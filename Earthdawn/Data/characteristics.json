@@ -1,0 +1,272 @@
+{
+    "1": {
+        "Step": 2,
+        "Defense": 2,
+        "CarryCapacity": 10,
+        "UnconciousRating": 2,
+        "DeathRating": 4,
+        "Woundthreshold": 3,
+        "Recovery": 1
+    },
+    "2": {
+        "Step": 2,
+        "Defense": 2,
+        "CarryCapacity": 15,
+        "UnconciousRating": 4,
+        "DeathRating": 6,
+        "Woundthreshold": 3,
+        "Recovery": 1
+    },
+    "3": {
+        "Step": 2,
+        "Defense": 3,
+        "CarryCapacity": 20,
+        "UnconciousRating": 6,
+        "DeathRating": 8,
+        "Woundthreshold": 4,
+        "Recovery": 1
+    },
+    "4": {
+        "Step": 3,
+        "Defense": 3,
+        "CarryCapacity": 25,
+        "UnconciousRating": 8,
+        "DeathRating": 11,
+        "Woundthreshold": 4,
+        "Recovery": 1
+    },
+    "5": {
+        "Step": 3,
+        "Defense": 4,
+        "CarryCapacity": 30,
+        "UnconciousRating": 10,
+        "DeathRating": 13,
+        "Woundthreshold": 5,
+        "Recovery": 1
+    },
+    "6": {
+        "Step": 3,
+        "Defense": 4,
+        "CarryCapacity": 40,
+        "UnconciousRating": 12,
+        "DeathRating": 15,
+        "Woundthreshold": 5,
+        "Recovery": 1
+    },
+    "7": {
+        "Step": 4,
+        "Defense": 5,
+        "CarryCapacity": 50,
+        "UnconciousRating": 14,
+        "DeathRating": 18,
+        "Woundthreshold": 6,
+        "Recovery": 2
+    },
+    "8": {
+        "Step": 4,
+        "Defense": 5,
+        "CarryCapacity": 60,
+        "UnconciousRating": 16,
+        "DeathRating": 20,
+        "Woundthreshold": 6,
+        "Recovery": 2
+    },
+    "9": {
+        "Step": 4,
+        "Defense": 6,
+        "CarryCapacity": 70,
+        "UnconciousRating": 18,
+        "DeathRating": 22,
+        "Woundthreshold": 7,
+        "Recovery": 2
+    },
+    "10": {
+        "Step": 5,
+        "Defense": 6,
+        "CarryCapacity": 80,
+        "UnconciousRating": 20,
+        "DeathRating": 25,
+        "Woundthreshold": 7,
+        "Recovery": 2
+    },
+    "11": {
+        "Step": 5,
+        "Defense": 7,
+        "CarryCapacity": 95,
+        "UnconciousRating": 22,
+        "DeathRating": 27,
+        "Woundthreshold": 8,
+        "Recovery": 2
+    },
+    "12": {
+        "Step": 5,
+        "Defense": 7,
+        "CarryCapacity": 110,
+        "UnconciousRating": 24,
+        "DeathRating": 29,
+        "Woundthreshold": 8,
+        "Recovery": 2
+    },
+    "13": {
+        "Step": 6,
+        "Defense": 8,
+        "CarryCapacity": 125,
+        "UnconciousRating": 26,
+        "DeathRating": 32,
+        "Woundthreshold": 9,
+        "Recovery": 3
+    },
+    "14": {
+        "Step": 6,
+        "Defense": 8,
+        "CarryCapacity": 140,
+        "UnconciousRating": 28,
+        "DeathRating": 34,
+        "Woundthreshold": 9,
+        "Recovery": 3
+    },
+    "15": {
+        "Step": 6,
+        "Defense": 9,
+        "CarryCapacity": 155,
+        "UnconciousRating": 30,
+        "DeathRating": 36,
+        "Woundthreshold": 10,
+        "Recovery": 3
+    },
+    "16": {
+        "Step": 7,
+        "Defense": 9,
+        "CarryCapacity": 175,
+        "UnconciousRating": 32,
+        "DeathRating": 39,
+        "Woundthreshold": 10,
+        "Recovery": 3
+    },
+    "17": {
+        "Step": 7,
+        "Defense": 10,
+        "CarryCapacity": 195,
+        "UnconciousRating": 34,
+        "DeathRating": 41,
+        "Woundthreshold": 11,
+        "Recovery": 3
+    },
+    "18": {
+        "Step": 7,
+        "Defense": 10,
+        "CarryCapacity": 215,
+        "UnconciousRating": 36,
+        "DeathRating": 43,
+        "Woundthreshold": 11,
+        "Recovery": 3
+    },
+    "19": {
+        "Step": 8,
+        "Defense": 11,
+        "CarryCapacity": 235,
+        "UnconciousRating": 38,
+        "DeathRating": 46,
+        "Woundthreshold": 12,
+        "Recovery": 4
+    },
+    "20": {
+        "Step": 8,
+        "Defense": 11,
+        "CarryCapacity": 255,
+        "UnconciousRating": 40,
+        "DeathRating": 48,
+        "Woundthreshold": 12,
+        "Recovery": 4
+    },
+    "21": {
+        "Step": 8,
+        "Defense": 12,
+        "CarryCapacity": 280,
+        "UnconciousRating": 42,
+        "DeathRating": 50,
+        "Woundthreshold": 13,
+        "Recovery": 4
+    },
+    "22": {
+        "Step": 9,
+        "Defense": 12,
+        "CarryCapacity": 305,
+        "UnconciousRating": 44,
+        "DeathRating": 53,
+        "Woundthreshold": 13,
+        "Recovery": 4
+    },
+    "23": {
+        "Step": 9,
+        "Defense": 13,
+        "CarryCapacity": 330,
+        "UnconciousRating": 46,
+        "DeathRating": 55,
+        "Woundthreshold": 14,
+        "Recovery": 4
+    },
+    "24": {
+        "Step": 9,
+        "Defense": 13,
+        "CarryCapacity": 355,
+        "UnconciousRating": 48,
+        "DeathRating": 57,
+        "Woundthreshold": 14,
+        "Recovery": 4
+    },
+    "25": {
+        "Step": 10,
+        "Defense": 14,
+        "CarryCapacity": 380,
+        "UnconciousRating": 50,
+        "DeathRating": 60,
+        "Woundthreshold": 15,
+        "Recovery": 5
+    },
+    "26": {
+        "Step": 10,
+        "Defense": 14,
+        "CarryCapacity": 410,
+        "UnconciousRating": 52,
+        "DeathRating": 62,
+        "Woundthreshold": 15,
+        "Recovery": 5
+    },
+    "27": {
+        "Step": 10,
+        "Defense": 15,
+        "CarryCapacity": 440,
+        "UnconciousRating": 54,
+        "DeathRating": 64,
+        "Woundthreshold": 16,
+        "Recovery": 5
+    },
+    "28": {
+        "Step": 11,
+        "Defense": 15,
+        "CarryCapacity": 470,
+        "UnconciousRating": 56,
+        "DeathRating": 67,
+        "Woundthreshold": 16,
+        "Recovery": 5
+    },
+    "29": {
+        "Step": 11,
+        "Defense": 16,
+        "CarryCapacity": 500,
+        "UnconciousRating": 58,
+        "DeathRating": 69,
+        "Woundthreshold": 17,
+        "Recovery": 5
+    },
+    "30": {
+        "Step": 11,
+        "Defense": 16,
+        "CarryCapacity": 530,
+        "UnconciousRating": 60,
+        "DeathRating": 71,
+        "Woundthreshold": 17,
+        "Recovery": 5
+    }
+}

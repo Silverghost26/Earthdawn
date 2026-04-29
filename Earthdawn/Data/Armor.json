@@ -1,0 +1,162 @@
+{
+  "Blood Pebble": {
+    "Living": "True",
+    "Availability": "Rare",
+    "PhysicalArmor": 5,
+    "MysticArmor": 3,
+    "InitiativePenalty": 1,
+    "Cost": "300",
+    "Weight": "NA",
+    "Description": "Living armor. Blood pebbles are a form of living elemental armor. Hundreds of small elemental stones are embedded in the character’s skin, drawing power from the magic in his blood. The character wearing this type of armor takes 4 Blood Magic Damage that cannot be healed while the armor is worn. Implanting or removing blood pebbles requires one day of work by a trained Weaponsmith.    "
+  },
+  "Chain Mail": {
+    "Living": "False",
+    "Availability": "Average",
+    "PhysicalArmor": 7,
+    "MysticArmor": 0,
+    "InitiativePenalty": 3,
+    "Cost": "180",
+    "Weight": "40",
+    "Description": "Made from interlocking metal rings, chain mail is flexible but slow to bend, which impedes the character’s movement. Chain mail protects the character’s entire body, except the legs below the knees.    "
+  },
+  "Crystal Plate": {
+    "Living": "True",
+    "Availability": "Rare",
+    "PhysicalArmor": 7,
+    "MysticArmor": 7,
+    "InitiativePenalty": 5,
+    "Cost": "12,000",
+    "Weight": "90",
+    "Description": "Living armor. This form of plate mail is made from living crystal rather than metal. To provide sustenance for the living crystal, the armor is enchanted. The enchantments must be renewed each year at a cost of 2,000 silver pieces. Without the enchantment the armor loses its Mystic Armor bonus and the living crystal becomes dormant. Renewing the enchantment automatically renews the living crystal, even on centuries-old armor. Crystal plate is extremely heavy, and joints sometimes grind against one another, causing an annoying noise while moving.    "
+  },
+  "Crystal Ringlet": {
+    "Living": "True",
+    "Availability": "Rare",
+    "PhysicalArmor": 4,
+    "MysticArmor": 4,
+    "InitiativePenalty": 2,
+    "Cost": "500",
+    "Weight": "45",
+    "Description": "Crystal Ringlet: Living armor. Made from carved, interlocking rings of living crystal, this armor protects the character’s entire body except for the legs below the knee. To provide sustenance for the living crystal, the armor is enchanted. The enchantments must be renewed each year at a cost of 100 silver pieces. Without the enchantment the armor loses its Mystic Armor bonus and the living crystal becomes dormant.    "
+  },
+  "Espagra Cloak": {
+    "Living": "False",
+    "Availability": "Rare",
+    "PhysicalArmor": 3,
+    "MysticArmor": 1,
+    "InitiativePenalty": 0,
+    "Cost": "200",
+    "Weight": "10",
+    "Description": "Espagra-scale cloaks, fashionable among dwarfs, are made from the hide of the espagra—a bright blue, scaled, flying reptile—and provide similar protection to leather armor. Espagra-scale cloaks are perfectly suited to those social occasions when an individual desires some physical protection, yet does not wish to look awkward by wearing a suit of full armor. The cloak is fastened around the neck and does not include a hood which could be used as a helmet.    "
+  },
+  "Fernweave": {
+    "Living": "True",
+    "Availability": "Unusual",
+    "PhysicalArmor": 2,
+    "MysticArmor": 3,
+    "InitiativePenalty": 0,
+    "Cost": "125",
+    "Weight": "15",
+    "Description": "Living armor. Woven from deep-forest vines and herbs, fernweave is living armor that must be watered once every three days. If the armor is not watered, the magical properties of the herbs disappear, along with the Mystic Armor bonus this armor provides. Dormant fernweave armor will revive if watered, even after a considerable lapse of time (centuries in some cases). Watering fernweave consumes one day’s water ration.    "
+  },
+  "Hardened Leather": {
+    "Living": "False",
+    "Availability": "Average",
+    "PhysicalArmor": 5,
+    "MysticArmor": 0,
+    "InitiativePenalty": 1,
+    "Cost": "40",
+    "Weight": "20",
+    "Description": "Hardened leather armor has been boiled and coated in wax to be made harder than normal leather. This armor protects the character’s entire body except for the forearms and legs below the knee.    "
+  },
+  "Hide Armor": {
+    "Living": "False",
+    "Availability": "Average",
+    "PhysicalArmor": 5,
+    "MysticArmor": 1,
+    "InitiativePenalty": 1,
+    "Cost": "50",
+    "Weight": "25",
+    "Description": "This armor is commonly made by sewing tanned animal hides to a normal suit of leather armor. Hide armor retains the shape of the animal the hide came from, including its paws and head, the latter which is often worn as a helmet. The paws cannot be used as weapons. Animal hides commonly used to make hide armor include: bear, jaguar, lion, and gorilla skins.    "
+  },
+  "Leather": {
+    "Living": "False",
+    "Availability": "Average",
+    "PhysicalArmor": 3,
+    "MysticArmor": 0,
+    "InitiativePenalty": 0,
+    "Cost": "10",
+    "Weight": "15",
+    "Description": "This armor is made from one to three layers of soft leather. The thinner parts of the armor provide freedom of movement for joints and limbs. Leather armor protects the character’s entire body except for the forearms, and legs below the knee.    "
+  },
+  "Living Crystal": {
+    "Living": "True",
+    "Availability": "Rare",
+    "PhysicalArmor": 6,
+    "MysticArmor": 3,
+    "InitiativePenalty": 2,
+    "Cost": "1,100",
+    "Weight": "NA",
+    "Description": "Living armor. Living crystal armor is made up of small columns of crystal that are embedded inside the character’s body. The magic in the character’s blood causes the crystals to grow until the armor covers the character’s skin. Implanting the crystal inflicts 5 Blood Magic Damage to the character, that cannot be healed while the armor is worn. Because the crystal is alive, the character can feel through the armor and move within it as if it was his skin. Portions of the armor, particularly the crystal columns, retain their hardness. Living crystal armor protects the character’s entire body except for the head; attempting to grow crystal on the head causes fatal brain damage. Implanting or removing living crystal armor requires 3 days of work by a trained Weaponsmith.    "
+  },
+  "Obsidiman Skin": {
+    "Living": "False",
+    "Availability": "Rare",
+    "PhysicalArmor": 3,
+    "MysticArmor": 1,
+    "InitiativePenalty": 0,
+    "Cost": "100",
+    "Weight": "20",
+    "Description": "This armor is made from the skin of a slain obsidiman. The negative reaction it elicits in most Namegivers usually outweighs its protective value. Obsidimen will attack anyone wearing this armor on sight. Dwarfs and trolls consider the wearing of obsidiman skin armor an ugly and distasteful practice, and react to the character with loathing; worsen the Attitude toward the character (and his obvious companions) for Interaction Tests by two degrees.    "
+  },
+  "Padded Cloth": {
+    "Living": "False",
+    "Availability": "Average",
+    "PhysicalArmor": 2,
+    "MysticArmor": 0,
+    "InitiativePenalty": 0,
+    "Cost": "2",
+    "Weight": "5",
+    "Description": "Padded cloth armor comprises two layers of quilted raw cotton. It protects the character’s entire body except for the forearms and legs below the knee.    "
+  },
+  "Padded Leather": {
+    "Living": "False",
+    "Availability": "Average",
+    "PhysicalArmor": 4,
+    "MysticArmor": 0,
+    "InitiativePenalty": 0,
+    "Cost": "20",
+    "Weight": "20",
+    "Description": "Padded leather armor combines padded cloth with a covering of leather armor. It protects the character’s entire body except for the forearms and legs below the knee.    "
+  },
+  "Plate Armor": {
+    "Living": "False",
+    "Availability": "Unusual",
+    "PhysicalArmor": 9,
+    "MysticArmor": 0,
+    "InitiativePenalty": 4,
+    "Cost": "3,000",
+    "Weight": "60",
+    "Description": "Plate armor is composed of fitted and jointed pieces of steel plate, with chain mail to protect vulnerable gaps. Though the armor moves smoothly for such a massive and ungainly-looking construct, the heaviness of the plate metal makes quick reaction almost impossible. Plate armor protects the character’s entire body.    "
+  },
+  "Ring Mail": {
+    "Living": "False",
+    "Availability": "Average",
+    "PhysicalArmor": 6,
+    "MysticArmor": 0,
+    "InitiativePenalty": 2,
+    "Cost": "110",
+    "Weight": "30",
+    "Description": "Ring mail is leather armor reinforced with metal rings to deflect blows. It protects the character’s entire body except for the legs below the knee.    "
+  },
+  "Wyvern Skin": {
+    "Living": "False",
+    "Availability": "Rare",
+    "PhysicalArmor": 8,
+    "MysticArmor": 1,
+    "InitiativePenalty": 3,
+    "Cost": "2,000",
+    "Weight": "50",
+    "Description": "Made from the hide of a wyvern, this armor retains most of the creature’s natural resiliency and is fortified with True Water to preserve that resiliency. This armor covers the torso, arms, and legs. Wyverns will attack anyone wearing this armor on sight. Dragons consider the wearing of wyvern-skin armor distasteful and will react accordingly; worsen the Attitude toward the character (and his obvious companions) for Interaction Tests by one degree. True Water is a key ingredient when enchanting this type of armor, to ensure its flexibility.    "
+  }
+}

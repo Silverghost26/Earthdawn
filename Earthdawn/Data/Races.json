@@ -1,0 +1,166 @@
+{
+    "Dwarfs": {
+        "Description": "Dwarfs are short and stocky, averaging just over four feet in height, and weighing about 120 pounds. Their hair is thick and abundant, especially the hair on their heads, and male dwarfs commonly grow long beards, well-groomed and sometimes braided into elaborate patterns. Their skin tones range from pale pinkish-white to dark ebony, largely divided along tribal lines. Dwarfs are broad-chested, tough, and strong for their size. Their short legs are ill-suited to running, and also make it difficult for them to swim or ride horses. As a result, dwarfs prefer riding in carts, using ponies, or other animals better suited to their proportions. Their ears are gently pointed, less so than elves and windlings. Dwarfs reach physical maturity in their late teens, and tend to live for about 100 years. Dwarfs have an affinity for the earth, feeling a kinship with stone and metal. This, coupled with a strong inclination for organization and attention to detail, makes them a race of builders and craftsmen. Indeed, this tendency is what led the Therans to appoint the dwarfs of Throal as the province’s administrators before the Scourge, and helped Throal become the dominant power in Barsaive in the decades after the Scourge. A dwarf’s first loyalty is to their family and tribe, but they easily transfer that loyalty to their home town, city, or kingdom. Dwarfs prefer to live close to, or even under, the earth, with multiple generations of extended family under the same roof. While loyal and efficient, dwarfs can be quick to latch onto a single solution and stubbornly resist change. Dwarfs frequently come across as curt or lacking in social graces, but at the same time they can be friendly and open to those they consider friends. There is nothing a dwarf likes more than talking about his craft to those who show an interest—much to the chagrin of those who don’t care to explore a subject in exhaustive detail.",
+        "DEX": 9,
+        "STR": 10,
+        "TOU": 12,
+        "PER": 11,
+        "WIL": 11,
+        "CHA": 10,
+        "Movement": 10,
+        "FlyingMovement": 0,
+        "KarmaMod": 4,
+        "Abilities": [
+            {
+                "Ability": "Heat Sight",
+                "Description": "Characters with Heat Sight can see heat radiated by another character or object, which translates into different colors. The colors depend on the relative heat given out by an object. The hottest objects show up as white, with the spectrum dropping through red, orange, yellow, green, blue, and down into violet or even black for the coldest objects. Heat Sight tends to fade into the background the more light is present, but it allows the character to see in the dark, at the expense of detail. Magical effects that limit normal sight, for example magical darkness, also affect Heat Sight, and Heat Sight does not penetrate objects."
+            },
+            {
+                "Ability": "Strong Back",
+                "Description": "Dwarf characters have a +2 bonus to their Strength for the purposes of determining carrying capacity."
+            }
+        ]
+    },
+    "Elves": {
+        "Description": "Elves are tall and thin, averaging over six feet in height and weighing about 150 pounds. Their facial features appear symmetrical, almost uncannily so, and even other races tend to find elves attractive. Skin color can vary, ranging from almost pure white to tan, brown, even midnight black. Some rare individuals are even pale green, or an iridescent mother-of-pearl color called cetharel. Their body hair is fine and sparse, but facial and head hair is commonly long and luxuriant with colors ranging from white blond to brown, and black, with naturally occurring blue, violet or metallic colors being rare but not unheard of. Elves have long, pointed ears and move with a natural grace, but their slight build makes them a little more susceptible to injury. They reach physical maturity in their early twenties, and have a natural lifespan of nearly three hundred years—though some individuals have been known to live longer. Elves revere nature and beauty, and have an affinity with magic and the natural world. They prefer living in open areas, especially ones that blend into the environment. These traits, along with their keen vision and grace, result in artists and magicians being common. Those of a more martial bent are attracted to the Archer and Swordmaster Disciplines. Elves are mainly loyal to their family, feeling that blood ties are the most binding relationship in their lives. Tribal or national ties are weaker, though it is not uncommon for an elf to view their village or town as an extended family. Prior to the Scourge, Wyrm Wood was seen as the center of elven culture, and most elves felt some loyalty to the court. These days, however, the Ritual of Thorns and the court’s isolationist attitudes have led some elves to see themselves as a lost people, and the Blood Elves are an all too painful reminder of how the Horrors were not responsible for all that was lost during the Scourge.",
+        "DEX": 12,
+        "STR": 10,
+        "TOU": 8,
+        "PER": 11,
+        "WIL": 11,
+        "CHA": 11,
+        "Movement": 14,
+        "FlyingMovement": 0,
+        "KarmaMod": 4,
+        "Abilities": [
+            {
+                "Ability": "Low-Light Vision",
+                "Description": "Low-Light Vision allows a character to see at much lower light levels than humans. For a character with Low-Light Vision, a single torch easily illuminates a 30-yard by 30-yard meeting hall. Starlight provides plenty of light on a clear night, and even on a night shrouded by thick cloud cover the character can see as well as a human sees at dusk. Characters with Low-Light Vision are no more susceptible to flash-blindness than humans. Complete darkness—the complete absence of light—will render a character with Low-Light Vision unable to see, like other characters requiring normal vision."
+            }
+        ]
+    },
+    "Humans": {
+        "Description": "Humans average between five and a half and six feet tall, and weigh 160 pounds. They produce less body hair than most other races except elves. Skin tone ranges from pinkish-white to tan and dark chocolate. Their ears are small and rounded. Humans reach physical maturity in their teens, and tend to live about seventy-five years, though some can live up to a century. Humans are scattered across the land, living alongside the other races of Barsaive. They are seldom the largest racial group in a town or city, but they are found almost everywhere. In many communities, they take on the roles other races are not as suited to. The only consistent thing that can be said about humans is that they can be found just about anywhere, doing just about anything. 47 Humans feel a natural loyalty to their family, but easily transfer that loyalty to larger social groups like cities and kingdoms. However, they do not have the same tendency to organize that dwarfs do, so large, dedicated human communities remain rare. This doesn’t prevent humans from rising to influential positions in other places, but humans in present-day Barsaive sometimes seem to be happiest when they can fill in where they are needed.",
+        "DEX": 10,
+        "STR": 10,
+        "TOU": 10,
+        "PER": 10,
+        "WIL": 10,
+        "CHA": 10,
+        "Movement": 12,
+        "FlyingMovement": 0,
+        "KarmaMod": 5,
+        "Abilities": [
+            {
+                "Ability": "Versatility",
+                "Description": "Human adepts have a special racial talent available to them from First Circle: Versatility. This talent allows them to learn talents from Disciplines other than their own (see the Talents chapter, p. 118, for a full description). Human adepts starting play with no Ranks assigned to their Versatility talent know it at Rank 0. They may purchase ranks for it during the game using Legend Points, just like other talents, treating it as a Novice talent. Non-adept humans cannot learn the Versatility talent. "
+            }
+        ]
+    },
+    "Obsidimen": {
+        "Description": "Obsidimen are tall, averaging around seven feet, but their massive build makes them appear squat from a distance. Obsidimen weigh an average of 900 pounds, and their craggy skin and body tissue incorporate many of the properties of stone. Despite this rocky appearance, obsidimen are flesh and blood, and need food, water, and air to survive just as any other Namegiver. Obsidimen are sexless, born fully-grown from a Liferock: large stone formations naturally imbued with powerful elemental magic. These formations are rare, and usually found in wild or remote areas. Obsidimen from the same Liferock call themselves a brotherhood, and the skin colors of a brotherhood commonly resemble the dominant stone of the area, with some individuals showing metallic highlights or veins of Their blood, unlike the other races, is bluish-grey. They have no body hair, and their ears are internal, covered over by a thin flap of skin. Obsidimen spend the first century of their life attached to their Liferock. During this time, the obsidiman communes with the spirits of other obsidimen in a state called the Dreaming. After this time, they emerge with a Name, and are free to travel as they wish. The natural lifespan of an obsidiman is measured in centuries, with individuals commonly reaching 900 years or more. Obsidimen tend to be slow and deliberate as befits their size, and the hastiness of the other races often mystifies and unsettles them. Their primary loyalty is to their brotherhood, and obsidimen do not form larger communities. Much like the stones they resemble, they are steady and patient, but when angered they are as implacable as an avalanche.",
+        "DEX": 8,
+        "STR": 18,
+        "TOU": 13,
+        "PER": 9,
+        "WIL": 10,
+        "CHA": 9,
+        "Movement": 10,
+        "FlyingMovement": 0,
+        "KarmaMod": 3,
+        "Abilities": [
+            {
+                "Ability": "Increased Wound Threshold",
+                "Description": "Add +3 to the Wound Threshold of obsidimen to represent this race’s inherent resistance to damage because of their stone-like skin."
+            },
+            {
+                "Ability": "Natural Armor",
+                "Description": "Obsidimen have very tough skin, which serves them as armor. Obsidiman skin has a Physical Armor Rating of 3. However, obsidimen can only wear other types of living armor, which add their protection to the character’s Natural Armor. (See Armor and Shields, p. 411; types of armor considered “living” are indicated as such in the armor’s description.)"
+            }
+        ]
+    },
+    "Orks": {
+        "Description": "Orks are tall and powerfully built, averaging about six feet in height and weighing over 200 pounds. They are more muscular than humans, and two large lower canines protrude from their mouth and cover their upper lip. Their body hair is coarse, and facial and head hair is frequently the texture of fine wire. Skin color ranges from beige to olive green, with tan, pinkish-white, or ebony possible, but less common. Orks are impulsive and their emotions burn swift and hot, a trait they call gahad. They anger quickly, and are just as quick to form friendships. When an ork is driven to act, they act, and some individuals report physical discomfort when they “swallow their gahad.” While this tendency can cause problems for their companions, orks generally consider gahad as a positive thing, a spiritual fire pushing them forward. With a lifespan averaging only 40 years, orks tend to seize life by the throat and get the most out of it they can. Given their emotional and impulsive natures, ork families tend to be sprawling affairs of half-siblings, aunts, uncles and cousins. Themost common social group is a tribe or clan, living a nomadic existence on the plains of Barsaive. Even the reborn kingdom of Cara Fahd is not much more than an affiliation of multiple tribes and clans. Still, the orks are taking to nation-building as fiercely as anything else they attempt. While all the races have faced the prospect of slavery at the hands of the Theran Empire, the orks have a longer and deeper history with the institution. Ork legends tell that at one time, they were all slaves until they won their freedom centuries before the Scourge. As a result of this cultural legacy, many orks believe freedom to be one of the highest ideals in existence.",
+        "DEX": 10,
+        "STR": 13,
+        "TOU": 11,
+        "PER": 10,
+        "WIL": 8,
+        "CHA": 9,
+        "Movement": 12,
+        "FlyingMovement": 0,
+        "KarmaMod": 5,
+        "Abilities": [
+            {
+                "Ability": "Gahad",
+                "Description": "Gahad is largely a roleplaying concept, best described as a physical sensation similar to intense heartburn. It is triggered by certain circumstances or situations, causing orks to feel a drive to eradicate the situation triggering the gahad or take revenge on the perpetrator. Each ork experiences gahad in response to unique circumstances or stimuli, and different orks feel this impulse to greater or lesser degrees. For groups that want to use some game rules to enforce gahad, they should describe a couple of impulses that always trigger gahad, using short sentences. For example, a player might specify that “Grisalk’s gahad is triggered when his mother is insulted.” The player may specify limits or exceptions for these triggers, for example that “Grisalk’s gahad is triggered when his mother is insulted, except by someone in the family.” When his gahad is triggered, the player may choose to have his character give in to it or try to resist the impulse. To resist gahad, the character has to succeed at a Willpower (6) Test, requiring a success level based on how severe the trigger is. In the above example, an ambiguous comment about Grisalk’s mother may only require a single success, while an obvious and vicious obscenity could require three (or more) successes. Successfully resisting, or “swallowing”, gahad causes a gahad hangover. The hangover begins within an hour of swallowing gahad and lasts for one hour per success required on the original Willpower Test. The hangover manifests as localized pains and cramps, headaches, and in extreme cases, hallucinations about the object of the trigger. While it lasts, the character is considered Harried (p. 388). When giving in to gahad (or if the attempt to resist it fails), the character is driven to end the stimuli that triggered gahad, or take revenge on a character that caused it. In the above example, Grisalk would react violently towards the person who insulted his mother or, if the insult consisted of an obscene picture drawn on a wall, he would destroy the picture. This drive lasts for as long as the hangover would have lasted, regardless of whether or not a resistance test was attempted. The character gets a +1 bonus to any Action or Effect test made towards ending the stimulus or taking revenge, for example to attack the insulting party or tear down the wall. Gahad is not intended to be a game mechanic giving orks a test bonus on every flimsy excuse. The use and application of gahad, and the bonuses or penalties it confers, are always at the discretion of the gamemaster. In addition, violent reactions, while common, are not a requirement to a triggered gahad—any kind of forceful, decisive action could satisfy the urge to act."
+            },
+            {
+                "Ability": "Low-Light Vision",
+                "Description": "Low-Light Vision allows a character to see at much lower light levels than humans. For a character with Low-Light Vision, a single torch easily illuminates a 30-yard by 30-yard meeting hall. Starlight provides plenty of light on a clear night, and even on a night shrouded by thick cloud cover the character can see as well as a human sees at dusk. Characters with Low-Light Vision are no more susceptible to flash-blindness than humans. Complete darkness—the complete absence of light—will render a character with Low-Light Vision unable to see, like other characters requiring normal vision."
+            }
+        ]
+    },
+    "Trolls": {
+        "Description": "Trolls are massive, standing eight and a half feet tall and weighing 500 pounds or more on average. Many trolls sport pronounced lower canines similar to orks. Skin color ranges from beige to olive and dark brown, and their skin has a rough texture with minor ridges and plating made of trolthelia, a material similar to rhinoceros horn or deer antler. Trolthelia is also the material that makes up a troll’s most prominent physical feature, the horns that grow from their heads. These horns grow slowly throughout a troll’s life, frequently into asymmetrical shapes. Some isolated clans have practices that shape their horns, while others may inscribe runic designs into them. Strong and tough, trolls reach maturity in their early teens and live into their fifties. They live primarily in the mountainous regions of Barsaive, and due to their size and weight find it difficult to live among the other races. They frequently feel a kinship with obsidimen, who they call “rock brothers”, and find their serenity deeply moving. Trolls are fiercely loyal to their families, and organize themselves into clans and moots—an alliance of several clans. The largest population of trolls in Barsaive—the Crystal Raiders of the Twilight Peaks—are known for their airships, which they use to raid lowland settlements and caravans, carrying the spoils back to their mountain homes. The clans of the Twilight Peaks are believed to have been the originators of the Sky Raider Discipline, and trolls are the most common race to practice that Discipline to this day. Trolls place great value on honor, following complex rules and guidelines for personal behavior that frequently baffle other races. There are three main concepts in troll honor: katorr, kat’ral, and katera, loosely translated as personal, clan, and racial honor. Individual trolls define these values in different ways and to varying degrees, and a troll that lives among other Namegivers is less likely to react violently to an insult than a Crystal Raider, but a troll will defend his honor if he believes it has been slighted. Highland trolls guilty of crimes against honor will sometimes have their horns cut off, marking them as kava, or “mud people”, and exiled from troll society. Some trolls voluntarily undergo this punishment as a way of maintaining personal honor, and take pride in their status as outcasts.",
+        "DEX": 10,
+        "STR": 14,
+        "TOU": 12,
+        "PER": 9,
+        "WIL": 11,
+        "CHA": 10,
+        "Movement": 14,
+        "FlyingMovement": 0,
+        "KarmaMod": 3,
+        "Abilities": [
+            {
+                "Ability": "Heat Sight",
+                "Description": "Characters with Heat Sight can see heat radiated by another character or object, which translates into different colors. The colors depend on the relative heat given out by an object. The hottest objects show up as white, with the spectrum dropping through red, orange, yellow, green, blue, and down into violet or even black for the coldest objects. Heat Sight tends to fade into the background the more light is present, but it allows the character to see in the dark, at the expense of detail. Magical effects that limit normal sight, for example magical darkness, also affect Heat Sight, and Heat Sight does not penetrate objects."
+            }
+        ]
+    },
+    "Tskrangs": {
+        "Description": "T’skrang are reptilian beings that stand 5 feet 9 inches tall on average, with a tail that adds another five to six feet in length. They typically weigh around 200 pounds, of which the tail can be as much as a quarter. Skin color ranges from yellow-green to emerald and aquamarine, with deep blue and sunset red variants also possible. T’skrang are hairless, but most individuals sport a head crest of some sort. Their ears are small and cauliflower-shaped. T’skrang are semi-aquatic, living on and around the lakes and rivers of Barsaive. They love to swim and tend to get irritable when they can’t regularly submerge themselves in water. Their villages and towns are frequently housed in underwater domes, with towers that reach to the water’s surface, with facilities to dock riverboats and ferries. These communities are made up of tightly-knit, communal groups called nialls, with the entire niall an extended family that follows a matriarch called a lahala. Sometimes several nialls will band together to form an aropagoi, or great house, which will follow a shivalahala. T’skrang lay eggs, which take eight to ten months to hatch. The eggs of a niall are incubated together in a special room in the village, and after hatching the young are raised together. As a result, t’skrang do not generally know who their egg-mother is, and view their egg-mates as siblings. Young t’skrang come into the world with their gender unknown. When they undergo puberty after their first decade, their sex is revealed. T’skrang live an average of 80 years, though tales of individuals living well over a century are not unheard of. The t’skrang are known as merchants and traders, sailing their riverboats up and down the length of the Serpent River and its tributaries. The riverboats are driven by magical engines powered by elemental air and fire, and their operation is a closely guarded secret. Attempts by dwarf scholars and engineers to unlock the mysteries of this magic have—thus far—met with failure. T’skrang have a flair for the dramatic, and their culture reveres the ideals of fearlessness, passion, and bravery. Other races frequently interpret this as mere bravado. Because of the communal nature of their villages, t’skrang do very well in groups, and are a sociable people. They frequently consider other Namegivers as dull and boring, while the other races consider them flamboyant and foolish.",
+        "DEX": 11,
+        "STR": 10,
+        "TOU": 11,
+        "PER": 10,
+        "WIL": 10,
+        "CHA": 11,
+        "Movement": 12,
+        "FlyingMovement": 0,
+        "KarmaMod": 4,
+        "Abilities": [
+            {
+                "Ability": "Tail Combat",
+                "Description": "T’skrang often make use of their tails when engaged in combat. A t’skrang can use his tail to whip at opponents in unarmed combat much like striking with an arm or kicking with a leg, using an appropriate unarmed combat talent or skill for any Attack tests. The Damage Step used is the character’s Strength Step, unless modified by abilities that enhance unarmed combat Damage. A t’skrang may also attach a melee weapon of up to Size 2 to his tail, and this is treated as an Attached Weapon (see p. 406). Tail Combat allows t’skrang to use the Tail Attack Combat Option (see p. 386)."
+            }
+        ]
+    },
+    "Windlings": {
+        "Description": "Windlings are small winged Namegivers, standing around 18 inches tall and weighing about 13 pounds. Windlings have paired wings similar to a dragonfly, and can fly for limited stretches at a time. A windling’s skin and hair color match the brightest-colored features of their home environment: the icy white of a snowy mountain, the red and yellow of wildflowers, even the glazed blue of city roof tiles. After a windling has lived in the same place for three or four months, their skin color will change to match their new home. They have almost no body hair, but the hair on their heads is thick and rich for their size. Their ears come to an even sharper point than elven ears. Windlings mature slowly, reaching adulthood by around age thirty, though their general attitude can frequently come across as childlike, even in older individuals. The average windling lifespan is roughly 170 years, and they do not appear to physically age during their lifetime. While their small size and somewhat fragile nature makes them more aware of the world’s dangers, windlings love traveling and experiencing new things. Indeed, they have a passion and zest for life that few can equal, though their curiosity and fascination with new experiences can come across as flighty and unfocused. Windlings typically live in forested areas, in dwellings made from the local environment. Their society is best described as haphazard-members of a clan frequently bring back practices and fads they pick up in their travels, so there can be little consistency from village to village. There are tales of windling nobles, but scholars believe this to be no more than a rumor. Windlings frequently have a live and let live attitude, but their ability to fly gives them a strong love of freedom and as a general rule they abhor slavery. They are a gregarious and outgoing people, and their love of life is frequently expressed through finding the bright side of things. They have a reputation among the other races as incorrigible pranksters, and their almost permanent perky and optimistic attitude can come across as grating. Perhaps more than any other Namegiver race, windlings are in tune with the magic of the world. Almost all windlings can sense the magical world, and windling adepts have been known to develop this ability to high degrees.",
+        "DEX": 11,
+        "STR": 4,
+        "TOU": 8,
+        "PER": 11,
+        "WIL": 10,
+        "CHA": 12,
+        "Movement": 6,
+        "FlyingMovement": 16,
+        "KarmaMod": 6,
+        "Abilities": [
+            {
+                "Ability": "Astral Sight",
+                "Description": "All windlings have access to the Astral Sight Talent (see p. 129). Windling adepts starting play with no Ranks assigned to their Astral Sight talent know it at Rank 0. They may purchase Ranks for the talent during the game using Legend Points, just like other talents, treating it as a Novice talent."
+            },
+            {
+                "Ability": "Flight",
+                "Description": "Windlings can fly, but it is not their primary method of movement. Flying tires them quickly and windlings usually limit their flights to short periods of around fifteen to twenty minutes. When flying for extended periods of time, a windling may suffer Strain. After 20 minutes in flight a windling must make a Toughness (5) test. Failure means the character takes 1 Strain. Each five-minute period spent flying beyond the additional twenty minutes requires an additional Toughness test with a cumulative +2 modifier. Brief interruptions do not reset the time spent flying, it reduces it on a one-to-one basis: a windling who has spent twenty minutes in flight and then rests five minutes can only fly for five more minutes before having to make Toughness Tests again. Though windling wings are durable, they become heavy and fragile when wet, severely impairing the windling’s ability to fly. When soaked with water, like falling into a stream or in heavy rain, their flight duration is reduced from twenty minutes to five, and the Difficulty Number of the Toughness tests increases by +2 every minute, instead of every five. When flying with wet wings, the windling is considered Harried (see p. 388). Windling wings dry within ten minutes of being in a dry place, or within five minutes of being in a warm place, such as in front of a fire."
+            },
+            {
+                "Ability": "Increased Physical Defense",
+                "Description": "The natural mobility of windlings, combined with their small size, adds +2 to their Physical Defense."
+            }
+        ]
+    }
+}

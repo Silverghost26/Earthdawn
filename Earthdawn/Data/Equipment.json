@@ -1,0 +1,1076 @@
+{
+  "Equipment": {
+    "Item": [
+      {
+        "name": "Bedroll of Comfort",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "340",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Boots, Dry",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "250",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Boots, Huntsman",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "700",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Cleaning Broom",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "25",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Cloak, Dwarf Winternight",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "275",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Cloak, Everclean",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "275",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "Cloak, Warm",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "300",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Divining Rod",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "75",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "Elfweave Robe",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "80",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Fire Starter",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "100",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Firefly Chalk (per stick)",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "12",
+        "Weight": "Neg.",
+        "Description": ""
+      },
+      {
+        "name": "Heat Stone",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "100",
+        "Weight": "3",
+        "Description": ""
+      },
+      {
+        "name": "Hot Pot",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "100",
+        "Weight": "8",
+        "Description": ""
+      },
+      {
+        "name": "Light Quartz, Small",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "75",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Light Quartz, Medium",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "125",
+        "Weight": "6",
+        "Description": ""
+      },
+      {
+        "name": "Light Quartz, Large",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "200",
+        "Weight": "20",
+        "Description": ""
+      },
+      {
+        "name": "Light Quartz Weapon",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "100",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "Message Stone",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "300",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Message Stone (warded)",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "600",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "One-Size Hat",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "35",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "Orichalcum Container",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "5,000",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "Pot of Grumbah, Small",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "75",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Pot of Grumbah, Large",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "200",
+        "Weight": "5",
+        "Description": ""
+      },
+      {
+        "name": "Pure Water Pot",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "150",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Quiet Fingers Gloves",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "140",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "Quiet Pouch",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "65",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Season Lamp",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "350",
+        "Weight": "NA",
+        "Description": ""
+      },
+      {
+        "name": "Traveler’s Mug",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "350",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "Upandal’s Blessings",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "275",
+        "Weight": "3",
+        "Description": ""
+      },
+      {
+        "name": "Wind Instrument",
+        "type": "Common Magic Item",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "250",
+        "Weight": "2+",
+        "Description": ""
+      },
+      {
+        "name": "AbsorbBlow",
+        "type": "",
+        "magical": "True",
+        "bloodCharm": "True",
+        "Availability": "Unusual",
+        "Cost": "100",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "Astral-SensitiveEye",
+        "type": "",
+        "magical": "True",
+        "bloodCharm": "True",
+        "Availability": "Unusual",
+        "Cost": "325",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "BoneCharm",
+        "type": "",
+        "magical": "True",
+        "bloodCharm": "True",
+        "Availability": "Rare",
+        "Cost": "175",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "DarksightEye",
+        "type": "",
+        "magical": "True",
+        "bloodCharm": "True",
+        "Availability": "Unusual",
+        "Cost": "200",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "DeathCheat",
+        "type": "",
+        "magical": "True",
+        "bloodCharm": "True",
+        "Availability": "Unusual",
+        "Cost": "450",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "DesperateBlow",
+        "type": "",
+        "magical": "True",
+        "bloodCharm": "True",
+        "Availability": "Unusual",
+        "Cost": "275",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "DesperateSpell",
+        "type": "",
+        "magical": "True",
+        "bloodCharm": "True",
+        "Availability": "Unusual",
+        "Cost": "300",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "GarlenStone",
+        "type": "",
+        "magical": "True",
+        "bloodCharm": "True",
+        "Availability": "Rare",
+        "Cost": "250",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "HornNeedle",
+        "type": "",
+        "magical": "True",
+        "bloodCharm": "True",
+        "Availability": "Rare",
+        "Cost": "450",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "HorrorFend",
+        "type": "",
+        "magical": "True",
+        "bloodCharm": "True",
+        "Availability": "Unusual",
+        "Cost": "500",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "InitiativeBooster",
+        "type": "",
+        "magical": "True",
+        "bloodCharm": "True",
+        "Availability": "Rare",
+        "Cost": "600",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "StrengthBooster",
+        "type": "",
+        "magical": "True",
+        "bloodCharm": "True",
+        "Availability": "Rare",
+        "Cost": "300",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "TargetingEye",
+        "type": "",
+        "magical": "True",
+        "bloodCharm": "True",
+        "Availability": "Unusual",
+        "Cost": "450",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "WoundBalance",
+        "type": "",
+        "magical": "True",
+        "bloodCharm": "True",
+        "Availability": "Unusual",
+        "Cost": "200",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "BoosterPotion",
+        "type": "Healing Aid",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "50",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "CureDiseasePotion",
+        "type": "Healing Aid",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "500",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "HaltIllnessPotion",
+        "type": "Healing Aid",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "100",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "HealingPotion",
+        "type": "Healing Aid",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "300",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Kelia’sAntidote",
+        "type": "Healing Aid",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "125",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Kelix’sPoultice",
+        "type": "Healing Aid",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "50",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "LastChanceSalve",
+        "type": "Healing Aid",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Very",
+        "Cost": "600",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "SalveofClosure",
+        "type": "Healing Aid",
+        "magical": "True",
+        "bloodCharm": "False",
+        "Availability": "Rare",
+        "Cost": "200",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "Adventuring Kit: Backpack, bedroll, flint and steel, torch, waterskin, large sack",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "15",
+        "Weight": "14",
+        "Description": ""
+      },
+      {
+        "name": "As above, with tent",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "40",
+        "Weight": "34",
+        "Description": ""
+      },
+      {
+        "name": "Alchemist’s Kit",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "500",
+        "Weight": "15",
+        "Description": ""
+      },
+      {
+        "name": "Alchemist’s Shop",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "2,000",
+        "Weight": "NA",
+        "Description": ""
+      },
+      {
+        "name": "Carving",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "15",
+        "Weight": "3",
+        "Description": ""
+      },
+      {
+        "name": "Embroidery/Sewing",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "25",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "Forge",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "100",
+        "Weight": "20",
+        "Description": ""
+      },
+      {
+        "name": "Painting",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "45",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Sculpting",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "30",
+        "Weight": "3",
+        "Description": ""
+      },
+      {
+        "name": "Backpack",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "5",
+        "Weight": "3",
+        "Description": ""
+      },
+      {
+        "name": "Bedroll",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "5",
+        "Weight": "4",
+        "Description": ""
+      },
+      {
+        "name": "Belt Pouch",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Everyday",
+        "Cost": "8cp",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "Blanket",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Everyday",
+        "Cost": "15cp",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Candle",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Everyday",
+        "Cost": "3cp",
+        "Weight": "4oz",
+        "Description": ""
+      },
+      {
+        "name": "Heavy (10ft)",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "50",
+        "Weight": "9",
+        "Description": ""
+      },
+      {
+        "name": "Light (10ft)",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "10",
+        "Weight": "6",
+        "Description": ""
+      },
+      {
+        "name": "Chalk (5 pieces)",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Everyday",
+        "Cost": "3cp",
+        "Weight": "4oz",
+        "Description": ""
+      },
+      {
+        "name": "Climbing Kit: Rope (20ft), Light Chain (10ft), 2 Pitons, Grappling Hook",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "36",
+        "Weight": "19",
+        "Description": ""
+      },
+      {
+        "name": "Craftsman Tools",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "25",
+        "Weight": "5",
+        "Description": ""
+      },
+      {
+        "name": "Disguise Kit",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "50",
+        "Weight": "6",
+        "Description": ""
+      },
+      {
+        "name": "Fishing Kit: 10 Fish Hooks, Fishing Net, Fishing Rod, Bait Jar",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "20",
+        "Weight": "14",
+        "Description": ""
+      },
+      {
+        "name": "Fishing Net (30 sq ft)",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "15",
+        "Weight": "10",
+        "Description": ""
+      },
+      {
+        "name": "Flint and Steel",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Everyday",
+        "Cost": "1",
+        "Weight": "8oz",
+        "Description": ""
+      },
+      {
+        "name": "Grappling Hook",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "10",
+        "Weight": "5",
+        "Description": ""
+      },
+      {
+        "name": "Healing Kit:",
+        "type": "Healing Kit",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "5",
+        "Cost": "Basic (3 applications)",
+        "Weight": "75",
+        "Description": ""
+      },
+      {
+        "name": "Unusual",
+        "type": "Healing Kit",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Neg.",
+        "Cost": "Refill (3 applications)",
+        "Weight": "50",
+        "Description": ""
+      },
+      {
+        "name": "Iron Pot",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "20",
+        "Weight": "8",
+        "Description": ""
+      },
+      {
+        "name": "Hooded",
+        "type": "Lantern",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "9",
+        "Weight": "3",
+        "Description": ""
+      },
+      {
+        "name": "Bullseye",
+        "type": "Lantern",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "27",
+        "Weight": "3",
+        "Description": ""
+      },
+      {
+        "name": "Light Quartz",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "85",
+        "Weight": "5",
+        "Description": ""
+      },
+      {
+        "name": "Map or Scroll Case",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "8cp",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "Drum",
+        "type": "Musical Instrument",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "7",
+        "Weight": "5",
+        "Description": ""
+      },
+      {
+        "name": "Flute",
+        "type": "Musical Instrument",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "2",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Horn",
+        "type": "Musical Instrument",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "70",
+        "Weight": "7",
+        "Description": ""
+      },
+      {
+        "name": "Lute",
+        "type": "Musical Instrument",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "25",
+        "Weight": "6",
+        "Description": ""
+      },
+      {
+        "name": "Whistle",
+        "type": "Musical Instrument",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Everyday",
+        "Cost": "2cp",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "Navigation Charts",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "15",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Oil Flask",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Everyday",
+        "Cost": "6",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "Paper/Parchment (sheet)",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "1",
+        "Weight": "Neg.",
+        "Description": ""
+      },
+      {
+        "name": "Basic (3 applications)",
+        "type": "Physician’s Kit",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "50",
+        "Weight": "3",
+        "Description": ""
+      },
+      {
+        "name": "Refill (3 applications)",
+        "type": "Physician’s Kit",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "25",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "Quill Pen",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "1",
+        "Weight": "Neg.",
+        "Description": ""
+      },
+      {
+        "name": "Rope, per yard",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "3",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "Sack",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Everyday",
+        "Cost": "2",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Tent",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "30",
+        "Weight": "20",
+        "Description": ""
+      },
+      {
+        "name": "Thieves’ Picks and Tools",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "100",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "Torch",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Everyday",
+        "Cost": "5cp",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "Whetstone",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Everyday",
+        "Cost": "2cp",
+        "Weight": "1",
+        "Description": ""
+      },
+      {
+        "name": "Water or Wine Skin",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Everyday",
+        "Cost": "2",
+        "Weight": "4",
+        "Description": ""
+      },
+      {
+        "name": "Writing Ink (per vial)",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "10",
+        "Weight": "8oz",
+        "Description": ""
+      },
+      {
+        "name": "Writing Kit: Quill Pen, Writing Ink, 10 sheets Parchment or Paper, 2 Candles, 10 Pieces of Chalk",
+        "type": "Adventuring Equipment",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Unusual",
+        "Cost": "23",
+        "Weight": "2",
+        "Description": ""
+      },
+      {
+        "name": "Canoe",
+        "type": "Transport",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "20",
+        "Weight": "",
+        "Description": ""
+      },
+      {
+        "name": "Large Cart",
+        "type": "Transport",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "40",
+        "Weight": "",
+        "Description": ""
+      },
+      {
+        "name": "Small Cart",
+        "type": "Transport",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "15",
+        "Weight": "",
+        "Description": ""
+      },
+      {
+        "name": "Rowboat",
+        "type": "Transport",
+        "magical": "False",
+        "bloodCharm": "False",
+        "Availability": "Average",
+        "Cost": "50",
+        "Weight": "",
+        "Description": ""
+      }
+    ]
+  }
+}

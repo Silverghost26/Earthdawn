@@ -1,0 +1,178 @@
+{
+    "Dyre": {
+        "Availability": "Rare",
+        "Cost": "4,500!",
+        "Weight": "2tons",
+        "CarryingCapacity": "2,740",
+        "Speed": "16",
+        "Lifespan": "25",
+        "FeedCost": "5",
+        "StableCost": "2",
+        "Description": ""
+    },
+    "Elephant": {
+        "Availability": "Very Rare",
+        "Cost": "3,000",
+        "Weight": "3.5tons",
+        "CarryingCapacity": "1,760",
+        "Speed": "16",
+        "Lifespan": "70",
+        "FeedCost": "30",
+        "StableCost": "NA",
+        "Description": ""
+    },
+    "Goat, Riding": {
+        "Availability": "Average",
+        "Cost": "10",
+        "Weight": "150",
+        "CarryingCapacity": "250",
+        "Speed": "16",
+        "Lifespan": "15",
+        "FeedCost": "1cp",
+        "StableCost": "NA",
+        "Description": ""
+    },
+    "Granlain": {
+        "Availability": "Rare",
+        "Cost": "115",
+        "Weight": "1.5tons",
+        "CarryingCapacity": "1,020",
+        "Speed": "16",
+        "Lifespan": "20",
+        "FeedCost": "1",
+        "StableCost": "3cp",
+        "Description": ""
+    },
+    "Griffin": {
+        "Availability": "Very Rare",
+        "Cost": "7,500!",
+        "Weight": "600",
+        "CarryingCapacity": "360**",
+        "Speed": "18/18*",
+        "Lifespan": "45",
+        "FeedCost": "10",
+        "StableCost": "5",
+        "Description": ""
+    },
+    "Horse, Draft": {
+        "Availability": "Average",
+        "Cost": "150",
+        "Weight": "1,800",
+        "CarryingCapacity": "520",
+        "Speed": "16",
+        "Lifespan": "30",
+        "FeedCost": "5cp",
+        "StableCost": "3cp",
+        "Description": ""
+    },
+    "Horse, Pony": {
+        "Availability": "Average",
+        "Cost": "110",
+        "Weight": "700",
+        "CarryingCapacity": "250",
+        "Speed": "16",
+        "Lifespan": "25",
+        "FeedCost": "5cp",
+        "StableCost": "3cp",
+        "Description": ""
+    },
+    "Horse, Riding": {
+        "Availability": "Average",
+        "Cost": "125",
+        "Weight": "1,000",
+        "CarryingCapacity": "360",
+        "Speed": "20",
+        "Lifespan": "25",
+        "FeedCost": "5cp",
+        "StableCost": "3cp",
+        "Description": ""
+    },
+    "Horse, War": {
+        "Availability": "Unusual",
+        "Cost": "1,500!",
+        "Weight": "1,800",
+        "CarryingCapacity": "740",
+        "Speed": "16",
+        "Lifespan": "25",
+        "FeedCost": "5cp",
+        "StableCost": "3cp",
+        "Description": ""
+    },
+    "Huttawa": {
+        "Availability": "Unusual",
+        "Cost": "95",
+        "Weight": "600",
+        "CarryingCapacity": "520",
+        "Speed": "16",
+        "Lifespan": "15",
+        "FeedCost": "8cp",
+        "StableCost": "3cp",
+        "Description": ""
+    },
+    "Kue": {
+        "Availability": "Unusual",
+        "Cost": "100",
+        "Weight": "25",
+        "CarryingCapacity": "100",
+        "Speed": "16",
+        "Lifespan": "10",
+        "FeedCost": "2cp",
+        "StableCost": "1cp",
+        "Description": ""
+    },
+    "Mule, Pack": {
+        "Availability": "Average",
+        "Cost": "100",
+        "Weight": "900",
+        "CarryingCapacity": "360",
+        "Speed": "16",
+        "Lifespan": "20",
+        "FeedCost": "2cp",
+        "StableCost": "2cp",
+        "Description": ""
+    },
+    "Staijan": {
+        "Availability": "Rare",
+        "Cost": "3,500!",
+        "Weight": "1ton",
+        "CarryingCapacity": "1,020",
+        "Speed": "20",
+        "Lifespan": "25",
+        "FeedCost": "3",
+        "StableCost": "1",
+        "Description": ""
+    },
+    "Thundra Beast": {
+        "Availability": "Rare",
+        "Cost": "4,000!",
+        "Weight": "2.5tons",
+        "CarryingCapacity": "1,360",
+        "Speed": "16",
+        "Lifespan": "45",
+        "FeedCost": "5",
+        "StableCost": "2",
+        "Description": ""
+    },
+    "Troajin": {
+        "Availability": "Unusual",
+        "Cost": "100",
+        "Weight": "400",
+        "CarryingCapacity": "250",
+        "Speed": "16",
+        "Lifespan": "20",
+        "FeedCost": "2",
+        "StableCost": "3cp",
+        "Description": ""
+    },
+    "Zoak": {
+        "Availability": "Rare",
+        "Cost": "115",
+        "Weight": "25",
+        "CarryingCapacity": "80**",
+        "Speed": "4/18*",
+        "Lifespan": "15",
+        "FeedCost": "1cp",
+        "StableCost": "NA",
+        "Description": ""
+    }
+}

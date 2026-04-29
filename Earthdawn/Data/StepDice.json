@@ -1,0 +1,442 @@
+[
+  {
+    "stepNumber": 1,
+    "dice": {
+      "diceOne": 2,
+      "diceTwo": 0,
+      "diceThree": 0,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 2,
+    "dice": {
+      "diceOne": 3,
+      "diceTwo": 0,
+      "diceThree": 0,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 3,
+    "dice": {
+      "diceOne": 4,
+      "diceTwo": 0,
+      "diceThree": 0,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 4,
+    "dice": {
+      "diceOne": 6,
+      "diceTwo": 0,
+      "diceThree": 0,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 5,
+    "dice": {
+      "diceOne": 8,
+      "diceTwo": 0,
+      "diceThree": 0,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 6,
+    "dice": {
+      "diceOne": 10,
+      "diceTwo": 0,
+      "diceThree": 0,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 7,
+    "dice": {
+      "diceOne": 12,
+      "diceTwo": 0,
+      "diceThree": 0,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 8,
+    "dice": {
+      "diceOne": 6,
+      "diceTwo": 6,
+      "diceThree": 0,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 9,
+    "dice": {
+      "diceOne": 8,
+      "diceTwo": 6,
+      "diceThree": 0,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 10,
+    "dice": {
+      "diceOne": 8,
+      "diceTwo": 8,
+      "diceThree": 0,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 11,
+    "dice": {
+      "diceOne": 10,
+      "diceTwo": 8,
+      "diceThree": 0,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 12,
+    "dice": {
+      "diceOne": 10,
+      "diceTwo": 10,
+      "diceThree": 0,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 13,
+    "dice": {
+      "diceOne": 12,
+      "diceTwo": 10,
+      "diceThree": 0,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 14,
+    "dice": {
+      "diceOne": 12,
+      "diceTwo": 12,
+      "diceThree": 0,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 15,
+    "dice": {
+      "diceOne": 12,
+      "diceTwo": 6,
+      "diceThree": 6,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 16,
+    "dice": {
+      "diceOne": 12,
+      "diceTwo": 8,
+      "diceThree": 6,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 17,
+    "dice": {
+      "diceOne": 12,
+      "diceTwo": 8,
+      "diceThree": 8,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 18,
+    "dice": {
+      "diceOne": 12,
+      "diceTwo": 10,
+      "diceThree": 8,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 19,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 6,
+      "diceThree": 6,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 20,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 8,
+      "diceThree": 6,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 21,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 8,
+      "diceThree": 8,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 22,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 10,
+      "diceThree": 8,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 23,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 10,
+      "diceThree": 10,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 24,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 12,
+      "diceThree": 10,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 25,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 12,
+      "diceThree": 12,
+      "diceFour": 0,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 26,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 12,
+      "diceThree": 6,
+      "diceFour": 6,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 27,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 12,
+      "diceThree": 8,
+      "diceFour": 6,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 28,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 12,
+      "diceThree": 8,
+      "diceFour": 8,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 29,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 12,
+      "diceThree": 10,
+      "diceFour": 8,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 30,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 20,
+      "diceThree": 6,
+      "diceFour": 6,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 31,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 20,
+      "diceThree": 8,
+      "diceFour": 6,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 32,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 20,
+      "diceThree": 8,
+      "diceFour": 8,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 33,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 20,
+      "diceThree": 10,
+      "diceFour": 8,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 34,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 20,
+      "diceThree": 10,
+      "diceFour": 10,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 35,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 20,
+      "diceThree": 12,
+      "diceFour": 10,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 36,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 20,
+      "diceThree": 12,
+      "diceFour": 12,
+      "diceFive": 0,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 37,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 20,
+      "diceThree": 12,
+      "diceFour": 6,
+      "diceFive": 6,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 38,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 20,
+      "diceThree": 12,
+      "diceFour": 8,
+      "diceFive": 6,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 39,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 20,
+      "diceThree": 12,
+      "diceFour": 8,
+      "diceFive": 8,
+      "diceSix": 0
+    }
+  },
+  {
+    "stepNumber": 40,
+    "dice": {
+      "diceOne": 20,
+      "diceTwo": 20,
+      "diceThree": 12,
+      "diceFour": 10,
+      "diceFive": 8,
+      "diceSix": 0
+    }
+  }
+]

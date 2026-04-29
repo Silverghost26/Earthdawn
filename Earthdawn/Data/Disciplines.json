@@ -1,0 +1,4295 @@
+{
+    "Air Sailor": {
+        "ImportantAttributes": "Charisma, Dexterity, Willpower",
+        "HalfMagic": "The Air Sailor’s uses for Half-Magic include knowledge of airship designs, recognition of different types of airships, commonly followed flight paths, and airship crew complements. It may also cover the maintenance, repair, and construction of airships.",
+        "Durability": "5",
+        "TalentOptions": {
+            "Novice": [
+                "Acrobatic Defense",
+                "Distract",
+                "First Impression",
+                "Great Leap",
+                "Haggle",
+                "Maneuver",
+                "Navigation",
+                "Speak Language",
+                "Taunt",
+                "Throwing Weapons"
+            ],
+            "Journeyman": [
+                "Air Speaking",
+                "Battle Bellow",
+                "Conceal Object",
+                "Engaging Banter",
+                "Etiquette",
+                "Graceful Exit",
+                "Leadership",
+                "Resist Taunt",
+                "Second Weapon",
+                "Surprise Strike"
+            ],
+            "Warden": [
+                "Astral Sight",
+                "Blood Share",
+                "Cold Purify",
+                "Defensive Posture",
+                "Down Strike",
+                "Eagle Eye",
+                "Gliding Stride",
+                "Impressive Display",
+                "Relentless Recovery",
+                "Spot Armor Flaw"
+            ],
+            "Master": [
+                "Champion Challenge",
+                "Critical Hit",
+                "Disarming Smile",
+                "Fluid Movement",
+                "Life Check",
+                "Second Chance",
+                "Soul Aegis",
+                "Undermine"
+            ]
+        },
+        "Circles": {
+            "First": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend Karma once per round on any action taken while on board an airship.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents": [
+                    ""
+                ],
+                "Talents": [
+                    "Avoid Blow",
+                    "Climbing",
+                    "Melee Weapons",
+                    "Thread Weaving (Air Weaving)",
+                    "Wind Catcher"
+                ]
+            },
+            "Second": {
+                "PhysicalDefense": "1",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents": [
+                    ""
+                ],
+                "Talents": [
+                    "Awareness"
+                ]
+            },
+            "Third": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on Initiative tests.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Empathic Sense"
+                ]
+            },
+            "Fourth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "1",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Wound Balance"
+                ]
+            },
+            "Fifth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend 1 Karma Point on Interaction Tests",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "Collaborate: Once per round as a Simple action, the adept may take 1 Strain to give an ally a +2 bonus to a test towards achieving a common goal. The player should describe how they are assisting their ally.",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Heartening Laugh"
+                ]
+            },
+            "Sixth": {
+                "PhysicalDefense": "2",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Air Dance"
+                ]
+            },
+            "Seventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "1",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Inspire Others"
+                ]
+            },
+            "Eighth": {
+                "PhysicalDefense": "3",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Lion Heart"
+                ]
+            },
+            "Ninth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Tenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Eleventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Twelfth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Thirteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fourteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fifteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            }
+        }
+    },
+    "Archer": {
+        "ImportantAttributes": "Dexterity, Perception",
+        "HalfMagic": "Archers may use half-magic when caring for ranged weapons and to recognize different types of ranged weapons, ammunition, or their creators.",
+        "Durability": "5",
+        "TalentOptions": {
+            "Novice": [
+                "Awareness",
+                "Climbing",
+                "Creature Analysis",
+                "First Impression",
+                "Impressive Display",
+                "Navigation",
+                "Stealthy Stride",
+                "Throwing Weapons",
+                "Tracking",
+                "Wilderness Survival"
+            ],
+            "Journeyman": [
+                "Conversation",
+                "Danger Sense",
+                "Distract",
+                "Etiquette",
+                "Evidence Analysis",
+                "Resist Taunt",
+                "Speak Language",
+                "Steel Thought",
+                "Stopping Aim",
+                "Tiger Spring"
+            ],
+            "Warden": [
+                "Astral Sight",
+                "Chameleon",
+                "Critical Hit",
+                "Defensive Posture",
+                "Ethereal Weapon",
+                "Lasting Impression",
+                "Lifesight",
+                "Matrix Sight",
+                "True Sight",
+                "Wood Skin"
+            ],
+            "Master": [
+                "Lion Heart",
+                "Orbiting Spy",
+                "Relentless Recovery",
+                "Second Chance",
+                "Soul Aegis",
+                "Venom",
+                "Vital Strike",
+                "Vital Ward"
+            ]
+        },
+        "Circles": {
+            "First": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on Perception tests that rely on sight.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents": [
+                    "Call Missile"
+                ],
+                "Talents": [
+                    "Avoid Blow",
+                    "Missile Weapons",
+                    "Mystic Aim",
+                    "Thread Weaving (Arrow Weaving)",
+                    "True Shot"
+                ]
+            },
+            "Second": {
+                "PhysicalDefense": "1",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Mystic Pursuit"
+                ]
+            },
+            "Third": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on Initiative tests.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Anticipate Blow"
+                ]
+            },
+            "Fourth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "1",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Long Shot"
+                ]
+            },
+            "Fifth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend 1 Karma Point on Damage tests made with ranged weapons.   ",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "Once per round as a Standard action, the adept may take 1 Strain, and make an Arrow Weaving (6) test. Each success creates one arrow, bolt, or throwing weapon. All items created must be of the same type. The projectiles last for Arrow Weaving Rank in minutes, after which they disappear. They are treated as normal weapons or ammunition for the purpose of talents or spells that require it.   ",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Spot Armor Flaw"
+                ]
+            },
+            "Sixth": {
+                "PhysicalDefense": "2",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Bank Shot"
+                ]
+            },
+            "Seventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "1",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Flame Arrow"
+                ]
+            },
+            "Eighth": {
+                "PhysicalDefense": "3",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Second Shot"
+                ]
+            },
+            "Ninth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Tenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Eleventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Twelfth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Thirteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fourteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fifteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            }
+        }
+    },
+    "Beastmaster": {
+        "ImportantAttributes": "Charisma,Dexterity, Willpower",
+        "HalfMagic": "Beastmasters may use half-magic when dealing with or caring for animals in ways beyond those described by their talents, including animal husbandry and first aid. Beastmasters may use half-magic when recognizing different animals, animal tracks, and abnormal behavior among animals and creatures.  Note: Many of the Beastmaster’s talents and abilities refer to Animal Companions. An animal may be considered an Animal Companion if it has a Loyal attitude towards the Beastmaster. See the Animal Bond talent on p. 125 for details.     ",
+        "Durability": "7",
+        "TalentOptions": {
+            "Novice": [
+                "Acrobatic Defense",
+                "Animal Bond",
+                "Animal Training",
+                "Borrow Sense",
+                "Climbing",
+                "Creature Analysis",
+                "Danger Sense",
+                "Enhance Animal Companion",
+                "Stealthy Stride",
+                "Tracking"
+            ],
+            "Journeyman": [
+                "Animal Companion Durability",
+                "Animal Possession",
+                "Battle Bellow",
+                "Call Animal Companion",
+                "Cobra Strike",
+                "Iron Constitution",
+                "Lion Heart",
+                "Sprint",
+                "Swift Kick",
+                "Tiger Spring"
+            ],
+            "Warden": [
+                "Armor Mount",
+                "Bloodhound Form",
+                "Burning Vigor",
+                "Chameleon",
+                "Defensive Posture",
+                "Eagle Eye",
+                "Goring Attack",
+                "Life Check",
+                "Resist Pain",
+                "Steely Stare"
+            ],
+            "Master": [
+                "Alley Cat Approach",
+                "Animal Leadership",
+                "Aura Armor",
+                "Echolocation",
+                "Lion Spirit",
+                "Second Chance",
+                "Vital Strike",
+                "Vital Ward"
+            ]
+        },
+        "Circles": {
+            "First": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Avoid Blow",
+                    "Claw Shape",
+                    "Thread Weaving (Beast Weaving)",
+                    "Unarmed Combat",
+                    "Wilderness Survival"
+                ]
+            },
+            "Second": {
+                "PhysicalDefense": "1",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Awareness"
+                ]
+            },
+            "Third": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on Recovery tests.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Dominate Beast"
+                ]
+            },
+            "Fourth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "1",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Great Leap"
+                ]
+            },
+            "Fifth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a point of Karma on any unarmed Damage test.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "Cat’s Grace: The adept automatically succeeds at tests to maintain balance (not including Knockdown tests) and may stand up as a simple action with no cost or test.",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Blood Share"
+                ]
+            },
+            "Sixth": {
+                "PhysicalDefense": "2",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Animal Talk"
+                ]
+            },
+            "Seventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "1",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Down Strike"
+                ]
+            },
+            "Eighth": {
+                "PhysicalDefense": "3",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Claw Frenzy"
+                ]
+            },
+            "Ninth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Tenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Eleventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Twelfth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Thirteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fourteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fifteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            }
+        }
+    },
+    "Cavalryman": {
+        "ImportantAttributes": "Charisma, Dexterity, Perception",
+        "HalfMagic": "Cavalrymen may use half-magic for knowledge of different types of mounts used by the Namegiver races, upkeep of riding gear, animal husbandry and first aid, and knowledge of significant cavalry units in Barsaive.     ",
+        "Durability": "7",
+        "TalentOptions": {
+            "Novice": [
+                "Avoid Blow",
+                "Battle Shout",
+                "Blood Share",
+                "Conversation",
+                "Creature Analysis",
+                "Dominate Beast",
+                "First Impression",
+                "Heartening Laugh",
+                "Speak Language",
+                "Sure Mount"
+            ],
+            "Journeyman": [
+                "Animal Companion Durability",
+                "Empathic Sense",
+                "Etiquette",
+                "Fearsome Charge",
+                "Leadership",
+                "Lion Heart",
+                "Missile Weapons",
+                "Mount Attack",
+                "Spirit Mount",
+                "Tactics"
+            ],
+            "Warden": [
+                "Battle Bellow",
+                "Defensive Posture",
+                "Down Strike",
+                "Fireblood",
+                "Impressive Display",
+                "Iron Constitution",
+                "Lasting Impression",
+                "Life Check",
+                "Resist Taunt",
+                "Steel Thought"
+            ],
+            "Master": [
+                "Champion Challenge",
+                "Lion Spirit",
+                "Rally",
+                "Resist Pain",
+                "Second Chance",
+                "Thought Link",
+                "Unflinching Fortitude",
+                "Vicious Wound"
+            ]
+        },
+        "Circles": {
+            "First": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Animal Bond",
+                    "Charge",
+                    "Melee Weapons",
+                    "Thread Weaving (Rider Weaving)",
+                    "Trick Riding"
+                ]
+            },
+            "Second": {
+                "PhysicalDefense": "1",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Animal Training"
+                ]
+            },
+            "Third": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on Attack tests made while charging.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Enhance Animal Companion"
+                ]
+            },
+            "Fourth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "1",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Call Animal Companion"
+                ]
+            },
+            "Fifth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on any Damage tests made while mounted.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "One Soul, Two Bodies: The adept gains a +2 bonus to any non-combat test involving his connection to his favored mount. For example, Animal Bond, Animal Training, and Blood Share would get the bonus, but Trick Riding in combat would not.   ",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Armor Mount"
+                ]
+            },
+            "Sixth": {
+                "PhysicalDefense": "2",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Wheeling Attack"
+                ]
+            },
+            "Seventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "1",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Wheeling Defense"
+                ]
+            },
+            "Eighth": {
+                "PhysicalDefense": "3",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Double-Charge"
+                ]
+            },
+            "Ninth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Tenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Eleventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Twelfth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Thirteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fourteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fifteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            }
+        }
+    },
+    "Elementalist": {
+        "ImportantAttributes": "Perception, Willpower",
+        "HalfMagic": "Elementalists use half-magic for knowledge of nature, the elements, uses of elemental magic, and other magical rituals. The Elementalist may make a Perception-based Half-Magic test to detect the presence of elemental spirits within 30 yards. The Difficulty Number for sensing an elemental spirit is the spirit’s Mystic Defense. If the test succeeds, the character can sense the presence of the elemental spirit and can use spells, or talents such as Elemental Tongues and Elemental Hold, to communicate and interact with it. The gamemaster may choose to make this Half-Magic Test on behalf of an Elementalist character at any time, as this innate sense is always active.     ",
+        "Durability": "3",
+        "TalentOptions": {
+            "Novice": [
+                "Air Speaking",
+                "Arcane Mutterings",
+                "Astral Sight",
+                "Avoid Blow",
+                "Climbing",
+                "Item History",
+                "Standard Matrix",
+                "Tracking",
+                "Wilderness Survival",
+                "Wind Catcher"
+            ],
+            "Journeyman": [
+                "Banish",
+                "Cold Purify",
+                "Dispel Magic",
+                "Enhanced Matrix",
+                "Fireblood",
+                "Gliding Stride",
+                "Navigation",
+                "Safe Path",
+                "Steel Thought",
+                "Tenacious Weave"
+            ],
+            "Warden": [
+                "Armored Matrix",
+                "Contest of Wills",
+                "Evidence Analysis",
+                "Iron Constitution",
+                "Perfect Focus",
+                "Plant Talk",
+                "Range Pattern",
+                "Summoning Circle",
+                "Suppress Curse",
+                "Temper Flesh"
+            ],
+            "Master": [
+                "Burning Vigor",
+                "Casting Pattern",
+                "Effect Pattern",
+                "Life Check",
+                "Second Chance",
+                "Shared Matrix",
+                "Shock Treatment",
+                "Unflinching Fortitude"
+            ]
+        },
+        "Circles": {
+            "First": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents": [
+                    "Standard Matrix",
+                    "Standard Matrix"
+                ],
+                "Talents": [
+                    "Awareness",
+                    "Patterncraft",
+                    "Spellcasting",
+                    "Thread Weaving (Elementalism)",
+                    "Wood Skin"
+                ]
+
+            },
+            "Second": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "1",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Fire Heal"
+                ]
+            },
+            "Third": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on Recovery tests.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Elemental Tongues"
+                ]
+            },
+            "Fourth": {
+                "PhysicalDefense": "1",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Elemental Hold"
+                ]
+            },
+            "Fifth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point to target an additional ally with a spell he is casting.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "Fire and Ice: For 1 Strain the adept may do one of the following as a Standard action with a successful Elementalism Test against the higher of the target’s Mystic Defense or a Difficulty Number of 6:     1. Create a small flame between his thumb and forefinger. This fire     lasts for only one round, but is intense enough to light a torch.     If used in combat, it inflicts Step 4/D6 fire damage     (Physical Armor provides protection).     2. Freeze water by touching it with his middle three fingers.     The adept can freeze up to one quart of water from each use of this ability.     If used in combat, it inflicts Step 4/D6 cold damage     (Physical Armor provides protection).   ",
+                "FreeTalents": [
+                    "One of the adept’s free Standard Matrix talents is upgraded to an Enhanced Matrix."
+                ],
+                "Talents": [
+                    "Summon [Elemental Spirits]"
+                ]
+            },
+            "Sixth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "2",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Willforce"
+                ]
+            },
+            "Seventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "1",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Earth Skin"
+                ]
+            },
+            "Eighth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "3",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Hold Thread"
+                ]
+            },
+            "Ninth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Tenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Eleventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Twelfth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Thirteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fourteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fifteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            }
+        }
+    },
+    "Illusionist": {
+        "ImportantAttributes": "Charisma,Perception, Willpower",
+        "HalfMagic": "Illusionists make Half-Magic tests to recognize different types of magic use, as well as specific uses of illusion magic. They also make Half-Magic tests when attempting to perceive the “truth” of a given situation.     ",
+        "Durability": "3",
+        "TalentOptions": {
+            "Novice": [
+                "Arcane Mutterings",
+                "Astral Sight",
+                "Awareness",
+                "Dead Fall",
+                "Mimic Voice",
+                "Speak Language",
+                "Standard Matrix",
+                "Stealthy Stride",
+                "Taunt",
+                "Winning Smile"
+            ],
+            "Journeyman": [
+                "Conceal Object",
+                "Dispel Magic",
+                "Engaging Banter",
+                "Enhanced Matrix",
+                "Fast Hand",
+                "Frighten",
+                "Resist Taunt",
+                "Slough Blame",
+                "Steel Thought",
+                "Tenacious Weave"
+            ],
+            "Warden": [
+                "Armored Matrix",
+                "Astral Pocket",
+                "Empathic Sense",
+                "Etiquette",
+                "Graceful Exit",
+                "Lasting Impression",
+                "Range Pattern",
+                "Safe Thought",
+                "Thought Link",
+                "Undermine"
+            ],
+            "Master": [
+                "Bardic Voice",
+                "Casting Pattern",
+                "Effect Pattern",
+                "Impossible Hide",
+                "Second Chance",
+                "Shared Matrix",
+                "Soul Aegis",
+                "Witty Repartee"
+            ]
+        },
+        "Circles": {
+            "First": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents": [
+                    "Standard Matrix",
+                    "Standard Matrix"
+                ],
+                "Talents": [
+                    "False Sight",
+                    "First Impression",
+                    "Patterncraft",
+                    "Spellcasting",
+                    "Thread Weaving (Illusionism)"
+                ]
+            },
+            "Second": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "1",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "True Sight"
+                ]
+            },
+            "Third": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on Interaction tests.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Conversation"
+                ]
+            },
+            "Fourth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "1",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Disguise Self"
+                ]
+            },
+            "Fifth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point to add a +2 bonus to a spell’s Effect Step.     The bonus lasts for the full spell duration, even if the spell has multiple Effect tests.   ",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "Glamour: For 2 Strain, the adept creates a clearly illusory scene     (no Sensing test necessary) to delight and entertain onlookers as a Standard action.     The adept makes an Illusionism test against the highest Social Defense in the crowd.     If successful, the adept gains a +2 bonus to Making an Impression tests for a number     of hours equal to the successes scored.   ",
+                "FreeTalents": [
+                    "One of the adept’s free Standard Matrix talents is upgraded to an Enhanced Matrix."
+                ],
+                "Talents": [
+                    "Power Mask"
+                ]
+            },
+            "Sixth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "2",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Willforce"
+                ]
+            },
+            "Seventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "1",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Hypnotize"
+                ]
+            },
+            "Eighth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "3",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Hold Thread"
+                ]
+            },
+            "Ninth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Tenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Eleventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Twelfth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Thirteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fourteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fifteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            }
+        }
+    },
+    "Nethermancer": {
+        "ImportantAttributes": "Charisma, Perception, Willpower",
+        "HalfMagic": "Nethermancers use half-magic to recognize uses of nethermantic magic, different types of undead and spirits, and magical rituals—especially blood magic rituals. Nethermancers may also use half-magic to understand the effects of different blood charms, as these are linked with Nethermancy. A Nethermancer may use half-magic to sense the presence of spirits within 30 yards of his location. The Detection Difficulty for sensing a spirit is the spirit’s Mystic Defense (determined by the gamemaster). If the test succeeds, the Nethermancer can sense the presence of the spirit and use spells, or talents such as Spirit Hold or Spirit Talk, to communicate and interact with the spirit. The gamemaster may choose to make this Half-Magic test on behalf of a Nethermancer character at any time, as this innate sense is always active.     ",
+        "Durability": "3",
+        "TalentOptions": {
+            "Novice": [
+                "Arcane Mutterings",
+                "Avoid Blow",
+                "Awareness",
+                "Command Nightflyer",
+                "Dispel Magic",
+                "Read and Write Language",
+                "Speak Language",
+                "Standard Matrix",
+                "Stealthy Stride",
+                "Suppress Curse"
+            ],
+            "Journeyman": [
+                "Astral Interference",
+                "Banish",
+                "Blood Share",
+                "Enhanced Matrix",
+                "Lifesight",
+                "Lion Heart",
+                "Research",
+                "Spirit Mount",
+                "Steely Stare",
+                "Tenacious Weave"
+            ],
+            "Warden": [
+                "Armored Matrix",
+                "Astral Pocket",
+                "Contest of Wills",
+                "Evidence Analysis",
+                "Item History",
+                "Perfect Focus",
+                "Range Pattern",
+                "Safe Thought",
+                "Soul Aegis",
+                "Summoning Circle"
+            ],
+            "Master": [
+                "Animal Possession",
+                "Casting Pattern",
+                "Confront Horror",
+                "Effect Pattern",
+                "Lion Spirit",
+                "Resist Pain",
+                "Second Chance",
+                "Shared Matrix"
+            ]
+        },
+        "Circles": {
+            "First": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents": [
+                    "Standard Matrix",
+                    "Standard Matrix"
+                ],
+                "Talents": [
+                    "Astral Sight",
+                    "Frighten",
+                    "Patterncraft",
+                    "Spellcasting",
+                    "Thread Weaving (Nethermancy)"
+                ]
+            },
+            "Second": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "1",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Steel Thought"
+                ]
+            },
+            "Third": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point once per round on any test against a Horror, Horror Construct, or undead target.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Spirit Talk"
+                ]
+            },
+            "Fourth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "1",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Spirit Hold"
+                ]
+            },
+            "Fifth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point to increase the target’s penalty from a spell he is casting by 2.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "Blood Summon: The adept may take Blood Magic Damage equal to the     Strength rating of a spirit being summoned to gain an extra success on a     Summon test. This damage may only be healed a full day after the spirit     has left the summoner’s service.   ",
+                "FreeTalents": [
+                    "One of the adept’s free Standard Matrix talents is upgraded to an Enhanced Matrix."
+                ],
+                "Talents": [
+                    "Summon [Ally Spirits]"
+                ]
+            },
+            "Sixth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "2",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Willforce"
+                ]
+            },
+            "Seventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "1",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Orbiting Spy"
+                ]
+            },
+            "Eighth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "3",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Hold Thread"
+                ]
+            },
+            "Ninth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Tenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Eleventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Twelfth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Thirteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fourteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fifteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            }
+        }
+    },
+    "Scout": {
+        "ImportantAttributes": "Dexterity, Perception",
+        "HalfMagic": "A Scout may use half-magic to recognize tracks and trails left by different types of animals and Namegivers, know about the plants and creatures native to a region, even general information on the different cultures across Barsaive.     ",
+        "Durability": "5",
+        "TalentOptions": {
+            "Novice": [
+                "Anticipate Blow",
+                "Avoid Blow",
+                "Creature Analysis",
+                "Disarm Trap",
+                "Great Leap",
+                "Lock Picking",
+                "Melee Weapons",
+                "Missile Weapons",
+                "Read and Write Language",
+                "Speak Language"
+            ],
+            "Journeyman": [
+                "Animal Bond",
+                "Borrow Sense",
+                "Conceal Object",
+                "Disguise Self",
+                "Spirit Mount",
+                "Spot Armor Flaw",
+                "Sprint",
+                "Surprise Strike",
+                "Tiger Spring",
+                "True Sight"
+            ],
+            "Warden": [
+                "Animal Possession",
+                "Animal Talk",
+                "Animal Training",
+                "Critical Hit",
+                "Etiquette",
+                "Iron Constitution",
+                "Life Check",
+                "Plant Talk",
+                "Relentless Recovery",
+                "Wood Skin"
+            ],
+            "Master": [
+                "Eidetic Memory",
+                "Matrix Sight",
+                "Netherwalk",
+                "Second Attack",
+                "Second Chance",
+                "Second Shot",
+                "Soul Aegis",
+                "Spirit Strike"
+            ]
+        },
+        "Circles": {
+            "First": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on tests made to find something",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents": [
+                    "Navigation"
+                ],
+                "Talents": [
+                    "Awareness",
+                    "Climbing",
+                    "Thread Weaving (Scout Weaving)",
+                    "Tracking",
+                    "Wilderness Survival"
+                ]
+            },
+            "Second": {
+                "PhysicalDefense": "1",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Stealthy Stride"
+                ]
+            },
+            "Third": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on Initiative tests.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Mystic Pursuit"
+                ]
+            },
+            "Fourth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "1",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Danger Sense"
+                ]
+            },
+            "Fifth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on Recovery tests.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "Enhanced Senses: For 1 Strain, the adept enhances one of     his natural senses as a Simple action and gains a +2 bonus to Perception tests     based on the sense for 1 round. If that sense is unhindered, you may ignore     Blindness penalties by using your enhanced sense as your primary sense.   ",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Evidence Analysis"
+                ]
+            },
+            "Sixth": {
+                "PhysicalDefense": "2",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Astral Sight"
+                ]
+            },
+            "Seventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "1",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Safe Path"
+                ]
+            },
+            "Eighth": {
+                "PhysicalDefense": "3",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Orbiting Spy"
+                ]
+            },
+            "Ninth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Tenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Eleventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Twelfth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Thirteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fourteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fifteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            }
+        }
+    },
+    "Sky Raider": {
+        "ImportantAttributes": "Charisma, Dexterity, Strength",
+        "HalfMagic": "Sky Raiders use half-magic for tasks related to the upkeep, repair, and building of smaller airships (like the drakkar), knowledge of different airship designs and crew complements, as well as knowledge of commonly followed flight paths.     ",
+        "Durability": "7",
+        "TalentOptions": {
+            "Novice": [
+                "Air Sailing",
+                "Air Speaking",
+                "Avoid Blow",
+                "Danger Sense",
+                "Navigation",
+                "Shield Bash",
+                "Throwing Weapons",
+                "Unarmed Combat",
+                "Wilderness Survival",
+                "Wind Catcher"
+            ],
+            "Journeyman": [
+                "Distract",
+                "First Impression",
+                "Iron Constitution",
+                "Leadership",
+                "Lion Heart",
+                "Second Weapon",
+                "Sprint",
+                "Swift Kick",
+                "Tactics",
+                "Tiger Spring"
+            ],
+            "Warden": [
+                "Air Dance",
+                "Impressive Display",
+                "Lasting Impression",
+                "Life Check",
+                "Lion Spirit",
+                "Relentless Recovery",
+                "Resist Pain",
+                "Resist Taunt",
+                "Storm Shield",
+                "Vital Ward"
+            ],
+            "Master": [
+                "Aura Armor",
+                "Champion Challenge",
+                "Critical Hit",
+                "Eagle Eye",
+                "Second Chance",
+                "Temper Flesh",
+                "Undermine",
+                "Weapon Breaker"
+            ]
+        },
+        "Circles": {
+            "First": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Battle Shout",
+                    "Climbing",
+                    "Fireblood",
+                    "Melee Weapons",
+                    "Thread Weaving (Sky Weaving)"
+                ]
+            },
+            "Second": {
+                "PhysicalDefense": "1",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Great Leap"
+                ]
+            },
+            "Third": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on Recovery tests.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Wound Balance"
+                ]
+            },
+            "Fourth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "1",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Fire Heal"
+                ]
+            },
+            "Fifth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on Damage tests made with     melee or throwing weapons at or above the character’s one-handed Size limit.   ",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "Overwhelming Force: The adept no longer takes Strain when using the     Aggressive Attack Combat Option. If another effect grants them the same     bonus, the adept instead reduces the penalties by 1.   ",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Battle Bellow"
+                ]
+            },
+            "Sixth": {
+                "PhysicalDefense": "2",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Steely Stare"
+                ]
+            },
+            "Seventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "1",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Down Strike"
+                ]
+            },
+            "Eighth": {
+                "PhysicalDefense": "3",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Momentum Attack"
+                ]
+            },
+            "Ninth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Tenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Eleventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Twelfth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Thirteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fourteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fifteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            }
+        }
+    },
+    "Swordmaster": {
+        "ImportantAttributes": "Charisma, Dexterity",
+        "HalfMagic": "Swordmasters use half-magic to care for their weapons, know the history of legendary weapons, and recognize different types of melee weapons. Swordmasters may also use half-magic to identify another Swordmaster’s fighting techniques, including which prominent Swordmasters may have shaped the individual’s style.     ",
+        "Durability": "7",
+        "TalentOptions": {
+            "Novice": [
+                "Acrobatic Defense",
+                "Anticipate Blow",
+                "Danger Sense",
+                "Distract",
+                "Impressive Display",
+                "Speak Language",
+                "Tiger Spring",
+                "Unarmed Combat",
+                "Winning Smile",
+                "Wound Balance"
+            ],
+            "Journeyman": [
+                "Cobra Strike",
+                "Engaging Banter",
+                "Etiquette",
+                "Gliding Stride",
+                "Graceful Exit",
+                "Lasting Impression",
+                "Lion Heart",
+                "Spot Armor Flaw",
+                "Sprint",
+                "Swift Kick"
+            ],
+            "Warden": [
+                "Champion Challenge",
+                "Empathic Sense",
+                "Ethereal Weapon",
+                "Life Check",
+                "Lion Spirit",
+                "Matrix Sight",
+                "Relentless Recovery",
+                "Spirit Strike",
+                "Undermine",
+                "Witty Repartee"
+            ],
+            "Master": [
+                "Aura Armor",
+                "Bardic Voice",
+                "Chilling Strike",
+                "Resist Pain",
+                "Second Chance",
+                "Soul Aegis",
+                "Unflinching Fortitude",
+                "Vital Ward"
+            ]
+        },
+        "Circles": {
+            "First": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Avoid Blow",
+                    "Maneuver",
+                    "Melee Weapons",
+                    "Taunt",
+                    "Thread Weaving (Weapon Weaving)"
+                ]
+            },
+            "Second": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "1",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "First Impression"
+                ]
+            },
+            "Third": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on Interaction tests.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Riposte"
+                ]
+            },
+            "Fourth": {
+                "PhysicalDefense": "1",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Heartening Laugh"
+                ]
+            },
+            "Fifth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on Damage tests made with a melee weapon.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "Size Up: As a Simple Action, the adept takes 2 Strain, and makes a Weapon Weaving     test against an opponent’s Mystic Defense. If successful, he may ask one specific question     about one of that opponent’s traits. This ability works like the Creature Analysis talent     (p. 136), but only against Name-giver targets, and only allows one question.   ",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Second Weapon"
+                ]
+            },
+            "Sixth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "2",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Disarm"
+                ]
+            },
+            "Seventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "1",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Resist Taunt"
+                ]
+            },
+            "Eighth": {
+                "PhysicalDefense": "2",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Second Attack"
+                ]
+            },
+            "Ninth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Tenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Eleventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Twelfth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Thirteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fourteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fifteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            }
+        }
+    },
+    "Thief": {
+        "ImportantAttributes": "Charisma, Dexterity, Perception",
+        "HalfMagic": "Thieves may use half-magic to build or bypass security measures intended to prevent theft, and to recognize different types of locking mechanisms.     ",
+        "Durability": "5",
+        "TalentOptions": {
+            "Novice": [
+                "Avoid Blow",
+                "Climbing",
+                "First Impression",
+                "Great Leap",
+                "Melee Weapons",
+                "Missile Weapons",
+                "Sprint",
+                "Surprise Strike",
+                "Taunt",
+                "Throwing Weapons"
+            ],
+            "Journeyman": [
+                "Blade Juggle",
+                "Call Missile",
+                "Dead Fall",
+                "Disguise Self",
+                "Graceful Exit",
+                "Mimic Voice",
+                "Mystic Pursuit",
+                "Second Weapon",
+                "Spot Armor Flaw",
+                "True Sight"
+            ],
+            "Warden": [
+                "Acrobatic Defense",
+                "Anticipate Blow",
+                "Astral Sight",
+                "Echolocation",
+                "Escape Plan",
+                "Orbiting Spy",
+                "Perfect Focus",
+                "Resist Taunt",
+                "Tiger Spring",
+                "Wind Catcher"
+            ],
+            "Master": [
+                "Alley Cat Approach",
+                "Critical Hit",
+                "Defensive Posture",
+                "Disarming Smile",
+                "Fluid Movement",
+                "Netherwalk",
+                "Second Chance",
+                "Spirit Strike"
+            ]
+        },
+        "Circles": {
+            "First": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on any Charisma-based     test when the adept is attempting to deceive a target.   ",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents": [
+                    "Danger Sense"
+                ],
+                "Talents": [
+                    "Awareness",
+                    "Lock Picking",
+                    "Picking Pockets",
+                    "Stealthy Stride",
+                    "Thread Weaving (Thief Weaving)"
+                ]
+            },
+            "Second": {
+                "PhysicalDefense": "1",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Disarm Trap"
+                ]
+            },
+            "Third": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on Initiative tests.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Haggle"
+                ]
+            },
+            "Fourth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "1",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Conceal Object"
+                ]
+            },
+            "Fifth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on Attack tests against a Surprised or Blindsided opponent.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "Shadowcloak: For 2 Strain, the Difficulty Number for any tests made to     detect the adept are increased by +2 for a number of minutes equal to the adept’s     Thief Weaving Rank. This is a Simple Action.   ",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Engaging Banter"
+                ]
+            },
+            "Sixth": {
+                "PhysicalDefense": "2",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Slough Blame"
+                ]
+            },
+            "Seventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "1",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Fast Hand"
+                ]
+            },
+            "Eighth": {
+                "PhysicalDefense": "3",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "False Sight"
+                ]
+            },
+            "Ninth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Tenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Eleventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Twelfth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Thirteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fourteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fifteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            }
+        }
+    },
+    "Troubadour": {
+        "ImportantAttributes": "Charisma, Perception",
+        "HalfMagic": "Troubadours may make Half-Magic tests for knowledge of legends, myths, and folklore of their home province’s lands and people. They may also make Half-Magic tests to identify instruments and performing arts of different areas.     ",
+        "Durability": "5",
+        "TalentOptions": {
+            "Novice": [
+                "Avoid Blow",
+                "Conversation",
+                "Haggle",
+                "Impressive Display",
+                "Melee Weapons",
+                "Read and Write Language",
+                "Speak Language",
+                "Taunt",
+                "Throwing Weapons",
+                "Winning Smile"
+            ],
+            "Journeyman": [
+                "Air Speaking",
+                "Blade Juggle",
+                "Diplomacy",
+                "Disguise Self",
+                "Engaging Banter",
+                "Graceful Exit",
+                "Hypnotize",
+                "Leadership",
+                "Lion Heart",
+                "Mimic Voice"
+            ],
+            "Warden": [
+                "Acrobatic Defense",
+                "Anticipate Blow",
+                "Book Memory",
+                "Cold Purify",
+                "Disarming Smile",
+                "Eidetic Memory",
+                "Second Weapon",
+                "Steel Thought",
+                "Thought Link",
+                "True Sight"
+            ],
+            "Master": [
+                "Confront Horror",
+                "Critical Hit",
+                "Lion Spirit",
+                "Memory Probe",
+                "Perfect Focus",
+                "Safe Thought",
+                "Second Chance",
+                "Soul Aegis"
+            ]
+        },
+        "Circles": {
+            "First": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on Interaction tests",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Emotion Song",
+                    "First Impression",
+                    "Heartening Laugh",
+                    "Item History",
+                    "Thread Weaving (Story Weaving)"
+                ]
+            },
+            "Second": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "1",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Etiquette"
+                ]
+            },
+            "Third": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on any test to gain or recall information.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Empathic Sense"
+                ]
+            },
+            "Fourth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "1",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Research"
+                ]
+            },
+            "Fifth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "Once per round the adept may spend a Karma Point to add to another character’s     test by offering encouragement. The target must be able to hear and/or see the Troubadour.   ",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "One Last Word: If the adept fails a test against a target’s Social Defense,     the adept may take 2 Strain to add a Karma Die to the test result. One Last Word     can only be used once per failed test.   ",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Inspire Others"
+                ]
+            },
+            "Sixth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "2",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Lasting Impression"
+                ]
+            },
+            "Seventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "1",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Resist Taunt"
+                ]
+            },
+            "Eighth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "3",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Slough Blame"
+                ]
+            },
+            "Ninth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Tenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Eleventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Twelfth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Thirteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fourteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fifteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            }
+        }
+    },
+    "Warrior": {
+        "ImportantAttributes": "Dexterity, Strength, Toughness",
+        "HalfMagic": "Warriors can use half-magic when caring for or repairing their weapons and armor, knowledge of military tactics and strategy (recognizing the safest approach to a target when planning a battle, for instance) and to recall events of Barsaive’s military history. They also use half-magic to recognize warrior orders, famous ancient Warriors, and ancient arms and armor.     ",
+        "Durability": "7",
+        "TalentOptions": {
+            "Novice": [
+                "Acrobatic Defense",
+                "Anticipate Blow",
+                "Danger Sense",
+                "Distract",
+                "Fireblood",
+                "Maneuver",
+                "Missile Weapons",
+                "Shield Bash",
+                "Tactics",
+                "Unarmed Combat"
+            ],
+            "Journeyman": [
+                "Disarm",
+                "Etiquette",
+                "Leadership",
+                "Life Check",
+                "Lion Heart",
+                "Momentum Attack",
+                "Second Weapon",
+                "Spot Armor Flaw",
+                "Steely Stare",
+                "Swift Kick"
+            ],
+            "Warden": [
+                "Burning Vigor",
+                "Critical Hit",
+                "Defensive Posture",
+                "Iron Constitution",
+                "Lion Spirit",
+                "Rally",
+                "Resist Pain",
+                "Steel Thought",
+                "Storm Shield",
+                "Vital Strike"
+            ],
+            "Master": [
+                "Champion Challenge",
+                "Ethereal Weapon",
+                "Fluid Movement",
+                "Second Chance",
+                "Soul Aegis",
+                "Spirit Strike",
+                "Vicious Wound",
+                "Vital Ward"
+            ]
+        },
+        "Circles": {
+            "First": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Avoid Blow",
+                    "Melee Weapons",
+                    "Thread Weaving (War Weaving)",
+                    "Tiger Spring",
+                    "Wood Skin"
+                ]
+            },
+            "Second": {
+                "PhysicalDefense": "1",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Wound Balance"
+                ]
+            },
+            "Third": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on a Recovery test.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Air Dance"
+                ]
+            },
+            "Fourth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "1",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Waterfall Slam"
+                ]
+            },
+            "Fifth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on any Damage test made in close combat.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "Battle Rites: The adept spends 30 minutes in meditation and selects a talent. During     any encounter over the next 24 hours, the adept may activate Battle Rites by spending     a Karma Point as a Simple action. This allows the adept to reduce the Strain     cost of the selected talent by 1 once per round for the duration of the encounter.     Battle Rites may be used in multiple encounters, but requires a Karma Point be spent     for each encounter.   ",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Earth Skin"
+                ]
+            },
+            "Sixth": {
+                "PhysicalDefense": "2",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Temper Flesh"
+                ]
+            },
+            "Seventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "1",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Crushing Blow"
+                ]
+            },
+            "Eighth": {
+                "PhysicalDefense": "3",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Second Attack"
+                ]
+            },
+            "Ninth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Tenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Eleventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Twelfth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Thirteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fourteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fifteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            }
+        }
+    },
+    "Weaponsmith": {
+        "ImportantAttributes": "Charisma, Perception, Willpower",
+        "HalfMagic": "Weaponsmiths may use half-magic when caring for weapons and armor and to recognize different types of weapons and armor used or worn by different Namegiver races or their creators.     ",
+        "Durability": "5",
+        "TalentOptions": {
+            "Novice": [
+                "Avoid Blow",
+                "Awareness",
+                "Danger Sense",
+                "Disarm Trap",
+                "Fireblood",
+                "First Impression",
+                "Haggle",
+                "Read and Write Language",
+                "Shield Bash",
+                "Speak Language"
+            ],
+            "Journeyman": [
+                "Battle Shout",
+                "Diplomacy",
+                "Earth Skin",
+                "Etiquette",
+                "Fire Heal",
+                "Heartening Laugh",
+                "Iron Constitution",
+                "Leadership",
+                "Missile Weapons",
+                "Resist Taunt"
+            ],
+            "Warden": [
+                "Astral Sight",
+                "Evidence Analysis",
+                "Lion Spirit",
+                "Matrix Sight",
+                "Momentum Attack",
+                "Relentless Recovery",
+                "Spirit Strike",
+                "Steely Stare",
+                "True Sight",
+                "Unflinching Fortitude"
+            ],
+            "Master": [
+                "Burning Vigor",
+                "Crushing Blow",
+                "Ethereal Weapon",
+                "Resist Pain",
+                "Second Chance",
+                "Vital Strike",
+                "Vital Ward",
+                "Weapon Breaker"
+            ]
+        },
+        "Circles": {
+            "First": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept can spend a Karma Point on any test to craft or repair an item.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents": [
+                    " Craftsman. This talent is similar to the Craftsman skill (p. 195) allowing the adept to make tests to craft and repair mundane items including       weapons and armor.     "
+                ],
+                "Talents": [
+                    "Forge Weapon",
+                    "Item History",
+                    "Melee Weapons",
+                    "Steel Thought",
+                    "Thread Weaving (Thread Smithing)"
+                ]
+            },
+            "Second": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "1",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Conversation"
+                ]
+            },
+            "Third": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on Recovery tests.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Suppress Curse"
+                ]
+            },
+            "Fourth": {
+                "PhysicalDefense": "1",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Wound Balance"
+                ]
+            },
+            "Fifth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept can spend a Karma Point on Damage tests he makes with a weapon he crafted.",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "Traveling Smithy: For 2 Strain, the adept uses magic to create an improvised forge, provided he has the minimum requirements necessary, such as     a fire for working metal. The smithy lasts for one day, and gives a -3 penalty     to any tests made that use it. Only the Weaponsmith may use the forge for tests.   ",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Forge Armor"
+                ]
+            },
+            "Sixth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "2",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Temper Flesh"
+                ]
+            },
+            "Seventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "1",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Spot Armor Flaw"
+                ]
+            },
+            "Eighth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "3",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Lion Heart"
+                ]
+            },
+            "Ninth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Tenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Eleventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Twelfth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Thirteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fourteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fifteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            }
+        }
+    },
+    "Wizard": {
+        "ImportantAttributes": "Charisma, Perception, Willpower",
+        "HalfMagic": "Wizards may use half-magic to recognize different types of magic use, identify specific uses of Wizardry, and for knowledge of magical rituals.     ",
+        "Durability": "3",
+        "TalentOptions": {
+            "Novice": [
+                "Arcane Mutterings",
+                "Awareness",
+                "Book Memory",
+                "Conversation",
+                "Creature Analysis",
+                "Etiquette",
+                "Item History",
+                "Read and Write Language",
+                "Speak Language",
+                "Standard Matrix"
+            ],
+            "Journeyman": [
+                "Avoid Blow",
+                "Diplomacy",
+                "Enhanced Matrix",
+                "Evidence Analysis",
+                "Hypnotize",
+                "Lifesight",
+                "Mystic Pursuit",
+                "Power Mask",
+                "Resist Taunt",
+                "True Sight"
+            ],
+            "Warden": [
+                "Armored Matrix",
+                "Astral Pocket",
+                "Empathic Sense",
+                "First Impression",
+                "Graceful Exit",
+                "Matrix Sight",
+                "Perfect Focus",
+                "Range Pattern",
+                "Safe Thought",
+                "Thought Link"
+            ],
+            "Master": [
+                "Astral Domain",
+                "Casting Pattern",
+                "Effect Pattern",
+                "Memory Probe",
+                "Second Chance",
+                "Shared Matrix",
+                "Soul Aegis",
+                "Undermine"
+            ]
+        },
+        "Circles": {
+            "First": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents": [
+                    "Standard Matrix",
+                    "Standard Matrix"
+                ],
+                "Talents": [
+                    "Dispel Magic",
+                    "Patterncraft",
+                    "Research",
+                    "Spellcasting",
+                    "Thread Weaving (Wizardry)"
+                ]
+            },
+            "Second": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "1",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Astral Sight"
+                ]
+            },
+            "Third": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point on any test to recall information (including Knowledge tests).",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Tenacious Weave"
+                ]
+            },
+            "Fourth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "1",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Steel Thought"
+                ]
+            },
+            "Fifth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "The adept may spend a Karma Point to change the range of a spell from Self to Touch",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "Book Mage: For 1 Strain, the adept gains a +5 to a Thread Weaving test     to reattune on the fly if they are looking at the spell in their grimoire   ",
+                "FreeTalents": [
+                    "One of the adept’s free Standard Matrix talents is upgraded to an Enhanced Matrix."
+                ],
+                "Talents": [
+                    "Astral Interference"
+                ]
+            },
+            "Sixth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "2",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Willforce"
+                ]
+            },
+            "Seventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "1",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Hold Thread"
+                ]
+            },
+            "Eighth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "3",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    "Suppress Curse"
+                ]
+            },
+            "Ninth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Tenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Eleventh": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Twelfth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Thirteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fourteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            },
+            "Fifteenth": {
+                "PhysicalDefense": "",
+                "MysticalDefense": "",
+                "SocialDefense": "",
+                "PhysicalArmor": "",
+                "MysticalArmor": "",
+                "Karma": "",
+                "Initiative": "",
+                "Recovery": "",
+                "Special": "",
+                "FreeTalents":  [ "" ],
+                "Talents": [
+                    ""
+                ]
+            }
+        }
+    }
+}
