@@ -33,6 +33,11 @@ public partial class MainWindowViewModel : ViewModelBase
     public bool SkillsIsActive => CurrentPage.PageName == ApplicationPageNames.Skills;
     public bool SpellsIsActive => CurrentPage.PageName == ApplicationPageNames.Spells;
     public bool TalentsIsActive => CurrentPage.PageName == ApplicationPageNames.Talents;
+
+    public MainWindowViewModel()
+    {
+        
+    }
     
     public MainWindowViewModel(PageFactory pageFactory)
     {

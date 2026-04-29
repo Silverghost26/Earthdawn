@@ -1,0 +1,46 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Earthdawn.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:Earthdawn.ViewModels"
+        mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080"
+        Width="1920" Height="1080"
+        x:Class="Earthdawn.Views.MainWindowView"
+        x:DataType="viewModels:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Earthdawn">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    <Grid RowDefinitions="Auto, *, Auto" Background="{DynamicResource ResourceKey=PrimaryBackground}">
+        <ContentControl Grid.Row="1" Content="{Binding CurrentPage}"/>
+        <Image Source="/Assets/Art/earthdawn.png"
+               Height="40"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"/>
+        <Border Grid.Row="2" Padding="3">
+            <Grid ColumnDefinitions="Auto, *, Auto">
+                <Button Command="{Binding GoToDisciplinesPageCommand}"
+                    Classes="navigation"
+                    Width="50"
+                    Height="30"
+                    VerticalAlignment="Top" 
+                    Grid.Column="1">
+                        <Image Source="/Assets/Icons/silver_left_arrow.png" />
+                </Button>
+                <Button
+                    Classes="navigation"
+                    Width="50"
+                    Height="30"
+                    VerticalAlignment="Top" 
+                    Grid.Column="2">
+                        <Image Source="/Assets/Icons/silver_right_arrow.png" />
+                </Button>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
