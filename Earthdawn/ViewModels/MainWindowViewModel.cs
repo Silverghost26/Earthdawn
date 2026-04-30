@@ -2,6 +2,7 @@
 using Earthdawn.Data;
 using Earthdawn.Factories;
 using System;
+using System.Reflection.Metadata.Ecma335;
 using CommunityToolkit.Mvvm.Input;
 
 namespace Earthdawn.ViewModels;
@@ -9,8 +10,8 @@ namespace Earthdawn.ViewModels;
 public partial class MainWindowViewModel : ViewModelBase
 {
     private PageFactory _pageFactory;
-    [ObservableProperty]
-    private string _welcome = "Welcome to Earthdawn";
+    [ObservableProperty] private bool _previousPageIsAvailable;
+    [ObservableProperty] private bool _nextPageIsAvailable;
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(CharacterCustomizationsIsActive))]
@@ -41,6 +42,8 @@ public partial class MainWindowViewModel : ViewModelBase
     
     public MainWindowViewModel(PageFactory pageFactory)
     {
+        PreviousPageIsAvailable = false;
+        NextPageIsAvailable = true;
         _pageFactory = pageFactory;
         
         GoToHomePage();
@@ -64,4 +67,80 @@ public partial class MainWindowViewModel : ViewModelBase
     private void GoToSpellsPage() => CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.Spells);
     [RelayCommand]
     private void GoToTalentsPage() => CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.Talents);
+
+    [RelayCommand]
+    private void GoToNextPage()
+    {
+        switch (CurrentPage.PageName)
+        {
+            case ApplicationPageNames.Home:
+                GoToRacesPage();
+                break;
+            case ApplicationPageNames.Races:
+                GoToDisciplinesPage();
+                break;
+            case ApplicationPageNames.Disciplines:
+                GoToCharacterCustomizationPage();
+                break;
+            case ApplicationPageNames.CharacterCustomizations:
+                GoToTalentsPage();
+                break;
+            case ApplicationPageNames.Talents:
+                GoToSkillsPage();
+                break;
+            case ApplicationPageNames.Skills:
+                GoToSpellsPage();
+                break;
+            case ApplicationPageNames.Spells:
+                GoToEquipmentSelectionPage();
+                break;
+            case ApplicationPageNames.EquipmentSelection:
+                GoToCharacterPage();
+                break;
+            case ApplicationPageNames.Character:
+                break;
+            default:
+                break;
+        }
+        PreviousPageIsAvailable = !HomeIsActive;
+        NextPageIsAvailable = !CharacterIsActive;
+    }
+
+    [RelayCommand]
+    private void GoToPreviousPage()
+    {
+        switch (CurrentPage.PageName)
+        {
+            case ApplicationPageNames.Home:
+                break;
+            case ApplicationPageNames.Races:
+                GoToHomePage();
+                break;
+            case ApplicationPageNames.Disciplines:
+                GoToRacesPage();
+                break;
+            case ApplicationPageNames.CharacterCustomizations:
+                GoToDisciplinesPage();
+                break;
+            case ApplicationPageNames.Talents:
+                GoToCharacterCustomizationPage();
+                break;
+            case ApplicationPageNames.Skills:
+                GoToTalentsPage();
+                break;
+            case ApplicationPageNames.Spells:
+                GoToSkillsPage();
+                break;
+            case ApplicationPageNames.EquipmentSelection:
+                GoToSpellsPage();
+                break;
+            case ApplicationPageNames.Character:
+                GoToEquipmentSelectionPage();
+                break;
+            default:
+                break;
+        }
+        PreviousPageIsAvailable = !HomeIsActive;
+        NextPageIsAvailable = !CharacterIsActive;
+    }
 }

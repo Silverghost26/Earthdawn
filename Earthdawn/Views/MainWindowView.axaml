@@ -24,21 +24,23 @@
                HorizontalAlignment="Center"/>
         <Border Grid.Row="2" Padding="3">
             <Grid ColumnDefinitions="Auto, *, Auto">
-                <Button Command="{Binding GoToDisciplinesPageCommand}"
-                    Classes="navigation"
-                    Width="50"
-                    Height="30"
-                    VerticalAlignment="Top" 
-                    Grid.Column="1">
-                        <Image Source="/Assets/Icons/silver_left_arrow.png" />
+                <Button Command="{Binding GoToPreviousPageCommand}"
+                        IsVisible="{Binding PreviousPageIsAvailable}"
+                        Classes="navigation"
+                        Width="50"
+                        Height="30"
+                        VerticalAlignment="Top" 
+                        Grid.Column="1">
+                    <Image Source="/Assets/Icons/silver_left_arrow.png" />
                 </Button>
-                <Button
-                    Classes="navigation"
-                    Width="50"
-                    Height="30"
-                    VerticalAlignment="Top" 
-                    Grid.Column="2">
-                        <Image Source="/Assets/Icons/silver_right_arrow.png" />
+                <Button Command="{Binding GoToNextPageCommand}"
+                        IsVisible="{Binding NextPageIsAvailable}"
+                        Classes="navigation"
+                        Width="50"
+                        Height="30"
+                        VerticalAlignment="Top" 
+                        Grid.Column="2">
+                    <Image Source="/Assets/Icons/silver_right_arrow.png" />
                 </Button>
             </Grid>
         </Border>
