@@ -8,8 +8,55 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Folder Include="Models\" />
         <AvaloniaResource Include="Assets\**" />
+        <None Remove="Assets\Data\Races.json" />
+        <AvaloniaResource Include="Assets\Data\Races.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </AvaloniaResource>
+        <None Remove="Assets\Data\Armor.json" />
+        <AvaloniaResource Include="Assets\Data\Armor.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </AvaloniaResource>
+        <None Remove="Assets\Data\characteristics.json" />
+        <AvaloniaResource Include="Assets\Data\characteristics.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </AvaloniaResource>
+        <None Remove="Assets\Data\Disciplines.json" />
+        <AvaloniaResource Include="Assets\Data\Disciplines.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </AvaloniaResource>
+        <None Remove="Assets\Data\Equipment.json" />
+        <AvaloniaResource Include="Assets\Data\Equipment.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </AvaloniaResource>
+        <None Remove="Assets\Data\Mounts.json" />
+        <AvaloniaResource Include="Assets\Data\Mounts.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </AvaloniaResource>
+        <None Remove="Assets\Data\shields.json" />
+        <AvaloniaResource Include="Assets\Data\shields.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </AvaloniaResource>
+        <None Remove="Assets\Data\skills.json" />
+        <AvaloniaResource Include="Assets\Data\skills.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </AvaloniaResource>
+        <None Remove="Assets\Data\spells.json" />
+        <AvaloniaResource Include="Assets\Data\spells.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </AvaloniaResource>
+        <None Remove="Assets\Data\StepDice.json" />
+        <AvaloniaResource Include="Assets\Data\StepDice.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </AvaloniaResource>
+        <None Remove="Assets\Data\Talents.json" />
+        <AvaloniaResource Include="Assets\Data\Talents.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </AvaloniaResource>
+        <None Remove="Assets\Data\Weapons.json" />
+        <AvaloniaResource Include="Assets\Data\Weapons.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </AvaloniaResource>
     </ItemGroup>
 
     <ItemGroup>

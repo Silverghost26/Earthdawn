@@ -10,6 +10,7 @@ using System;
 using Earthdawn.Data;
 using Microsoft.Extensions.DependencyInjection;
 using Earthdawn.Factories;
+using EarthDawn.Services;
 
 namespace Earthdawn;
 
@@ -24,6 +25,7 @@ public partial class App : Application
     {
         var collection = new ServiceCollection();
         collection.AddSingleton<MainWindowViewModel>();
+        collection.AddSingleton<IDataServices,  DataServices>();
         collection.AddTransient<CharacterCustomizationsViewModel>();
         collection.AddTransient<CharacterViewModel>();
         collection.AddTransient<DisciplinesViewModel>();

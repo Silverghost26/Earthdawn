@@ -1,7 +1,7 @@
 
 namespace Earthdawn.Models;
 
-public class CharacterSheet
+public class  CharacterSheet
 {
     //Properties
     public string CharacterName {

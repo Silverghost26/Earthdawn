@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
 
-namespace EarthDawn_Assistant.src
+namespace EarthDawn.Models
 {
     public class StepDice
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EarthDawn_Assistant.src
+namespace EarthDawn.Models
 {
     public class Skill
     {
