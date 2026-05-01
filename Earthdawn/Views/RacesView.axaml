@@ -10,15 +10,18 @@
     
     <StackPanel>
         <Carousel SelectedIndex="{Binding CurrentIndex}"
-                  ItemsSource="{Binding Races}">
+                  ItemsSource="{Binding Races}"
+                  Height="900" Width="1800">
             <Carousel.PageTransition>
                 <PageSlide Duration="0:00:00.5" Orientation="Horizontal"/>
             </Carousel.PageTransition>
             <Carousel.ItemTemplate>
                 <DataTemplate>
-                    <Border Padding="20">
+                    <Border Padding="10" Background="BlanchedAlmond" CornerRadius="30">
                         <Grid ColumnDefinitions="Auto, 100, Auto, 100, Auto, 100, *" RowDefinitions="Auto, Auto, Auto, Auto, 80, Auto, Auto, Auto" >
-                            <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Grid.ColumnSpan="7" FontSize="70" FontStyle="Oblique" Content="{Binding Name}"/>
+                            <Image Grid.Row="1" Grid.Column="6" Grid.RowSpan="4" VerticalAlignment="Center" HorizontalAlignment="Center"  Source="{Binding ImagePath, Converter={StaticResource Imageconverter}}" ></Image>
+                            
+                            <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Grid.ColumnSpan="7" FontSize="70" FontStyle="Normal" Content="{Binding Name}"/>
                             <Label Grid.Row="1" Grid.Column="0" Content="Dexterity: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
                             <Label Grid.Row="1" Grid.Column="1" Content="{Binding NameGiverRace.DEX}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
                             <Label Grid.Row="2" Grid.Column="0" Content="Strength: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
@@ -41,7 +44,7 @@
                             <Label Grid.Row="3" Grid.Column="5" Content="{Binding NameGiverRace.FlyingMovement}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
                             
                             <Label Grid.Row="4" Grid.Column="0" Content="Racial Abilities" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="30"/>
-                            <Label Grid.Row="5" Grid.Column="0" Content="{Binding NameGiverRace.Abilities[0]}" Grid.ColumnSpan="6" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                            <TextBlock Grid.Row="5" Grid.Column="0" Text="{Binding RaceAbilities}" TextWrapping="Wrap" Grid.ColumnSpan="7" VerticalAlignment="Top" HorizontalAlignment="Left"/>
                             
                             <Label Grid.Row="6" Grid.Column="0" Content="Description" Grid.ColumnSpan="7" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="30"/>
                             <TextBlock Grid.Row="7" Grid.Column="0" Text="{Binding NameGiverRace.Description}" TextWrapping="Wrap" Grid.ColumnSpan="7" VerticalAlignment="Top" HorizontalAlignment="Center"/>

@@ -1,5 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
+using Avalonia.Media.Imaging;
+using Avalonia.Platform;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Earthdawn.Data;
@@ -10,20 +12,18 @@ namespace Earthdawn.ViewModels;
 
 public partial class RacesViewModel : PageViewModel
 {
-    public string Test { get; set; } = "Welcome to the bound Races for Earthdawn";
-
-    //private RaceDisplayCard? currentRace;
     [ObservableProperty] 
     private int _currentIndex;
+
+    [ObservableProperty]
+    private Bitmap _raceImage;
     public ObservableCollection<RaceDisplayCard> Races { get; }
     
 
     public RacesViewModel(){}
-    
 public RacesViewModel(IDataServices dataService)
     {
         PageName = ApplicationPageNames.Races;
-
         Races = new ObservableCollection<RaceDisplayCard>(dataService.LoadRaces());
     }
     

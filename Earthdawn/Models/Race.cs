@@ -65,8 +65,26 @@ public class RaceDisplayCard
         {
             string _name = Regex.Replace(value, "[^a-zA-Z0-9]", String.Empty); // Remove whitespace from the name
             _name = _name.ToLower(); // Convert to lowercase
-            _imagePath  = _name + "RacialPortrait.png";
+            _imagePath  = "avares://Earthdawn/Assets/Portraits/" + _name + "racialportrait.png";
         }
     }
     private string? _imagePath = string.Empty;
+
+    public string RaceAbilities
+    {
+        get 
+        {
+            if (_raceAbilities == null)
+            {
+                string tempAbilities = string.Empty;
+                foreach (var ability in NameGiverRace.Abilities)
+                {
+                    tempAbilities = tempAbilities + ability.Ability + "\n" + ability.Description + "\n\n";
+                }
+                _raceAbilities = tempAbilities;
+            }
+            return _raceAbilities;
+        }
+    }
+    private string? _raceAbilities;
 }

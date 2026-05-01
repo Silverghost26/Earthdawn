@@ -26,6 +26,8 @@ public partial class App : Application
         var collection = new ServiceCollection();
         collection.AddSingleton<MainWindowViewModel>();
         collection.AddSingleton<IDataServices,  DataServices>();
+        collection.AddSingleton<StringToImageconverter>();
+        
         collection.AddTransient<CharacterCustomizationsViewModel>();
         collection.AddTransient<CharacterViewModel>();
         collection.AddTransient<DisciplinesViewModel>();
