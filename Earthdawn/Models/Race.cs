@@ -32,12 +32,11 @@ public class Race
 
     //Racial Special Abilities
     public List<SpecialAbility> Abilities 
-      { 
+    { 
         get => _abilities ?? new List<SpecialAbility>();
         set => _abilities = value;}
-    private List<SpecialAbility>? _abilities;
-  
-}
+        private List<SpecialAbility>? _abilities;
+    }
 
 public class RaceDisplayCard
 {
@@ -55,7 +54,7 @@ public class RaceDisplayCard
     public Race NameGiverRace
     {
         get => _nameGiverRace ?? new Race();
-        set => _nameGiverRace = value;
+        init => _nameGiverRace = value;
     }
     private Race? _nameGiverRace;
 

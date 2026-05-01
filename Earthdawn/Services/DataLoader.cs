@@ -4,7 +4,7 @@ using System.IO;
 
 namespace EarthDawn.Services
 {
-    public class DataLoader
+    public static class DataLoader
     {
         //use Example for 'headless' dictionaries.
         //object rawData = new DataLoader().LoadDataFromDisk(jsonString, dictionaryTargetType);
@@ -12,7 +12,7 @@ namespace EarthDawn.Services
 
         //use syntax 1: List<StepResult> stepData = loader.LoadDataFromDisk<List<StepResult>>("path/to/dice_rolls.json");
         //use syntax 2: GeneralEquipment equipmentData = loader.LoadDataFromDisk<RootModel>("path/to/equipment.json");
-        public T LoadJson<T>(string jsonString) where T : class
+        public static T LoadJson<T>(string jsonString) where T : class
         {
             // if (!File.Exists(path))
             // {

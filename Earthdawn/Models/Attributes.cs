@@ -34,4 +34,14 @@ public class Attributes
         _attributes["Willpower"].AttributeValue = race.WIL;
         _attributes["Charisma"].AttributeValue = race.CHA;
     }
+
+    public Attributes(int dex, int str, int tou, int per, int wil, int cha) : this()
+    {
+        _attributes["Dexterity"].AttributeValue = dex;
+        _attributes["Strength"].AttributeValue = str;
+        _attributes["Toughness"].AttributeValue = tou;
+        _attributes["Perception"].AttributeValue = per;
+        _attributes["Willpower"].AttributeValue = wil;
+        _attributes["Charisma"].AttributeValue = cha;
+    }
 }

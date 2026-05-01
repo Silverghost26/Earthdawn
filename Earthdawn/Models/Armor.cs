@@ -4,19 +4,19 @@ using System.Text;
 
 namespace EarthDawn.Models
 {
-    internal class ArmorCollection : Dictionary<string, Armor>
+    public class ArmorCollection : Dictionary<string, Armor>
     {
 
     }
-    internal class Armor
+    public class Armor
     {
-        public string Living { get; set; }
-        public string Availability { get; set; }
-        public int PhysicalArmor { get; set; }
-        public int MysticArmor {  get; set; }
+        public string Living { get; set; } = string.Empty;
+        public string Availability { get; set; } = string.Empty;
+        public int PhysicalArmor { get; set; } = 0;
+        public int MysticArmor { get; set; } = 0;
         public int InitiativePenalty {  get; set; }
-        public string Cost {  get; set; }
-        public string Weight {  get; set; }
-        public string Description { get; set; }
+        public string Cost {  get; set; } = string.Empty;
+        public string Weight {  get; set; } = string.Empty;
+        public string Description { get; set; } =  string.Empty;
     }
 }

@@ -8,5 +8,28 @@
              x:Class="Earthdawn.Views.RacesView">
     <Design.DataContext><vm:RacesViewModel></vm:RacesViewModel></Design.DataContext>
     
-    <Label Content="{Binding Test}"></Label>
+    <Panel>
+        <Carousel SelectedIndex="{Binding CurrentIndex}"
+                  ItemsSource="{Binding Races}">
+            <Carousel.PageTransition>
+                <PageSlide Duration="0:00:00.5" Orientation="Horizontal"/>
+            </Carousel.PageTransition>
+            <Carousel.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="50, 30" RowDefinitions="30, 30, 30, 30, 30, 30">
+                        <Label Grid.Row="0" Grid.Column="0" Content="Dexterity: " VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <Label Grid.Row="0" Grid.Column="1" Content="{Binding NameGiverRace.DEX}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <Label Grid.Row="1" Grid.Column="0" Content="Strength: " VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <Label Grid.Row="1" Grid.Column="1" Content="{Binding NameGiverRace.STR}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    </Grid>
+                </DataTemplate>
+            </Carousel.ItemTemplate>
+
+        </Carousel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="100">
+            <Button Content = "Next" Command="{Binding NextCommand}"/>
+            <Button Content = "Previous" Command="{Binding PreviousCommand}"/>
+        </StackPanel>
+    </Panel>
+
 </UserControl>

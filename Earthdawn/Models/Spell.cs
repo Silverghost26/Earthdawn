@@ -86,17 +86,17 @@ namespace Earthdawn.Models;
 
 public class SpellDisplayCard : ViewModelBase
 {
-    private bool isSelected;
+    // private bool isSelected;
     public string Name { get; set; } = string.Empty;
     public SpellCircle Book { get; set; } = new();
-
-    public bool IsSelected
-    {
-        get => isSelected;
-        set => SetProperty(ref isSelected, value);
-    }
-
-    public string ButtonText => IsSelected ? "Remove" : "Add";
+    //
+    // public bool IsSelected
+    // {
+    //     get => isSelected;
+    //     set => SetProperty(ref isSelected, value);
+    // }
+    //
+    // public string ButtonText => IsSelected ? "Remove" : "Add";
 
     public List<Spell> GetSpellRange(int circleRangeStart, int circleRangeEnd)
     {
@@ -167,7 +167,7 @@ public class SpellDisplayCard : ViewModelBase
         return GetSpellRange(1, 15);
     }
 
-    public List<Spell> GetSpellRange(int circleRange)
+    public List<Spell> GetSpellCircleList(int circleRange)
     {
         return GetSpellRange(circleRange, circleRange);
     }
