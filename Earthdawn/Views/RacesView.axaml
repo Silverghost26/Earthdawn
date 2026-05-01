@@ -8,7 +8,7 @@
              x:Class="Earthdawn.Views.RacesView">
     <Design.DataContext><vm:RacesViewModel></vm:RacesViewModel></Design.DataContext>
     
-    <Panel>
+    <StackPanel>
         <Carousel SelectedIndex="{Binding CurrentIndex}"
                   ItemsSource="{Binding Races}">
             <Carousel.PageTransition>
@@ -16,20 +16,45 @@
             </Carousel.PageTransition>
             <Carousel.ItemTemplate>
                 <DataTemplate>
-                    <Grid ColumnDefinitions="50, 30" RowDefinitions="30, 30, 30, 30, 30, 30">
-                        <Label Grid.Row="0" Grid.Column="0" Content="Dexterity: " VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                        <Label Grid.Row="0" Grid.Column="1" Content="{Binding NameGiverRace.DEX}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                        <Label Grid.Row="1" Grid.Column="0" Content="Strength: " VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                        <Label Grid.Row="1" Grid.Column="1" Content="{Binding NameGiverRace.STR}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                    </Grid>
+                    <Border Padding="20">
+                        <Grid ColumnDefinitions="Auto, 100, Auto, 100, Auto, 100, *" RowDefinitions="Auto, Auto, Auto, Auto, 80, Auto, Auto, Auto" >
+                            <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Grid.ColumnSpan="7" FontSize="70" FontStyle="Oblique" Content="{Binding Name}"/>
+                            <Label Grid.Row="1" Grid.Column="0" Content="Dexterity: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
+                            <Label Grid.Row="1" Grid.Column="1" Content="{Binding NameGiverRace.DEX}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
+                            <Label Grid.Row="2" Grid.Column="0" Content="Strength: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
+                            <Label Grid.Row="2" Grid.Column="1" Content="{Binding NameGiverRace.STR}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
+                            <Label Grid.Row="3" Grid.Column="0" Content="Toughness: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
+                            <Label Grid.Row="3" Grid.Column="1" Content="{Binding NameGiverRace.TOU}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
+                            
+                            <Label Grid.Row="1" Grid.Column="2" Content="Perception: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
+                            <Label Grid.Row="1" Grid.Column="3" Content="{Binding NameGiverRace.PER}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
+                            <Label Grid.Row="2" Grid.Column="2" Content="WillPower: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
+                            <Label Grid.Row="2" Grid.Column="3" Content="{Binding NameGiverRace.WIL}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
+                            <Label Grid.Row="3" Grid.Column="2" Content="Charisma: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
+                            <Label Grid.Row="3" Grid.Column="3" Content="{Binding NameGiverRace.CHA}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
+                            
+                            <Label Grid.Row="1" Grid.Column="4" Content="Karma Modifier: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
+                            <Label Grid.Row="1" Grid.Column="5" Content="{Binding NameGiverRace.KarmaMod}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
+                            <Label Grid.Row="2" Grid.Column="4" Content="Movement: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
+                            <Label Grid.Row="2" Grid.Column="5" Content="{Binding NameGiverRace.Movement}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
+                            <Label Grid.Row="3" Grid.Column="4" Content="Flying Movement: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
+                            <Label Grid.Row="3" Grid.Column="5" Content="{Binding NameGiverRace.FlyingMovement}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25"/>
+                            
+                            <Label Grid.Row="4" Grid.Column="0" Content="Racial Abilities" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="30"/>
+                            <Label Grid.Row="5" Grid.Column="0" Content="{Binding NameGiverRace.Abilities[0]}" Grid.ColumnSpan="6" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                            
+                            <Label Grid.Row="6" Grid.Column="0" Content="Description" Grid.ColumnSpan="7" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="30"/>
+                            <TextBlock Grid.Row="7" Grid.Column="0" Text="{Binding NameGiverRace.Description}" TextWrapping="Wrap" Grid.ColumnSpan="7" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        </Grid>
+                    </Border>
                 </DataTemplate>
             </Carousel.ItemTemplate>
 
         </Carousel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="100">
-            <Button Content = "Next" Command="{Binding NextCommand}"/>
             <Button Content = "Previous" Command="{Binding PreviousCommand}"/>
+            <Button Content = "Next" Command="{Binding NextCommand}"/>
         </StackPanel>
-    </Panel>
+    </StackPanel>
 
 </UserControl>
