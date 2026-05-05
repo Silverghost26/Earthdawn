@@ -25,6 +25,7 @@ public partial class DisciplinesViewModel : PageViewModel
         foreach (DisciplineDisplayCard discipline in Disciplines)
         {
             discipline.SetPropertiesFromDictionary();
+            discipline.SetDisplayForOptionalTalents();
         }
         
     }

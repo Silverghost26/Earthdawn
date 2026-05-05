@@ -11,7 +11,7 @@
     <StackPanel>
         <Carousel SelectedIndex="{Binding CurrentIndex}"
                   ItemsSource="{Binding Races}"
-                  Height="700" Width="1800">
+                  Height="1000" Width="1800">
             <Carousel.PageTransition>
                 <PageSlide Duration="0:00:00.5" Orientation="Horizontal"/>
             </Carousel.PageTransition>
@@ -27,7 +27,7 @@
                                 <Image 
                                        VerticalAlignment="Top" HorizontalAlignment="Center"
                                        Source="{Binding ImagePath, Converter={StaticResource Imageconverter}}"
-                                       Height="310">
+                                       Height="450">
                                 </Image>
                             </Border>
                             <StackPanel Grid.Row="2" Grid.Column="0">

@@ -33,8 +33,13 @@ public class DisciplineDisplayCard
 {
     public string Name 
     {
-        get => _name ?? string.Empty;  
-        set => _name = value; 
+        get => _name ?? string.Empty;
+        set
+        {
+            _name = value;
+            ImagePath = _name;
+        }
+        
     }
     private string? _name;
     public Discipline Disciplines 
@@ -52,6 +57,7 @@ public class DisciplineDisplayCard
             string _name = Regex.Replace(value, "[^a-zA-Z0-9]", String.Empty); // Remove whitespace from the name
             _name = _name.ToLower(); // Convert to lowercase
             _imagePath  = "avares://Earthdawn/Assets/Portraits/" + _name + "disciplineportrait.png";
+            return;
         }
     }
     private string? _imagePath = string.Empty;
@@ -71,6 +77,92 @@ public class DisciplineDisplayCard
     public string? Thirteenth { get;  set; }
     public string? Fourteenth { get;  set; }
     public string? Fifteenth { get;  set; }
+
+    public string? NoviceOptions
+    {
+        get => _noviceOptions;
+        private set => _noviceOptions = value;
+    }
+    private string? _noviceOptions = string.Empty;
+    public string? JourneymanOptions
+    {
+        get => _journeymanOptions;
+        private set => _journeymanOptions = value;
+    }
+    private string?  _journeymanOptions = string.Empty;
+    public string? WardenOptions
+    {
+        get => _wardenOptions;
+        private set => _wardenOptions = value;
+    }
+    private string? _wardenOptions = string.Empty;
+    public string? MasterOptions
+    {
+        get => _masterOptions;
+        private set => _masterOptions = value;
+    }
+    private string? _masterOptions = string.Empty;
+
+    public void SetDisplayForOptionalTalents()
+    {
+        int index = 1;
+        foreach (string talent in _discipline.TalentOptions["Novice"])
+        {
+            if (index < _discipline.TalentOptions["Novice"].Count)
+            {
+                _noviceOptions += talent + ", ";
+            }
+            else
+            {
+                _noviceOptions += talent;
+            }
+
+            index++;
+        }
+
+        index = 1;
+        foreach (string talent in _discipline.TalentOptions["Journeyman"])
+        {
+            if (index < _discipline.TalentOptions["Journeyman"].Count)
+            {
+                _journeymanOptions += talent + ", ";
+            }
+            else
+            {
+                _journeymanOptions += talent;
+            }
+
+            index++;
+        }
+        index = 1;
+        
+        foreach (string talent in _discipline.TalentOptions["Warden"])
+        {
+            if (index < _discipline.TalentOptions["Warden"].Count)
+            {
+                _wardenOptions += talent + ", ";
+            }
+            else
+            {
+                _wardenOptions += talent;
+            }
+            index++;
+        }
+
+        index = 1;
+        foreach (string talent in _discipline.TalentOptions["Master"])
+        {
+            if (index < _discipline.TalentOptions["Master"].Count)
+            {
+                _masterOptions += talent + ", ";
+            }
+            else
+            {
+                _masterOptions += talent;
+            }
+            index++;
+        }
+    }
 
     public void SetPropertiesFromDictionary()
     {
@@ -123,50 +215,53 @@ public class DisciplineDisplayCard
         displayString = displayString + "\n\n";
         foreach (string ft in circle.FreeTalents)
         {
-            displayString = displayString + "Free Talent: " + ft + "\n";
+            if(ft != string.Empty)
+            {
+                displayString = displayString + "Free Talent: " + ft + "\n";
+            }
         }
         if (circle.PhysicalDefense != string.Empty)
         {
-            displayString = displayString + "Physical Defense: " + circle.PhysicalDefense + "\n";
+            displayString = displayString + "\nPhysical Defense: " + circle.PhysicalDefense + "\n";
         }
         if (circle.MysticalDefense != string.Empty)
         {
-            displayString = displayString + "Mystical Defense: " + circle.MysticalDefense + "\n";
+            displayString = displayString + "\nMystical Defense: " + circle.MysticalDefense + "\n";
         }
 
         if (circle.SocialDefense != string.Empty)
         {
-            displayString = displayString + "Social Defense: " + circle.SocialDefense + "\n";
+            displayString = displayString + "\nSocial Defense: " + circle.SocialDefense + "\n";
         }
 
         if (circle.PhysicalArmor != string.Empty)
         {
-            displayString = displayString + "Physical Armor: " + circle.PhysicalArmor + "\n";
+            displayString = displayString + "\nPhysical Armor: " + circle.PhysicalArmor + "\n";
         }
 
         if (circle.MysticalArmor != string.Empty)
         {
-            displayString = displayString + "Mystical Armor: " + circle.MysticalArmor + "\n";
+            displayString = displayString + "\nMystical Armor: " + circle.MysticalArmor + "\n";
         }
 
         if (circle.Karma != string.Empty)
         {
-            displayString = displayString + "Karma: " + circle.Karma + "\n";
+            displayString = displayString + "\nKarma: " + circle.Karma + "\n";
         }
 
         if (circle.Initiative != string.Empty)
         {
-            displayString = displayString + "Initiative: " + circle.Initiative + "\n";
+            displayString = displayString + "\nInitiative: " + circle.Initiative + "\n";
         }
 
         if (circle.Recovery != string.Empty)
         {
-            displayString = displayString + "Recovery: " + circle.Recovery + "\n";
+            displayString = displayString + "\nRecovery: " + circle.Recovery + "\n";
         }
 
         if (circle.Special != string.Empty)
         {
-            displayString = displayString + "Special Ability: " + circle.Special + "\n";
+            displayString = displayString + "\nSpecial Ability: " + circle.Special + "\n";
         }
         return displayString;
         
