@@ -1,5 +1,6 @@
 {
     "Air Sailor": {
+        "Description": "Air Sailors are the swashbuckling brotherhood of the sky. Air Sailors never leave their fellows behind and embrace the idea of togetherness, working to protect and spread civilization, rather than preying upon it.",
         "ImportantAttributes": "Charisma, Dexterity, Willpower",
         "HalfMagic": "The Air Sailor’s uses for Half-Magic include knowledge of airship designs, recognition of different types of airships, commonly followed flight paths, and airship crew complements. It may also cover the maintenance, repair, and construction of airships.",
         "Durability": "5",
@@ -63,7 +64,7 @@
                 "Recovery": "",
                 "Special": "",
                 "FreeTalents": [
-                    ""
+                    "Air Sailing"
                 ],
                 "Talents": [
                     "Avoid Blow",
@@ -288,6 +289,7 @@
         }
     },
     "Archer": {
+        "Description": "The Archer learns the art of the bow and crossbow, and by extension, all types of ranged attacks. This Discipline stresses accuracy and speed. Most Archers show greatly enhanced perceptive powers, frequently noticing things that others miss.",
         "ImportantAttributes": "Dexterity, Perception",
         "HalfMagic": "Archers may use half-magic when caring for ranged weapons and to recognize different types of ranged weapons, ammunition, or their creators.",
         "Durability": "5",
@@ -415,7 +417,7 @@
                 "Karma": "The adept may spend 1 Karma Point on Damage tests made with ranged weapons.   ",
                 "Initiative": "",
                 "Recovery": "",
-                "Special": "Once per round as a Standard action, the adept may take 1 Strain, and make an Arrow Weaving (6) test. Each success creates one arrow, bolt, or throwing weapon. All items created must be of the same type. The projectiles last for Arrow Weaving Rank in minutes, after which they disappear. They are treated as normal weapons or ammunition for the purpose of talents or spells that require it.   ",
+                "Special": "Create Projectile: Once per round as a Standard action, the adept may take 1 Strain, and make an Arrow Weaving (6) test. Each success creates one arrow, bolt, or throwing weapon. All items created must be of the same type. The projectiles last for Arrow Weaving Rank in minutes, after which they disappear. They are treated as normal weapons or ammunition for the purpose of talents or spells that require it.   ",
                 "FreeTalents":  [ "" ],
                 "Talents": [
                     "Spot Armor Flaw"
@@ -574,6 +576,7 @@
         }
     },
     "Beastmaster": {
+        "Description": "Beastmasters are adepts that use magic to emulate and interact with animals and other creatures. Some develop these abilities to become expert trackers and survivalists, while others forge magical bonds with animal companions, or train and care for the domestic animals that support day to day life in Barsaive.",
         "ImportantAttributes": "Charisma,Dexterity, Willpower",
         "HalfMagic": "Beastmasters may use half-magic when dealing with or caring for animals in ways beyond those described by their talents, including animal husbandry and first aid. Beastmasters may use half-magic when recognizing different animals, animal tracks, and abnormal behavior among animals and creatures.  Note: Many of the Beastmaster’s talents and abilities refer to Animal Companions. An animal may be considered an Animal Companion if it has a Loyal attitude towards the Beastmaster. See the Animal Bond talent on p. 125 for details.     ",
         "Durability": "7",
@@ -858,6 +861,7 @@
         }
     },
     "Cavalryman": {
+        "Description" :"Members of the Cavalryman Discipline are fierce, mounted warriors. They train with their mounts and form a close empathic bond with them. A Cavalryman typically respects his mount more than any Namegiver, with the possible exception of other Cavalrymen. This Discipline emphasizes motion and empathy for one’s mount.",
         "ImportantAttributes": "Charisma, Dexterity, Perception",
         "HalfMagic": "Cavalrymen may use half-magic for knowledge of different types of mounts used by the Namegiver races, upkeep of riding gear, animal husbandry and first aid, and knowledge of significant cavalry units in Barsaive.     ",
         "Durability": "7",
@@ -1142,6 +1146,7 @@
         }
     },
     "Elementalist": {
+        "Description": "Elementalists are adepts who have a strong connection to the elemental spirits of Barsaive. They can sense the presence of these spirits and use their magic to interact with them. Elementalists are often found in the wilderness, where they commune with nature and the elements.",
         "ImportantAttributes": "Perception, Willpower",
         "HalfMagic": "Elementalists use half-magic for knowledge of nature, the elements, uses of elemental magic, and other magical rituals. The Elementalist may make a Perception-based Half-Magic test to detect the presence of elemental spirits within 30 yards. The Difficulty Number for sensing an elemental spirit is the spirit’s Mystic Defense. If the test succeeds, the character can sense the presence of the elemental spirit and can use spells, or talents such as Elemental Tongues and Elemental Hold, to communicate and interact with it. The gamemaster may choose to make this Half-Magic Test on behalf of an Elementalist character at any time, as this innate sense is always active.     ",
         "Durability": "3",
@@ -1432,6 +1437,7 @@
         }
     },
     "Illusionist": {
+        "Description": "Illusionists cast spells that work through deception. However, some Illusionist spells do have real effects; Illusionists learned long ago that if everything they did was an illusion, people quickly caught on and their magic became less effective. Now they balance real magic, illusions, trickery, and sleight of hand.",
         "ImportantAttributes": "Charisma,Perception, Willpower",
         "HalfMagic": "Illusionists make Half-Magic tests to recognize different types of magic use, as well as specific uses of illusion magic. They also make Half-Magic tests when attempting to perceive the “truth” of a given situation.     ",
         "Durability": "3",
@@ -1721,6 +1727,7 @@
         }
     },
     "Nethermancer": {
+        "Description": "Nethermancers are spellcasters who specialize in the magic of the netherworlds. Their interests focus on other planes, and the spirits and creatures that inhabit those planes. Most people consider Nethermancers to be a little “off” in an eerie sort of way, and consequently followers of this Discipline are unlikely to win many popularity contests.",
         "ImportantAttributes": "Charisma, Perception, Willpower",
         "HalfMagic": "Nethermancers use half-magic to recognize uses of nethermantic magic, different types of undead and spirits, and magical rituals—especially blood magic rituals. Nethermancers may also use half-magic to understand the effects of different blood charms, as these are linked with Nethermancy. A Nethermancer may use half-magic to sense the presence of spirits within 30 yards of his location. The Detection Difficulty for sensing a spirit is the spirit’s Mystic Defense (determined by the gamemaster). If the test succeeds, the Nethermancer can sense the presence of the spirit and use spells, or talents such as Spirit Hold or Spirit Talk, to communicate and interact with the spirit. The gamemaster may choose to make this Half-Magic test on behalf of a Nethermancer character at any time, as this innate sense is always active.     ",
         "Durability": "3",
@@ -2010,6 +2017,7 @@
         }
     },
     "Scout": {
+        "Description": "Scouts are the vanguard, the tracker, and the brave rangers who go where others cannot. Scouts are masters of becoming one with their environment whether that environment is a primeval forest or the heart of the city.",
         "ImportantAttributes": "Dexterity, Perception",
         "HalfMagic": "A Scout may use half-magic to recognize tracks and trails left by different types of animals and Namegivers, know about the plants and creatures native to a region, even general information on the different cultures across Barsaive.     ",
         "Durability": "5",
@@ -2296,6 +2304,7 @@
         }
     },
     "Sky Raider": {
+        "Description": "Scouts are the vanguard, the tracker, and the brave rangers who go where others cannot. Scouts are masters of becoming one with their environment whether that environment is a primeval forest or the heart of the city.",
         "ImportantAttributes": "Charisma, Dexterity, Strength",
         "HalfMagic": "Sky Raiders use half-magic for tasks related to the upkeep, repair, and building of smaller airships (like the drakkar), knowledge of different airship designs and crew complements, as well as knowledge of commonly followed flight paths.     ",
         "Durability": "7",
@@ -2580,6 +2589,7 @@
         }
     },
     "Swordmaster": {
+        "Description": "Swordmasters are fighters who learn the value of a well-handled weapon, training to demonstrate quickness, flash, and panache in a fight. Swordmasters often emphasize style as much as skill in combat. While swords are the most common weapon employed by this Discipline, some schools focus on and train with other weapons.",
         "ImportantAttributes": "Charisma, Dexterity",
         "HalfMagic": "Swordmasters use half-magic to care for their weapons, know the history of legendary weapons, and recognize different types of melee weapons. Swordmasters may also use half-magic to identify another Swordmaster’s fighting techniques, including which prominent Swordmasters may have shaped the individual’s style.     ",
         "Durability": "7",
@@ -2864,6 +2874,7 @@
         }
     },
     "Thief": {
+        "Description": "Thieves learn early to be self-reliant and how to steal. They draw power from their self-confidence and the knowledge that they depend only on themselves. The abundance of rumors governing Thief guilds means such groups may, in fact, exist, but proof or disproof of their reality remains a secret.",
         "ImportantAttributes": "Charisma, Dexterity, Perception",
         "HalfMagic": "Thieves may use half-magic to build or bypass security measures intended to prevent theft, and to recognize different types of locking mechanisms.     ",
         "Durability": "5",
@@ -3150,6 +3161,7 @@
         }
     },
     "Troubadour": {
+        "Description": "Troubadours serve as entertainers, storytellers, actors, and songsmiths. As such, they represent the closest thing to a historian or scholar that common people usually see.",
         "ImportantAttributes": "Charisma, Perception",
         "HalfMagic": "Troubadours may make Half-Magic tests for knowledge of legends, myths, and folklore of their home province’s lands and people. They may also make Half-Magic tests to identify instruments and performing arts of different areas.     ",
         "Durability": "5",
@@ -3434,6 +3446,7 @@
         }
     },
     "Warrior": {
+        "Description": "Warriors are fighters and soldiers trained to use magic to enhance their combat techniques. They often form groups with other Warriors, living in seclusion in self-sufficient settlements similar to monastic orders.",
         "ImportantAttributes": "Dexterity, Strength, Toughness",
         "HalfMagic": "Warriors can use half-magic when caring for or repairing their weapons and armor, knowledge of military tactics and strategy (recognizing the safest approach to a target when planning a battle, for instance) and to recall events of Barsaive’s military history. They also use half-magic to recognize warrior orders, famous ancient Warriors, and ancient arms and armor.     ",
         "Durability": "7",
@@ -3718,6 +3731,7 @@
         }
     },
     "Weaponsmith": {
+        "Description": "A Weaponsmith trains to gain an iron will and a highly critical eye. In addition to their role as craftsmen that make mundane weapons, armor, and other goods, Weaponsmiths help identify and create legendary weapons. Nearly every community places great value on their Weaponsmiths.",
         "ImportantAttributes": "Charisma, Perception, Willpower",
         "HalfMagic": "Weaponsmiths may use half-magic when caring for weapons and armor and to recognize different types of weapons and armor used or worn by different Namegiver races or their creators.     ",
         "Durability": "5",
@@ -4004,6 +4018,7 @@
         }
     },
     "Wizard": {
+        "Description": "Wizards are spellcasters focusing on the theoretical aspects of magic. Those who follow other spellcasting Disciplines sometimes disparage Wizards as being “book magicians,” but it is interesting to note that very few have the guts to call a Wizard that to his face.",
         "ImportantAttributes": "Charisma, Perception, Willpower",
         "HalfMagic": "Wizards may use half-magic to recognize different types of magic use, identify specific uses of Wizardry, and for knowledge of magical rituals.     ",
         "Durability": "3",

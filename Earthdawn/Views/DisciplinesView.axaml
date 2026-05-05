@@ -8,6 +8,35 @@
              x:Class="Earthdawn.Views.DisciplinesView">
     
     <Design.DataContext><vm:HomeViewModel></vm:HomeViewModel></Design.DataContext>
-    
-    <Label Content="{Binding Test}"></Label>
+    <StackPanel>
+        <Carousel SelectedIndex="{Binding CurrentIndex}"
+        ItemsSource="{Binding Disciplines}"
+        Height="700" Width="1800">
+            <Carousel.PageTransition>
+                <PageSlide Duration="0:00:00.5" Orientation="Horizontal"/>
+            </Carousel.PageTransition>
+            <Carousel.ItemTemplate>
+                <DataTemplate>
+                    <Border Padding="20" Background="BlanchedAlmond" CornerRadius="30">
+                        <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto, Auto, *">
+                            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Content="{Binding Name}"/>
+                            <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                                <TextBlock Text="{Binding Disciplines.Description}"/>
+                                <TextBlock Text="{Binding Disciplines.HalfMagic}"/>
+                                <TextBlock Text="{Binding Disciplines.ImportantAttributes}"/>
+                            </StackPanel>
+                        </Grid>
+                        <!-- <StackPanel> -->
+                        <!--     ~1~ <Label Content="{Binding Name}" VerticalAlignment="Center"/> @1@ -->
+                        <!--     ~1~ <TextBlock Text="{Binding First}" TextWrapping="Wrap" VerticalAlignment="Center"/> @1@ -->
+                        <!-- </StackPanel> -->
+                    </Border>
+                </DataTemplate>
+            </Carousel.ItemTemplate>
+        </Carousel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="100">
+            <Button Content = "Previous" Command="{Binding PreviousCommand}"/>
+            <Button Content = "Next" Command="{Binding NextCommand}"/>
+        </StackPanel>
+    </StackPanel>
 </UserControl>

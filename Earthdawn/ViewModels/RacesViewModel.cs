@@ -15,8 +15,8 @@ public partial class RacesViewModel : PageViewModel
     [ObservableProperty] 
     private int _currentIndex;
 
-    [ObservableProperty]
-    private Bitmap _raceImage;
+    // [ObservableProperty]
+    //private Bitmap _raceImage;
     public ObservableCollection<RaceDisplayCard> Races { get; }
     
 
