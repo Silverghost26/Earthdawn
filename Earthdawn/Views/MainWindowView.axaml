@@ -16,9 +16,9 @@
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-    <Grid RowDefinitions="Auto, *, Auto" Background="{DynamicResource ResourceKey=PrimaryBackground}">
+    <Grid RowDefinitions="Auto, *, Auto" Classes="application-background">
         <ContentControl Grid.Row="1" Content="{Binding CurrentPage}"/>
-        <Image Source="/Assets/Art/earthdawn.png"
+        <Image Grid.Row="0" Source="/Assets/Art/earthdawn.png"
                Height="40"
                VerticalAlignment="Center"
                HorizontalAlignment="Center"/>

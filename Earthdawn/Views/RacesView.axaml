@@ -11,7 +11,7 @@
     <StackPanel>
         <Carousel SelectedIndex="{Binding CurrentIndex}"
                   ItemsSource="{Binding Races}"
-                  Height="1000" Width="1800">
+                  Height="900" Width="1800">
             <Carousel.PageTransition>
                 <PageSlide Duration="0:00:00.5" Orientation="Horizontal"/>
             </Carousel.PageTransition>
@@ -23,84 +23,88 @@
                             <StackPanel Grid.Row="1" Grid.Column="0">
                                 <TextBlock Text="{Binding NameGiverRace.Description}" TextWrapping="Wrap" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                             </StackPanel>
-                            <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Background="Black">
-                                <Image 
-                                       VerticalAlignment="Top" HorizontalAlignment="Center"
-                                       Source="{Binding ImagePath, Converter={StaticResource Imageconverter}}"
-                                       Height="450">
-                                </Image>
+                            <Border Classes="PortraitBackground" Grid.Row="1" Grid.Column="1" CornerRadius="20">
+                                <StackPanel>
+                                    <Image 
+                                        VerticalAlignment="Center" HorizontalAlignment="Center"
+                                        Source="{Binding ImagePath, Converter={StaticResource Imageconverter}}"
+                                        Height="450">
+                                    </Image>
+                                    <Grid RowDefinitions="30,*,*,*" ColumnDefinitions="*,*,*" HorizontalAlignment="Center">
+                                        <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" Content="Attributes" Foreground="AliceBlue"/>
+                                        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+                                            <Label Classes="AttributeName" Content="Dexterity:"/>
+                                            <Label Classes="Attribute" Content="{Binding NameGiverRace.DEX}"/>
+                                        </StackPanel>
+                                        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                                            <Label Classes="AttributeName" Content="Perception:"/>
+                                            <Label Classes="Attribute" Content="{Binding NameGiverRace.PER}"/>
+                                        </StackPanel>
+                                        <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal">
+                                            <Label Classes="AttributeName" Content="Karma Modifier:"/>
+                                            <Label Classes="Attribute" Content="{Binding NameGiverRace.KarmaMod}"/>
+                                        </StackPanel>
+                                        
+                                        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
+                                            <Label Classes="AttributeName" Content="Strength:"/>
+                                            <Label Classes="Attribute" Content="{Binding NameGiverRace.STR}"/>
+                                        </StackPanel>
+                                        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+                                            <Label Classes="AttributeName" Content="Toughness:"/>
+                                            <Label Classes="Attribute" Content="{Binding NameGiverRace.TOU}"/>
+                                        </StackPanel>
+                                        <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal">
+                                            <Label Classes="AttributeName" Content="Movement:"/>
+                                            <Label Classes="Attribute" Content="{Binding NameGiverRace.Movement}"/>
+                                        </StackPanel>
+                                        
+                                        <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal">
+                                            <Label Classes="AttributeName" Content="WillPower:"/>
+                                            <Label Classes="Attribute" Content="{Binding NameGiverRace.WIL}"/>
+                                        </StackPanel>
+                                        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
+                                            <Label Classes="AttributeName" Content="Charisma:"/>
+                                            <Label Classes="Attribute" Content="{Binding NameGiverRace.CHA}"/>
+                                        </StackPanel>
+                                        <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Horizontal">
+                                            <Label Classes="AttributeName" Content="Flying Movement:"/>
+                                            <Label Classes="Attribute" Content="{Binding NameGiverRace.FlyingMovement}"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </StackPanel>
                             </Border>
                             <StackPanel Grid.Row="2" Grid.Column="0">
                                 <Label Content="Racial Abilities" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="30"/>
                                 <TextBlock Text="{Binding RaceAbilities}" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left"/>
                             </StackPanel>
-                            <Border Grid.Row="2" Grid.Column="1" Padding="30" Background="Azure" CornerRadius="20"/>
-                            <Grid Grid.Row="2" Grid.Column="1" ColumnDefinitions="*, Auto, *, Auto, *, Auto" RowDefinitions="30, Auto, Auto, Auto">
-                                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" Content="Attributes"/>
-                                <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Dexterity:"/>
-                                <Label Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.DEX}"/>
-                                <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Strength:"/>
-                                <Label Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.STR}"/>
-                                <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Toughness:"/>
-                                <Label Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.TOU}"/>
-                            
-                                <Label Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Perception:"/>
-                                <Label Grid.Row="1" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.PER}"/>
-                                <Label Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Content="WillPower:"/>
-                                <Label Grid.Row="2" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.WIL}"/>
-                                <Label Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Charisma:"/>
-                                <Label Grid.Row="3" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.CHA}"/>
-                            
-                                <Label Grid.Row="1" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Karma Modifier:"/>
-                                <Label Grid.Row="1" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.KarmaMod}"/>
-                                <Label Grid.Row="2" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Movement:"/>
-                                <Label Grid.Row="2" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.Movement}"/>
-                                <Label Grid.Row="3" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Flying Movement:"/>
-                                <Label Grid.Row="3" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.FlyingMovement}"/>
-                            </Grid>
+                            <!-- <Border Grid.Row="2" Grid.Column="1" Padding="30" Background="Azure" CornerRadius="20"/> -->
+                            <!-- <Grid Grid.Row="2" Grid.Column="1" ColumnDefinitions="*, Auto, *, Auto, *, Auto" RowDefinitions="30, Auto, Auto, Auto"> -->
+                            <!--     <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" Content="Attributes"/> -->
+                            <!--     <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Dexterity:"/> -->
+                            <!--     <Label Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.DEX}"/> -->
+                            <!--     <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Strength:"/> -->
+                            <!--     <Label Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.STR}"/> -->
+                            <!--     <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Toughness:"/> -->
+                            <!--     <Label Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.TOU}"/> -->
+                            <!-- -->
+                            <!--     <Label Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Perception:"/> -->
+                            <!--     <Label Grid.Row="1" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.PER}"/> -->
+                            <!--     <Label Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Content="WillPower:"/> -->
+                            <!--     <Label Grid.Row="2" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.WIL}"/> -->
+                            <!--     <Label Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Charisma:"/> -->
+                            <!--     <Label Grid.Row="3" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.CHA}"/> -->
+                            <!-- -->
+                            <!--     <Label Grid.Row="1" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Karma Modifier:"/> -->
+                            <!--     <Label Grid.Row="1" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.KarmaMod}"/> -->
+                            <!--     <Label Grid.Row="2" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Movement:"/> -->
+                            <!--     <Label Grid.Row="2" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.Movement}"/> -->
+                            <!--     <Label Grid.Row="3" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Flying Movement:"/> -->
+                            <!--     <Label Grid.Row="3" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.FlyingMovement}"/> -->
+                            <!-- </Grid> -->
                         </Grid>
-                        <!-- <Grid Height="925" Width="1800" ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto, Auto, Auto, Auto, *"> -->
-                        <!--     <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Grid.ColumnSpan="2" FontSize="70" FontStyle="Normal" Content="{Binding Name}"/> -->
-                        <!--     <Image Grid.Row="1" -->
-                        <!--            Grid.Column="1" Grid.RowSpan="3" -->
-                        <!--            VerticalAlignment="Top" HorizontalAlignment="Right" -->
-                        <!--            Source="{Binding ImagePath, Converter={StaticResource Imageconverter}}" -->
-                        <!--            Height="310"> -->
-                        <!--     </Image> -->
-                        <!--     <Border Grid.Row="1" Grid.Column="0" Padding="20" Background="Azure" CornerRadius="20"/> -->
-                        <!--     <Grid Grid.Row="1" Grid.Column="0" ColumnDefinitions="*, Auto, *, Auto, *, Auto" RowDefinitions="30, Auto, Auto, Auto"> -->
-                        <!--         <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" Content="Attributes"/> -->
-                        <!--         <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Dexterity:"/> -->
-                        <!--         <Label Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.DEX}"/> -->
-                        <!--         <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Strength:"/> -->
-                        <!--         <Label Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.STR}"/> -->
-                        <!--         <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Toughness:"/> -->
-                        <!--         <Label Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.TOU}"/> -->
-                        <!--          -->
-                        <!--         <Label Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Perception:"/> -->
-                        <!--         <Label Grid.Row="1" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.PER}"/> -->
-                        <!--         <Label Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Content="WillPower:"/> -->
-                        <!--         <Label Grid.Row="2" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.WIL}"/> -->
-                        <!--         <Label Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Charisma:"/> -->
-                        <!--         <Label Grid.Row="3" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.CHA}"/> -->
-                        <!--          -->
-                        <!--         <Label Grid.Row="1" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Karma Modifier:"/> -->
-                        <!--         <Label Grid.Row="1" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.KarmaMod}"/> -->
-                        <!--         <Label Grid.Row="2" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Movement:"/> -->
-                        <!--         <Label Grid.Row="2" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.Movement}"/> -->
-                        <!--         <Label Grid.Row="3" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Flying Movement:"/> -->
-                        <!--         <Label Grid.Row="3" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.FlyingMovement}"/> -->
-                        <!--     </Grid> -->
-                        <!--     <Label Grid.Row="2" Grid.Column="0" Content="Racial Abilities" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="30"/> -->
-                        <!--     <TextBlock Grid.Row="3" Grid.Column="0" Text="{Binding RaceAbilities}" TextWrapping="Wrap" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Left"/> -->
-                        <!--      -->
-                        <!--     <Label Grid.Row="4" Grid.Column="0" Content="Description" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="30"/> -->
-                        <!--     <TextBlock Grid.Row="5" Grid.Column="0" Text="{Binding NameGiverRace.Description}" TextWrapping="Wrap" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center"/> -->
-                        <!-- </Grid> -->
                     </Border>
                 </DataTemplate>
             </Carousel.ItemTemplate>
-
         </Carousel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="100">
             <Button Content = "Previous" Command="{Binding PreviousCommand}"/>

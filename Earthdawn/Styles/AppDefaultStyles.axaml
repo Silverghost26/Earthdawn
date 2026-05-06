@@ -16,6 +16,8 @@
     </Design.PreviewWith>
 
     <!-- Add Styles Here -->
+    
+    <!--Buttons-->
     <Style Selector="Button">
         <Setter Property="CornerRadius" Value="5"/>
         <Setter Property="Padding" Value="4,4"/>
@@ -28,5 +30,30 @@
     
     <Style Selector="Button.navigation:pointerover /template/ ContentPresenter">
         <Setter Property="Background" Value="{DynamicResource ButtonPrimaryBackgroundHover}"/>
-    </Style>    
+    </Style>   
+    
+    <!--Backgrounds-->
+    <Style Selector="Grid.application-background">
+        <Setter Property="Background">
+            <ImageBrush Source="/Assets/Art/earthdawn_background.png"
+                        Stretch="UniformToFill"
+                        AlignmentX="Center"
+                        AlignmentY="Center"
+                        Opacity="0.2"/>
+        </Setter>
+    </Style>
+    
+    <Style Selector="Border.PortraitBackground">
+        <Setter Property="Background" Value="{DynamicResource PrimaryPortraitGradient}"></Setter>
+    </Style>
+    
+    <Style Selector="Label.AttributeName">
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryPortraitTextForeground}"/>
+        <Setter Property="Padding" Value="30 0 3 5"/>
+    </Style>
+    <Style Selector="Label.Attribute">
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryPortraitTextForeground}"/>
+        <Setter Property="Padding" Value="0 0 30 5"/>
+    </Style>
+    
 </Styles>

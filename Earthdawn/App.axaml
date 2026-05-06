@@ -16,9 +16,22 @@
     </Application.Styles>
              
     <Application.Resources>
+        <!--Graphical helper services-->
         <services:StringToImageconverter x:Key="Imageconverter"></services:StringToImageconverter>
         
-        <SolidColorBrush x:Key="PrimaryBackground">#9cbff7</SolidColorBrush>
+        <!--Portrait Elements-->
+        <SolidColorBrush x:Key="PrimaryPortraitBackground">#070708</SolidColorBrush>
+        <SolidColorBrush x:Key="SecondaryPortraitBackground">#17176E</SolidColorBrush>
+        <SolidColorBrush x:Key="PrimaryPortraitTextForeground">#D7D7F5</SolidColorBrush>
+        <LinearGradientBrush x:Key="PrimaryPortraitGradient" StartPoint="100%,0%" EndPoint="0%,50%">
+            <GradientStop Color="#070708" Offset="0"/>
+            <GradientStop Color="#17176E" Offset="1"/>
+        </LinearGradientBrush>
+        <!--Common Background Elements-->
+        
+        
+        
+        <!--Button Elements-->
         <SolidColorBrush x:Key="ButtonNavBackground">Transparent</SolidColorBrush>
         <SolidColorBrush x:Key="ButtonPrimaryBackgroundHover">#63f2a1</SolidColorBrush>
     </Application.Resources>

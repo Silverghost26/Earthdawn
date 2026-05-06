@@ -11,13 +11,13 @@
     <StackPanel>
         <Carousel SelectedIndex="{Binding CurrentIndex}"
         ItemsSource="{Binding Disciplines}"
-        Height="1000" Width="1800">
+        Height="900" Width="1800">
             <Carousel.PageTransition>
                 <PageSlide Duration="0:00:00.5" Orientation="Horizontal"/>
             </Carousel.PageTransition>
             <Carousel.ItemTemplate>
                 <DataTemplate>
-                    <Border Padding="10, 0, 5, 0" Background="BlanchedAlmond" CornerRadius="30">
+                    <Border Padding="10, 0, 5, 0" Background="AliceBlue" Opacity=".70" BorderThickness="5" BorderBrush="Black" CornerRadius="30">
                         <Grid ColumnDefinitions="*, Auto, *" RowDefinitions="Auto, Auto, *">
                             <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Content="{Binding Name}"/>
                             <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left">
@@ -33,7 +33,7 @@
                                 </StackPanel>
                                 
                             </StackPanel>
-                            <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Background="Black">
+                            <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Classes="PortraitBackground">
                                 <StackPanel>
                                     <Image 
                                         VerticalAlignment="Top" HorizontalAlignment="Center"
