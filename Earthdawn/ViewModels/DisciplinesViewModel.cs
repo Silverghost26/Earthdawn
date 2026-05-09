@@ -10,16 +10,16 @@ namespace Earthdawn.ViewModels;
 
 public partial class DisciplinesViewModel : PageViewModel
 {
-    [ObservableProperty]
-    private int _currentIndex;
-    
-    [ObservableProperty]
-    private Bitmap _disciplineImage;
-    
+    private ICharacterSheetService _characterSheetService;
+    [ObservableProperty] private int _currentIndex;
+
+    [ObservableProperty] private Bitmap _disciplineImage;
+
     public ObservableCollection<DisciplineDisplayCard> Disciplines { get; }
-    
-    public DisciplinesViewModel(IDataServices dataService)
+
+    public DisciplinesViewModel(IDataServices dataService, ICharacterSheetService characterSheetService)
     {
+        _characterSheetService = characterSheetService;
         PageName = ApplicationPageNames.Disciplines;
         Disciplines = new ObservableCollection<DisciplineDisplayCard>(dataService.LoadDisciplines());
         foreach (DisciplineDisplayCard discipline in Disciplines)
@@ -27,12 +27,23 @@ public partial class DisciplinesViewModel : PageViewModel
             discipline.SetPropertiesFromDictionary();
             discipline.SetDisplayForOptionalTalents();
         }
-        
+
     }
-    
+
     [RelayCommand]
     private void Next() => CurrentIndex = (CurrentIndex + 1) % Disciplines.Count;
 
     [RelayCommand]
     private void Previous() => CurrentIndex = CurrentIndex == 0 ? Disciplines.Count - 1 : CurrentIndex - 1;
+
+    [RelayCommand]
+    private void ApplyDisciplineValues()
+    {
+        Discipline discipline = Disciplines[CurrentIndex].Disciplines;
+        _characterSheetService.CharacterSheetInstance.CharacterDiscipline = discipline;
+
+        _characterSheetService.CharacterSheetInstance.Discipline = Disciplines[CurrentIndex].Name;
+
+    }
+
 }

@@ -17,56 +17,49 @@
             </Carousel.PageTransition>
             <Carousel.ItemTemplate>
                 <DataTemplate>
-                    <Border Padding="10, 0, 5, 0" Background="AliceBlue" Opacity=".70" BorderThickness="5" BorderBrush="Black" CornerRadius="30">
-                        <Grid ColumnDefinitions="*, Auto, *" RowDefinitions="Auto, Auto, *">
-                            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Content="{Binding Name}"/>
+                    <Border Padding="10, 0, 5, 0" Classes="background" BorderThickness="5" BorderBrush="Black" CornerRadius="30">
+                        <Grid ColumnDefinitions="*, 480, *" RowDefinitions="Auto, 560, *">
+                            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Classes="PrimaryHeader" HorizontalAlignment="Center" VerticalAlignment="Top" Content="{Binding Name}"/>
                             <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left">
-                                <TextBlock Text="Description:" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="Bold"/>
-                                <TextBlock Text="{Binding Disciplines.Description}" TextWrapping="Wrap" Padding="15,0,20,20" VerticalAlignment="Top"/>
-                                <TextBlock Text="Half Magic:" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="Bold"/>
-                                <TextBlock Text="{Binding Disciplines.HalfMagic}" TextWrapping="Wrap" Padding="15,0,20,20"/>
-                                <TextBlock Text="Starting Abilities:" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="Bold"/>
-                                <TextBlock Text="{Binding First}" TextWrapping="Wrap" Padding="15,0,20,0"/>
+                                <Label Classes="PrimarySubHeader" Content="Description:" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="Bold"/>
+                                <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Disciplines.Description}" TextWrapping="Wrap" Padding="15,0,20,20" VerticalAlignment="Top"/>
+                                <Label Classes="PrimarySubHeader" Content="Half Magic:" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="Bold"/>
+                                <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Disciplines.HalfMagic}" TextWrapping="Wrap" Padding="15,0,20,20"/>
+                                <Label Classes="PrimarySubHeader" Content="Starting Abilities:" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="Bold"/>
+                                <TextBlock Classes="PrimaryDescriptionText" Text="{Binding First}" TextWrapping="Wrap" Padding="15,0,20,0"/>
                                 <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-                                    <Label Content="Durability: " Padding="15,0,5,20"/>
-                                    <TextBlock Text="{Binding Disciplines.Durability}" TextWrapping="Wrap" Padding="15,0,20,20"/>
+                                    <TextBlock Classes="PrimaryDescriptionText" Text="Durability: " Padding="15,0,5,20"/>
+                                    <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Disciplines.Durability}" TextWrapping="Wrap" Padding="15,0,20,20"/>
                                 </StackPanel>
-                                
                             </StackPanel>
                             <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Classes="PortraitBackground">
-                                <StackPanel>
+                                <StackPanel VerticalAlignment="Center">
                                     <Image 
                                         VerticalAlignment="Top" HorizontalAlignment="Center"
                                         Source="{Binding ImagePath, Converter={StaticResource Imageconverter}}"
                                         Height="450">
                                     </Image>
-                                    <Label Content="Primary Attributes" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Foreground="AliceBlue"/>
-                                    <TextBlock Text="{Binding Disciplines.ImportantAttributes}" TextWrapping="Wrap" Padding="0,2,0,10" Foreground="AliceBlue" HorizontalAlignment="Center"/>
+                                    <Label Classes="PictureBoxHeader" Content="Primary Attributes" FontWeight="Bold" HorizontalAlignment="Center"/>
+                                    <TextBlock Classes="PictureBoxText" Text="{Binding Disciplines.ImportantAttributes}" TextWrapping="Wrap" Padding="0,2,0,10" HorizontalAlignment="Center"/>
                                 </StackPanel>
                             </Border>
                             <Grid Grid.Row="1" Grid.Column="2" RowDefinitions="*, *, *, *" ColumnDefinitions="*" HorizontalAlignment="Center">
                                 <StackPanel Grid.Row="0" Grid.Column="0">
-                                    <Label Content="Novice Optional Talents" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"/>
-                                    <TextBlock Text="{Binding NoviceOptions}" TextWrapping="Wrap" Padding="20 0 10 0"/>
+                                    <Label Classes="PrimarySubHeader" Content="Novice Optional Talents" HorizontalAlignment="Center" FontWeight="Bold"/>
+                                    <TextBlock Classes="PrimaryDescriptionText" Text="{Binding NoviceOptions}" TextWrapping="Wrap" Padding="20 0 10 0"/>
                                 </StackPanel>
                                     <StackPanel Grid.Row="1">
-                                        <Label Content="Journeyman Optional Talents" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"/>
-                                        <TextBlock Text="{Binding JourneymanOptions}" TextWrapping="Wrap" Padding="20 0 10 0"/>
+                                        <Label Classes="PrimarySubHeader" Content="Journeyman Optional Talents" HorizontalAlignment="Center" FontWeight="Bold"/>
+                                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding JourneymanOptions}" TextWrapping="Wrap" Padding="20 0 10 0"/>
                                     </StackPanel>
                                     <StackPanel Grid.Row="2">
-                                    <Label Content="Warden Optional Talents" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"/>
-                                    <TextBlock Text="{Binding WardenOptions}" TextWrapping="Wrap" Padding="20 0 10 0"/>
+                                    <Label Classes="PrimarySubHeader" Content="Warden Optional Talents" HorizontalAlignment="Center" FontWeight="Bold"/>
+                                    <TextBlock Classes="PrimaryDescriptionText" Text="{Binding WardenOptions}" TextWrapping="Wrap" Padding="20 0 10 0"/>
                                     </StackPanel>
                                 <StackPanel Grid.Row="3">
-                                    <Label Content="Master Optional Talents" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"/>
-                                    <TextBlock Text="{Binding MasterOptions}" TextWrapping="Wrap" Padding="20 0 10 0"/>
+                                    <Label Classes="PrimarySubHeader" Content="Master Optional Talents" HorizontalAlignment="Center" FontWeight="Bold"/>
+                                    <TextBlock Classes="PrimaryDescriptionText" Text="{Binding MasterOptions}" TextWrapping="Wrap" Padding="20 0 10 0"/>
                                 </StackPanel>
-                            </Grid>
-
-                            <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
-                                <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,*">
-                                    
-                                </Grid>
                             </Grid>
                         </Grid>
                     </Border>
@@ -75,6 +68,7 @@
         </Carousel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="100">
             <Button Content = "Previous" Command="{Binding PreviousCommand}"/>
+            <Button Content = "Select Discipline" Command="{Binding ApplyDisciplineValuesCommand}"/>
             <Button Content = "Next" Command="{Binding NextCommand}"/>
         </StackPanel>
     </StackPanel>

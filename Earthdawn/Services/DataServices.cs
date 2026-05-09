@@ -13,24 +13,23 @@ public class DataServices : IDataServices
 
     public List<RaceDisplayCard> LoadRaces()
     {
-        // Dictionary<string, Race> raceDictionary = dataLoader.LoadJson<Dictionary<string, Race>>(getJson("Races.json"));
-        Dictionary<string, Race> raceDictionary = DataLoader.LoadJson<Dictionary<string, Race>>(getJson("Races.json"));
+        Dictionary<string, Race> raceDictionary = DataLoader.LoadJson<Dictionary<string, Race>>(GetJson("Races.json"));
         return raceDictionary.Select(kvp => new RaceDisplayCard { Name = kvp.Key, NameGiverRace = kvp.Value }).ToList();
     }
 
     public List<DisciplineDisplayCard> LoadDisciplines()
     {
-        Dictionary<string, Discipline> disciplineDictionary = DataLoader.LoadJson<Dictionary<string, Discipline>>(getJson("Disciplines.json"));
+        Dictionary<string, Discipline> disciplineDictionary = DataLoader.LoadJson<Dictionary<string, Discipline>>(GetJson("Disciplines.json"));
         return disciplineDictionary.Select(kvp => new DisciplineDisplayCard() { Name = kvp.Key, Disciplines = kvp.Value }).ToList();
     }
     
     public List<SpellDisplayCard> LoadSpells()
     {
-        Dictionary<string, SpellCircle> spellDictionary = DataLoader.LoadJson<Dictionary<string, SpellCircle>>(getJson("spells.json"));
+        Dictionary<string, SpellCircle> spellDictionary = DataLoader.LoadJson<Dictionary<string, SpellCircle>>(GetJson("spells.json"));
         return spellDictionary.Select(kvp => new SpellDisplayCard() { Name = kvp.Key, Book = kvp.Value }).ToList();
     }
 
-    private string getJson(string file)
+    private string GetJson(string file)
     {
         string path = "avares://Earthdawn/Assets/Data/" + file;
         var uri = new Uri(path);

@@ -17,21 +17,24 @@
             </Carousel.PageTransition>
             <Carousel.ItemTemplate>
                 <DataTemplate>
-                    <Border Padding="20" Background="BlanchedAlmond" CornerRadius="30">
-                        <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto, Auto, *">
-                            <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Grid.ColumnSpan="2" FontSize="70" FontStyle="Normal" Content="{Binding Name}"/>
+                    <Border Padding="20" CornerRadius="30" Classes="background" BorderThickness="5" BorderBrush="Black">
+                        <Grid ColumnDefinitions="*, 480" RowDefinitions="Auto, 560, *">
+                            <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Grid.ColumnSpan="2" Classes="PrimaryHeader" Content="{Binding Name}"/>
                             <StackPanel Grid.Row="1" Grid.Column="0">
-                                <TextBlock Text="{Binding NameGiverRace.Description}" TextWrapping="Wrap" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                                <TextBlock Text="{Binding NameGiverRace.Description}" Padding="5, 0 10 0" Classes="PrimaryDescriptionText" TextWrapping="Wrap" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                                <Label Content="Racial Abilities" VerticalAlignment="Bottom" HorizontalAlignment="Left" Classes="PrimarySubHeader" Padding="0 20 0 0"/>
+                                <TextBlock Text="{Binding UpperAbilityText }" Padding="5 0 10 0" Classes="PrimaryDescriptionText" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Left"/>
                             </StackPanel>
+                            <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LowerAbilityText}" TextWrapping="Wrap" Classes="PrimaryDescriptionText" HorizontalAlignment="Left"/>
                             <Border Classes="PortraitBackground" Grid.Row="1" Grid.Column="1" CornerRadius="20">
-                                <StackPanel>
+                                <StackPanel VerticalAlignment="Center">
                                     <Image 
                                         VerticalAlignment="Center" HorizontalAlignment="Center"
                                         Source="{Binding ImagePath, Converter={StaticResource Imageconverter}}"
                                         Height="450">
                                     </Image>
                                     <Grid RowDefinitions="30,*,*,*" ColumnDefinitions="*,*,*" HorizontalAlignment="Center">
-                                        <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" Content="Attributes" Foreground="AliceBlue"/>
+                                        <Label Classes="PictureBoxHeader" Padding="0 0 0 5" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Attributes"/>
                                         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
                                             <Label Classes="AttributeName" Content="Dexterity:"/>
                                             <Label Classes="Attribute" Content="{Binding NameGiverRace.DEX}"/>
@@ -73,34 +76,6 @@
                                     </Grid>
                                 </StackPanel>
                             </Border>
-                            <StackPanel Grid.Row="2" Grid.Column="0">
-                                <Label Content="Racial Abilities" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="30"/>
-                                <TextBlock Text="{Binding RaceAbilities}" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                            </StackPanel>
-                            <!-- <Border Grid.Row="2" Grid.Column="1" Padding="30" Background="Azure" CornerRadius="20"/> -->
-                            <!-- <Grid Grid.Row="2" Grid.Column="1" ColumnDefinitions="*, Auto, *, Auto, *, Auto" RowDefinitions="30, Auto, Auto, Auto"> -->
-                            <!--     <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" Content="Attributes"/> -->
-                            <!--     <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Dexterity:"/> -->
-                            <!--     <Label Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.DEX}"/> -->
-                            <!--     <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Strength:"/> -->
-                            <!--     <Label Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.STR}"/> -->
-                            <!--     <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Toughness:"/> -->
-                            <!--     <Label Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.TOU}"/> -->
-                            <!-- -->
-                            <!--     <Label Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Perception:"/> -->
-                            <!--     <Label Grid.Row="1" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.PER}"/> -->
-                            <!--     <Label Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Content="WillPower:"/> -->
-                            <!--     <Label Grid.Row="2" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.WIL}"/> -->
-                            <!--     <Label Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Charisma:"/> -->
-                            <!--     <Label Grid.Row="3" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.CHA}"/> -->
-                            <!-- -->
-                            <!--     <Label Grid.Row="1" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Karma Modifier:"/> -->
-                            <!--     <Label Grid.Row="1" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.KarmaMod}"/> -->
-                            <!--     <Label Grid.Row="2" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Movement:"/> -->
-                            <!--     <Label Grid.Row="2" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.Movement}"/> -->
-                            <!--     <Label Grid.Row="3" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Flying Movement:"/> -->
-                            <!--     <Label Grid.Row="3" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding NameGiverRace.FlyingMovement}"/> -->
-                            <!-- </Grid> -->
                         </Grid>
                     </Border>
                 </DataTemplate>
@@ -108,6 +83,7 @@
         </Carousel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="100">
             <Button Content = "Previous" Command="{Binding PreviousCommand}"/>
+            <Button Content="Select Race" Command="{Binding ApplyRaceAttributesCommand}"/>
             <Button Content = "Next" Command="{Binding NextCommand}"/>
         </StackPanel>
     </StackPanel>

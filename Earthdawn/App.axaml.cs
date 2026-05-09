@@ -10,6 +10,7 @@ using System;
 using Earthdawn.Data;
 using Microsoft.Extensions.DependencyInjection;
 using Earthdawn.Factories;
+using Earthdawn.Models;
 using EarthDawn.Services;
 
 namespace Earthdawn;
@@ -19,6 +20,7 @@ public partial class App : Application
     public override void Initialize()
     {
         AvaloniaXamlLoader.Load(this);
+        
     }
 
     public override void OnFrameworkInitializationCompleted()
@@ -27,6 +29,7 @@ public partial class App : Application
         collection.AddSingleton<MainWindowViewModel>();
         collection.AddSingleton<IDataServices,  DataServices>();
         collection.AddSingleton<StringToImageconverter>();
+        collection.AddSingleton<ICharacterSheetService, CharacterSheetService>();
         
         collection.AddTransient<CharacterCustomizationsViewModel>();
         collection.AddTransient<CharacterViewModel>();
@@ -55,7 +58,8 @@ public partial class App : Application
         collection.AddSingleton<PageFactory>();
         
         var services = collection.BuildServiceProvider();
-        
+        var sheetService = services.GetRequiredService<ICharacterSheetService>();
+        sheetService.SetCharacterSheet(new CharacterSheet());
         
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {

@@ -16,6 +16,46 @@
     </Design.PreviewWith>
 
     <!-- Add Styles Here -->
+    <Style Selector="Label.PrimaryHeader">
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryFontForeground}"/>
+        <Setter Property="FontFamily" Value="{DynamicResource Vinque}"/>
+        <Setter Property="FontSize" Value="70"/>
+    </Style>
+    
+    <Style Selector="Label.PrimarySubHeader">
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryFontForeground}"/>
+        <Setter Property="FontFamily" Value="{DynamicResource Vinque}"/>
+        <Setter Property="FontSize" Value="35"/>
+    </Style>
+    
+    <Style Selector="Label.PrimaryText">
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryFontForeground}"/>
+        <Setter Property="FontFamily" Value="{DynamicResource Vinque}"/>
+        <Setter Property="FontSize" Value="17"/>
+    </Style>
+    
+    <Style Selector="TextBlock.PrimaryDescriptionText">
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryFontForeground}"/>
+        <Setter Property="FontFamily" Value="{DynamicResource Vinque}"/>
+        <Setter Property="FontSize" Value="17"/>
+    </Style>
+    
+    <Style Selector="Label.PictureBoxHeader">
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryPortraitTextForeground}"/>
+        <Setter Property="FontFamily" Value="{DynamicResource Vinque}"/>
+        <Setter Property="FontSize" Value="25"/>
+    </Style>
+    
+    <Style Selector="TextBlock.PictureBoxText">
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryPortraitTextForeground}"/>
+        <Setter Property="FontFamily" Value="{DynamicResource Vinque}"/>
+        <Setter Property="FontSize" Value="15"/>
+    </Style>
+    
+    <Style Selector="TextBlock">
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryFontForeground}"/>
+    </Style>
+    
     
     <!--Buttons-->
     <Style Selector="Button">
@@ -39,10 +79,20 @@
                         Stretch="UniformToFill"
                         AlignmentX="Center"
                         AlignmentY="Center"
-                        Opacity="0.2"/>
+                        Opacity="0.6"/>
         </Setter>
     </Style>
     
+    <Style Selector="Border.background">
+        <Setter Property="Background">
+            <ImageBrush Source="/Assets/Textures/whitestone.png"
+                Stretch="UniformToFill"
+                AlignmentX="Center"
+                AlignmentY="Center"
+                Opacity=".9"/>
+        </Setter>
+    </Style>
+                
     <Style Selector="Border.PortraitBackground">
         <Setter Property="Background" Value="{DynamicResource PrimaryPortraitGradient}"></Setter>
     </Style>
@@ -50,10 +100,12 @@
     <Style Selector="Label.AttributeName">
         <Setter Property="Foreground" Value="{DynamicResource PrimaryPortraitTextForeground}"/>
         <Setter Property="Padding" Value="30 0 3 5"/>
+        <Setter Property="FontFamily" Value="{DynamicResource Vinque}"/>
     </Style>
     <Style Selector="Label.Attribute">
         <Setter Property="Foreground" Value="{DynamicResource PrimaryPortraitTextForeground}"/>
         <Setter Property="Padding" Value="0 0 30 5"/>
+        <Setter Property="FontFamily" Value="{DynamicResource Vinque}"/>
     </Style>
     
 </Styles>

@@ -49,6 +49,8 @@ public class DisciplineDisplayCard
     }
     private Discipline? _discipline;
     
+    
+    // ************************************* UI Display Helpers ***************************************
     public string ImagePath
     {
         get => _imagePath ?? string.Empty;
@@ -61,7 +63,7 @@ public class DisciplineDisplayCard
         }
     }
     private string? _imagePath = string.Empty;
-
+    
     public string? First { get;  set; } 
     public string? Second { get;  set; }
     public string? Third { get;  set; }
@@ -77,7 +79,7 @@ public class DisciplineDisplayCard
     public string? Thirteenth { get;  set; }
     public string? Fourteenth { get;  set; }
     public string? Fifteenth { get;  set; }
-
+    
     public string? NoviceOptions
     {
         get => _noviceOptions;
@@ -212,56 +214,56 @@ public class DisciplineDisplayCard
             index++;
         }
 
-        displayString = displayString + "\n\n";
+        displayString = displayString;
         foreach (string ft in circle.FreeTalents)
         {
             if(ft != string.Empty)
             {
-                displayString = displayString + "Free Talent: " + ft + "\n";
+                displayString = displayString + "\nFree Talent: " + ft;
             }
         }
         if (circle.PhysicalDefense != string.Empty)
         {
-            displayString = displayString + "\nPhysical Defense: " + circle.PhysicalDefense + "\n";
+            displayString = displayString + "\nPhysical Defense: " + circle.PhysicalDefense;
         }
         if (circle.MysticalDefense != string.Empty)
         {
-            displayString = displayString + "\nMystical Defense: " + circle.MysticalDefense + "\n";
+            displayString = displayString + "\nMystical Defense: " + circle.MysticalDefense;
         }
 
         if (circle.SocialDefense != string.Empty)
         {
-            displayString = displayString + "\nSocial Defense: " + circle.SocialDefense + "\n";
+            displayString = displayString + "\nSocial Defense: " + circle.SocialDefense;
         }
 
         if (circle.PhysicalArmor != string.Empty)
         {
-            displayString = displayString + "\nPhysical Armor: " + circle.PhysicalArmor + "\n";
+            displayString = displayString + "\nPhysical Armor: " + circle.PhysicalArmor;
         }
 
         if (circle.MysticalArmor != string.Empty)
         {
-            displayString = displayString + "\nMystical Armor: " + circle.MysticalArmor + "\n";
+            displayString = displayString + "\nMystical Armor: " + circle.MysticalArmor;
         }
 
         if (circle.Karma != string.Empty)
         {
-            displayString = displayString + "\nKarma: " + circle.Karma + "\n";
+            displayString = displayString + "\nKarma: " + circle.Karma;
         }
 
         if (circle.Initiative != string.Empty)
         {
-            displayString = displayString + "\nInitiative: " + circle.Initiative + "\n";
+            displayString = displayString + "\nInitiative: " + circle.Initiative;
         }
 
         if (circle.Recovery != string.Empty)
         {
-            displayString = displayString + "\nRecovery: " + circle.Recovery + "\n";
+            displayString = displayString + "\nRecovery: " + circle.Recovery;
         }
 
         if (circle.Special != string.Empty)
         {
-            displayString = displayString + "\nSpecial Ability: " + circle.Special + "\n";
+            displayString = displayString + "\nSpecial Ability: " + circle.Special;
         }
         return displayString;
         

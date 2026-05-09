@@ -16,6 +16,9 @@
     </Application.Styles>
              
     <Application.Resources>
+        <!--Fonts-->
+        <FontFamily x:Key="Vinque">avares://Earthdawn/Assets/Fonts#Vinque Regular</FontFamily>
+        <SolidColorBrush x:Key="PrimaryFontForeground">#040840</SolidColorBrush>
         <!--Graphical helper services-->
         <services:StringToImageconverter x:Key="Imageconverter"></services:StringToImageconverter>
         

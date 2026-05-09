@@ -8,6 +8,89 @@
              x:Class="Earthdawn.Views.CharacterCustomizationsView">
     
     <Design.DataContext><vm:HomeViewModel></vm:HomeViewModel></Design.DataContext>
-    
-    <Label Content="{Binding Test}"></Label>
+    <StackPanel Spacing="5" Width="1900">
+        <Border Classes="background" CornerRadius="30" Padding="20">
+            <StackPanel Spacing="5">
+                <Label Classes="PrimarySubHeader" Content="Attributes" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                <Grid ColumnDefinitions="1150,* *" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
+                    <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                        <Label Classes="PrimaryText" Content="Dexterity:" Padding="20 0 5 0" FontSize="25"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Dexterity}" FontSize="25"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                        <Label Classes="PrimaryText" Content="Strength:" Padding="20 0 5 0" FontSize="25"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Strength}" FontSize="25"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                        <Label Classes="PrimaryText" Content="Toughness:" Padding="20 0 5 0" FontSize="25"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Toughness}" FontSize="25"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                        <Label Classes="PrimaryText" Content="Perception:" Padding="20 0 5 0" FontSize="25"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Perception}" FontSize="25"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="4" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">    
+                        <Label Classes="PrimaryText" Content="Willpower:" Padding="20 0 5 0" FontSize="25"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Willpower}" FontSize="25"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="5" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                        <Label Classes="PrimaryText" Content="Charisma:" Padding="20 0 5 0" FontSize="25"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Charisma}" FontSize="25"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Grid.ColumnSpan="2">
+                        <Label Classes="PrimaryText" Content="Remaining Attribute Points:" Padding="20 0 5 10" FontSize="25"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="25" FontSize="25"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                        <Label Classes="PrimaryText" Content="Max Karma:" Padding="20 0 5 10" FontSize="25"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Karma}" FontSize="25"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal">
+                        <Label Classes="PrimaryText" Content="Initiative:" Padding="100 0 5 10" FontSize="25"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Karma}" FontSize="25"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+                        <Label Classes="PrimaryText" Content="Physical Defense:" Padding="20 0 5 10" FontSize="25"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Charisma}" FontSize="25"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal">
+                        <Label Classes="PrimaryText" Content="Mystical Defense:" Padding="100 0 5 10" FontSize="25"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Karma}" FontSize="25"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
+                        <Label Classes="PrimaryText" Content="SocialDefence:" Padding="20 0 5 10" FontSize="25"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Karma}" FontSize="25"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Horizontal">
+                        <Label Classes="PrimaryText" Content="Unconscious Rating:" Padding="100 0 5 10" FontSize="25"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Charisma}" FontSize="25"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal">
+                        <Label Classes="PrimaryText" Content="Death Rating:" Padding="20 0 5 10" FontSize="25"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Karma}" FontSize="25"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="4" Grid.Column="2" Orientation="Horizontal">
+                        <Label Classes="PrimaryText" Content="Wound Threshold:" Padding="100 0 5 10" FontSize="25"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Karma}" FontSize="25"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
+                        <Label Classes="PrimaryText" Content="Recovery Tests:" Padding="20 0 5 0" FontSize="25"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Charisma}" FontSize="25"/>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </Border>
+        <Border Classes="background" CornerRadius="30">
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,*">
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Classes="PrimarySubHeader" Content="Talents" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                <StackPanel Grid.Row="1" Grid.Column="0">
+                    <Label Grid.Row="1" Grid.Column="0" Classes="PrimaryText" Content="Discipline Talents" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25"/>
+                    <ListBox ItemsSource="{Binding Talents}"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Classes="background" CornerRadius="30">
+            <Label Classes="PrimarySubHeader" Content="Skills" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        </Border>
+    </StackPanel>
 </UserControl>

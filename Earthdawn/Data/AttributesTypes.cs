@@ -1,6 +1,6 @@
 ﻿namespace Earthdawn.Data;
 
-public enum Attributes
+public enum AttributesTypes
 {
     Dex,
     Str,

@@ -1,21 +1,43 @@
 
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
 namespace Earthdawn.Models;
 
-public class  CharacterSheet
+public class  CharacterSheet : INotifyPropertyChanged
 {
+    public event PropertyChangedEventHandler? PropertyChanged;
+
+    protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+
+    public CharacterSheet()
+    {
+        CharAttributes = new Attributes();
+    }
+
+    public CharacterSheet(Race race)
+    {
+        CharAttributes = new Attributes(race);
+    }
+    
+    
     //Properties
     public string CharacterName {
-         get => _charactername ?? string.Empty;
-         set => _charactername = value.Trim(); 
+         get => _characterName ?? string.Empty;
+         set => _characterName = value.Trim(); 
          }
-    private string? _charactername;
+    private string? _characterName;
 
     public string Discipline 
     {
-        get => _discipline ?? string.Empty;
-        set => _discipline = value.Trim();
+        get => _disciplineName ?? string.Empty;
+        set => _disciplineName = value.Trim();
     }
-    private string? _discipline;
+    private string? _disciplineName;
 
     public string Race
     {
@@ -88,6 +110,14 @@ public class  CharacterSheet
     }
     private int _movementRate;
 
+    public int FlyingMovementRate
+    {
+        get => _flyingMovementRate;
+        set => _flyingMovementRate = value <= 0 ? 0 : value;
+    }
+
+    private int _flyingMovementRate;
+
     public int CarryingCapacity
     {
         get => _carryingCapacity;
@@ -97,26 +127,25 @@ public class  CharacterSheet
 
     public int LegendPointsTotal
     {
-        get => _legendpointsTotal;
-        private set => _legendpointsTotal = value < 0 ? 0 : value; // Ensure Legend Points is non-negative
+        get => _legendPointsTotal;
+        private set => _legendPointsTotal = value < 0 ? 0 : value; // Ensure Legend Points is non-negative
     }
-    private int _legendpointsTotal;
+    private int _legendPointsTotal;
 
     public int LegendPointsAvailable
     {
-        get => _legendpointsAvailable;
-        private set => _legendpointsAvailable = value < 0 ? 0 : value; // Ensure Legend Points is non-negative
+        get => _legendPointsAvailable;
+        private set => _legendPointsAvailable = value < 0 ? 0 : value; // Ensure Legend Points is non-negative
     }
-    private int _legendpointsAvailable;
+    private int _legendPointsAvailable;
 
-    public string LengendaryStatus
+    public string LegendaryStatus
     {
         get => _legendaryStatus ?? string.Empty;
         set => _legendaryStatus = value.Trim();
     }
     private string? _legendaryStatus;
-
-
+    
     public string Renown
     {
         get => _renown ?? string.Empty;
@@ -131,5 +160,34 @@ public class  CharacterSheet
     }       
     private string? _reputation;
 
+    public Attributes CharAttributes
+    {
+        get => _charAttributes ??= new Attributes();
+        set => _charAttributes = value ?? new();
+    }
+    private Attributes? _charAttributes;
+    
+    public int Karma { get; set; }
+    public int KarmaModifier { get; set; }
+    public int MaxKarma { get; set; }
 
+    public List<SpecialAbility> RacialAbilities
+    {
+        get => _racialAbilities ??= new List<SpecialAbility>();
+        set => _racialAbilities = value ?? new List<SpecialAbility>();
+    }
+    private List<SpecialAbility> _racialAbilities;
+
+    public Discipline CharacterDiscipline
+    {
+        get => _characterDiscipline ??= new();
+        set => _characterDiscipline = value;
+    }
+    private Discipline _characterDiscipline;
+    
+    public void AddRaceBaseAttributes(Race race)
+    {
+        Attributes attributes = new Attributes(race);
+        CharAttributes = attributes;
+    }
 }

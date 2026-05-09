@@ -14,13 +14,6 @@ namespace EarthDawn.Services
         //use syntax 2: GeneralEquipment equipmentData = loader.LoadDataFromDisk<RootModel>("path/to/equipment.json");
         public static T LoadJson<T>(string jsonString) where T : class
         {
-            // if (!File.Exists(path))
-            // {
-            //     throw new FileNotFoundException($"File not found at: {path}");
-            // }
-            //
-            // string jsonString = File.ReadAllText(path);
-
             try
             {
                 var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
