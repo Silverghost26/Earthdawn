@@ -29,6 +29,18 @@ public class DataServices : IDataServices
         return spellDictionary.Select(kvp => new SpellDisplayCard() { Name = kvp.Key, Book = kvp.Value }).ToList();
     }
 
+    public List<TalentDisplayCard> LoadTalentsList()
+    {
+        Dictionary<string, Talent> talentDictionary = DataLoader.LoadJson<Dictionary<string, Talent>>(GetJson("Talents.json"));
+        return talentDictionary.Select(kvp => new TalentDisplayCard() { Name = kvp.Key, Talents = kvp.Value }).ToList();
+    }
+
+    public Dictionary<string, Talent> LoadTalents()
+    {
+        return DataLoader.LoadJson<Dictionary<string, Talent>>(GetJson("Talents.json"));
+    }
+    
+
     private string GetJson(string file)
     {
         string path = "avares://Earthdawn/Assets/Data/" + file;

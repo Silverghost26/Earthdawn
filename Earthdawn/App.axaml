@@ -37,5 +37,7 @@
         <!--Button Elements-->
         <SolidColorBrush x:Key="ButtonNavBackground">Transparent</SolidColorBrush>
         <SolidColorBrush x:Key="ButtonPrimaryBackgroundHover">#63f2a1</SolidColorBrush>
+        
+        
     </Application.Resources>
 </Application>

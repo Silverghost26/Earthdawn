@@ -15,6 +15,7 @@
         </Border>
     </Design.PreviewWith>
 
+    
     <!-- Add Styles Here -->
     <Style Selector="Label.PrimaryHeader">
         <Setter Property="Foreground" Value="{DynamicResource PrimaryFontForeground}"/>

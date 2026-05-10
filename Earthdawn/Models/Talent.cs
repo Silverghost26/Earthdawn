@@ -20,3 +20,24 @@ public class Talent
         // Maps to the "Description" key
         public string Description { get; set; }
 }
+
+public class TalentDisplayCard
+{
+    public string Name
+    {
+        get => _name ?? string.Empty;
+        set
+        {
+            _name = value;
+            
+        }
+    }
+    private string? _name;
+
+    public Talent Talents
+    {
+        get => _talent ?? new Talent();
+        set => _talent = value;
+    }
+    private Talent? _talent;
+}
