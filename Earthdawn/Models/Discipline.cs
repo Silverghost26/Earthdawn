@@ -16,14 +16,14 @@ public class Discipline
 
     public class Circle
     {
-        public string PhysicalDefense { get; set; } = string.Empty;
-        public string MysticalDefense { get; set; } = string.Empty;
-        public string SocialDefense { get; set; } = string.Empty;
-        public string PhysicalArmor { get; set; } = string.Empty;
-        public string MysticalArmor { get; set; } = string.Empty;
+        public int PhysicalDefense { get; set; }
+        public int MysticalDefense { get; set; } 
+        public int SocialDefense { get; set; } 
+        public int MysticalArmor { get; set; } 
+        public int PhysicalArmor { get; set; } 
         public string Karma { get; set; } = string.Empty;
-        public string Initiative { get; set; } = string.Empty;
-        public string Recovery { get; set; } = string.Empty;
+        public int Initiative { get; set; } 
+        public int Recovery { get; set; } 
         public string Special { get; set; } = string.Empty;
         public List<string> FreeTalents { get; set; } = new();
         public List<string> Talents { get; set; } = new();
@@ -222,26 +222,26 @@ public class DisciplineDisplayCard
                 displayString = displayString + "\nFree Talent: " + ft;
             }
         }
-        if (circle.PhysicalDefense != string.Empty)
+        if (circle.PhysicalDefense != 0)
         {
             displayString = displayString + "\nPhysical Defense: " + circle.PhysicalDefense;
         }
-        if (circle.MysticalDefense != string.Empty)
+        if (circle.MysticalDefense != 0)
         {
             displayString = displayString + "\nMystical Defense: " + circle.MysticalDefense;
         }
 
-        if (circle.SocialDefense != string.Empty)
+        if (circle.SocialDefense != 0)
         {
             displayString = displayString + "\nSocial Defense: " + circle.SocialDefense;
         }
 
-        if (circle.PhysicalArmor != string.Empty)
+        if (circle.PhysicalArmor != 0)
         {
             displayString = displayString + "\nPhysical Armor: " + circle.PhysicalArmor;
         }
 
-        if (circle.MysticalArmor != string.Empty)
+        if (circle.MysticalArmor != 0)
         {
             displayString = displayString + "\nMystical Armor: " + circle.MysticalArmor;
         }
@@ -251,12 +251,12 @@ public class DisciplineDisplayCard
             displayString = displayString + "\nKarma: " + circle.Karma;
         }
 
-        if (circle.Initiative != string.Empty)
+        if (circle.Initiative != 0)
         {
             displayString = displayString + "\nInitiative: " + circle.Initiative;
         }
 
-        if (circle.Recovery != string.Empty)
+        if (circle.Recovery != 0)
         {
             displayString = displayString + "\nRecovery: " + circle.Recovery;
         }

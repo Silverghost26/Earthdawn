@@ -8,12 +8,12 @@ namespace  Earthdawn.Models
     {
         public string Living { get; set; }
         public string Availability { get; set; }
-        public string PhysicalDefense { get; set; }
-        public string MysticDefense { get; set; }
-        public string InitiativePenalty { get; set; }
-        public string ShatterThreshold { get; set; }
+        public int PhysicalDefense { get; set; }
+        public int MysticDefense { get; set; }
+        public int InitiativePenalty { get; set; }
+        public int ShatterThreshold { get; set; }
         public string Cost { get; set; }
-        public string Weight { get; set; }
+        public int Weight { get; set; }
         public string Description { get; set; }
     }
 }

@@ -7,6 +7,7 @@ namespace Earthdawn.Models;
 
 public class  CharacterSheet : INotifyPropertyChanged
 {
+
     public event PropertyChangedEventHandler? PropertyChanged;
 
     protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
@@ -16,12 +17,12 @@ public class  CharacterSheet : INotifyPropertyChanged
 
     public CharacterSheet()
     {
-        CharAttributes = new Attributes();
+        _charAttributes = new Attributes();
     }
 
     public CharacterSheet(Race race)
     {
-        CharAttributes = new Attributes(race);
+        _charAttributes = new Attributes(race);
     }
     
     
