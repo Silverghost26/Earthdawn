@@ -57,13 +57,23 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
         SelectedOptionalTalent = selectedTalent;
     }
 
-    public int Dexterity => _characterSheetService.CharacterSheetInstance.CharAttributes.Dexterity;
-    public int Strength => _characterSheetService.CharacterSheetInstance.CharAttributes.Strength;
-    public int Toughness => _characterSheetService.CharacterSheetInstance.CharAttributes.Toughness;
-    public int Perception => _characterSheetService.CharacterSheetInstance.CharAttributes.Perception;
-    public int Willpower => _characterSheetService.CharacterSheetInstance.CharAttributes.Willpower;
-    public int Charisma => _characterSheetService.CharacterSheetInstance.CharAttributes.Charisma;
+    public int Dexterity => _characterSheetService.CharacterSheetInstance.Dexterity;
+    public int Strength => _characterSheetService.CharacterSheetInstance.Strength;
+    public int Toughness => _characterSheetService.CharacterSheetInstance.Toughness;
+    public int Perception => _characterSheetService.CharacterSheetInstance.Perception;
+    public int Willpower => _characterSheetService.CharacterSheetInstance.Willpower;
+    public int Charisma => _characterSheetService.CharacterSheetInstance.Charisma;
     public int Karma => _characterSheetService.CharacterSheetInstance.Karma;
+    public int PhysicalDefense => _characterSheetService.CharacterSheetInstance.PhysicalDefense;
+    public int MysticDefense => _characterSheetService.CharacterSheetInstance.MysticDefense;
+    public int PhysicalArmor => _characterSheetService.CharacterSheetInstance.PhysicalArmor;
+    public int MysticalArmor => _characterSheetService.CharacterSheetInstance.MysticalArmor;
+    public int SocialDefense => _characterSheetService.CharacterSheetInstance.SocialDefense;
+    public int Initiative => _characterSheetService.CharacterSheetInstance.Initiative;
+    public int UnconsciousRating => _characterSheetService.CharacterSheetInstance.UnconsciousRating;
+    public int DeathRating => _characterSheetService.CharacterSheetInstance.DeathRating;
+    public int WoundThreshold => _characterSheetService.CharacterSheetInstance.WoundThreshold;
+    public int RecovertyTests => _characterSheetService.CharacterSheetInstance.RecoveryTests;
 
     public List<string> Talents =>
         _characterSheetService.CharacterSheetInstance.CharacterDiscipline.Circles["First"].Talents;

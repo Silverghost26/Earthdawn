@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using Earthdawn.Data;
 
 namespace Earthdawn.Models;
 
 public class  CharacterSheet : INotifyPropertyChanged
 {
 
+    private Attributes? _charAttributes;
     public event PropertyChangedEventHandler? PropertyChanged;
 
     protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
@@ -23,6 +25,7 @@ public class  CharacterSheet : INotifyPropertyChanged
     public CharacterSheet(Race race)
     {
         _charAttributes = new Attributes(race);
+        Karma = race.KarmaMod;
     }
     
     
@@ -161,13 +164,139 @@ public class  CharacterSheet : INotifyPropertyChanged
     }       
     private string? _reputation;
 
-    public Attributes CharAttributes
+    public int Dexterity
     {
-        get => _charAttributes ??= new Attributes();
-        set => _charAttributes = value ?? new();
+        get
+        {
+            return _charAttributes.Dexterity;
+        } 
+        set;
     }
-    private Attributes? _charAttributes;
+
+    public int Strength
+    {
+        get
+        {
+            return _charAttributes.Strength;
+        }
+        set;
+    }
+    public int Toughness {
+        get
+        {
+            return _charAttributes.Toughness;
+        }
+        set; 
+    }
+
+    public int Perception
+    {
+        get
+        {
+            return _charAttributes.Perception;
+        }
+        set;
+    }
+
+    public int Willpower
+    {
+        get
+        {
+            return _charAttributes.Willpower;
+        } 
+        set;
+    }
+
+    public int Charisma
+    {
+        get
+        {
+            return _charAttributes.Charisma;
+        } 
+        set;
+    }
+    public int Initiative {
+        get
+        {
+            return _charAttributes.GetStepNumber(AttributesTypes.Dex);
+        }
+        set; 
+    }
+    private int _initiative;
+
+    public int PhysicalDefense
+    {
+        get
+        {
+            return _charAttributes.GetBasePhysicalDefense();
+        }
+        set;
+    }
+
+    private int _physicalDefense;
     
+    public int MysticDefense
+    {
+        get
+        {
+            return _charAttributes.GetBaseMysticDefense();
+        }
+        set;
+    }
+    private int _mysticDefense;
+
+    public int PhysicalArmor
+    {
+        get
+        {
+            return 0;
+        }
+        set;
+    }
+
+    private int _physicalArmor;
+
+    public int MysticalArmor
+    {
+        get
+        {
+            return _charAttributes.GetMysticArmor();
+        }
+    }
+
+    private int _mysticalArmor;
+
+    public int SocialDefense
+    {
+        get
+        {
+            return _charAttributes.GetBaseSocialDefense();
+        }
+        set;
+    }
+
+    private int _socialDefense;
+
+    public int UnconsciousRating
+    {
+        get => _charAttributes.GetUnconsciousnessRating();
+    }
+
+    public int DeathRating
+    {
+        get => _charAttributes.GetDeathRating();
+    }
+
+    public int RecoveryTests
+    {
+        get => _charAttributes.GetRecoveryTests();
+    }
+
+    public int WoundThreshold
+    {
+        get => _charAttributes.GetWoundThreshold();
+    }
+
     public int Karma { get; set; }
     public int KarmaModifier { get; set; }
     public int MaxKarma { get; set; }
@@ -189,6 +318,6 @@ public class  CharacterSheet : INotifyPropertyChanged
     public void AddRaceBaseAttributes(Race race)
     {
         Attributes attributes = new Attributes(race);
-        CharAttributes = attributes;
+        _charAttributes = attributes;
     }
 }

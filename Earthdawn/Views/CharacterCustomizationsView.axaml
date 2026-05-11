@@ -59,35 +59,35 @@
                     </StackPanel>
                     <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal">
                         <Label Classes="PrimaryText" Content="Initiative:" Padding="100 0 5 10" FontSize="20"/>
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Karma}" FontSize="20"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Initiative}" FontSize="20"/>
                     </StackPanel>
                     <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
                         <Label Classes="PrimaryText" Content="Physical Defense:" Padding="20 0 5 10" FontSize="20"/>
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Charisma}" FontSize="20"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding PhysicalDefense}" FontSize="20"/>
                     </StackPanel>
                     <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal">
                         <Label Classes="PrimaryText" Content="Mystical Defense:" Padding="100 0 5 10" FontSize="20"/>
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Karma}" FontSize="20"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding MysticDefense}" FontSize="20"/>
                     </StackPanel>
                     <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
                         <Label Classes="PrimaryText" Content="SocialDefence:" Padding="20 0 5 10" FontSize="20"/>
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Karma}" FontSize="20"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding SocialDefense}" FontSize="20"/>
                     </StackPanel>
                     <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Horizontal">
                         <Label Classes="PrimaryText" Content="Unconscious Rating:" Padding="100 0 5 10" FontSize="20"/>
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Charisma}" FontSize="20"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding UnconsciousRating}" FontSize="20"/>
                     </StackPanel>
                     <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal">
                         <Label Classes="PrimaryText" Content="Death Rating:" Padding="20 0 5 10" FontSize="20"/>
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Karma}" FontSize="20"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding DeathRating}" FontSize="20"/>
                     </StackPanel>
                     <StackPanel Grid.Row="4" Grid.Column="2" Orientation="Horizontal">
                         <Label Classes="PrimaryText" Content="Wound Threshold:" Padding="100 0 5 10" FontSize="20"/>
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Karma}" FontSize="20"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding WoundThreshold}" FontSize="20"/>
                     </StackPanel>
                     <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
                         <Label Classes="PrimaryText" Content="Recovery Tests:" Padding="20 0 5 0" FontSize="20"/>
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Charisma}" FontSize="20"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding RecovertyTests}" FontSize="20"/>
                     </StackPanel>
                 </Grid>
             </StackPanel>
