@@ -126,7 +126,7 @@ public class  CharacterCreationSheet : CharacterBase
 
     public void IncrementTalent(string talentName)
     {
-        if (RemainingAttributePoints > 0)
+        if (RemainingTalentPoints > 0)
         {
             string characterDiscipline = GetAllCharacterDisciplines()[0];
             DisciplineCircle dc = GetDisciplineCircleByName(characterDiscipline);
@@ -137,8 +137,8 @@ public class  CharacterCreationSheet : CharacterBase
                     if (talentName == talent.TalentName && talent.Rank < 3)
                     {
                         talent.IncrementRank(_charAttributes);
-                        RemainingAttributePoints -= 1;
-                        OnPropertyChanged(nameof(RemainingAttributePoints));
+                        RemainingTalentPoints -= 1;
+                        OnPropertyChanged(nameof(RemainingTalentPoints));
                     }
                 }
             }
@@ -156,8 +156,8 @@ public class  CharacterCreationSheet : CharacterBase
                 if (talentName == talent.TalentName && talent.Rank > 0)
                 {
                     talent.DecrementRank();
-                    RemainingAttributePoints += 1;
-                    OnPropertyChanged(nameof(RemainingAttributePoints));
+                    RemainingTalentPoints += 1;
+                    OnPropertyChanged(nameof(RemainingTalentPoints));
                 }
             }
         }
