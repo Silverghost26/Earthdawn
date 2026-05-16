@@ -53,6 +53,11 @@
         <Setter Property="FontSize" Value="15"/>
     </Style>
     
+    <Style Selector="RadioButton.PrimaryRadioButton">
+        <Setter Property="FontFamily" Value="{DynamicResource Vinque}"/>
+        <Setter Property="FontSize" Value="20"/>
+    </Style>
+    
     <Style Selector="TextBlock">
         <Setter Property="Foreground" Value="{DynamicResource PrimaryFontForeground}"/>
     </Style>

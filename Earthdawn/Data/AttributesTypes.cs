@@ -7,5 +7,6 @@ public enum AttributesTypes
     Tou,
     Per,
     Wil,
-    Chr
+    Chr,
+    None
 }

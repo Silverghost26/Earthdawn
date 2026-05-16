@@ -59,7 +59,7 @@ public partial class App : Application
         
         var services = collection.BuildServiceProvider();
         var sheetService = services.GetRequiredService<ICharacterSheetService>();
-        sheetService.SetCharacterSheet(new CharacterSheet());
+        sheetService.SetCharacterSheet(new CharacterCreationSheet());
         
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {

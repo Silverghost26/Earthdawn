@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using Avalonia.Media.Imaging;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -39,10 +40,16 @@ public partial class DisciplinesViewModel : PageViewModel
     [RelayCommand]
     private void ApplyDisciplineValues()
     {
-        Discipline discipline = Disciplines[CurrentIndex].Disciplines;
-        _characterSheetService.CharacterSheetInstance.CharacterDiscipline = discipline;
-
-        _characterSheetService.CharacterSheetInstance.Discipline = Disciplines[CurrentIndex].Name;
+        _characterSheetService.CharacterCreationSheetInstance.AddNewDiscipline(Disciplines[CurrentIndex]);
+        //Add the list of Novice Optional Talents to the Character creation.
+        _characterSheetService.CharacterCreationSheetInstance.AddOptionalDisciplineTalents(Disciplines[CurrentIndex].Disciplines.TalentOptions["Novice"]);
+        
+        //
+        //
+        // Discipline discipline = Disciplines[CurrentIndex].Disciplines;
+        // _characterSheetService.CharacterSheetInstance.CharacterDiscipline = discipline;
+        //
+        // _characterSheetService.CharacterSheetInstance.Discipline = Disciplines[CurrentIndex].Name;
 
     }
 

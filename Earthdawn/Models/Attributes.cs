@@ -1,15 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
+using System.Runtime.CompilerServices;
 using Earthdawn.Data;
 
 namespace Earthdawn.Models;
 
-public class Attributes
+public class Attributes : INotifyPropertyChanged
 {
+    public event PropertyChangedEventHandler? PropertyChanged;
+
+    protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
     private Dictionary<string, int> _attributes;
-
-
+    
     public Attributes()
     {
         _attributes = new Dictionary<string, int>
@@ -36,7 +43,7 @@ public class Attributes
         };
     }
 
-    public int Dexterity
+       public int Dexterity
     {
         get => _attributes["Dexterity"];
         set
@@ -44,6 +51,7 @@ public class Attributes
             if (value >= 0)
             {
                 _attributes["Dexterity"] = value;
+                OnPropertyChanged();
             }
             else
             {
@@ -60,6 +68,7 @@ public class Attributes
             if (value >= 0)
             {
                 _attributes["Strength"] = value;
+                OnPropertyChanged();
             }
             else
             {
@@ -76,6 +85,7 @@ public class Attributes
             if (value >= 0)
             {
                 _attributes["Toughness"] = value;
+                OnPropertyChanged();
             }
             else
             {
@@ -92,6 +102,7 @@ public class Attributes
             if (value >= 0)
             {
                 _attributes["Perception"] = value;
+                OnPropertyChanged();
             }
             else
             {
@@ -108,6 +119,7 @@ public class Attributes
             if (value >= 0)
             {
                 _attributes["Willpower"] = value;
+                OnPropertyChanged();
             }
             else
             {
@@ -124,6 +136,7 @@ public class Attributes
             if (value >= 0)
             {
                 _attributes["Charisma"] = value;
+                OnPropertyChanged();
             }
             else
             {
@@ -135,6 +148,9 @@ public class Attributes
     public int GetStepNumber(AttributesTypes att)
     {
         string strValue = ConvertToString(att);
+        if (string.IsNullOrEmpty(strValue) || strValue == "None")
+            return 0;
+        
         return ((int)Math.Ceiling(_attributes[strValue] / 3.0) + 1);
     }
 

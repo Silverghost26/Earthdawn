@@ -47,11 +47,11 @@ public partial class RacesViewModel : PageViewModel
     private void ApplyRaceAttributes()
     {
         Race race= Races[CurrentIndex].NameGiverRace;
-        _characterSheetService.CharacterSheetInstance.AddRaceBaseAttributes(race);
-        _characterSheetService.CharacterSheetInstance.MovementRate = race.Movement;
-        _characterSheetService.CharacterSheetInstance.FlyingMovementRate = race.FlyingMovement;
-        _characterSheetService.CharacterSheetInstance.KarmaModifier = race.KarmaMod;
-        _characterSheetService.CharacterSheetInstance.RacialAbilities = race.Abilities;
-        _characterSheetService.CharacterSheetInstance.Race = Races[CurrentIndex].Name;
+        _characterSheetService.CharacterCreationSheetInstance.AddRaceBaseAttributes(race);
+        _characterSheetService.CharacterCreationSheetInstance.MovementRate = race.Movement;
+        _characterSheetService.CharacterCreationSheetInstance.FlyingMovementRate = race.FlyingMovement;
+        _characterSheetService.CharacterCreationSheetInstance.KarmaModifier = race.KarmaMod;
+        _characterSheetService.CharacterCreationSheetInstance.RacialAbilities = race.Abilities;
+        _characterSheetService.CharacterCreationSheetInstance.Race = Races[CurrentIndex].Name;
     }
 }

@@ -6,8 +6,8 @@ namespace EarthDawn.Services;
 
 public interface ICharacterSheetService : INotifyPropertyChanged
 {
-    CharacterSheet CharacterSheetInstance { get; }
-    void SetCharacterSheet(CharacterSheet sheet);
+    CharacterCreationSheet CharacterCreationSheetInstance { get; }
+    void SetCharacterSheet(CharacterCreationSheet creationSheet);
 }
 
 public class CharacterSheetService : ICharacterSheetService
@@ -16,7 +16,7 @@ public class CharacterSheetService : ICharacterSheetService
     {
     }
 
-    private CharacterSheet? _characterSheetInstance;
+    private CharacterCreationSheet? _characterSheetInstance;
 
     // Implementing INotifyPropertyChanged for the service itself 
     // (though often not necessary if only the model changes, it is good practice)
@@ -36,14 +36,14 @@ public class CharacterSheetService : ICharacterSheetService
     // private CharacterSheetService() { }
     
     // The property that holds the single source of truth
-    public CharacterSheet CharacterSheetInstance
+    public CharacterCreationSheet CharacterCreationSheetInstance
     {
         get 
         {
             if (_characterSheetInstance == null)
             {
                 // Fallback: Provide a default instance if nothing has been set yet
-                _characterSheetInstance = new CharacterSheet();
+                _characterSheetInstance = new CharacterCreationSheet();
             }
             return _characterSheetInstance;
         }
@@ -53,12 +53,12 @@ public class CharacterSheetService : ICharacterSheetService
     /// Initializes or replaces the single global character sheet instance.
     /// This should be called during application startup.
     /// </summary>
-    public void SetCharacterSheet(CharacterSheet sheet)
+    public void SetCharacterSheet(CharacterCreationSheet creationSheet)
     {
         // Check if the sheet is actually changing to prevent unnecessary notification triggers
         if (_characterSheetInstance == null)
         {
-            _characterSheetInstance = sheet;
+            _characterSheetInstance = creationSheet;
         }
         
         // Because the model itself now raises PropertyChanged, 
