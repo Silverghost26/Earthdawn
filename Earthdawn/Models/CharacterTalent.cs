@@ -5,10 +5,10 @@ using Earthdawn.Data;
 
 namespace Earthdawn.Models;
 
-public class CharacterTalent
+public class CharacterTalent : INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler? PropertyChanged;
-
+    
     protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

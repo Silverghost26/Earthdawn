@@ -19,6 +19,7 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
     [ObservableProperty] private string? _talentButtonItem;
     [ObservableProperty] private string? _selectedOptionalTalent;
     [ObservableProperty] private Talent? _currentTalent;
+    [ObservableProperty] private CharacterTalent? _selectedCharacterTalent;
     private Dictionary<string, Talent> CharacterTalents { get; }
 
     public CharacterCustomizationsViewModel(IDataServices dataServices, ICharacterSheetService characterSheetService)
@@ -128,6 +129,17 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
         }
     }
 
+    partial void OnSelectedCharacterTalentChanged(CharacterTalent? value)
+    {
+        if (value != null)
+        {
+            string talentName = value.TalentName;
+            if (talentName.Contains("Thread Weaving"))
+                talentName = "Thread Weaving";
+            CurrentTalent = CharacterTalents[talentName];
+        }
+    }
+
     [RelayCommand]
     private void TalentSelectionChanged(string selectedItem)
     {
@@ -137,9 +149,17 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
     }
 
     [RelayCommand]
-    private void TalentIncreaseButtonClicked(string talentButtonItem)
+    private void TalentIncreaseButtonClicked(CharacterTalent talent)
     {
-        Debug.WriteLine($"Associated Talent: {talentButtonItem}");
+        Debug.WriteLine($"Associated Talent: {talent.TalentName}");
+        _characterSheetService.CharacterCreationSheetInstance.IncrementTalent(talent.TalentName);
+    }
+
+    [RelayCommand]
+    private void TalentDecreaseButtonClicked(CharacterTalent talent)
+    {
+        Debug.WriteLine($"Associated Talent: {talent.TalentName}");
+        _characterSheetService.CharacterCreationSheetInstance.DecremenetTalent(talent.TalentName);
     }
     
     [RelayCommand]
@@ -200,8 +220,19 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
                 break;
         }
     }
-    
 
+    [RelayCommand]
+    private void IncrementTalent(string selectedTalent)
+    {
+        _characterSheetService.CharacterCreationSheetInstance.IncrementTalent(selectedTalent);
+    }
+
+    [RelayCommand]
+    private void DecrementTalent(string selectedTalent)
+    {
+        _characterSheetService.CharacterCreationSheetInstance.DecremenetTalent(selectedTalent);
+    }
+    
     public int Dexterity => _characterSheetService.CharacterCreationSheetInstance.Dexterity;
     public int Strength => _characterSheetService.CharacterCreationSheetInstance.Strength;
     public int Toughness => _characterSheetService.CharacterCreationSheetInstance.Toughness;
@@ -238,16 +269,21 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
     public int PerDecrementCost => _characterSheetService.CharacterCreationSheetInstance.GetAttributeDecrementCostPer();
     public int WilDecrementCost => _characterSheetService.CharacterCreationSheetInstance.GetAttributeDecrementCostWil();
     public int ChrDecrementCost => _characterSheetService.CharacterCreationSheetInstance.GetAttributeDecrementCostChr();
+    
 
     public int RemainingAttributePoints =>
         _characterSheetService.CharacterCreationSheetInstance.RemainingAttributePoints;
     
     public List<string> Talents =>
-        _characterSheetService.CharacterCreationSheetInstance.GetTalents();
+        _characterSheetService.CharacterCreationSheetInstance.GetTalentNameList();
 
     public List<string> NoviceOptionTalents =>
         _characterSheetService.CharacterCreationSheetInstance.GetOptionalTalents();
 
-    public List<string> FreeTalents =>
-        _characterSheetService.CharacterCreationSheetInstance.GetFreeTalents();
+    public List<CharacterTalent> DisciplineTalents =>
+        _characterSheetService.CharacterCreationSheetInstance.GetDisciplineTalentList();
+
+    public List<CharacterTalent> FreeDisciplineTalents =>
+        _characterSheetService.CharacterCreationSheetInstance.GetFreeTalentList();
+
 }

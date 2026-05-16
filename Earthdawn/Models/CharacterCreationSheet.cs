@@ -57,11 +57,11 @@ public class  CharacterCreationSheet : CharacterBase
     }
 
     //Note: During character Creation there should only be one discipline, thus only one element in the list.
-    public List<string> GetTalents()
+    public List<string> GetTalentNameList()
     {
         List<string> characterTalents = new();
         string firstDiscipline = this.GetAllCharacterDisciplines()[0];
-        foreach( var talent in GetDisciplineCircles(firstDiscipline).Talents)
+        foreach( var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
         {
             if(!talent.IsFreeTalent)
                 characterTalents.Add(talent.TalentName);
@@ -70,11 +70,11 @@ public class  CharacterCreationSheet : CharacterBase
     }
     
     //Note: Free talents can not be upgraded with Attribute points or Legendpoints, they are tied to the Circle.
-    public List<string> GetFreeTalents()
+    public List<string> GetFreeTalentNameList()
     {
         List<string> characterFreeTalents = new();
         string firstDiscipline = GetAllCharacterDisciplines()[0];
-        foreach (var talent in GetDisciplineCircles(firstDiscipline).Talents)
+        foreach (var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
         {
             if(talent.IsFreeTalent)
                 characterFreeTalents.Add(talent.TalentName);
@@ -83,12 +83,86 @@ public class  CharacterCreationSheet : CharacterBase
         return characterFreeTalents;
     }
 
+    public List<CharacterTalent> GetDisciplineTalentList()
+    {
+        List<CharacterTalent> disciplineTalents = new();
+        if (_characterDisciplineCircles.Count == 0)
+            return disciplineTalents;
+            
+        string firstDiscipline = GetAllCharacterDisciplines()[0];
+        foreach (var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
+        {
+            if (!talent.IsFreeTalent)
+                disciplineTalents.Add(talent);
+        }
+        return disciplineTalents;
+    }
+
+    public List<CharacterTalent> GetFreeTalentList()
+    {
+        List<CharacterTalent> freeTalents = new();
+        if (_characterDisciplineCircles.Count == 0)
+            return freeTalents;
+            
+        string firstDiscipline = GetAllCharacterDisciplines()[0];
+        foreach (var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
+        {
+            if (talent.IsFreeTalent)
+                freeTalents.Add(talent);
+        }
+        return freeTalents;
+    }
+
+    public List<CharacterTalent> GetTalentList()
+    {
+        return _characterDisciplineCircles[0].Talents;
+    }
+
     private void SetRacialAttributes(Race race)
     {
         SetCharAttributes(new Attributes(race));
         SetStartingAttributes(new Attributes(race));
     }
 
+    public void IncrementTalent(string talentName)
+    {
+        if (RemainingAttributePoints > 0)
+        {
+            string characterDiscipline = GetAllCharacterDisciplines()[0];
+            DisciplineCircle dc = GetDisciplineCircleByName(characterDiscipline);
+            if (dc != null)
+            {
+                foreach (CharacterTalent talent in dc.Talents)
+                {
+                    if (talentName == talent.TalentName && talent.Rank < 3)
+                    {
+                        talent.IncrementRank(_charAttributes);
+                        RemainingAttributePoints -= 1;
+                        OnPropertyChanged(nameof(RemainingAttributePoints));
+                    }
+                }
+            }
+        }
+    }
+
+    public void DecremenetTalent(string talentName)
+    {
+        string characterDiscipline = GetAllCharacterDisciplines()[0];
+        DisciplineCircle dc = GetDisciplineCircleByName(characterDiscipline);
+        if (dc != null)
+        {
+            foreach (CharacterTalent talent in dc.Talents)
+            {
+                if (talentName == talent.TalentName && talent.Rank > 0)
+                {
+                    talent.DecrementRank();
+                    RemainingAttributePoints += 1;
+                    OnPropertyChanged(nameof(RemainingAttributePoints));
+                }
+            }
+        }
+    }
+    
     public void IncrementAttribute(AttributesTypes att)
     {
         int cost = 0;

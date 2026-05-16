@@ -3,6 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:Earthdawn.ViewModels"
+             xmlns:models="clr-namespace:Earthdawn.Models"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:DataType="vm:CharacterCustomizationsViewModel"
              x:Class="Earthdawn.Views.CharacterCustomizationsView">
@@ -166,40 +167,52 @@
                     <TextBlock Classes="PrimaryDescriptionText" Text="Selected Optional Talent" FontSize="25"/>
                     <TextBlock Classes="PrimaryDescriptionText" Text="{Binding SelectedOptionalTalent}" FontSize="20"/>
                 </StackPanel>
-                <StackPanel Grid.Row="1" Grid.Column="0">
-                    <Label Classes="PrimaryText" Content="Discipline Talents" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25"/>
-                    <StackPanel Orientation="Horizontal">
-                        <ListBox ItemsSource="{Binding Talents}" Background="Transparent" Margin="0, 0, 0, 0" Padding="0"
-                                 SelectedItem="{Binding TalentSelectedItem}"
-                                 SelectionMode="Single">
-                            <ListBox.ItemTemplate>
-                                <DataTemplate>
-                                    <DockPanel LastChildFill="True">
-                                        <ContentPresenter DockPanel.Dock="Left"/>
-                                        <Button Content="-"
-                                                DockPanel.Dock="Left" Width="30" Height="30" VerticalAlignment="Center"/>
-                                        <Button Content="+"
-                                                Command="{Binding $parent[ListBox].((vm:CharacterCustomizationsViewModel)DataContext).TalentIncreaseButtonClickedCommand}"
-                                                CommandParameter="{Binding}"
-                                                DockPanel.Dock="Left" Width="30" Height="30" VerticalAlignment="Center" />
-                                        <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding }" DockPanel.Dock="Left"/>
-                                        <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="Test" Padding="7 0 0 0"></TextBlock>
-                                    </DockPanel>
-                                </DataTemplate>
-                            </ListBox.ItemTemplate>
-                        </ListBox>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel Grid.Row="1" Grid.Column="1">
-                    <Label Classes="PrimaryText" Content="Discipline Free Talents" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25"></Label>
-                    <ListBox ItemsSource="{Binding FreeTalents}" Background="Transparent">
+            <StackPanel Grid.Row="1" Grid.Column="0">
+                <Label Classes="PrimaryText" Content="Discipline Talents" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25"/>
+                <StackPanel Orientation="Horizontal">
+                    <ListBox ItemsSource="{Binding DisciplineTalents}" Background="Transparent" Margin="0, 0, 0, 0" Padding="0"
+                             SelectedItem="{Binding SelectedCharacterTalent}"
+                             SelectionMode="Single">
                         <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding}"></TextBlock>
+                            <DataTemplate x:DataType="models:CharacterTalent">
+                                <DockPanel LastChildFill="True">
+                                    <Button Content="-"
+                                            Command="{Binding $parent[ListBox].((vm:CharacterCustomizationsViewModel)DataContext).TalentDecreaseButtonClickedCommand}"
+                                            CommandParameter="{Binding}"
+                                            DockPanel.Dock="Left" Width="30" Height="30" VerticalAlignment="Center"/>
+                                    <Button Content="+"
+                                            Command="{Binding $parent[ListBox].((vm:CharacterCustomizationsViewModel)DataContext).TalentIncreaseButtonClickedCommand}"
+                                            CommandParameter="{Binding}"
+                                            DockPanel.Dock="Left" Width="30" Height="30" VerticalAlignment="Center" />
+                                    <TextBlock Classes="PrimaryDescriptionText" FontSize="18" Text="{Binding TalentName}" DockPanel.Dock="Left" Padding="5 0 0 0"/>
+                                    <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" Margin="15 0 0 0">
+                                        <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="Rank: "/>
+                                        <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Rank}"/>
+                                        <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text=" | Step: " Padding="10 0 0 0"/>
+                                        <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Step}"/>
+                                    </StackPanel>
+                                </DockPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
                 </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="1">
+                <Label Classes="PrimaryText" Content="Discipline Free Talents" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25"></Label>
+                <ListBox ItemsSource="{Binding FreeDisciplineTalents}" Background="Transparent">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate x:DataType="models:CharacterTalent">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding TalentName}"/>
+                                <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text=" - Rank: " Padding="10 0 0 0"/>
+                                <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Rank}"/>
+                                <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text=" | Step: " Padding="10 0 0 0"/>
+                                <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Step}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
                 <StackPanel Grid.Row="1" Grid.Column="3">
                     <TextBlock Classes="PrimaryDescriptionText" Text="Available Optional Talents:" FontSize="25"/>
                     <ItemsControl ItemsSource="{Binding NoviceOptionTalents}" FontSize="20">

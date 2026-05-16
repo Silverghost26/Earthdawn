@@ -22,7 +22,7 @@ public class CharacterBase : ObservableObject
     //***********************************Private Vars*************************************************
     protected Attributes? _charAttributes;
     protected Attributes? _startingAttributes;
-    private List<DisciplineCircle> _characterDisciplineCircles;
+    protected List<DisciplineCircle> _characterDisciplineCircles;
     
     private void SubscribeToAttributeChanges()
     {
@@ -433,7 +433,7 @@ public class CharacterBase : ObservableObject
         }
     }
 
-    public DisciplineCircle GetDisciplineCircles(string discipline)
+    public DisciplineCircle GetDisciplineCircleByName(string discipline)
     {
         foreach (DisciplineCircle dc in _characterDisciplineCircles)
         {
@@ -507,6 +507,18 @@ public class CharacterBase : ObservableObject
             CharacterTalent newTalent = new CharacterTalent(talentName, tnt, dt, isFree, isOptional);
             newTalent.UpdateRank(startingTalentLevel, at);
             _talents.Add(newTalent);
+        }
+
+        public void UpdateCharacterTalent(string talentName, int value, Attributes att)
+        {
+            //Find the existing talent
+            foreach (CharacterTalent ct in _talents)
+            {
+                if (ct.TalentName == talentName)
+                {
+                    ct.UpdateRank(value, att);
+                }
+            }
         }
 
         public void AddNewDisciplineCircle(Circle c, Attributes at, int circleLevel)
