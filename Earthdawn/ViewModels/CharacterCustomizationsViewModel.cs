@@ -158,15 +158,17 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
     [RelayCommand]
     private void TalentDecreaseButtonClicked(CharacterTalent talent)
     {
-        Debug.WriteLine($"Associated Talent: {talent.TalentName}");
         _characterSheetService.CharacterCreationSheetInstance.DecremenetTalent(talent.TalentName);
     }
     
     [RelayCommand]
     private void SelectNoviceOptionTalent(string selectedTalent)
     {
-        TalentSelectedItem = selectedTalent;
-        SelectedOptionalTalent = selectedTalent;
+        if (selectedTalent != SelectedOptionalTalent)
+        {
+            TalentSelectedItem = selectedTalent;
+            SelectedOptionalTalent = selectedTalent;
+        }
     }
 
     [RelayCommand]
@@ -285,5 +287,8 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
 
     public List<CharacterTalent> FreeDisciplineTalents =>
         _characterSheetService.CharacterCreationSheetInstance.GetFreeTalentList();
+
+    public List<CharacterTalent> OptionTalent =>
+        _characterSheetService.CharacterCreationSheetInstance.GetOptionalTalentList();
 
 }

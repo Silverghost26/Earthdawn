@@ -9,5 +9,7 @@
     
     <Design.DataContext><vm:HomeViewModel></vm:HomeViewModel></Design.DataContext>
     
-    <Label Content="{Binding Test}"></Label>
+    <StackPanel VerticalAlignment="Center">
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="500" FontSize="30" Content="Character Creation" Background="CornflowerBlue" HorizontalContentAlignment="Center"></Button>
+    </StackPanel>
 </UserControl>

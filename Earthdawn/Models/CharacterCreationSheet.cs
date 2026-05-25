@@ -92,10 +92,28 @@ public class  CharacterCreationSheet : CharacterBase
         string firstDiscipline = GetAllCharacterDisciplines()[0];
         foreach (var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
         {
-            if (!talent.IsFreeTalent)
+            if (!talent.IsFreeTalent  && !talent.IsOptionalTalent)
                 disciplineTalents.Add(talent);
         }
         return disciplineTalents;
+    }
+
+    public List<CharacterTalent> GetOptionalTalentList()
+    {
+        List<CharacterTalent> optionaTalents = new();
+        if (_characterDisciplineCircles.Count == 0)
+            return optionaTalents;
+
+        string firstDiscipline = GetAllCharacterDisciplines()[0];
+        foreach (var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
+        {
+            if (talent.IsOptionalTalent)
+            {
+                optionaTalents.Add(talent);
+            }
+        }
+
+        return optionaTalents;
     }
 
     public List<CharacterTalent> GetFreeTalentList()
@@ -122,6 +140,11 @@ public class  CharacterCreationSheet : CharacterBase
     {
         SetCharAttributes(new Attributes(race));
         SetStartingAttributes(new Attributes(race));
+    }
+
+    public void AddOptionalTalent(string talent)
+    {
+        
     }
 
     public void IncrementTalent(string talentName)
