@@ -19,6 +19,7 @@ public class  CharacterCreationSheet : CharacterBase
         RemainingGeneralSkillPoints = 8;
         RemainingKnowledgeSkillPoints = 2;
         _optionalTalensList = new();
+        
     }
     
    
@@ -142,17 +143,12 @@ public class  CharacterCreationSheet : CharacterBase
         SetStartingAttributes(new Attributes(race));
     }
 
-    public void AddOptionalTalent(string talent)
-    {
-        
-    }
-
     public void IncrementTalent(string talentName)
     {
         if (RemainingTalentPoints > 0)
         {
             string characterDiscipline = GetAllCharacterDisciplines()[0];
-            DisciplineCircle dc = GetDisciplineCircleByName(characterDiscipline);
+            CharacterDiscipline dc = GetDisciplineCircleByName(characterDiscipline);
             if (dc != null)
             {
                 foreach (CharacterTalent talent in dc.Talents)
@@ -171,7 +167,7 @@ public class  CharacterCreationSheet : CharacterBase
     public void DecremenetTalent(string talentName)
     {
         string characterDiscipline = GetAllCharacterDisciplines()[0];
-        DisciplineCircle dc = GetDisciplineCircleByName(characterDiscipline);
+        CharacterDiscipline dc = GetDisciplineCircleByName(characterDiscipline);
         if (dc != null)
         {
             foreach (CharacterTalent talent in dc.Talents)
