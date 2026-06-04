@@ -16,7 +16,7 @@ public class Attributes : INotifyPropertyChanged
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
     private Dictionary<string, int> _attributes;
-    
+    private Dictionary<AttributesTypes, int> _legendPointIncrease;
     public Attributes()
     {
         _attributes = new Dictionary<string, int>
@@ -27,6 +27,15 @@ public class Attributes : INotifyPropertyChanged
             { "Perception", 1 },
             { "Willpower", 1 },
             { "Charisma", 1 }
+        };
+        _legendPointIncrease = new Dictionary<AttributesTypes, int>
+        {
+            { AttributesTypes.Dex, 0 },
+            { AttributesTypes.Str, 0 },
+            { AttributesTypes.Per, 0 },
+            { AttributesTypes.Tou, 0 },
+            { AttributesTypes.Wil, 0 },
+            { AttributesTypes.Chr, 0 }
         };
     }
 
@@ -41,9 +50,40 @@ public class Attributes : INotifyPropertyChanged
             { "Willpower", race.WIL },
             { "Charisma", race.CHA }
         };
+        _legendPointIncrease = new Dictionary<AttributesTypes, int>
+        {
+            { AttributesTypes.Dex, 0 },
+            { AttributesTypes.Str, 0 },
+            { AttributesTypes.Per, 0 },
+            { AttributesTypes.Tou, 0 },
+            { AttributesTypes.Wil, 0 },
+            { AttributesTypes.Chr, 0 }
+        };
     }
 
-       public int Dexterity
+    public Attributes(Attributes attributes)
+    {
+        _attributes = new Dictionary<string, int>
+        {
+            { "Dexterity", attributes.Dexterity },
+            { "Strength", attributes.Strength },
+            { "Toughness", attributes.Toughness },
+            { "Perception", attributes.Perception },
+            { "Willpower", attributes.Willpower },
+            { "Charisma", attributes.Charisma }
+        };
+        _legendPointIncrease = new Dictionary<AttributesTypes, int>
+        {
+            { AttributesTypes.Dex, attributes.Dexterity },
+            { AttributesTypes.Str, attributes.Strength },
+            { AttributesTypes.Per, attributes.Perception },
+            { AttributesTypes.Tou, attributes.Toughness },
+            { AttributesTypes.Wil, attributes.Willpower },
+            { AttributesTypes.Chr, attributes.Charisma }
+        };
+    }
+
+    public int Dexterity
     {
         get => _attributes["Dexterity"];
         set
@@ -192,6 +232,24 @@ public class Attributes : INotifyPropertyChanged
     public int GetMysticArmor()
     {
         return ((int)Math.Floor(_attributes["Willpower"] / 5.0));
+    }
+    
+    //*************************************Functions*******************************************
+    public void AddLegendPointIncrease(AttributesTypes att)
+    {
+        if (_legendPointIncrease[att] < 3)
+        {
+            string strValue = ConvertToString(att);
+            if (string.IsNullOrEmpty(strValue) || strValue == "None")
+                return;
+            _attributes[strValue] += 1;
+            _legendPointIncrease[att] += 1;
+        }
+    }
+
+    public bool LegendPointIncreaseAvailable(AttributesTypes att)
+    {
+        return _legendPointIncrease[att] < 3;
     }
     
     private string ConvertToString(AttributesTypes att)

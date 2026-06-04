@@ -6,11 +6,19 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics.Arm;
 using Earthdawn.Data;
+using EarthDawn.Services;
 
 namespace Earthdawn.Models;
 
 public class  CharacterCreationSheet : CharacterBase
 {
+    private int _racialDex;
+    private int _racialStr;
+    private int _racialTou;
+    private int _racialPer;
+    private int _racialWil;
+    private int _racialChr;
+    
     private List<string> _optionalTalensList;
     public CharacterCreationSheet()
     {
@@ -19,7 +27,6 @@ public class  CharacterCreationSheet : CharacterBase
         RemainingGeneralSkillPoints = 8;
         RemainingKnowledgeSkillPoints = 2;
         _optionalTalensList = new();
-        
     }
     
    
@@ -38,150 +45,224 @@ public class  CharacterCreationSheet : CharacterBase
     public int RemainingTalentPoints { get; set; }
     public int RemainingGeneralSkillPoints { get; set; }
     public int RemainingKnowledgeSkillPoints { get; set; }
+    
+    
+    //*************************************************Functions*********************************************
+    public void AddDiscipline(DisciplineDisplayCard card)
+    {
+        IDataServices dataService = new DataServices();
+        var talents = dataService.LoadTalents();
+        Discipline newDiscipline = new Discipline();
+        newDiscipline.DisciplineName = card.Name;
+        newDiscipline.DisciplineCircleLevel = 1;
+        newDiscipline.DisciplinePrecedence = 1;
+        int.TryParse(card.Disciplines.Durability, out int durability);
+        newDiscipline.Durability = durability;
+        newDiscipline.PhysicalDefenseBonus += card.Disciplines.Circles["First"].PhysicalDefense;
+        newDiscipline.MysticalDefenseBonus += card.Disciplines.Circles["First"].MysticalDefense;
+        newDiscipline.SocialDefenseBonus += card.Disciplines.Circles["First"].SocialDefense;
+        newDiscipline.PhysicalArmorBonus += card.Disciplines.Circles["First"].PhysicalArmor;
+        newDiscipline.MysticalArmorBonus += card.Disciplines.Circles["First"].MysticalArmor;
+        newDiscipline.InitiativeBonus += card.Disciplines.Circles["First"].Initiative;
+        newDiscipline.RecoveryTestBonus += card.Disciplines.Circles["First"].Recovery;
+        newDiscipline.AddNewKarmaSpecial(card.Disciplines.Circles["First"].Karma);
+        newDiscipline.AddNewCircleSpecial(card.Disciplines.Circles["First"].Special);
+        if (card.Disciplines.Circles["First"].FreeTalents != null)
+        {
+            foreach (string talent in card.Disciplines.Circles["First"].FreeTalents)
+            {
+                if (!string.IsNullOrEmpty(talent))
+                {
+                    string tempTalent = string.Empty;
+                    if (talent.Contains("Thread Weaving"))
+                    {
+                        tempTalent = "Thread Weaving";
+                    }
+                    else
+                    {
+                        tempTalent = talent;
+                    }
+                    var newTalent = talents[tempTalent];
+                    newTalent.CircleObtained = 1;
+                    newTalent.Rank = 1;
+                    newDiscipline.AddNewFreeTalent(newTalent);
+                }
+            }
 
+            if (card.Disciplines.Circles["First"].Talents != null)
+            {
+                foreach (string talent in card.Disciplines.Circles["First"].Talents)
+                {
+                    if (!string.IsNullOrEmpty(talent))
+                    {
+                        string tempTalent = string.Empty;
+                        if (talent.Contains("Thread Weaving"))
+                        {
+                            tempTalent = "Thread Weaving";
+                        }
+                        else
+                        {
+                            tempTalent = talent;
+                        }
+
+                        var newTalent = talents[tempTalent];
+                        newTalent.CircleObtained = 1;
+                        newDiscipline.AddNewTalent(newTalent);
+                    }
+                }
+            }
+            
+        }
+    }
+    
     public void AddRaceBaseAttributes(Race race)
     {
         Karma = race.KarmaMod + _remainingAttributePoints;
         this.SetRacialAttributes(race); ;
         this.MovementRate = race.Movement;
         this.FlyingMovementRate = race.FlyingMovement;
-    }
-
-    public void AddOptionalDisciplineTalents(List<string> optionalTalents)
-    {
-        _optionalTalensList = optionalTalents;
-    }
-    
-    public List<string> GetOptionalTalents()
-    {
-        return _optionalTalensList;
-    }
-
-    //Note: During character Creation there should only be one discipline, thus only one element in the list.
-    public List<string> GetTalentNameList()
-    {
-        List<string> characterTalents = new();
-        string firstDiscipline = this.GetAllCharacterDisciplines()[0];
-        foreach( var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
-        {
-            if(!talent.IsFreeTalent)
-                characterTalents.Add(talent.TalentName);
-        }
-        return characterTalents;
+        _racialChr = race.CHA;
+        _racialDex = race.DEX;
+        _racialPer = race.PER;
+        _racialStr = race.STR;
+        _racialTou = race.TOU;
+        _racialWil = race.WIL;
     }
     
-    //Note: Free talents can not be upgraded with Attribute points or Legendpoints, they are tied to the Circle.
-    public List<string> GetFreeTalentNameList()
-    {
-        List<string> characterFreeTalents = new();
-        string firstDiscipline = GetAllCharacterDisciplines()[0];
-        foreach (var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
-        {
-            if(talent.IsFreeTalent)
-                characterFreeTalents.Add(talent.TalentName);
-        }
-
-        return characterFreeTalents;
-    }
-
-    public List<CharacterTalent> GetDisciplineTalentList()
-    {
-        List<CharacterTalent> disciplineTalents = new();
-        if (_characterDisciplineCircles.Count == 0)
-            return disciplineTalents;
-            
-        string firstDiscipline = GetAllCharacterDisciplines()[0];
-        foreach (var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
-        {
-            if (!talent.IsFreeTalent  && !talent.IsOptionalTalent)
-                disciplineTalents.Add(talent);
-        }
-        return disciplineTalents;
-    }
-
-    public List<CharacterTalent> GetOptionalTalentList()
-    {
-        List<CharacterTalent> optionaTalents = new();
-        if (_characterDisciplineCircles.Count == 0)
-            return optionaTalents;
-
-        string firstDiscipline = GetAllCharacterDisciplines()[0];
-        foreach (var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
-        {
-            if (talent.IsOptionalTalent)
-            {
-                optionaTalents.Add(talent);
-            }
-        }
-
-        return optionaTalents;
-    }
-
-    public List<CharacterTalent> GetFreeTalentList()
-    {
-        List<CharacterTalent> freeTalents = new();
-        if (_characterDisciplineCircles.Count == 0)
-            return freeTalents;
-            
-        string firstDiscipline = GetAllCharacterDisciplines()[0];
-        foreach (var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
-        {
-            if (talent.IsFreeTalent)
-                freeTalents.Add(talent);
-        }
-        return freeTalents;
-    }
-
-    public List<CharacterTalent> GetTalentList()
-    {
-        return _characterDisciplineCircles[0].Talents;
-    }
-
     private void SetRacialAttributes(Race race)
     {
         SetCharAttributes(new Attributes(race));
-        SetStartingAttributes(new Attributes(race));
     }
+    
+    // public List<string> GetTalentNameList()
+    // {
+    //     List<string> characterTalents = new();
+    //     string firstDiscipline = this.GetAllCharacterDisciplines()[0];
+    //     foreach( var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
+    //     {
+    //         if(!talent.IsFreeTalent)
+    //             characterTalents.Add(talent.TalentName);
+    //     }
+    //     return characterTalents;
+    // }
+    
+    //Note: Free talents can not be upgraded with Attribute points or Legendpoints, they are tied to the Circle.
+    // public List<string> GetFreeTalentNameList()
+    // {
+    //     List<string> characterFreeTalents = new();
+    //     string firstDiscipline = GetAllCharacterDisciplines()[0];
+    //     foreach (var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
+    //     {
+    //         if(talent.IsFreeTalent)
+    //             characterFreeTalents.Add(talent.TalentName);
+    //     }
+    //
+    //     return characterFreeTalents;
+    // }
 
+    // public List<CharacterTalent> GetDisciplineTalentList()
+    // {
+    //     List<CharacterTalent> disciplineTalents = new();
+    //     if (_characterDisciplineCircles.Count == 0)
+    //         return disciplineTalents;
+    //         
+    //     string firstDiscipline = GetAllCharacterDisciplines()[0];
+    //     foreach (var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
+    //     {
+    //         if (!talent.IsFreeTalent  && !talent.IsOptionalTalent)
+    //             disciplineTalents.Add(talent);
+    //     }
+    //     return disciplineTalents;
+    // }
+
+    // public List<CharacterTalent> GetOptionalTalentList()
+    // {
+    //     List<CharacterTalent> optionaTalents = new();
+    //     if (_characterDisciplineCircles.Count == 0)
+    //         return optionaTalents;
+    //
+    //     string firstDiscipline = GetAllCharacterDisciplines()[0];
+    //     foreach (var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
+    //     {
+    //         if (talent.IsOptionalTalent)
+    //         {
+    //             optionaTalents.Add(talent);
+    //         }
+    //     }
+    //
+    //     return optionaTalents;
+    // }
+
+    // public List<CharacterTalent> GetFreeTalentList()
+    // {
+    //     List<CharacterTalent> freeTalents = new();
+    //     if (_characterDisciplineCircles.Count == 0)
+    //         return freeTalents;
+    //         
+    //     string firstDiscipline = GetAllCharacterDisciplines()[0];
+    //     foreach (var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
+    //     {
+    //         if (talent.IsFreeTalent)
+    //             freeTalents.Add(talent);
+    //     }
+    //     return freeTalents;
+    // }
+    //
+    // public List<CharacterTalent> GetTalentList()
+    // {
+    //     return _characterDisciplineCircles[0].Talents;
+    // }
+    //
+
+    //
     public void IncrementTalent(string talentName)
     {
         if (RemainingTalentPoints > 0)
         {
-            string characterDiscipline = GetAllCharacterDisciplines()[0];
-            CharacterDiscipline dc = GetDisciplineCircleByName(characterDiscipline);
-            if (dc != null)
+            foreach (Talent talent in _disciplines[0].GetDisciplineTalents())
             {
-                foreach (CharacterTalent talent in dc.Talents)
+                if (talentName == talent.Name && talent.Rank < 3)
                 {
-                    if (talentName == talent.TalentName && talent.Rank < 3)
-                    {
-                        talent.IncrementRank(_charAttributes);
-                        RemainingTalentPoints -= 1;
-                        OnPropertyChanged(nameof(RemainingTalentPoints));
-                    }
-                }
-            }
-        }
-    }
-
-    public void DecremenetTalent(string talentName)
-    {
-        string characterDiscipline = GetAllCharacterDisciplines()[0];
-        CharacterDiscipline dc = GetDisciplineCircleByName(characterDiscipline);
-        if (dc != null)
-        {
-            foreach (CharacterTalent talent in dc.Talents)
-            {
-                if (talentName == talent.TalentName && talent.Rank > 0)
-                {
-                    talent.DecrementRank();
-                    RemainingTalentPoints += 1;
+                    talent.Rank += 1;
+                    RemainingTalentPoints -= 1;
                     OnPropertyChanged(nameof(RemainingTalentPoints));
                 }
             }
         }
     }
     
+    public void DecremenetTalent(string talentName)
+    {
+        foreach (Talent talent in _disciplines[0].GetDisciplineTalents())
+        {
+            if (talentName == talent.Name && talent.Rank > 0)
+            {
+                talent.Rank -= 1;
+                RemainingTalentPoints += 1;
+                OnPropertyChanged(nameof(RemainingTalentPoints));
+            }
+        }
+    }
+
+
+    // public void DecremenetTalent(string talentName)
+    // {
+    //     string characterDiscipline = GetAllCharacterDisciplines()[0];
+    //     CharacterDiscipline dc = GetDisciplineCircleByName(characterDiscipline);
+    //     if (dc != null)
+    //     {
+    //         foreach (CharacterTalent talent in dc.Talents)
+    //         {
+    //             if (talentName == talent.TalentName && talent.Rank > 0)
+    //             {
+    //                 talent.DecrementRank();
+    //                 RemainingTalentPoints += 1;
+    //                 OnPropertyChanged(nameof(RemainingTalentPoints));
+    //             }
+    //         }
+    //     }
+    // }
+    //
     public void IncrementAttribute(AttributesTypes att)
     {
         int cost = 0;
@@ -189,7 +270,7 @@ public class  CharacterCreationSheet : CharacterBase
         {
             case AttributesTypes.Chr:
                 cost = GetAttributeIncreaseCostChr();
-                if (cost <= RemainingAttributePoints && (Charisma - OriginalChr) < 8)
+                if (cost <= RemainingAttributePoints && (Charisma - _racialChr) < 8)
                 {
                     RemainingAttributePoints -= cost;
                     Charisma += 1;
@@ -198,7 +279,7 @@ public class  CharacterCreationSheet : CharacterBase
                 break;
             case AttributesTypes.Per:
                 cost = GetAttributeIncreaseCostPer();
-                if (cost <= RemainingAttributePoints && (Perception - OriginalPer) < 8)
+                if (cost <= RemainingAttributePoints && (Perception - _racialPer) < 8)
                 {
                     RemainingAttributePoints -= cost;
                     Perception += 1;
@@ -207,7 +288,7 @@ public class  CharacterCreationSheet : CharacterBase
                 break;
             case AttributesTypes.Str:
                 cost = GetAttributeIncreaseCostStr();
-                if (cost <= RemainingAttributePoints && (Strength - OriginalStr) < 8)
+                if (cost <= RemainingAttributePoints && (Strength - _racialStr) < 8)
                 {
                     RemainingAttributePoints -= cost;
                     Strength += 1;
@@ -216,7 +297,7 @@ public class  CharacterCreationSheet : CharacterBase
                 break;
             case AttributesTypes.Tou:
                 cost = GetAttributeIncreaseCostTou();
-                if (cost <= RemainingAttributePoints && (Toughness - OriginalTou) < 8)
+                if (cost <= RemainingAttributePoints && (Toughness - _racialTou) < 8)
                 {
                     RemainingAttributePoints -= cost;
                     Toughness += 1;
@@ -225,7 +306,7 @@ public class  CharacterCreationSheet : CharacterBase
                 break;
             case AttributesTypes.Wil:
                 cost = GetAttributeIncreaseCostWil();
-                if (cost <= RemainingAttributePoints && (Willpower - OriginalWil) < 8)
+                if (cost <= RemainingAttributePoints && (Willpower - _racialWil) < 8)
                 {
                     RemainingAttributePoints -= cost;
                     Willpower += 1;
@@ -234,7 +315,7 @@ public class  CharacterCreationSheet : CharacterBase
                 break;
             case AttributesTypes.Dex:
                 cost = GetAttributeIncreaseCostDex();
-                if (cost <= RemainingAttributePoints && (Dexterity - OriginalDex) < 8)
+                if (cost <= RemainingAttributePoints && (Dexterity - _racialDex) < 8)
                 {
                     RemainingAttributePoints -= cost;
                     Dexterity += 1;
@@ -243,7 +324,7 @@ public class  CharacterCreationSheet : CharacterBase
                 break;
         }
     }
-
+    
     public void DecrementAttribute(AttributesTypes att)
     {
         int cost = 0;
@@ -251,7 +332,7 @@ public class  CharacterCreationSheet : CharacterBase
         {
             case AttributesTypes.Chr:
                 cost = GetAttributeDecrementCostChr();
-                if ((Charisma - OriginalChr) > -2)
+                if ((Charisma - _racialChr) > -2)
                 {
                     RemainingAttributePoints += cost;
                     Charisma -= 1;
@@ -260,7 +341,7 @@ public class  CharacterCreationSheet : CharacterBase
                 break;
             case AttributesTypes.Per:
                 cost = GetAttributeDecrementCostPer();
-                if ((Perception - OriginalPer) > -2)
+                if ((Perception - _racialPer) > -2)
                 {
                     RemainingAttributePoints += cost;
                     Perception -= 1;
@@ -269,7 +350,7 @@ public class  CharacterCreationSheet : CharacterBase
                 break;
             case AttributesTypes.Str:
                 cost = GetAttributeDecrementCostStr();
-                if ((Strength - OriginalStr) > -2)
+                if ((Strength - _racialStr) > -2)
                 {
                     RemainingAttributePoints += cost;
                     Strength -= 1;
@@ -278,7 +359,7 @@ public class  CharacterCreationSheet : CharacterBase
                 break;
             case AttributesTypes.Tou:
                 cost = GetAttributeDecrementCostTou();
-                if ((Toughness - OriginalTou) > -2)
+                if ((Toughness - _racialTou) > -2)
                 {
                     RemainingAttributePoints += cost;
                     Toughness -= 1;
@@ -287,7 +368,7 @@ public class  CharacterCreationSheet : CharacterBase
                 break;
             case AttributesTypes.Wil:
                 cost = GetAttributeDecrementCostWil();
-                if ((Willpower - OriginalWil) > -2)
+                if ((Willpower - _racialWil) > -2)
                 {
                     RemainingAttributePoints += cost;
                     Willpower -= 1;
@@ -296,7 +377,7 @@ public class  CharacterCreationSheet : CharacterBase
                 break;
             case AttributesTypes.Dex:
                 cost = GetAttributeDecrementCostDex();
-                if ((Dexterity - OriginalDex) > -2)
+                if ((Dexterity - _racialDex) > -2)
                 {
                     RemainingAttributePoints += cost;
                     Dexterity -= 1;
@@ -305,57 +386,57 @@ public class  CharacterCreationSheet : CharacterBase
                 break;
         }
     }
-
+    
     public int GetAttributeIncreaseCostDex()
     {
-        return Math.Abs(CalculateAttributePointChange(Dexterity - OriginalDex + 1));
+        return Math.Abs(CalculateAttributePointChange(Dexterity - _racialDex + 1));
     }
     public int GetAttributeIncreaseCostStr()
     {
-        return Math.Abs(CalculateAttributePointChange(Strength - OriginalStr + 1));
+        return Math.Abs(CalculateAttributePointChange(Strength - _racialStr + 1));
     }
     public int GetAttributeIncreaseCostTou()
     {
-        return Math.Abs(CalculateAttributePointChange(Toughness - OriginalTou + 1));
+        return Math.Abs(CalculateAttributePointChange(Toughness - _racialTou + 1));
     }
     public int GetAttributeIncreaseCostPer()
     {
-        return Math.Abs(CalculateAttributePointChange(Perception - OriginalPer + 1));
+        return Math.Abs(CalculateAttributePointChange(Perception - _racialPer + 1));
     }
     public int GetAttributeIncreaseCostWil()
     {
-        return Math.Abs(CalculateAttributePointChange(Willpower - OriginalWil + 1));
+        return Math.Abs(CalculateAttributePointChange(Willpower - _racialWil + 1));
     }
     public int GetAttributeIncreaseCostChr()
     {
-        return Math.Abs(CalculateAttributePointChange(Charisma - OriginalChr + 1));
+        return Math.Abs(CalculateAttributePointChange(Charisma - _racialChr + 1));
     }
     public int GetAttributeDecrementCostDex()
     {
-        return Math.Abs(CalculateAttributePointChange(Dexterity - OriginalDex));
+        return Math.Abs(CalculateAttributePointChange(Dexterity - _racialDex));
     }
-
+    
     public int GetAttributeDecrementCostStr()
     {
-        return Math.Abs(CalculateAttributePointChange(Strength - OriginalStr));
+        return Math.Abs(CalculateAttributePointChange(Strength - _racialStr));
     }
     public int GetAttributeDecrementCostTou()
     {
-        return Math.Abs(CalculateAttributePointChange(Toughness - OriginalTou));
+        return Math.Abs(CalculateAttributePointChange(Toughness - _racialTou));
     }
     public int GetAttributeDecrementCostPer()
     {
-        return Math.Abs(CalculateAttributePointChange(Perception - OriginalPer));
+        return Math.Abs(CalculateAttributePointChange(Perception - _racialPer));
     }
     public int GetAttributeDecrementCostWil()
     {
-        return Math.Abs(CalculateAttributePointChange(Willpower - OriginalWil));
+        return Math.Abs(CalculateAttributePointChange(Willpower - _racialWil));
     }
     public int GetAttributeDecrementCostChr()
     {
-        return Math.Abs(CalculateAttributePointChange(Charisma - OriginalChr));
+        return Math.Abs(CalculateAttributePointChange(Charisma - _racialChr));
     }
-
+    
     private int CalculateAttributePointChange(int attributeDiff)
     {
         //Cost in Attribuate points.

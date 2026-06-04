@@ -4,13 +4,12 @@ using System.IO;
 using System.Linq;
 using Avalonia.Platform;
 using Earthdawn.Models;
+using Earthdawn.Data;
 
 namespace EarthDawn.Services;
 
 public class DataServices : IDataServices
 {
-    //private readonly DataLoader dataLoader = new();
-
     public List<RaceDisplayCard> LoadRaces()
     {
         Dictionary<string, Race> raceDictionary = DataLoader.LoadJson<Dictionary<string, Race>>(GetJson("Races.json"));
@@ -19,7 +18,7 @@ public class DataServices : IDataServices
 
     public List<DisciplineDisplayCard> LoadDisciplines()
     {
-        Dictionary<string, Discipline> disciplineDictionary = DataLoader.LoadJson<Dictionary<string, Discipline>>(GetJson("Disciplines.json"));
+        Dictionary<string, DisciplineData> disciplineDictionary = DataLoader.LoadJson<Dictionary<string, DisciplineData>>(GetJson("Disciplines.json"));
         return disciplineDictionary.Select(kvp => new DisciplineDisplayCard() { Name = kvp.Key, Disciplines = kvp.Value }).ToList();
     }
     

@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace EarthDawn.Models
+namespace Earthdawn.Data
 {
     public class StepDice
     {

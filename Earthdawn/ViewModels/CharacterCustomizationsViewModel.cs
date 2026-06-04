@@ -67,24 +67,7 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
                 OnPropertyChanged(nameof(ChrIncrementCost));
                 OnPropertyChanged(nameof(ChrDecrementCost));
                 break;
-            case nameof(CharacterCreationSheet.OriginalDex):
-                OnPropertyChanged(nameof(OriginalDex));
-                break;
-            case nameof(CharacterCreationSheet.OriginalStr):
-                OnPropertyChanged(nameof(OriginalStr));
-                break;
-            case nameof(CharacterCreationSheet.OriginalTou):
-                OnPropertyChanged(nameof(OriginalTou));
-                break;
-            case nameof(CharacterCreationSheet.OriginalPer):
-                OnPropertyChanged(nameof(OriginalPer));
-                break;
-            case nameof(CharacterCreationSheet.OriginalWil):
-                OnPropertyChanged(nameof(OriginalWil));
-                break;
-            case nameof(CharacterCreationSheet.OriginalChr):
-                OnPropertyChanged(nameof(OriginalChr));
-                break;
+
             case nameof(CharacterCreationSheet.Initiative):
                 OnPropertyChanged(nameof(Initiative));
                 break;
@@ -152,13 +135,13 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
     private void TalentIncreaseButtonClicked(CharacterTalent talent)
     {
         Debug.WriteLine($"Associated Talent: {talent.TalentName}");
-        _characterSheetService.CharacterCreationSheetInstance.IncrementTalent(talent.TalentName);
+        //_characterSheetService.CharacterCreationSheetInstance.IncrementTalent(talent.TalentName);
     }
 
     [RelayCommand]
     private void TalentDecreaseButtonClicked(CharacterTalent talent)
     {
-        _characterSheetService.CharacterCreationSheetInstance.DecremenetTalent(talent.TalentName);
+        //_characterSheetService.CharacterCreationSheetInstance.DecremenetTalent(talent.TalentName);
     }
     
     [RelayCommand]
@@ -226,13 +209,13 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
     [RelayCommand]
     private void IncrementTalent(string selectedTalent)
     {
-        _characterSheetService.CharacterCreationSheetInstance.IncrementTalent(selectedTalent);
+        //_characterSheetService.CharacterCreationSheetInstance.IncrementTalent(selectedTalent);
     }
 
     [RelayCommand]
     private void DecrementTalent(string selectedTalent)
     {
-        _characterSheetService.CharacterCreationSheetInstance.DecremenetTalent(selectedTalent);
+        //_characterSheetService.CharacterCreationSheetInstance.DecremenetTalent(selectedTalent);
     }
     
     public int Dexterity => _characterSheetService.CharacterCreationSheetInstance.Dexterity;
@@ -253,12 +236,6 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
     public int DeathRating => _characterSheetService.CharacterCreationSheetInstance.DeathRating;
     public int WoundThreshold => _characterSheetService.CharacterCreationSheetInstance.WoundThreshold;
     public int RecovertyTests => _characterSheetService.CharacterCreationSheetInstance.RecoveryTests;
-    public int OriginalDex => _characterSheetService.CharacterCreationSheetInstance.OriginalDex;
-    public int OriginalStr => _characterSheetService.CharacterCreationSheetInstance.OriginalStr;
-    public int OriginalTou => _characterSheetService.CharacterCreationSheetInstance.OriginalTou;
-    public int OriginalPer => _characterSheetService.CharacterCreationSheetInstance.OriginalPer;
-    public int OriginalWil => _characterSheetService.CharacterCreationSheetInstance.OriginalWil;
-    public int OriginalChr => _characterSheetService.CharacterCreationSheetInstance.OriginalChr;
     public int DexIncrementCost => _characterSheetService.CharacterCreationSheetInstance.GetAttributeIncreaseCostDex();
     public int StrIncrementCost => _characterSheetService.CharacterCreationSheetInstance.GetAttributeIncreaseCostStr();
     public int TouIncrementCost => _characterSheetService.CharacterCreationSheetInstance.GetAttributeIncreaseCostTou();
@@ -276,19 +253,19 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
     public int RemainingAttributePoints =>
         _characterSheetService.CharacterCreationSheetInstance.RemainingAttributePoints;
     
-    public List<string> Talents =>
-        _characterSheetService.CharacterCreationSheetInstance.GetTalentNameList();
-
-    public List<string> NoviceOptionTalents =>
-        _characterSheetService.CharacterCreationSheetInstance.GetOptionalTalents();
-
-    public List<CharacterTalent> DisciplineTalents =>
-        _characterSheetService.CharacterCreationSheetInstance.GetDisciplineTalentList();
-
-    public List<CharacterTalent> FreeDisciplineTalents =>
-        _characterSheetService.CharacterCreationSheetInstance.GetFreeTalentList();
-
-    public List<CharacterTalent> OptionTalent =>
-        _characterSheetService.CharacterCreationSheetInstance.GetOptionalTalentList();
+    // public List<string> Talents =>
+    //     _characterSheetService.CharacterCreationSheetInstance.GetTalentNameList();
+    //
+    // public List<string> NoviceOptionTalents =>
+    //     _characterSheetService.CharacterCreationSheetInstance.GetOptionalTalents();
+    //
+    // public List<CharacterTalent> DisciplineTalents =>
+    //     _characterSheetService.CharacterCreationSheetInstance.GetDisciplineTalentList();
+    //
+    // public List<CharacterTalent> FreeDisciplineTalents =>
+    //     _characterSheetService.CharacterCreationSheetInstance.GetFreeTalentList();
+    //
+    // public List<CharacterTalent> OptionTalent =>
+    //     _characterSheetService.CharacterCreationSheetInstance.GetOptionalTalentList();
 
 }

@@ -11,28 +11,26 @@ namespace Earthdawn.Models;
 
 public class CharacterBase : ObservableObject
 {
+    //**********************************************Private Members********************************************
+    protected List<Discipline> _disciplines;
+    //**********************************************Constructors***********************************
     public CharacterBase()
     {
         _charAttributes = new Attributes();
-        _startingAttributes = new Attributes();
-        _characterDisciplineCircles = new List<CharacterDiscipline>();
+        _disciplines = new ();
         SubscribeToAttributeChanges();
     }
     
     //***********************************Private Vars*************************************************
     protected Attributes? _charAttributes;
     protected Attributes? _startingAttributes;
-    protected List<CharacterDiscipline> _characterDisciplineCircles;
+    //protected List<CharacterDiscipline> _characterDisciplineCircles;
     
     private void SubscribeToAttributeChanges()
     {
         if (_charAttributes != null)
         {
             _charAttributes.PropertyChanged += OnCharAttributesPropertyChanged;
-        }
-        if (_startingAttributes != null)
-        {
-            _startingAttributes.PropertyChanged += OnStartingAttributesPropertyChanged;
         }
     }
     protected void SetCharAttributes(Attributes? value)
@@ -47,20 +45,6 @@ public class CharacterBase : ObservableObject
             _charAttributes.PropertyChanged += OnCharAttributesPropertyChanged;
         }
         RaiseAllAttributePropertyChanges();
-    }
-
-    protected void SetStartingAttributes(Attributes? value)
-    {
-        if (_startingAttributes != null)
-        {
-            _startingAttributes.PropertyChanged -= OnStartingAttributesPropertyChanged;
-        }
-        _startingAttributes = value;
-        if (_startingAttributes != null)
-        {
-            _startingAttributes.PropertyChanged += OnStartingAttributesPropertyChanged;
-        }
-        RaiseAllOriginalAttributePropertyChanges();
     }
 
     private void OnCharAttributesPropertyChanged(object? sender, PropertyChangedEventArgs e)
@@ -99,30 +83,6 @@ public class CharacterBase : ObservableObject
         OnPropertyChanged(nameof(Karma));
     }
 
-    private void OnStartingAttributesPropertyChanged(object? sender, PropertyChangedEventArgs e)
-    {
-        switch (e.PropertyName)
-        {
-            case nameof(Attributes.Dexterity):
-                OnPropertyChanged(nameof(OriginalDex));
-                break;
-            case nameof(Attributes.Strength):
-                OnPropertyChanged(nameof(OriginalStr));
-                break;
-            case nameof(Attributes.Toughness):
-                OnPropertyChanged(nameof(OriginalTou));
-                break;
-            case nameof(Attributes.Perception):
-                OnPropertyChanged(nameof(OriginalPer));
-                break;
-            case nameof(Attributes.Willpower):
-                OnPropertyChanged(nameof(OriginalWil));
-                break;
-            case nameof(Attributes.Charisma):
-                OnPropertyChanged(nameof(OriginalChr));
-                break;
-        }
-    }
 
     private void RaiseAllAttributePropertyChanges()
     {
@@ -143,17 +103,7 @@ public class CharacterBase : ObservableObject
         OnPropertyChanged(nameof(MysticalArmor));
         OnPropertyChanged(nameof(Karma));
     }
-
-    private void RaiseAllOriginalAttributePropertyChanges()
-    {
-        OnPropertyChanged(nameof(OriginalDex));
-        OnPropertyChanged(nameof(OriginalStr));
-        OnPropertyChanged(nameof(OriginalTou));
-        OnPropertyChanged(nameof(OriginalPer));
-        OnPropertyChanged(nameof(OriginalWil));
-        OnPropertyChanged(nameof(OriginalChr));
-    }
-    //************************************Properties**************************************************
+//************************************Properties**************************************************
 
         
     public string CharacterName { get; set; }
@@ -243,79 +193,7 @@ public class CharacterBase : ObservableObject
             _charAttributes.Charisma = value;
         }
     }
-
-    public int OriginalChr
-    {
-        get
-        {
-            return _startingAttributes.Charisma;
-        }
-        set
-        {
-            _startingAttributes.Charisma = value;
-        }
-    }
-
-    public int OriginalDex
-    {
-        get
-        {
-            return _startingAttributes.Dexterity;
-        }
-        set
-        {
-            _startingAttributes.Dexterity = value;
-        }
-    }
-
-    public int OriginalPer
-    {
-        get
-        {
-            return _startingAttributes.Perception;
-        }
-        set
-        {
-            _startingAttributes.Perception = value;
-        }
-    }
-
-    public int OriginalStr
-    {
-        get
-        {
-            return _startingAttributes.Strength;
-        }
-        set
-        {
-            _startingAttributes.Strength = value;
-        }
-    }
-
-    public int OriginalTou
-    {
-        get
-        {
-            return _startingAttributes.Toughness;
-        }
-        set
-        {
-            _startingAttributes.Toughness = value;
-        }
-    }
-
-    public int OriginalWil
-    {
-        get
-        {
-            return _startingAttributes.Willpower;
-        }
-        set
-        {
-            _startingAttributes.Willpower = value;
-        }
-    }
-
+    
     public int Initiative {
         get
         {
@@ -394,64 +272,30 @@ public class CharacterBase : ObservableObject
     public int MaxKarma { get; set; }
     
     //***************************************************************Functions***********************************************
+    public void AddDiscipline(Discipline discipline)
+    {
+        if (_disciplines.Contains(discipline) || _disciplines.Count >= 4)
+            return;
+        _disciplines.Add(discipline);
+    }
 
+    public List<Discipline> GetDisciplines()
+    {
+        List<Discipline> newDisciplineList = new();
+        foreach (Discipline discipline in _disciplines)
+        {
+            newDisciplineList.Add(new(discipline));
+        }
+        return newDisciplineList;
+    }
+    public int GetNumberOfDisciplines()
+    {
+        return _disciplines.Count;
+    }
     
-    public void AddNewDiscipline(DisciplineDisplayCard ddc)
+    public ref readonly List<Discipline> GetDiscipline()
     {
-        foreach (var cd in _characterDisciplineCircles)
-        {
-            if (cd.DisciplineName == ddc.Name)
-                return;
-        }
-        int currentCircleTotal = _characterDisciplineCircles.Count;
-        int.TryParse(ddc.Disciplines.Durability, out int durability);
-        _characterDisciplineCircles.Add(new CharacterDiscipline(ddc.Name, ddc.Disciplines.Circles["First"], durability, currentCircleTotal + 1, _charAttributes));
+        return ref _disciplines;
     }
-
-    public void AddNewCircleToExistingDiscipline(string disciplineName, Circle circle, Attributes att, int circleLevel)
-    {
-        foreach (var dc in _characterDisciplineCircles)
-        {
-            if (dc.DisciplineName == disciplineName)
-            {
-                if (dc.CircleLevel + 1 == circleLevel)
-                {
-                    dc.AddNewDisciplineCircle(circle, att, circleLevel);
-                }
-                else
-                {
-                    throw new Exception(
-                        "Circle Level: " + circleLevel+ "is not the expected circle of: " + 
-                                        dc.CircleLevel + "for Discipline: " + disciplineName);
-                }
-            }
-            else
-            {
-                throw new Exception(
-                    disciplineName + " is not a characters current discipline.  Use Add new Discipline.");
-            }
-        }
-    }
-
-    public CharacterDiscipline GetDisciplineCircleByName(string discipline)
-    {
-        foreach (CharacterDiscipline dc in _characterDisciplineCircles)
-        {
-            if (dc.DisciplineName == discipline)
-                return dc;
-        }
-
-        return null;
-    }
-
-    public List<string> GetAllCharacterDisciplines()
-    {
-        List<string> allDisciplineNames = new();
-        foreach (var discipline in _characterDisciplineCircles)
-        {
-            allDisciplineNames.Add(discipline.DisciplineName);
-        }
-
-        return allDisciplineNames;
-    }
+    
 }

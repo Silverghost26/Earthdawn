@@ -1,6 +1,6 @@
 using Earthdawn.ViewModels;
 
-namespace Earthdawn.Models;
+namespace Earthdawn.Data;
 
 public class Equipment
 {

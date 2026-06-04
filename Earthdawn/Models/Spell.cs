@@ -18,6 +18,7 @@ public class Spell
                 Range = spell.Range;
                 AOE = spell.AOE;
                 Description = spell.Description;
+                Circle = spell.Circle;
         }
 
         public string Name { get; set; }
@@ -30,4 +31,5 @@ public class Spell
         public string Range { get; set; }
         public string AOE { get; set; }
         public string Description { get; set; }
+        public int Circle { get; set; }
 }

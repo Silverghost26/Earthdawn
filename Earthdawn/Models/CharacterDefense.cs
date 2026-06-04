@@ -9,7 +9,7 @@ public class CharacterDefense
     private Attributes _attributes;
     private Armor _armor;
     private Shield _shield;
-    private List<Circle> _circles;
+    private List<Discipline> _disciplines;
     private string _race;
     private List<TemporaryValues>? _tempPhysicalDefense;
     private List<TemporaryValues>? _tempMysticDefense;
@@ -17,21 +17,66 @@ public class CharacterDefense
     private List<TemporaryValues>? _tempPhysicalArmor;
     private List<TemporaryValues>? _tempMysticalArmor;
     
-    public CharacterDefense(Attributes att, Armor armor, Shield shield, List<Circle> circles, string race)
+    public CharacterDefense(Attributes att, Armor armor, Shield shield, List<Discipline> disciplines, string race)
     {
         _attributes = att;
         _armor = armor;
         _shield = shield;
-        _circles = circles;
+        _disciplines = disciplines;
         _race = race;
+        _tempPhysicalArmor = new();
+        _tempPhysicalDefense = new();
+        _tempMysticalArmor = new();
+        _tempMysticDefense = new();
+        _tempSocialDefense = new();
     }
 
-    public CharacterDefense(Attributes att) : this(att, new Armor(), new Shield(), new List<Circle>(), "Unknown")
+    public CharacterDefense(Attributes att) : this(att, new Armor(), new Shield(), new List<Discipline>(), "Unknown")
     {
     }
 
     public CharacterDefense(): this(new Attributes())
     {
+    }
+
+    public CharacterDefense(CharacterDefense characterDefense)
+    {
+        _tempPhysicalArmor = new();
+        _tempPhysicalDefense = new();
+        _tempMysticalArmor = new();
+        _tempMysticDefense = new();
+        _tempSocialDefense = new();
+        _disciplines = new List<Discipline>();
+        _attributes = new Attributes(characterDefense._attributes);
+        _armor = new Armor(characterDefense._armor);
+        _shield = new Shield(characterDefense._shield);
+        foreach (Discipline disc in characterDefense._disciplines)
+        {
+            _disciplines.Add(new Discipline(disc));
+        }
+        foreach (TemporaryValues pd in characterDefense._tempPhysicalDefense)
+        {
+            _tempPhysicalDefense.Add(new TemporaryValues(pd.NameOfEffect, pd.NumbOfPoints, pd.EffectDurationInRounds));
+        }
+
+        foreach (TemporaryValues pa in characterDefense._tempPhysicalArmor)
+        {
+            _tempPhysicalArmor.Add(new TemporaryValues(pa.NameOfEffect, pa.NumbOfPoints, pa.EffectDurationInRounds));
+        }
+
+        foreach (TemporaryValues md in characterDefense._tempMysticDefense)
+        {
+            _tempMysticDefense.Add(new TemporaryValues(md.NameOfEffect, md.NumbOfPoints, md.EffectDurationInRounds));
+        }
+        foreach (TemporaryValues ma in characterDefense._tempMysticalArmor)
+        {
+            _tempMysticalArmor.Add(new TemporaryValues(ma.NameOfEffect, ma.NumbOfPoints, ma.EffectDurationInRounds));
+        }
+
+        foreach (TemporaryValues sd in characterDefense._tempSocialDefense)
+        {
+            _tempSocialDefense.Add(new TemporaryValues(sd.NameOfEffect, sd.NumbOfPoints, sd.EffectDurationInRounds));
+        }
         
     }
     
@@ -202,42 +247,58 @@ public class CharacterDefense
             case DefenseType.PhysicalDefense:
                 _physicalDefense = _attributes.GetBasePhysicalDefense();
                 _physicalDefense += _shield.PhysicalDefense;
-                foreach (Circle circle in _circles)
+                int physicalDefenseBonus = 0;
+                foreach (Discipline discipline in _disciplines)
                 {
-                    _physicalDefense += circle.PhysicalDefense;
+                    if(discipline.PhysicalDefenseBonus > physicalDefenseBonus)
+                        physicalDefenseBonus = discipline.PhysicalDefenseBonus;
                 }
+                _physicalDefense += physicalDefenseBonus;
                 break;
             case DefenseType.MysticDefense:
+                int mysticalDefenseBonus = 0;
                 _mysticDefense = _attributes.GetBaseMysticDefense();
                 _mysticDefense += _shield.MysticDefense;
-                foreach (Circle circle in _circles)
+                foreach (Discipline discipline in _disciplines)
                 {
-                    _mysticDefense += circle.MysticalDefense;
+                    if (discipline.MysticalDefenseBonus > mysticalDefenseBonus)
+                        mysticalDefenseBonus = discipline.MysticalDefenseBonus;
                 }
+                _mysticDefense += mysticalDefenseBonus;
                 break;
             case DefenseType.SocialDefense:
                 _socialDefense = _attributes.GetBaseSocialDefense();
-                foreach (Circle circle in _circles)
+                int socialDefenseBonus = 0;
+                foreach (Discipline discipline in _disciplines)
                 {
-                    _socialDefense += circle.SocialDefense;
+                    if (discipline.SocialDefenseBonus > socialDefenseBonus)
+                        socialDefenseBonus = discipline.SocialDefenseBonus;
                 }
+                _socialDefense += socialDefenseBonus;
                 break;
             case DefenseType.PhysicalArmor:
                 _physicalArmor = _armor.PhysicalArmor;
-                foreach (Circle circle in _circles)
+                int physicalArmorBonus = 0;
+                foreach (Discipline discipline in _disciplines)
                 {
-                    _physicalArmor += circle.PhysicalArmor;
+                    if (discipline.PhysicalArmorBonus > physicalArmorBonus)
+                        physicalArmorBonus = discipline.PhysicalArmorBonus;
                 }
+                _physicalArmor += physicalArmorBonus;
+                
                 if (_race == "Obsidimen")
                     _physicalArmor += 3;
                 break;
             case DefenseType.MysticalArmor:
                 _mysticalArmor = _attributes.GetMysticArmor();
                 _mysticalArmor += _armor.MysticArmor;
-                foreach (Circle circle in _circles)
+                int mysticalArmorBonus = 0;
+                foreach (Discipline discipline in _disciplines)
                 {
-                    _mysticalArmor += circle.MysticalArmor;
+                    if (discipline.MysticalArmorBonus > mysticalArmorBonus)
+                        mysticalArmorBonus = discipline.MysticalArmorBonus;
                 }
+                _mysticalArmor += mysticalArmorBonus;
                 break;
         }
         InitiativePenalty = -_shield.InitiativePenalty;

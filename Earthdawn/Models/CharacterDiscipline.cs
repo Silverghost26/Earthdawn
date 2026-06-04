@@ -9,12 +9,12 @@ namespace Earthdawn.Models;
         private Dictionary<CastingClasses, List<Spell>> _spells = new Dictionary<CastingClasses, List<Spell>>();
         
         //**************************************Constructors*******************************************
-        public CharacterDiscipline(string disciplineName, Circle circle, int durability, int circlePrecedent, Attributes att)
+        public CharacterDiscipline(string disciplineName, DisciplineCircle disciplineCircle, int durability, int circlePrecedent, Attributes att)
         {
             DisciplineName = disciplineName;
             Durability = durability;
             CirclePrecedence = circlePrecedent;
-            AddNewDisciplineCircle(circle, att, 1);
+            AddNewDisciplineCircle(disciplineCircle, att, 1);
         }
         
         //**************************************Properties*******************************************
@@ -73,7 +73,7 @@ namespace Earthdawn.Models;
             }
         }
 
-        public void AddNewDisciplineCircle(Circle c, Attributes at, int circleLevel)
+        public void AddNewDisciplineCircle(DisciplineCircle c, Attributes at, int circleLevel)
         {
             var ds = new DataServices();
             var talents = ds.LoadTalents();

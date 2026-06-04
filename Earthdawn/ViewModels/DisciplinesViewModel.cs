@@ -40,9 +40,9 @@ public partial class DisciplinesViewModel : PageViewModel
     [RelayCommand]
     private void ApplyDisciplineValues()
     {
-        _characterSheetService.CharacterCreationSheetInstance.AddNewDiscipline(Disciplines[CurrentIndex]);
+        //_characterSheetService.CharacterCreationSheetInstance.AddNewDiscipline(Disciplines[CurrentIndex]);
         //Add the list of Novice Optional Talents to the Character creation.
-        _characterSheetService.CharacterCreationSheetInstance.AddOptionalDisciplineTalents(Disciplines[CurrentIndex].Disciplines.TalentOptions["Novice"]);
+        //_characterSheetService.CharacterCreationSheetInstance.AddOptionalDisciplineTalents(Disciplines[CurrentIndex].Disciplines.TalentOptions["Novice"]);
         
         //
         //

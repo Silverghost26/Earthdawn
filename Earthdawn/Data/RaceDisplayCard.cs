@@ -1,8 +1,8 @@
 using System.Text.RegularExpressions;
-using System.Collections.Generic;
+using Earthdawn.Models;
 using System;
 
-namespace Earthdawn.Models;
+namespace Earthdawn.Data;
 
 public class RaceDisplayCard
 {

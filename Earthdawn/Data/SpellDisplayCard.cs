@@ -1,8 +1,7 @@
-using Earthdawn.ViewModels;
-using System.Text.Json.Serialization;
 using System.Collections.Generic;
+using Earthdawn.Models;
 
-namespace Earthdawn.Models;
+namespace Earthdawn.Data;
     public class SpellCircle
     {
         public List<Spell> Circle_1 { get; set; }

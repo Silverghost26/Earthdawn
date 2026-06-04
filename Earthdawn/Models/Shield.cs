@@ -6,6 +6,18 @@ namespace  Earthdawn.Models
 {
     public class Shield
     {
+        public Shield(){}
+        public Shield(Shield shield)
+        {
+            Living = shield.Living;
+            Availability = shield.Availability;
+            PhysicalDefense = shield.PhysicalDefense;
+            MysticDefense = shield.MysticDefense;
+            InitiativePenalty = shield.InitiativePenalty;
+            ShatterThreshold = shield.ShatterThreshold;
+            Cost = shield.Cost;
+            Weight = shield.Weight;
+        }
         public string Living { get; set; }
         public string Availability { get; set; }
         public int PhysicalDefense { get; set; }

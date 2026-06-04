@@ -37,7 +37,7 @@
                     </StackPanel>
                     <StackPanel Grid.Row="5" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
                         <Button Content="-" Width="30" Height="30" Command="{Binding DecrementAttributeCommand}" CommandParameter="Willpower"/>
-                        <Button Content="+" Width="30" Height="30" Command="{Binding IncrementAttributeCommand}" CommandParameter="Willpower"/>    
+                        <Button Content="+" Width="30" Height="30" Command="{Binding IncrementAttributeCommand}" CommandParameter="Willpower"/>
                         <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Willpower, StringFormat='Willpower:   {0}'}" FontSize="20"/>
                     </StackPanel>
                     <StackPanel Grid.Row="6" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
@@ -45,26 +45,26 @@
                         <Button Content="+" Width="30" Height="30" Command="{Binding IncrementAttributeCommand}" CommandParameter="Charisma"/>
                         <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Charisma, StringFormat='Charisma:    {0}'}" FontSize="20"/>
                     </StackPanel>
-                    <Border Grid.Column="1" Grid.Row="1" Grid.RowSpan="6" Background="BlanchedAlmond"></Border>
-                     <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding OriginalDex}" FontSize="20" Padding="15 0"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding OriginalStr}" FontSize="20" Padding="15 0"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding OriginalTou}" FontSize="20" Padding="15 0"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding OriginalPer}" FontSize="20" Padding="15 0"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding OriginalWil}" FontSize="20" Padding="15 0"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding OriginalChr}" FontSize="20" Padding="15 0"/>
-                    </StackPanel>
-                    
+                    <!-- <Border Grid.Column="1" Grid.Row="1" Grid.RowSpan="6" Background="BlanchedAlmond"></Border> -->
+                    <!--  <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left"> -->
+                    <!--     <TextBlock Classes="PrimaryDescriptionText" Text="{Binding OriginalDex}" FontSize="20" Padding="15 0"/> -->
+                    <!-- </StackPanel> -->
+                    <!-- <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left"> -->
+                    <!--     <TextBlock Classes="PrimaryDescriptionText" Text="{Binding OriginalStr}" FontSize="20" Padding="15 0"/> -->
+                    <!-- </StackPanel> -->
+                    <!-- <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left"> -->
+                    <!--     <TextBlock Classes="PrimaryDescriptionText" Text="{Binding OriginalTou}" FontSize="20" Padding="15 0"/> -->
+                    <!-- </StackPanel> -->
+                    <!-- <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left"> -->
+                    <!--     <TextBlock Classes="PrimaryDescriptionText" Text="{Binding OriginalPer}" FontSize="20" Padding="15 0"/> -->
+                    <!-- </StackPanel> -->
+                    <!-- <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left"> -->
+                    <!--     <TextBlock Classes="PrimaryDescriptionText" Text="{Binding OriginalWil}" FontSize="20" Padding="15 0"/> -->
+                    <!-- </StackPanel> -->
+                    <!-- <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left"> -->
+                    <!--     <TextBlock Classes="PrimaryDescriptionText" Text="{Binding OriginalChr}" FontSize="20" Padding="15 0"/> -->
+                    <!-- </StackPanel> -->
+    
                     <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Left">
                         <TextBlock Classes="PrimaryDescriptionText" Text="{Binding DexIncrementCost}" FontSize="20" Padding="15 0 5 0"/>
                         <Label Classes="PrimaryText" Content="|" FontSize="20" Padding="3 0 3 0"/>
@@ -95,7 +95,7 @@
                         <Label Classes="PrimaryText" Content="|" FontSize="20" Padding="3 0 3 0"/>
                         <TextBlock Classes="PrimaryDescriptionText" Text="{Binding ChrDecrementCost}" FontSize="20" Padding="5 0 5 0"/>
                     </StackPanel>
-                    
+    
                     <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Center" Grid.ColumnSpan="2" Grid.RowSpan="3">
                         <Label Classes="PrimaryText" Content="Remaining Attribute Points:" Padding="20 0 5 10" FontSize="30"/>
                         <TextBlock Classes="PrimaryDescriptionText" Text="{Binding RemainingAttributePoints}" FontSize="30" HorizontalAlignment="Center"/>
@@ -145,7 +145,8 @@
             <StackPanel Grid.Row="1" Grid.Column="0">
                 <Label Classes="PrimaryText" Content="Discipline Talents" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25"/>
                 <StackPanel Orientation="Horizontal">
-                    <ListBox ItemsSource="{Binding DisciplineTalents}" Background="Transparent" Margin="0, 0, 0, 0" Padding="0"
+                    <!-- <ListBox ItemsSource="{Binding DisciplineTalents}" Background="Transparent" Margin="0, 0, 0, 0" Padding="0" -->
+                    <ListBox ItemsSource="Temp" Background="Transparent" Margin="0, 0, 0, 0" Padding="0"
                              SelectedItem="{Binding SelectedCharacterTalent}"
                              SelectionMode="Single">
                         <ListBox.ItemTemplate>
@@ -174,7 +175,8 @@
             </StackPanel>
             <StackPanel Grid.Row="1" Grid.Column="1">
                 <Label Classes="PrimaryText" Content="Discipline Free Talents" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="25"></Label>
-                <ListBox ItemsSource="{Binding FreeDisciplineTalents}" Background="Transparent" HorizontalAlignment="Right">
+                <!-- <ListBox ItemsSource="{Binding FreeDisciplineTalents}" Background="Transparent" HorizontalAlignment="Right"> -->
+                <ListBox ItemsSource="temp" Background="Transparent" HorizontalAlignment="Right">
                     <ListBox.ItemTemplate>
                         <DataTemplate x:DataType="models:CharacterTalent">
                             <StackPanel Orientation="Horizontal">
@@ -190,22 +192,22 @@
             </StackPanel>
                 <StackPanel Grid.Row="1" Grid.Column="3">
                     <TextBlock Classes="PrimaryDescriptionText" Text="Available Optional Talents:" FontSize="25"/>
-                    <ItemsControl ItemsSource="{Binding NoviceOptionTalents}" FontSize="20">
-                        <ItemsControl.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <UniformGrid Columns="3" />
-                            </ItemsPanelTemplate>
-                        </ItemsControl.ItemsPanel>
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <RadioButton Classes="PrimaryRadioButton"
-                                    GroupName="NoviceOptionTalents"
-                                    Content="{Binding}"
-                                    Command="{Binding $parent[ItemsControl].((vm:CharacterCustomizationsViewModel)DataContext).SelectNoviceOptionTalentCommand}"
-                                    CommandParameter="{Binding}" />
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
+                    <!-- <ItemsControl ItemsSource="{Binding NoviceOptionTalents}" FontSize="20"> -->
+                        <!-- <ItemsControl.ItemsPanel> -->
+                        <!--     <ItemsPanelTemplate> -->
+                        <!--         <UniformGrid Columns="3" /> -->
+                        <!--     </ItemsPanelTemplate> -->
+                        <!-- </ItemsControl.ItemsPanel> -->
+                        <!-- <ItemsControl.ItemTemplate> -->
+                        <!--     <DataTemplate> -->
+                        <!--         <RadioButton Classes="PrimaryRadioButton" -->
+                        <!--             GroupName="NoviceOptionTalents" -->
+                        <!--             Content="{Binding}" -->
+                        <!--             Command="{Binding $parent[ItemsControl].((vm:CharacterCustomizationsViewModel)DataContext).SelectNoviceOptionTalentCommand}" -->
+                        <!--             CommandParameter="{Binding}" /> -->
+                        <!--     </DataTemplate> -->
+                        <!-- </ItemsControl.ItemTemplate> -->
+                    <!-- </ItemsControl> -->
                 </StackPanel>
             </Grid>
         </Border>
@@ -222,10 +224,10 @@
                         <TextBlock Classes="PrimaryDescriptionText" Text="{Binding CurrentTalent.Action, TargetNullValue='No Value'}" Padding="3 5 0 0"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                            
+    
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        
+    
                     </StackPanel>
                     <Label Classes="PrimaryText" Content="Description:" Padding="10 5 5 1"/>
                     <TextBlock Classes="PrimaryDescriptionText" Text="{Binding CurrentTalent.Description, TargetNullValue='No Value'}" TextWrapping="Wrap" Padding="20 5 5 15"/>
