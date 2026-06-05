@@ -45,26 +45,7 @@
                         <Button Content="+" Width="30" Height="30" Command="{Binding IncrementAttributeCommand}" CommandParameter="Charisma"/>
                         <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Charisma, StringFormat='Charisma:    {0}'}" FontSize="20"/>
                     </StackPanel>
-                    <!-- <Border Grid.Column="1" Grid.Row="1" Grid.RowSpan="6" Background="BlanchedAlmond"></Border> -->
-                    <!--  <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left"> -->
-                    <!--     <TextBlock Classes="PrimaryDescriptionText" Text="{Binding OriginalDex}" FontSize="20" Padding="15 0"/> -->
-                    <!-- </StackPanel> -->
-                    <!-- <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left"> -->
-                    <!--     <TextBlock Classes="PrimaryDescriptionText" Text="{Binding OriginalStr}" FontSize="20" Padding="15 0"/> -->
-                    <!-- </StackPanel> -->
-                    <!-- <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left"> -->
-                    <!--     <TextBlock Classes="PrimaryDescriptionText" Text="{Binding OriginalTou}" FontSize="20" Padding="15 0"/> -->
-                    <!-- </StackPanel> -->
-                    <!-- <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left"> -->
-                    <!--     <TextBlock Classes="PrimaryDescriptionText" Text="{Binding OriginalPer}" FontSize="20" Padding="15 0"/> -->
-                    <!-- </StackPanel> -->
-                    <!-- <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left"> -->
-                    <!--     <TextBlock Classes="PrimaryDescriptionText" Text="{Binding OriginalWil}" FontSize="20" Padding="15 0"/> -->
-                    <!-- </StackPanel> -->
-                    <!-- <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left"> -->
-                    <!--     <TextBlock Classes="PrimaryDescriptionText" Text="{Binding OriginalChr}" FontSize="20" Padding="15 0"/> -->
-                    <!-- </StackPanel> -->
-    
+                    
                     <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Left">
                         <TextBlock Classes="PrimaryDescriptionText" Text="{Binding DexIncrementCost}" FontSize="20" Padding="15 0 5 0"/>
                         <Label Classes="PrimaryText" Content="|" FontSize="20" Padding="3 0 3 0"/>
@@ -126,8 +107,8 @@
                         <TextBlock Classes="PrimaryDescriptionText" Text="{Binding WoundThreshold, StringFormat='WoundThreshold: {0}'}" FontSize="20" Padding="100 0 5 10"/>
                     </StackPanel>
                     <StackPanel Grid.Row="5" Grid.Column="4" Orientation="Horizontal">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding RecovertyTests, StringFormat='RecovertTests: {0}'}" FontSize="20" Padding="100 0 5 10"/>
-                    </StackPanel>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding RecoveryTests, StringFormat='RecoveryTests: {0}'}" FontSize="20" Padding="100 0 5 10"/>
+                    </StackPanel>                                                                                    
                 </Grid>
             </StackPanel>
         </Border>
@@ -145,12 +126,11 @@
             <StackPanel Grid.Row="1" Grid.Column="0">
                 <Label Classes="PrimaryText" Content="Discipline Talents" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25"/>
                 <StackPanel Orientation="Horizontal">
-                    <!-- <ListBox ItemsSource="{Binding DisciplineTalents}" Background="Transparent" Margin="0, 0, 0, 0" Padding="0" -->
-                    <ListBox ItemsSource="Temp" Background="Transparent" Margin="0, 0, 0, 0" Padding="0"
+                    <ListBox ItemsSource="{Binding DisciplineTalents}" Background="Transparent" Margin="0, 0, 0, 0" Padding="0"
                              SelectedItem="{Binding SelectedCharacterTalent}"
                              SelectionMode="Single">
                         <ListBox.ItemTemplate>
-                            <DataTemplate x:DataType="models:CharacterTalent">
+                            <DataTemplate x:DataType="models:Talent">
                                 <DockPanel LastChildFill="True">
                                     <Button Content="-"
                                             Command="{Binding $parent[ListBox].((vm:CharacterCustomizationsViewModel)DataContext).TalentDecreaseButtonClickedCommand}"
@@ -160,7 +140,7 @@
                                             Command="{Binding $parent[ListBox].((vm:CharacterCustomizationsViewModel)DataContext).TalentIncreaseButtonClickedCommand}"
                                             CommandParameter="{Binding}"
                                             DockPanel.Dock="Left" Width="30" Height="30" VerticalAlignment="Center" />
-                                    <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding TalentName}" DockPanel.Dock="Left" Padding="5 0 0 0"/>
+                                    <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Name}" DockPanel.Dock="Left" Padding="5 0 0 0"/>
                                     <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" Margin="15 0 0 0">
                                         <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="Rank: "/>
                                         <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Rank}"/>
@@ -175,12 +155,11 @@
             </StackPanel>
             <StackPanel Grid.Row="1" Grid.Column="1">
                 <Label Classes="PrimaryText" Content="Discipline Free Talents" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="25"></Label>
-                <!-- <ListBox ItemsSource="{Binding FreeDisciplineTalents}" Background="Transparent" HorizontalAlignment="Right"> -->
-                <ListBox ItemsSource="temp" Background="Transparent" HorizontalAlignment="Right">
+                <ListBox ItemsSource="{Binding FreeTalents}" Background="Transparent" HorizontalAlignment="Right">
                     <ListBox.ItemTemplate>
-                        <DataTemplate x:DataType="models:CharacterTalent">
+                        <DataTemplate x:DataType="models:Talent">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding TalentName}"/>
+                                <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Name}"/>
                                 <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text=" - Rank: " Padding="10 0 0 0"/>
                                 <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Rank}"/>
                                 <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text=" | Step: " Padding="10 0 0 0"/>
@@ -192,22 +171,22 @@
             </StackPanel>
                 <StackPanel Grid.Row="1" Grid.Column="3">
                     <TextBlock Classes="PrimaryDescriptionText" Text="Available Optional Talents:" FontSize="25"/>
-                    <!-- <ItemsControl ItemsSource="{Binding NoviceOptionTalents}" FontSize="20"> -->
-                        <!-- <ItemsControl.ItemsPanel> -->
-                        <!--     <ItemsPanelTemplate> -->
-                        <!--         <UniformGrid Columns="3" /> -->
-                        <!--     </ItemsPanelTemplate> -->
-                        <!-- </ItemsControl.ItemsPanel> -->
-                        <!-- <ItemsControl.ItemTemplate> -->
-                        <!--     <DataTemplate> -->
-                        <!--         <RadioButton Classes="PrimaryRadioButton" -->
-                        <!--             GroupName="NoviceOptionTalents" -->
-                        <!--             Content="{Binding}" -->
-                        <!--             Command="{Binding $parent[ItemsControl].((vm:CharacterCustomizationsViewModel)DataContext).SelectNoviceOptionTalentCommand}" -->
-                        <!--             CommandParameter="{Binding}" /> -->
-                        <!--     </DataTemplate> -->
-                        <!-- </ItemsControl.ItemTemplate> -->
-                    <!-- </ItemsControl> -->
+                    <ItemsControl ItemsSource="{Binding OptionalTalents}" FontSize="20">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Columns="3" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <RadioButton Classes="PrimaryRadioButton"
+                                    GroupName="NoviceOptionTalents"
+                                    Content="{Binding}"
+                                    Command="{Binding $parent[ItemsControl].((vm:CharacterCustomizationsViewModel)DataContext).SelectNoviceOptionTalentCommand}"
+                                    CommandParameter="{Binding}" />
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </StackPanel>
             </Grid>
         </Border>

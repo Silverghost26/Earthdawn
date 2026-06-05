@@ -82,37 +82,40 @@ public class  CharacterCreationSheet : CharacterBase
                     {
                         tempTalent = talent;
                     }
+
                     var newTalent = talents[tempTalent];
+                    newTalent.Name = talent;
                     newTalent.CircleObtained = 1;
                     newTalent.Rank = 1;
                     newDiscipline.AddNewFreeTalent(newTalent);
                 }
             }
+        }
 
-            if (card.Disciplines.Circles["First"].Talents != null)
+        if (card.Disciplines.Circles["First"].Talents != null)
+        {
+            foreach (string talent in card.Disciplines.Circles["First"].Talents)
             {
-                foreach (string talent in card.Disciplines.Circles["First"].Talents)
+                if (!string.IsNullOrEmpty(talent))
                 {
-                    if (!string.IsNullOrEmpty(talent))
+                    string tempTalent = string.Empty;
+                    if (talent.Contains("Thread Weaving"))
                     {
-                        string tempTalent = string.Empty;
-                        if (talent.Contains("Thread Weaving"))
-                        {
-                            tempTalent = "Thread Weaving";
-                        }
-                        else
-                        {
-                            tempTalent = talent;
-                        }
-
-                        var newTalent = talents[tempTalent];
-                        newTalent.CircleObtained = 1;
-                        newDiscipline.AddNewTalent(newTalent);
+                        tempTalent = "Thread Weaving";
                     }
+                    else
+                    {
+                        tempTalent = talent;
+                    }
+
+                    var newTalent = talents[tempTalent];
+                    newTalent.Name = talent;
+                    newTalent.CircleObtained = 1;
+                    newDiscipline.AddNewTalent(newTalent);
                 }
             }
-            
         }
+        _disciplines.Add(newDiscipline);
     }
     
     public void AddRaceBaseAttributes(Race race)
@@ -134,87 +137,28 @@ public class  CharacterCreationSheet : CharacterBase
         SetCharAttributes(new Attributes(race));
     }
     
-    // public List<string> GetTalentNameList()
-    // {
-    //     List<string> characterTalents = new();
-    //     string firstDiscipline = this.GetAllCharacterDisciplines()[0];
-    //     foreach( var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
-    //     {
-    //         if(!talent.IsFreeTalent)
-    //             characterTalents.Add(talent.TalentName);
-    //     }
-    //     return characterTalents;
-    // }
+    public List<string> GetTalentNameList()
+    {
+        List<string> characterTalents = new();
+        foreach( var talent in _disciplines[0].GetDisciplineTalents())
+        {
+            characterTalents.Add(talent.Name);
+        }
+        return characterTalents;
+    }
     
     //Note: Free talents can not be upgraded with Attribute points or Legendpoints, they are tied to the Circle.
-    // public List<string> GetFreeTalentNameList()
-    // {
-    //     List<string> characterFreeTalents = new();
-    //     string firstDiscipline = GetAllCharacterDisciplines()[0];
-    //     foreach (var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
-    //     {
-    //         if(talent.IsFreeTalent)
-    //             characterFreeTalents.Add(talent.TalentName);
-    //     }
-    //
-    //     return characterFreeTalents;
-    // }
+    public List<string> GetFreeTalentNameList()
+    {
+        List<string> characterFreeTalents = new();
+        foreach (var talent in _disciplines[0].GetDisciplineFreeTalents())
+        {
+            characterFreeTalents.Add(talent.Name);
+        }
+    
+        return characterFreeTalents;
+    }
 
-    // public List<CharacterTalent> GetDisciplineTalentList()
-    // {
-    //     List<CharacterTalent> disciplineTalents = new();
-    //     if (_characterDisciplineCircles.Count == 0)
-    //         return disciplineTalents;
-    //         
-    //     string firstDiscipline = GetAllCharacterDisciplines()[0];
-    //     foreach (var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
-    //     {
-    //         if (!talent.IsFreeTalent  && !talent.IsOptionalTalent)
-    //             disciplineTalents.Add(talent);
-    //     }
-    //     return disciplineTalents;
-    // }
-
-    // public List<CharacterTalent> GetOptionalTalentList()
-    // {
-    //     List<CharacterTalent> optionaTalents = new();
-    //     if (_characterDisciplineCircles.Count == 0)
-    //         return optionaTalents;
-    //
-    //     string firstDiscipline = GetAllCharacterDisciplines()[0];
-    //     foreach (var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
-    //     {
-    //         if (talent.IsOptionalTalent)
-    //         {
-    //             optionaTalents.Add(talent);
-    //         }
-    //     }
-    //
-    //     return optionaTalents;
-    // }
-
-    // public List<CharacterTalent> GetFreeTalentList()
-    // {
-    //     List<CharacterTalent> freeTalents = new();
-    //     if (_characterDisciplineCircles.Count == 0)
-    //         return freeTalents;
-    //         
-    //     string firstDiscipline = GetAllCharacterDisciplines()[0];
-    //     foreach (var talent in GetDisciplineCircleByName(firstDiscipline).Talents)
-    //     {
-    //         if (talent.IsFreeTalent)
-    //             freeTalents.Add(talent);
-    //     }
-    //     return freeTalents;
-    // }
-    //
-    // public List<CharacterTalent> GetTalentList()
-    // {
-    //     return _characterDisciplineCircles[0].Talents;
-    // }
-    //
-
-    //
     public void IncrementTalent(string talentName)
     {
         if (RemainingTalentPoints > 0)
@@ -225,7 +169,7 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     talent.Rank += 1;
                     RemainingTalentPoints -= 1;
-                    OnPropertyChanged(nameof(RemainingTalentPoints));
+                    // OnPropertyChanged(nameof(RemainingTalentPoints));
                 }
             }
         }
@@ -239,7 +183,7 @@ public class  CharacterCreationSheet : CharacterBase
             {
                 talent.Rank -= 1;
                 RemainingTalentPoints += 1;
-                OnPropertyChanged(nameof(RemainingTalentPoints));
+                // OnPropertyChanged(nameof(RemainingTalentPoints));
             }
         }
     }
@@ -274,7 +218,7 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints -= cost;
                     Charisma += 1;
-                    OnPropertyChanged(nameof(RemainingAttributePoints));
+                    // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
             case AttributesTypes.Per:
@@ -283,7 +227,7 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints -= cost;
                     Perception += 1;
-                    OnPropertyChanged(nameof(RemainingAttributePoints));
+                    // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
             case AttributesTypes.Str:
@@ -292,7 +236,7 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints -= cost;
                     Strength += 1;
-                    OnPropertyChanged(nameof(RemainingAttributePoints));
+                    // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
             case AttributesTypes.Tou:
@@ -301,7 +245,7 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints -= cost;
                     Toughness += 1;
-                    OnPropertyChanged(nameof(RemainingAttributePoints));
+                    // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
             case AttributesTypes.Wil:
@@ -310,7 +254,7 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints -= cost;
                     Willpower += 1;
-                    OnPropertyChanged(nameof(RemainingAttributePoints));
+                    // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
             case AttributesTypes.Dex:
@@ -319,7 +263,7 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints -= cost;
                     Dexterity += 1;
-                    OnPropertyChanged(nameof(RemainingAttributePoints));
+                    // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
         }
@@ -336,7 +280,7 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints += cost;
                     Charisma -= 1;
-                    OnPropertyChanged(nameof(RemainingAttributePoints));
+                    // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
             case AttributesTypes.Per:
@@ -345,7 +289,7 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints += cost;
                     Perception -= 1;
-                    OnPropertyChanged(nameof(RemainingAttributePoints));
+                    // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
             case AttributesTypes.Str:
@@ -354,7 +298,7 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints += cost;
                     Strength -= 1;
-                    OnPropertyChanged(nameof(RemainingAttributePoints));
+                    // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
             case AttributesTypes.Tou:
@@ -363,7 +307,7 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints += cost;
                     Toughness -= 1;
-                    OnPropertyChanged(nameof(RemainingAttributePoints));
+                    // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
             case AttributesTypes.Wil:
@@ -372,7 +316,7 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints += cost;
                     Willpower -= 1;
-                    OnPropertyChanged(nameof(RemainingAttributePoints));
+                    // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
             case AttributesTypes.Dex:
@@ -381,7 +325,7 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints += cost;
                     Dexterity -= 1;
-                    OnPropertyChanged(nameof(RemainingAttributePoints));
+                    // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
         }
