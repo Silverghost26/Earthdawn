@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Diagnostics;
-using System.Runtime.InteropServices;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Earthdawn.Data;
@@ -14,9 +11,8 @@ namespace Earthdawn.ViewModels;
 
 public partial class CharacterCustomizationsViewModel : PageViewModel
 {
-
     private readonly ICharacterSheetService _characterSheetService;
-
+    
     [ObservableProperty] private string? _talentSelectedItem;
     [ObservableProperty] private string? _talentButtonItem;
     [ObservableProperty] private string? _selectedOptionalTalent;
@@ -80,6 +76,18 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
         Willpower = _characterSheetService.CharacterCreationSheetInstance.Willpower;
         Charisma = _characterSheetService.CharacterCreationSheetInstance.Charisma;
         Karma = _characterSheetService.CharacterCreationSheetInstance.Karma;
+        Initiative = _characterSheetService.CharacterCreationSheetInstance.Initiative;
+        PhysicalDefense = _characterSheetService.CharacterCreationSheetInstance.PhysicalDefense;
+        MysticDefense = _characterSheetService.CharacterCreationSheetInstance.MysticDefense;
+        SocialDefense = _characterSheetService.CharacterCreationSheetInstance.SocialDefense;
+        MysticalArmor = _characterSheetService.CharacterCreationSheetInstance.MysticalArmor;
+        Karma = _characterSheetService.CharacterCreationSheetInstance.Karma;
+        UnconsciousRating = _characterSheetService.CharacterCreationSheetInstance.UnconsciousRating;
+        DeathRating = _characterSheetService.CharacterCreationSheetInstance.DeathRating;
+        WoundThreshold = _characterSheetService.CharacterCreationSheetInstance.WoundThreshold;
+        RecoveryTests = _characterSheetService.CharacterCreationSheetInstance.RecoveryTests;
+        RemainingAttributePoints = _characterSheetService.CharacterCreationSheetInstance.RemainingAttributePoints;
+        
         DisciplineTalents =
             new ObservableCollection<Talent>(_characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0]
                 .GetDisciplineTalents());
