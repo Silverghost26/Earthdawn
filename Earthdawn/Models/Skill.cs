@@ -6,6 +6,22 @@ namespace Earthdawn.Models
 {
     public class Skill
     {
+        public Skill()
+        {
+        }
+
+        public Skill(Skill skill)
+        {
+            Step = skill.Step;
+            Strain = skill.Strain;
+            Action = skill.Action;
+            Cost = skill.Cost;
+            Description = skill.Description;
+            SkillName = skill.SkillName;
+            Rank = skill.Rank;
+        }
+    
+
         // Step is a formula string (e.g., "Rank+CHA")
         public string Step { get; set; }
 
@@ -20,5 +36,8 @@ namespace Earthdawn.Models
 
         // Description holds the lengthy text rules for the skill.
         public string Description { get; set; }
+        
+        public string SkillName { get; set; }
+        public int Rank { get; set; }
     }
 }

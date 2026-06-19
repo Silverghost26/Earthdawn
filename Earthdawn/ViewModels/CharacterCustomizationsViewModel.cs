@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
+using System.Linq;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Earthdawn.Data;
@@ -12,12 +12,14 @@ namespace Earthdawn.ViewModels;
 public partial class CharacterCustomizationsViewModel : PageViewModel
 {
     private readonly ICharacterSheetService _characterSheetService;
+    private Talent _currentlySelectedOptionalTalent;
     
     [ObservableProperty] private string? _talentSelectedItem;
     [ObservableProperty] private string? _talentButtonItem;
     [ObservableProperty] private string? _selectedOptionalTalent;
     [ObservableProperty] private Talent? _currentTalent;
-    [ObservableProperty] private Talent? _selectedCharacterTalent;
+    //[ObservableProperty] private Talent? _selectedCharacterTalent;
+    [ObservableProperty] private TalentViewModel? _selectedCharacterTalent;
     [ObservableProperty] private int _dexterity;
     [ObservableProperty] private int _strength;
     [ObservableProperty] private int _toughness;
@@ -48,10 +50,13 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
     [ObservableProperty] private int _woundThreshold;
     [ObservableProperty] private int _recoveryTests;
     [ObservableProperty] private int _remainingAttributePoints;
+    [ObservableProperty] private int _remainingTalentPoints;
+    [ObservableProperty] private int _optionalTalentRank;
+    [ObservableProperty] private int _optionalTalentStep;
 
      public ObservableCollection<string> OptionalTalents { get; }
-     public ObservableCollection<Talent> DisciplineTalents { get; }
-     public ObservableCollection<Talent> FreeTalents { get; }
+     public ObservableCollection<TalentViewModel> DisciplineTalents { get; }
+     public ObservableCollection<TalentViewModel> FreeTalents { get; }
     
     
     private Dictionary<string, Talent> CharacterTalents { get; }
@@ -69,12 +74,12 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
         
         PageName = ApplicationPageNames.CharacterCustomizations;
         CharacterTalents = dataServices.LoadTalents();
-        Dexterity = _characterSheetService.CharacterCreationSheetInstance.Dexterity;
-        Strength = _characterSheetService.CharacterCreationSheetInstance.Strength;
-        Toughness = _characterSheetService.CharacterCreationSheetInstance.Toughness;
-        Perception = _characterSheetService.CharacterCreationSheetInstance.Perception;
-        Willpower = _characterSheetService.CharacterCreationSheetInstance.Willpower;
-        Charisma = _characterSheetService.CharacterCreationSheetInstance.Charisma;
+        UpdateAttributeValues("Dexterity");
+        UpdateAttributeValues("Strength");
+        UpdateAttributeValues("Toughness");
+        UpdateAttributeValues("Perception");
+        UpdateAttributeValues("Willpower");
+        UpdateAttributeValues("Charisma");
         Karma = _characterSheetService.CharacterCreationSheetInstance.Karma;
         Initiative = _characterSheetService.CharacterCreationSheetInstance.Initiative;
         PhysicalDefense = _characterSheetService.CharacterCreationSheetInstance.PhysicalDefense;
@@ -89,10 +94,10 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
         RemainingAttributePoints = _characterSheetService.CharacterCreationSheetInstance.RemainingAttributePoints;
         
         DisciplineTalents =
-            new ObservableCollection<Talent>(_characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0]
-                .GetDisciplineTalents());
-        FreeTalents = new ObservableCollection<Talent>(
-            _characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0].GetDisciplineFreeTalents());
+            new ObservableCollection<TalentViewModel>(_characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0]
+                .GetDisciplineTalents().Select(t => new TalentViewModel(t)));
+        FreeTalents = new ObservableCollection<TalentViewModel>(
+            _characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0].GetDisciplineFreeTalents().Select(t => new TalentViewModel(t)));
     }
     
     partial void OnTalentSelectedItemChanged(string? value)
@@ -102,8 +107,8 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
             TalentSelectionChangedCommand.Execute(value);
         }
     }
-
-    partial void OnSelectedCharacterTalentChanged(Talent? value)
+    
+    partial void OnSelectedCharacterTalentChanged(TalentViewModel? value)
     {
         if (value != null)
         {
@@ -123,25 +128,101 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
     }
 
     [RelayCommand]
-    private void TalentIncreaseButtonClicked(Talent talent)
+    private void TalentIncreaseButtonClicked(TalentViewModel talent)
     {
-        Debug.WriteLine($"Associated Talent: {talent.Name}");
-        //_characterSheetService.CharacterCreationSheetInstance.IncrementTalent(talent.TalentName);
+        IncrementTalent(talent.Name);
     }
 
     [RelayCommand]
-    private void TalentDecreaseButtonClicked(Talent talent)
+    private void TalentDecreaseButtonClicked(TalentViewModel talent)
     {
-        //_characterSheetService.CharacterCreationSheetInstance.DecremenetTalent(talent.TalentName);
+        DecrementTalent(talent.Name);
+    }
+
+    [RelayCommand]
+    private void OptionalTalentDecreaseButtonClicked(string selectedTalent)
+    {
+        DecrementTalent(selectedTalent);
     }
     
+    [RelayCommand]
+    private void OptionalTalentIncrementButtonClicked(string selectedTalent)
+    {
+        IncrementTalent(selectedTalent);
+    }
+    
+    [RelayCommand]
+    private void IncrementTalent(string selectedTalent)
+    {
+        if (string.IsNullOrWhiteSpace(selectedTalent))
+            return;
+        _characterSheetService.CharacterCreationSheetInstance.IncrementTalent(selectedTalent);
+        RemainingTalentPoints = _characterSheetService.CharacterCreationSheetInstance.RemainingTalentPoints;
+        UpdateAllTalents();
+    }
+
+    [RelayCommand]
+    private void DecrementTalent(string selectedTalent)
+    {
+        if (string.IsNullOrWhiteSpace(selectedTalent))
+            return;
+        _characterSheetService.CharacterCreationSheetInstance.DecrementTalent(selectedTalent);
+        RemainingTalentPoints = _characterSheetService.CharacterCreationSheetInstance.RemainingTalentPoints;
+        UpdateAllTalents();
+    }
+
     [RelayCommand]
     private void SelectNoviceOptionTalent(string selectedTalent)
     {
         if (selectedTalent != SelectedOptionalTalent)
         {
-            TalentSelectedItem = selectedTalent;
-            SelectedOptionalTalent = selectedTalent;
+            if (_currentlySelectedOptionalTalent != null && _currentlySelectedOptionalTalent.Name == selectedTalent)
+            {
+                TalentSelectedItem = selectedTalent;
+                SelectedOptionalTalent = selectedTalent;
+            }
+            else
+            {
+                _currentlySelectedOptionalTalent = new Talent(CharacterTalents[selectedTalent]);
+                _currentlySelectedOptionalTalent.Name = selectedTalent;
+                if (string.IsNullOrEmpty(SelectedOptionalTalent))
+                {
+                        _characterSheetService.CharacterCreationSheetInstance.AddOptionalTalent(
+                            _currentlySelectedOptionalTalent);
+                }
+                else
+                {
+                        _characterSheetService.CharacterCreationSheetInstance.AddOptionalTalent(
+                            _currentlySelectedOptionalTalent, SelectedOptionalTalent);
+                }
+                TalentSelectedItem = selectedTalent;
+                SelectedOptionalTalent = selectedTalent;
+            }
+            RemainingTalentPoints = _characterSheetService.CharacterCreationSheetInstance.RemainingTalentPoints;
+        }
+    }
+
+    private void UpdateAllTalents()
+    {
+        foreach (Talent talent in _characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0]
+                     .GetDisciplineTalents())
+        {
+            foreach (TalentViewModel dt in DisciplineTalents)
+            {
+                if (talent.Name == dt.Name)
+                {
+                    dt.Rank = talent.Rank;
+                    break;
+                }
+            }
+        }
+
+        if (_currentlySelectedOptionalTalent != null
+            && _characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0]
+                .GetDisciplineOptionalTalents() != null)
+        {
+            _currentlySelectedOptionalTalent.Rank = _characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0]
+                .GetDisciplineOptionalTalents()[0].Rank;
         }
     }
 
@@ -245,19 +326,6 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
         }
         RemainingAttributePoints = _characterSheetService.CharacterCreationSheetInstance.RemainingAttributePoints;
         Karma = _characterSheetService.CharacterCreationSheetInstance.Karma;
-    }
-
-    [RelayCommand]
-    private void IncrementTalent(string selectedTalent)
-    {
-        //_characterSheetService.CharacterCreationSheetInstance.IncrementTalent(selectedTalent);
-    }
-
-    [RelayCommand]
-    private void DecrementTalent(string selectedTalent)
-    {
-        Debug.Print("Hello");
-        //_characterSheetService.CharacterCreationSheetInstance.DecremenetTalent(selectedTalent);
     }
     
     public int RacialKarma => _characterSheetService.CharacterCreationSheetInstance.KarmaModifier;

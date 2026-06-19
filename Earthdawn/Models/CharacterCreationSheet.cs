@@ -1,10 +1,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Runtime.Intrinsics.Arm;
 using Earthdawn.Data;
 using EarthDawn.Services;
 
@@ -163,50 +159,61 @@ public class  CharacterCreationSheet : CharacterBase
     {
         if (RemainingTalentPoints > 0)
         {
+            foreach (Talent ot in _disciplines[0].GetDisciplineOptionalTalents())
+            {
+                if (ot.Name == talentName && ot.Rank < 3)
+                {
+                    ot.Rank += 1;
+                    RemainingTalentPoints -= 1;
+                    return;
+                }
+            }
             foreach (Talent talent in _disciplines[0].GetDisciplineTalents())
             {
                 if (talentName == talent.Name && talent.Rank < 3)
                 {
                     talent.Rank += 1;
                     RemainingTalentPoints -= 1;
-                    // OnPropertyChanged(nameof(RemainingTalentPoints));
+                    return;
                 }
             }
         }
     }
     
-    public void DecremenetTalent(string talentName)
+    public void DecrementTalent(string talentName)
     {
+        foreach (Talent ot in _disciplines[0].GetDisciplineOptionalTalents())
+        {
+            if (ot.Name == talentName && ot.Rank > 0)
+            {
+                ot.Rank -= 1;
+                RemainingTalentPoints += 1;
+                return;
+            }
+        }
         foreach (Talent talent in _disciplines[0].GetDisciplineTalents())
         {
             if (talentName == talent.Name && talent.Rank > 0)
             {
                 talent.Rank -= 1;
                 RemainingTalentPoints += 1;
-                // OnPropertyChanged(nameof(RemainingTalentPoints));
             }
         }
     }
 
+    public int AddOptionalTalent(Talent talent, string currentOptionalTalent = "")
+    {
+        int refund = 0;
+        if (!string.IsNullOrEmpty(currentOptionalTalent))
+        {
+            refund = _disciplines[0].RemoveOptionalTalent(currentOptionalTalent);
+        }
+        _disciplines[0].AddNewOptionalTalent(talent);
+        RemainingTalentPoints += refund;
+        return refund;
+    }
+    
 
-    // public void DecremenetTalent(string talentName)
-    // {
-    //     string characterDiscipline = GetAllCharacterDisciplines()[0];
-    //     CharacterDiscipline dc = GetDisciplineCircleByName(characterDiscipline);
-    //     if (dc != null)
-    //     {
-    //         foreach (CharacterTalent talent in dc.Talents)
-    //         {
-    //             if (talentName == talent.TalentName && talent.Rank > 0)
-    //             {
-    //                 talent.DecrementRank();
-    //                 RemainingTalentPoints += 1;
-    //                 OnPropertyChanged(nameof(RemainingTalentPoints));
-    //             }
-    //         }
-    //     }
-    // }
-    //
     public void IncrementAttribute(AttributesTypes att)
     {
         int cost = 0;

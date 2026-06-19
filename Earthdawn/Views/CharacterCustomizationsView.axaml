@@ -113,24 +113,16 @@
             </StackPanel>
         </Border>
         <Border Classes="background" CornerRadius="30">
-            <Grid ColumnDefinitions="*,*,*,Auto" RowDefinitions="Auto,*">
+            <Grid ColumnDefinitions="*,Auto,*,Auto" RowDefinitions="Auto,Auto,Auto">
                 <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Classes="PrimarySubHeader" Content="Talents" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                <StackPanel Grid.Row="1" Grid.Column="2">
-                    <TextBlock Classes="PrimaryDescriptionText" Text="Selected Optional Talent" FontSize="25" HorizontalAlignment="Center"/>
-                    <TextBlock Classes="PrimaryDescriptionText" Text="{Binding SelectedOptionalTalent}" FontSize="20" HorizontalAlignment="Center"/>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="-" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0 0 12 0"/>
-                        <Button Content="+" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="12 0 0 0 "/>
-                    </StackPanel>
-                </StackPanel>
-            <StackPanel Grid.Row="1" Grid.Column="0">
+            <StackPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">
                 <Label Classes="PrimaryText" Content="Discipline Talents" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25"/>
                 <StackPanel Orientation="Horizontal">
                     <ListBox ItemsSource="{Binding DisciplineTalents}" Background="Transparent" Margin="0, 0, 0, 0" Padding="0"
                              SelectedItem="{Binding SelectedCharacterTalent}"
                              SelectionMode="Single">
                         <ListBox.ItemTemplate>
-                            <DataTemplate x:DataType="models:Talent">
+                            <DataTemplate>
                                 <DockPanel LastChildFill="True">
                                     <Button Content="-"
                                             Command="{Binding $parent[ListBox].((vm:CharacterCustomizationsViewModel)DataContext).TalentDecreaseButtonClickedCommand}"
@@ -154,8 +146,25 @@
                 </StackPanel>
             </StackPanel>
             <StackPanel Grid.Row="1" Grid.Column="1">
-                <Label Classes="PrimaryText" Content="Discipline Free Talents" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="25"></Label>
-                <ListBox ItemsSource="{Binding FreeTalents}" Background="Transparent" HorizontalAlignment="Right">
+                <Label Classes="PrimaryText" Content="Talent Points Remaining: " VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="25"></Label>
+                <TextBlock Classes="PrimaryDescriptionText" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding RemainingTalentPoints}" FontSize="25"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="2">
+                <TextBlock Classes="PrimaryDescriptionText" Text="Selected Optional Talent" FontSize="25" HorizontalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Content="-" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0 0 12 0"
+                            Command="{Binding OptionalTalentDecreaseButtonClickedCommand}"
+                            CommandParameter="{Binding SelectedOptionalTalent}"/>
+                    <TextBlock Classes="PrimaryDescriptionText" Text="{Binding SelectedOptionalTalent}" FontSize="20" HorizontalAlignment="Left" Padding="5 0 0 0"/>
+                    
+                    <Button Content="+" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="12 0 0 0 "
+                            Command="{Binding OptionalTalentIncrementButtonClickedCommand}"
+                            CommandParameter="{Binding SelectedOptionalTalent}"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Grid.Column="2">
+                <Label Classes="PrimaryText" Content="Discipline Free Talents" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="25"></Label>
+                <ListBox ItemsSource="{Binding FreeTalents}" Background="Transparent" HorizontalAlignment="Center">
                     <ListBox.ItemTemplate>
                         <DataTemplate x:DataType="models:Talent">
                             <StackPanel Orientation="Horizontal">
@@ -169,7 +178,7 @@
                     </ListBox.ItemTemplate>
                 </ListBox>
             </StackPanel>
-                <StackPanel Grid.Row="1" Grid.Column="3">
+                <StackPanel Grid.Row="1" Grid.Column="3" Grid.RowSpan="2">
                     <TextBlock Classes="PrimaryDescriptionText" Text="Available Optional Talents:" FontSize="25"/>
                     <ItemsControl ItemsSource="{Binding OptionalTalents}" FontSize="20">
                         <ItemsControl.ItemsPanel>
