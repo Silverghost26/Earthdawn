@@ -8,8 +8,7 @@ using Earthdawn.Data;
 using EarthDawn.Services;
 
 namespace Earthdawn.Models;
-
-public class CharacterBase : ObservableObject
+public class CharacterBase
 {
     //**********************************************Private Members********************************************
     protected List<Discipline> _disciplines;
@@ -18,94 +17,16 @@ public class CharacterBase : ObservableObject
     {
         _charAttributes = new Attributes();
         _disciplines = new ();
-        SubscribeToAttributeChanges();
     }
     
     //***********************************Private Vars*************************************************
     protected Attributes? _charAttributes;
-    protected Attributes? _startingAttributes;
-    //protected List<CharacterDiscipline> _characterDisciplineCircles;
-    
-    private void SubscribeToAttributeChanges()
-    {
-        if (_charAttributes != null)
-        {
-            _charAttributes.PropertyChanged += OnCharAttributesPropertyChanged;
-        }
-    }
     protected void SetCharAttributes(Attributes? value)
     {
-        if (_charAttributes != null)
-        {
-            _charAttributes.PropertyChanged -= OnCharAttributesPropertyChanged;
-        }
         _charAttributes = value;
-        if (_charAttributes != null)
-        {
-            _charAttributes.PropertyChanged += OnCharAttributesPropertyChanged;
-        }
-        RaiseAllAttributePropertyChanges();
     }
-
-    private void OnCharAttributesPropertyChanged(object? sender, PropertyChangedEventArgs e)
-    {
-        // When an attribute changes, notify all dependent properties
-        switch (e.PropertyName)
-        {
-            case nameof(Attributes.Dexterity):
-                OnPropertyChanged(nameof(Dexterity));
-                OnPropertyChanged(nameof(Initiative));
-                OnPropertyChanged(nameof(PhysicalDefense));
-                break;
-            case nameof(Attributes.Strength):
-                OnPropertyChanged(nameof(Strength));
-                break;
-            case nameof(Attributes.Toughness):
-                OnPropertyChanged(nameof(Toughness));
-                OnPropertyChanged(nameof(UnconsciousRating));
-                OnPropertyChanged(nameof(DeathRating));
-                OnPropertyChanged(nameof(WoundThreshold));
-                OnPropertyChanged(nameof(RecoveryTests));
-                break;
-            case nameof(Attributes.Perception):
-                OnPropertyChanged(nameof(Perception));
-                OnPropertyChanged(nameof(MysticDefense));
-                break;
-            case nameof(Attributes.Willpower):
-                OnPropertyChanged(nameof(Willpower));
-                OnPropertyChanged(nameof(MysticalArmor));
-                break;
-            case nameof(Attributes.Charisma):
-                OnPropertyChanged(nameof(Charisma));
-                OnPropertyChanged(nameof(SocialDefense));
-                break;
-        }
-        OnPropertyChanged(nameof(Karma));
-    }
-
-
-    private void RaiseAllAttributePropertyChanges()
-    {
-        OnPropertyChanged(nameof(Dexterity));
-        OnPropertyChanged(nameof(Strength));
-        OnPropertyChanged(nameof(Toughness));
-        OnPropertyChanged(nameof(Perception));
-        OnPropertyChanged(nameof(Willpower));
-        OnPropertyChanged(nameof(Charisma));
-        OnPropertyChanged(nameof(Initiative));
-        OnPropertyChanged(nameof(PhysicalDefense));
-        OnPropertyChanged(nameof(MysticDefense));
-        OnPropertyChanged(nameof(SocialDefense));
-        OnPropertyChanged(nameof(UnconsciousRating));
-        OnPropertyChanged(nameof(DeathRating));
-        OnPropertyChanged(nameof(WoundThreshold));
-        OnPropertyChanged(nameof(RecoveryTests));
-        OnPropertyChanged(nameof(MysticalArmor));
-        OnPropertyChanged(nameof(Karma));
-    }
-//************************************Properties**************************************************
-
         
+    //*****************************************Properties**********************************************
     public string CharacterName { get; set; }
     public string Race { get; set; }
     public List<SpecialAbility> RacialAbilities
@@ -296,6 +217,17 @@ public class CharacterBase : ObservableObject
     public ref readonly List<Discipline> GetDiscipline()
     {
         return ref _disciplines;
+    }
+
+    public void AddNewOptionTalent(Talent talent, string discipline)
+    {
+        foreach (Discipline ds in _disciplines)
+        {
+            if (ds.DisciplineName == discipline)
+            {
+                ds.AddNewOptionalTalent(talent);
+            }
+        }
     }
     
 }

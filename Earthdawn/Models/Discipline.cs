@@ -75,6 +75,33 @@ public class Discipline
     public int RecoveryTestBonus { get; set; }
     
     //**************************Functions***********************************
+    public int RemoveOptionalTalent(string talent)
+    {
+        foreach (Talent t in _optionalTalents)
+        {
+            if (t.Name == talent)
+            {
+                _optionalTalents.Remove(t);
+                return t.Rank;
+            }
+        }
+        return 0;
+    }
+
+    public int RemoveTalent(string talent)
+    {
+        foreach (Talent t in _talents)
+        {
+            if (t.Name == talent)
+            {
+                _talents.Remove(t);
+                return t.Rank;
+            }
+        }
+
+        return 0;
+    }
+    
     public ref readonly SpellBook GetSpellBook()
     {
         return ref _spellBook;

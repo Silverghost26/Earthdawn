@@ -1,11 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Text;
 
 namespace EarthDawn.Models
 {
     public class Weapon
     {
+        public Weapon()
+        {
+        }
+
+        public Weapon(Weapon weapon)
+        {
+            Availability = weapon.Availability;
+            DamageStep = weapon.DamageStep;
+            MinDex = weapon.MinDex;
+            MinStr = weapon.MinStr;
+            Size = weapon.Size;
+            ShortRange = weapon.ShortRange;
+            LongRange = weapon.LongRange;
+            Cost = weapon.Cost;
+            Weight = weapon.Weight;
+            Entangle = weapon.Entangle;
+            TwoHanded = weapon.TwoHanded;
+            Description = weapon.Description;
+            WeaponName = weapon.WeaponName;
+        }
+
         // General Information
         public string Availability { get; set; }
         public string DamageStep { get; set; }
@@ -27,5 +49,7 @@ namespace EarthDawn.Models
 
         // Descriptive Text
         public string Description { get; set; }
+        
+        public string WeaponName { get; set; }
     }
 }

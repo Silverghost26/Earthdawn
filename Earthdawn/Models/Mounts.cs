@@ -4,8 +4,25 @@ using System.Text;
 
 namespace EarthDawn.Models
 {
-    public class Mounts
+    public class Mount
     {
+        public Mount()
+        {
+        }
+
+        public Mount(Mount mount)
+        {
+            Availability = mount.Availability;
+            Cost = mount.Cost;
+            Weight = mount.Weight;
+            CarryingCapacity = mount.CarryingCapacity;
+            Speed = mount.Speed;
+            Lifespan = mount.Lifespan;
+            FeedCost = mount.FeedCost;
+            StableCost = mount.StableCost;
+            Description = mount.Description;
+        }
+
         public string Availability { get; set; }
         public string Cost { get; set; }
         public string Weight { get; set; }

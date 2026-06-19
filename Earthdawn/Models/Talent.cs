@@ -10,12 +10,14 @@ public class Talent
     {
         Rank = talent.Rank;
         Step = talent.Step;
+        Name = talent.Name;
         Strain = talent.Strain;
         Action = talent.Action;
         SkillUse = talent.SkillUse;
         SkillLevel = talent.SkillLevel;
         Description = talent.Description;
         CircleObtained = talent.CircleObtained;
+        
     }
 
     // Maps to the "Step" key
