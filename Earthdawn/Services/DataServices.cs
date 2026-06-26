@@ -25,7 +25,12 @@ public class DataServices : IDataServices
     public List<SpellDisplayCard> LoadSpells()
     {
         Dictionary<string, SpellCircle> spellDictionary = DataLoader.LoadJson<Dictionary<string, SpellCircle>>(GetJson("spells.json"));
-        return spellDictionary.Select(kvp => new SpellDisplayCard() { Name = kvp.Key, Book = kvp.Value }).ToList();
+        List<SpellDisplayCard> spellDisplayCards = spellDictionary.Select(kvp => new SpellDisplayCard() { Name = kvp.Key, Book = kvp.Value }).ToList();
+        foreach (SpellDisplayCard sdc in spellDisplayCards)
+        {
+            UpdateSpellsWithCircle(sdc.Book);
+        }
+        return spellDisplayCards;
     }
 
     public List<TalentDisplayCard> LoadTalentsList()
@@ -49,5 +54,69 @@ public class DataServices : IDataServices
 
         string jsonText = reader.ReadToEnd();
         return jsonText;
+    }
+
+    private void UpdateSpellsWithCircle(SpellCircle sc)
+    {
+        foreach (Spell spell in sc.Circle_1)
+        {
+            spell.Circle = 1;
+        }
+        foreach (Spell spell in sc.Circle_2)
+        {
+            spell.Circle = 2;
+        }
+        foreach (Spell spell in sc.Circle_3)
+        {
+            spell.Circle = 3;
+        }
+        foreach (Spell spell in sc.Circle_4)
+        {
+            spell.Circle = 4;
+        }
+        foreach (Spell spell in sc.Circle_5)
+        {
+            spell.Circle = 5;
+        }
+        foreach (Spell spell in sc.Circle_6)
+        {
+            spell.Circle = 6;
+        }
+        foreach (Spell spell in sc.Circle_7)
+        {
+            spell.Circle = 7;
+        }
+        foreach (Spell spell in sc.Circle_8)
+        {
+            spell.Circle = 8;
+        }
+        foreach (Spell spell in sc.Circle_9)
+        {
+            spell.Circle = 9;
+        }
+        foreach (Spell spell in sc.Circle_10)
+        {
+            spell.Circle = 10;
+        }
+        foreach (Spell spell in sc.Circle_11)
+        {
+            spell.Circle = 11;
+        }
+        foreach (Spell spell in sc.Circle_12)
+        {
+            spell.Circle = 12;
+        }
+        foreach (Spell spell in sc.Circle_13)
+        {
+            spell.Circle = 13;
+        }
+        foreach (Spell spell in sc.Circle_14)
+        {
+            spell.Circle = 14;
+        }
+        foreach (Spell spell in sc.Circle_15)
+        {
+            spell.Circle = 15;
+        }
     }
 }
