@@ -22,7 +22,6 @@ public partial class MainWindowViewModel : ViewModelBase
     [NotifyPropertyChangedFor(nameof(RacesIsActive))]
     [NotifyPropertyChangedFor(nameof(SkillsIsActive))]
     [NotifyPropertyChangedFor(nameof(SpellsIsActive))]
-    [NotifyPropertyChangedFor(nameof(TalentsIsActive))]
     private PageViewModel _currentPage;
 
     public bool CharacterCustomizationsIsActive => CurrentPage.PageName == ApplicationPageNames.CharacterCustomizations;
@@ -33,7 +32,6 @@ public partial class MainWindowViewModel : ViewModelBase
     public bool RacesIsActive => CurrentPage.PageName == ApplicationPageNames.Races;
     public bool SkillsIsActive => CurrentPage.PageName == ApplicationPageNames.Skills;
     public bool SpellsIsActive => CurrentPage.PageName == ApplicationPageNames.Spells;
-    public bool TalentsIsActive => CurrentPage.PageName == ApplicationPageNames.Talents;
 
     public MainWindowViewModel()
     {
@@ -65,8 +63,6 @@ public partial class MainWindowViewModel : ViewModelBase
     private void GoToSkillsPage() => CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.Skills);
     [RelayCommand]
     private void GoToSpellsPage() => CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.Spells);
-    [RelayCommand]
-    private void GoToTalentsPage() => CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.Talents);
 
     [RelayCommand]
     private void GoToNextPage()
@@ -83,9 +79,6 @@ public partial class MainWindowViewModel : ViewModelBase
                 GoToCharacterCustomizationPage();
                 break;
             case ApplicationPageNames.CharacterCustomizations:
-                GoToTalentsPage();
-                break;
-            case ApplicationPageNames.Talents:
                 GoToSkillsPage();
                 break;
             case ApplicationPageNames.Skills:
@@ -122,11 +115,8 @@ public partial class MainWindowViewModel : ViewModelBase
             case ApplicationPageNames.CharacterCustomizations:
                 GoToDisciplinesPage();
                 break;
-            case ApplicationPageNames.Talents:
-                GoToCharacterCustomizationPage();
-                break;
             case ApplicationPageNames.Skills:
-                GoToTalentsPage();
+                GoToCharacterCustomizationPage();
                 break;
             case ApplicationPageNames.Spells:
                 GoToSkillsPage();

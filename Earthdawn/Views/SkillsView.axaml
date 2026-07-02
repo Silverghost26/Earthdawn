@@ -6,7 +6,76 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:DataType="vm:SkillsViewModel"
              x:Class="Earthdawn.Views.SkillsView">
-    
-    <Design.DataContext><vm:HomeViewModel></vm:HomeViewModel></Design.DataContext>
-    
+
+    <Design.DataContext>
+        <vm:SkillsViewModel />
+    </Design.DataContext>
+
+    <ScrollViewer>
+        <StackPanel Orientation="Vertical" Margin="20">
+            <Label Classes="PrimaryHeader" Content="Skills" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+            <Carousel ItemsSource="{Binding Skills}" 
+                      SelectedIndex="{Binding SelectedIndex}"
+                      Width="1800" Height="500">
+                <Carousel.PageTransition>
+                    <PageSlide Duration="0:00:00.5" Orientation="Horizontal"/>
+                </Carousel.PageTransition>
+                <Carousel.ItemTemplate>
+                    <DataTemplate>
+                        <Border Classes="background" BorderBrush="Black" BorderThickness="5" CornerRadius="30" Padding="20">
+                            <Grid ColumnDefinitions="300, *" RowDefinitions="Auto, *">
+                                <!-- Skill Name Centered at the Top -->
+                                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                                           Classes="PrimarySubHeader" Content="{Binding Name}" 
+                                           HorizontalAlignment="Center" 
+                                           FontSize="24" FontWeight="Bold" 
+                                           Margin="0,0,0,20"/>
+
+                                <!-- Skill Properties in a Bordered Box on the Left Side -->
+                                <Border Grid.Column="0" Grid.Row="1" 
+                                        BorderBrush="Black" BorderThickness="2" 
+                                        CornerRadius="10" Padding="30" 
+                                        Margin="0,0,20,0">
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Skills.Step, StringFormat='Step: {0}'}" 
+                                                   Classes="PrimaryDescriptionText" Margin="0,0,0,10"/>
+                                        <TextBlock Text="{Binding Skills.Strain, StringFormat='Strain: {0}'}" 
+                                                   Classes="PrimaryDescriptionText" Margin="0,0,0,10"/>
+                                        <TextBlock Text="{Binding Skills.Action, StringFormat='Action: {0}'}" 
+                                                   Classes="PrimaryDescriptionText" Margin="0,0,0,10"/>
+                                        <TextBlock Text="{Binding Skills.Cost, StringFormat='Cost: {0}'}" 
+                                                   Classes="PrimaryDescriptionText" Margin="0,0,0,10"/>
+                                    </StackPanel>
+                                </Border>
+
+                                <!-- Description Taking Up Remaining Space -->
+                                <StackPanel Grid.Column="1" Grid.Row="1">
+                                    <TextBlock Text="Description:" 
+                                               Classes="PrimaryDescriptionText" FontWeight="Bold" 
+                                               Margin="0,0,0,5"/>
+                                    <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Skills.Description}" 
+                                               TextWrapping="Wrap" 
+                                               MaxHeight="400"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </Carousel.ItemTemplate>
+            </Carousel>
+
+            <!-- Navigation and Selection Buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="20" Margin="0,20,0,0">
+                <Button Content="Previous" 
+                        Command="{Binding PreviousCommand}"
+                        Width="100" Height="40"/>
+                <Button Content="Select" 
+                        Command="{Binding SelectCommand}"
+                        Width="100" Height="40"/>
+                <Button Content="Next" 
+                        Command="{Binding NextCommand}"
+                        Width="100" Height="40"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
 </UserControl>

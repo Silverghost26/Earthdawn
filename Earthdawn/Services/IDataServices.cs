@@ -9,6 +9,7 @@ public interface IDataServices
     List<DisciplineDisplayCard> LoadDisciplines();
     List<SpellDisplayCard> LoadSpells();
     List<TalentDisplayCard> LoadTalentsList();
+    List<SkillDisplayCard> LoadSkillsList();
     Dictionary<string, Talent> LoadTalents();
 
 }

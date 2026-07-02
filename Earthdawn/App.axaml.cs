@@ -39,7 +39,6 @@ public partial class App : Application
         collection.AddTransient<RacesViewModel>();
         collection.AddTransient<SkillsViewModel>();
         collection.AddTransient<SpellsViewModel>();
-        collection.AddTransient<TalentsViewModel>();
 
         collection.AddSingleton<Func<ApplicationPageNames, PageViewModel>>(x => name => name switch
         {
@@ -51,7 +50,6 @@ public partial class App : Application
             ApplicationPageNames.Races => x.GetRequiredService<RacesViewModel>(),
             ApplicationPageNames.Skills => x.GetRequiredService<SkillsViewModel>(),
             ApplicationPageNames.Spells => x.GetRequiredService<SpellsViewModel>(),
-            ApplicationPageNames.Talents => x.GetRequiredService<TalentsViewModel>(),
             _ => throw new InvalidOperationException()
         });
 

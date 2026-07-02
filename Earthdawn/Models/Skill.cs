@@ -17,7 +17,7 @@ namespace Earthdawn.Models
             Action = skill.Action;
             Cost = skill.Cost;
             Description = skill.Description;
-            SkillName = skill.SkillName;
+            Name = skill.Name;
             Rank = skill.Rank;
         }
     
@@ -37,7 +37,7 @@ namespace Earthdawn.Models
         // Description holds the lengthy text rules for the skill.
         public string Description { get; set; }
         
-        public string SkillName { get; set; }
+        public string Name { get; set; }
         public int Rank { get; set; }
     }
 }

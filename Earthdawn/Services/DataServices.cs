@@ -39,6 +39,12 @@ public class DataServices : IDataServices
         return talentDictionary.Select(kvp => new TalentDisplayCard() { Name = kvp.Key, Talents = kvp.Value }).ToList();
     }
 
+    public List<SkillDisplayCard> LoadSkillsList()
+    {
+        Dictionary<string, Skill> skillDictionary = DataLoader.LoadJson<Dictionary<string, Skill>>(GetJson("skills.json"));
+        return skillDictionary.Select(kvp => new SkillDisplayCard() { Name = kvp.Key, Skills = kvp.Value }).ToList();
+    }
+
     public Dictionary<string, Talent> LoadTalents()
     {
         return DataLoader.LoadJson<Dictionary<string, Talent>>(GetJson("Talents.json"));
