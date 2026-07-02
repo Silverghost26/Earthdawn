@@ -21,6 +21,7 @@ namespace EarthDawn.Models
             FeedCost = mount.FeedCost;
             StableCost = mount.StableCost;
             Description = mount.Description;
+            Name = mount.Name;
         }
 
         public string Availability { get; set; }
@@ -32,5 +33,6 @@ namespace EarthDawn.Models
         public string FeedCost { get; set; }
         public string StableCost { get; set; }
         public string Description { get; set; }
+        public string Name { get; set; } = string.Empty;
     }
 }

@@ -10,6 +10,9 @@ public interface IDataServices
     List<SpellDisplayCard> LoadSpells();
     List<TalentDisplayCard> LoadTalentsList();
     List<SkillDisplayCard> LoadSkillsList();
+    List<WeaponDisplayCard> LoadWeaponsList();
+    List<ArmorDisplayCard> LoadArmorList();
+    List<ShieldDisplayCard> LoadShieldsList();
     Dictionary<string, Talent> LoadTalents();
 
 }

@@ -17,6 +17,8 @@ namespace  Earthdawn.Models
             ShatterThreshold = shield.ShatterThreshold;
             Cost = shield.Cost;
             Weight = shield.Weight;
+            Name = shield.Name;
+            Description = shield.Description;
         }
         public string Living { get; set; }
         public string Availability { get; set; }
@@ -27,5 +29,6 @@ namespace  Earthdawn.Models
         public string Cost { get; set; }
         public int Weight { get; set; }
         public string Description { get; set; }
+        public string Name { get; set; } = string.Empty;
     }
 }

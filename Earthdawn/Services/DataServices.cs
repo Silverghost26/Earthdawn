@@ -5,6 +5,7 @@ using System.Linq;
 using Avalonia.Platform;
 using Earthdawn.Models;
 using Earthdawn.Data;
+using EarthDawn.Models;
 
 namespace EarthDawn.Services;
 
@@ -43,6 +44,24 @@ public class DataServices : IDataServices
     {
         Dictionary<string, Skill> skillDictionary = DataLoader.LoadJson<Dictionary<string, Skill>>(GetJson("skills.json"));
         return skillDictionary.Select(kvp => new SkillDisplayCard() { Name = kvp.Key, Skills = kvp.Value }).ToList();
+    }
+
+    public List<WeaponDisplayCard> LoadWeaponsList()
+    {
+        Dictionary<string, Weapon> weaponDictionary = DataLoader.LoadJson<Dictionary<string, Weapon>>(GetJson("Weapons.json"));
+        return weaponDictionary.Select(kvp => new WeaponDisplayCard() { Name = kvp.Key, Weapons = kvp.Value }).ToList();
+    }
+
+    public List<ArmorDisplayCard> LoadArmorList()
+    {
+        Dictionary<string, Armor> armorDictionary = DataLoader.LoadJson<Dictionary<string, Armor>>(GetJson("Armor.json"));
+        return armorDictionary.Select(kvp => new ArmorDisplayCard() { Name = kvp.Key, Armors = kvp.Value }).ToList();
+    }
+
+    public List<ShieldDisplayCard> LoadShieldsList()
+    {
+        Dictionary<string, Shield> shieldDictionary = DataLoader.LoadJson<Dictionary<string, Shield>>(GetJson("shields.json"));
+        return shieldDictionary.Select(kvp => new ShieldDisplayCard() { Name = kvp.Key, Shields = kvp.Value }).ToList();
     }
 
     public Dictionary<string, Talent> LoadTalents()

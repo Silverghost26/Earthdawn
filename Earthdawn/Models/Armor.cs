@@ -24,6 +24,7 @@ namespace Earthdawn.Models
             Cost = armor.Cost;
             Weight = armor.Weight;
             Description = armor.Description;
+            Name = armor.Name;
         }
         public string Living { get; set; } = string.Empty;
         public string Availability { get; set; } = string.Empty;
@@ -33,5 +34,6 @@ namespace Earthdawn.Models
         public string Cost {  get; set; } = string.Empty;
         public string Weight {  get; set; } = string.Empty;
         public string Description { get; set; } =  string.Empty;
+        public string Name {get; set; } = string.Empty;
     }
 }
