@@ -200,15 +200,15 @@ public class CharacterBase
         _disciplines.Add(discipline);
     }
 
-    public List<Discipline> GetDisciplines()
-    {
-        List<Discipline> newDisciplineList = new();
-        foreach (Discipline discipline in _disciplines)
-        {
-            newDisciplineList.Add(new(discipline));
-        }
-        return newDisciplineList;
-    }
+    // public List<Discipline> GetDisciplines()
+    // {
+    //     List<Discipline> newDisciplineList = new();
+    //     foreach (Discipline discipline in _disciplines)
+    //     {
+    //         newDisciplineList.Add(new(discipline));
+    //     }
+    //     return newDisciplineList;
+    // }
     public int GetNumberOfDisciplines()
     {
         return _disciplines.Count;

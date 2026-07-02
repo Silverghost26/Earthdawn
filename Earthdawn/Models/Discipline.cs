@@ -157,9 +157,14 @@ public class Discipline
         _freeTalents.Add(newFreeTalent);   
     }
 
-    public void AddNewSpell(Spell spell)
+    public bool AddNewSpell(Spell spell)
     {
-        _spellBook.AddSpell(new Spell(spell));
+        return _spellBook.AddSpell(new Spell(spell));
+    }
+
+    public bool RemoveSpell(Spell spell)
+    {
+        return _spellBook.RemoveSpell(spell);
     }
     
     public void AddNewKarmaSpecial(string special)

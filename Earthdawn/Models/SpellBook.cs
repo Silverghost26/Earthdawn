@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Earthdawn.Models;
 
@@ -22,8 +23,19 @@ public class SpellBook
     //TODO: Add Spell Matrices : Stored threads, spells current in matrix, etc.
     
     public List<Spell> Spells => _spells;
-    public void AddSpell(Spell spell)
+    public bool AddSpell(Spell spell)
     {
+        if (_spells.Any(item => item.Name == spell.Name))
+            return false;
         _spells.Add(new Spell(spell));
+        return true;
+    }
+
+    public bool RemoveSpell(Spell spell)
+    {
+        if (!_spells.Any(item => item.Name == spell.Name))
+            return false;
+        _spells.RemoveAll(item => item.Name == spell.Name);
+        return true;
     }
 }

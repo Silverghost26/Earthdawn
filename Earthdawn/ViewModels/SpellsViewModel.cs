@@ -1,4 +1,7 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+// using System.Collections.ObjectCollection;
+using System.Collections.ObjectModel;
+using System.Linq;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Earthdawn.Data;
@@ -19,6 +22,12 @@ public partial class SpellsViewModel : PageViewModel
     // Current indices for each carousel
     [ObservableProperty] private int _circleOneCurrentIndex;
     [ObservableProperty] private int _circleTwoCurrentIndex;
+    
+    [ObservableProperty] private int _spellPointsRemaining;
+    
+    // Properties to track button text for select/remove functionality
+    [ObservableProperty] private string _circleOneButtonText = "Select";
+    [ObservableProperty] private string _circleTwoButtonText = "Select";
 
     public ObservableCollection<SpellDisplayCard> Spells { get; }
     private ICharacterSheetService _characterSheetService;
@@ -30,10 +39,14 @@ public partial class SpellsViewModel : PageViewModel
         _dataServices = dataServices;
         PageName = ApplicationPageNames.Spells;
         Spells = new ObservableCollection<SpellDisplayCard>(dataServices.LoadSpells());
-        DisciplineName = _characterSheetService.CharacterCreationSheetInstance.GetDisciplines()[0].DisciplineName;
+        DisciplineName = _characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0].DisciplineName;
+        SpellPointsRemaining = _characterSheetService.CharacterCreationSheetInstance.SpellPoints;
         
         // Initialize with first discipline
         UpdateSpellsForDiscipline();
+        // Initialize Spell Select button
+        UpdateCircleOneButtonText();
+        UpdateCircleTwoButtonText();
     }
 
     partial void OnDisciplineNameChanged(string value)
@@ -55,7 +68,45 @@ public partial class SpellsViewModel : PageViewModel
         }
     }
 
-    // Navigation commands for Circle 1
+    // Helper method to check if a spell is already selected
+    private bool IsSpellSelected(Spell spell)
+    {
+        var selectedSpells = _characterSheetService.CharacterCreationSheetInstance
+            .GetDiscipline()[0]
+            .GetSpellBook()
+            .Spells;
+        if (selectedSpells.Any(item => item.Name == spell.Name))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    // Update button text based on current spell selection
+    private void UpdateCircleOneButtonText()
+    {
+        if (CircleOneSpells.Spells.Count == 0)
+        {
+            CircleOneButtonText = "Select";
+            return;
+        }
+        
+        var currentSpell = CircleOneSpells.Spells[CircleOneCurrentIndex];
+        CircleOneButtonText = IsSpellSelected(currentSpell) ? "Remove" : "Select";
+    }
+
+    private void UpdateCircleTwoButtonText()
+    {
+        if (CircleTwoSpells.Spells.Count == 0)
+        {
+            CircleTwoButtonText = "Select";
+            return;
+        }
+        
+        var currentSpell = CircleTwoSpells.Spells[CircleTwoCurrentIndex];
+        CircleTwoButtonText = IsSpellSelected(currentSpell) ? "Remove" : "Select";
+    }
+
     [RelayCommand]
     private void PreviousCircleOne()
     {
@@ -66,6 +117,9 @@ public partial class SpellsViewModel : PageViewModel
         {
             CircleOneCurrentIndex = CircleOneSpells.Spells.Count - 1; // Wrap to end
         }
+        
+        // Update button text when selection changes
+        UpdateCircleOneButtonText();
     }
 
     [RelayCommand]
@@ -78,6 +132,33 @@ public partial class SpellsViewModel : PageViewModel
         {
             CircleOneCurrentIndex = 0; // Wrap to beginning
         }
+        
+        // Update button text when selection changes
+        UpdateCircleOneButtonText();
+    }
+
+    [RelayCommand]
+    private void SelectCircleOne()
+    {
+        if (CircleOneSpells.Spells.Count == 0) return;
+        
+        var currentSpell = CircleOneSpells.Spells[CircleOneCurrentIndex];
+        
+        if (IsSpellSelected(currentSpell))
+        {
+            // Update the button Text
+            UpdateCircleOneButtonText();
+            // If spell is already selected, remove it
+            _characterSheetService.CharacterCreationSheetInstance.RemoveSpell(currentSpell);
+        }
+        else
+        {
+            // Update the button Text
+            UpdateCircleOneButtonText();
+            // If spell is not selected, add it
+            _characterSheetService.CharacterCreationSheetInstance.AddNewSpell(currentSpell);
+        }
+        SpellPointsRemaining = _characterSheetService.CharacterCreationSheetInstance.SpellPoints;
     }
 
     // Navigation commands for Circle 2
@@ -91,6 +172,9 @@ public partial class SpellsViewModel : PageViewModel
         {
             CircleTwoCurrentIndex = CircleTwoSpells.Spells.Count - 1; // Wrap to end
         }
+        
+        // Update button text when selection changes
+        UpdateCircleTwoButtonText();
     }
 
     [RelayCommand]
@@ -103,5 +187,33 @@ public partial class SpellsViewModel : PageViewModel
         {
             CircleTwoCurrentIndex = 0; // Wrap to beginning
         }
+        
+        // Update button text when selection changes
+        UpdateCircleTwoButtonText();
+    }
+
+    [RelayCommand]
+    private void SelectCircleTwo()
+    {
+        if (CircleTwoSpells.Spells.Count == 0) return;
+        
+        var currentSpell = CircleTwoSpells.Spells[CircleTwoCurrentIndex];
+        
+        if (IsSpellSelected(currentSpell))
+        {
+            //Update the button text
+            UpdateCircleTwoButtonText();
+            // If spell is already selected, remove it
+            _characterSheetService.CharacterCreationSheetInstance.RemoveSpell(currentSpell);
+        }
+        else
+        {
+            // Update the button text
+            UpdateCircleTwoButtonText();
+            // If spell is not selected, add it
+            _characterSheetService.CharacterCreationSheetInstance.AddNewSpell(currentSpell);
+        }
+        
+        SpellPointsRemaining = _characterSheetService.CharacterCreationSheetInstance.SpellPoints;
     }
 }

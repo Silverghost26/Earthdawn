@@ -16,6 +16,7 @@ public class  CharacterCreationSheet : CharacterBase
     private int _racialChr;
     
     private List<string> _optionalTalensList;
+    private int _spellPoints;
     public CharacterCreationSheet()
     {
         RemainingAttributePoints = 25;
@@ -23,6 +24,7 @@ public class  CharacterCreationSheet : CharacterBase
         RemainingGeneralSkillPoints = 8;
         RemainingKnowledgeSkillPoints = 2;
         _optionalTalensList = new();
+        _spellPoints = 0;
     }
     
    
@@ -41,6 +43,10 @@ public class  CharacterCreationSheet : CharacterBase
     public int RemainingTalentPoints { get; set; }
     public int RemainingGeneralSkillPoints { get; set; }
     public int RemainingKnowledgeSkillPoints { get; set; }
+    public int SpellPoints
+    {
+        get => _spellPoints;
+    }
     
     
     //*************************************************Functions*********************************************
@@ -142,6 +148,24 @@ public class  CharacterCreationSheet : CharacterBase
         }
         return characterTalents;
     }
+
+    public void AddNewSpell(Spell spell)
+    {
+        if (_spellPoints < spell.Circle)
+            return;
+        if (_disciplines[0].AddNewSpell(spell))
+        {
+            _spellPoints -= spell.Circle;
+        }
+    }
+
+    public void RemoveSpell(Spell spell)
+    {
+        if (_disciplines[0].RemoveSpell(spell))
+        {
+            _spellPoints += spell.Circle;
+        }
+    }
     
     //Note: Free talents can not be upgraded with Attribute points or Legendpoints, they are tied to the Circle.
     public List<string> GetFreeTalentNameList()
@@ -225,7 +249,6 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints -= cost;
                     Charisma += 1;
-                    // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
             case AttributesTypes.Per:
@@ -234,7 +257,7 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints -= cost;
                     Perception += 1;
-                    // OnPropertyChanged(nameof(RemainingAttributePoints));
+                    _spellPoints = _charAttributes.GetStepNumber(AttributesTypes.Per);
                 }
                 break;
             case AttributesTypes.Str:
@@ -243,7 +266,6 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints -= cost;
                     Strength += 1;
-                    // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
             case AttributesTypes.Tou:
@@ -252,7 +274,6 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints -= cost;
                     Toughness += 1;
-                    // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
             case AttributesTypes.Wil:
@@ -261,7 +282,6 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints -= cost;
                     Willpower += 1;
-                    // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
             case AttributesTypes.Dex:
@@ -270,7 +290,6 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints -= cost;
                     Dexterity += 1;
-                    // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
         }
@@ -287,7 +306,6 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints += cost;
                     Charisma -= 1;
-                    // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
             case AttributesTypes.Per:

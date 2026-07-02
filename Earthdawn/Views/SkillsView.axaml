@@ -9,5 +9,4 @@
     
     <Design.DataContext><vm:HomeViewModel></vm:HomeViewModel></Design.DataContext>
     
-    <Label Content="{Binding Test}"></Label>
 </UserControl>
