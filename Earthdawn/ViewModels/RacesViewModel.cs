@@ -16,11 +16,12 @@ public partial class RacesViewModel : PageViewModel
     [ObservableProperty] private int _currentIndex;
     public ObservableCollection<RaceDisplayCard> Races { get; }
     private ICharacterSheetService _characterSheetService;
+    private readonly NavigationService _navigationService;
     
 
     public RacesViewModel(){}
     
-    public RacesViewModel(IDataServices dataService, ICharacterSheetService characterSheetService)
+    public RacesViewModel(IDataServices dataService, ICharacterSheetService characterSheetService, NavigationService navigationService)
     {
         _characterSheetService = characterSheetService;
         PageName = ApplicationPageNames.Races;
@@ -29,6 +30,7 @@ public partial class RacesViewModel : PageViewModel
         {
             race.CalculateAbilitiesStringBreakPoint();
         }
+        _navigationService = navigationService;
     }
     
     [RelayCommand]
@@ -53,5 +55,6 @@ public partial class RacesViewModel : PageViewModel
         _characterSheetService.CharacterCreationSheetInstance.KarmaModifier = race.KarmaMod;
         _characterSheetService.CharacterCreationSheetInstance.RacialAbilities = race.Abilities;
         _characterSheetService.CharacterCreationSheetInstance.Race = Races[CurrentIndex].Name;
+        _navigationService.GoToDisciplinesPage();
     }
 }

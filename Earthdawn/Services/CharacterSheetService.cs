@@ -60,10 +60,5 @@ public class CharacterSheetService : ICharacterSheetService
         {
             _characterSheetInstance = creationSheet;
         }
-        
-        // Because the model itself now raises PropertyChanged, 
-        // we don't need to manually notify here unless we were changing 
-        // a property *on the service* (like 'IsLoaded').
-        // We rely on the model's own mechanism.
     }
 }

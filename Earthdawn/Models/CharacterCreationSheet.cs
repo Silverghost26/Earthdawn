@@ -17,6 +17,11 @@ public class  CharacterCreationSheet : CharacterBase
     
     private List<string> _optionalTalensList;
     private int _spellPoints;
+    private int _generalSkillPoints;
+    private int _knowledgeSkillPoints;
+    private int _artisanSkillPoints;
+    private int _speakLanguageSkillPoints;
+    private int _readWriteSkillPoints;
     public CharacterCreationSheet()
     {
         RemainingAttributePoints = 25;
@@ -25,6 +30,11 @@ public class  CharacterCreationSheet : CharacterBase
         RemainingKnowledgeSkillPoints = 2;
         _optionalTalensList = new();
         _spellPoints = 0;
+        _generalSkillPoints = 8;
+        _knowledgeSkillPoints = 2;
+        _artisanSkillPoints = 1;
+        _readWriteSkillPoints = 1;
+        _spellPoints = 2;
     }
     
    
@@ -137,6 +147,7 @@ public class  CharacterCreationSheet : CharacterBase
     private void SetRacialAttributes(Race race)
     {
         SetCharAttributes(new Attributes(race));
+        _spellPoints = _charAttributes.GetStepNumber(AttributesTypes.Per);
     }
     
     public List<string> GetTalentNameList()

@@ -1,15 +1,16 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Earthdawn.Data;
-using Earthdawn.Factories;
 using System;
-using System.Reflection.Metadata.Ecma335;
 using CommunityToolkit.Mvvm.Input;
+using EarthDawn.Services;
+
 
 namespace Earthdawn.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {
-    private PageFactory _pageFactory;
+    private readonly NavigationService _navigationService;
+    
     [ObservableProperty] private bool _previousPageIsAvailable;
     [ObservableProperty] private bool _nextPageIsAvailable;
 
@@ -38,99 +39,51 @@ public partial class MainWindowViewModel : ViewModelBase
         
     }
     
-    public MainWindowViewModel(PageFactory pageFactory)
+    public MainWindowViewModel(NavigationService navigationService)
     {
+        _navigationService = navigationService;
+        _navigationService.CurrentPageChanged += OnCurrentPageChanged;
+        
         PreviousPageIsAvailable = false;
         NextPageIsAvailable = true;
-        _pageFactory = pageFactory;
         
         GoToHomePage();
     }
     
-    [RelayCommand]
-    private void GoToHomePage() => CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.Home);
-    [RelayCommand]
-    private void GoToCharacterCustomizationPage() => CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.CharacterCustomizations);
-    [RelayCommand]
-    private void GoToCharacterPage() => CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.Character);
-    [RelayCommand]
-    private void GoToDisciplinesPage() => CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.Disciplines);
-    [RelayCommand]
-    private void GoToEquipmentSelectionPage() => CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.EquipmentSelection);
-    [RelayCommand]
-    private void GoToRacesPage() => CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.Races);
-    [RelayCommand]
-    private void GoToSkillsPage() => CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.Skills);
-    [RelayCommand]
-    private void GoToSpellsPage() => CurrentPage = _pageFactory.GetPageViewModel(ApplicationPageNames.Spells);
-
-    [RelayCommand]
-    private void GoToNextPage()
+    private void OnCurrentPageChanged(object? sender, EventArgs e)
     {
-        switch (CurrentPage.PageName)
-        {
-            case ApplicationPageNames.Home:
-                GoToRacesPage();
-                break;
-            case ApplicationPageNames.Races:
-                GoToDisciplinesPage();
-                break;
-            case ApplicationPageNames.Disciplines:
-                GoToCharacterCustomizationPage();
-                break;
-            case ApplicationPageNames.CharacterCustomizations:
-                GoToSkillsPage();
-                break;
-            case ApplicationPageNames.Skills:
-                GoToSpellsPage();
-                break;
-            case ApplicationPageNames.Spells:
-                GoToEquipmentSelectionPage();
-                break;
-            case ApplicationPageNames.EquipmentSelection:
-                GoToCharacterPage();
-                break;
-            case ApplicationPageNames.Character:
-                break;
-            default:
-                break;
-        }
+        CurrentPage = _navigationService.CurrentPage;
         PreviousPageIsAvailable = !HomeIsActive;
         NextPageIsAvailable = !CharacterIsActive;
     }
+    
+    [RelayCommand]
+    private void GoToHomePage() => _navigationService.GoToHomePage();
+    
+    [RelayCommand]
+    private void GoToCharacterCustomizationPage() => _navigationService.GoToCharacterCustomizationPage();
+    
+    [RelayCommand]
+    private void GoToCharacterPage() => _navigationService.GoToCharacterPage();
+    
+    [RelayCommand]
+    private void GoToDisciplinesPage() => _navigationService.GoToDisciplinesPage();
+    
+    [RelayCommand]
+    private void GoToEquipmentSelectionPage() => _navigationService.GoToEquipmentSelectionPage();
+    
+    [RelayCommand]
+    private void GoToRacesPage() => _navigationService.GoToRacesPage();
+    
+    [RelayCommand]
+    private void GoToSkillsPage() => _navigationService.GoToSkillsPage();
+    
+    [RelayCommand]
+    private void GoToSpellsPage() => _navigationService.GoToSpellsPage();
 
     [RelayCommand]
-    private void GoToPreviousPage()
-    {
-        switch (CurrentPage.PageName)
-        {
-            case ApplicationPageNames.Home:
-                break;
-            case ApplicationPageNames.Races:
-                GoToHomePage();
-                break;
-            case ApplicationPageNames.Disciplines:
-                GoToRacesPage();
-                break;
-            case ApplicationPageNames.CharacterCustomizations:
-                GoToDisciplinesPage();
-                break;
-            case ApplicationPageNames.Skills:
-                GoToCharacterCustomizationPage();
-                break;
-            case ApplicationPageNames.Spells:
-                GoToSkillsPage();
-                break;
-            case ApplicationPageNames.EquipmentSelection:
-                GoToSpellsPage();
-                break;
-            case ApplicationPageNames.Character:
-                GoToEquipmentSelectionPage();
-                break;
-            default:
-                break;
-        }
-        PreviousPageIsAvailable = !HomeIsActive;
-        NextPageIsAvailable = !CharacterIsActive;
-    }
+    private void GoToNextPage() => _navigationService.GoToNextPage();
+
+    [RelayCommand]
+    private void GoToPreviousPage() => _navigationService.GoToPreviousPage();
 }

@@ -30,6 +30,7 @@ public partial class App : Application
         collection.AddSingleton<IDataServices,  DataServices>();
         collection.AddSingleton<StringToImageconverter>();
         collection.AddSingleton<ICharacterSheetService, CharacterSheetService>();
+        collection.AddSingleton<NavigationService>(); // Register NavigationService as singleton
         
         collection.AddTransient<CharacterCustomizationsViewModel>();
         collection.AddTransient<CharacterViewModel>();
