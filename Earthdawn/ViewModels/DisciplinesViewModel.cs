@@ -12,13 +12,14 @@ namespace Earthdawn.ViewModels;
 public partial class DisciplinesViewModel : PageViewModel
 {
     private ICharacterSheetService _characterSheetService;
+    private readonly NavigationService _navigationService;
     [ObservableProperty] private int _currentIndex;
 
     [ObservableProperty] private Bitmap _disciplineImage;
 
     public ObservableCollection<DisciplineDisplayCard> Disciplines { get; }
 
-    public DisciplinesViewModel(IDataServices dataService, ICharacterSheetService characterSheetService)
+    public DisciplinesViewModel(IDataServices dataService, ICharacterSheetService characterSheetService, NavigationService navigationService)
     {
         _characterSheetService = characterSheetService;
         PageName = ApplicationPageNames.Disciplines;
@@ -28,7 +29,7 @@ public partial class DisciplinesViewModel : PageViewModel
             discipline.SetPropertiesFromDictionary();
             discipline.SetDisplayForOptionalTalents();
         }
-
+        _navigationService = navigationService;
     }
 
     [RelayCommand]
@@ -41,16 +42,7 @@ public partial class DisciplinesViewModel : PageViewModel
     private void ApplyDisciplineValues()
     {
         _characterSheetService.CharacterCreationSheetInstance.AddDiscipline(Disciplines[CurrentIndex]);
-        //Add the list of Novice Optional Talents to the Character creation.
-        //_characterSheetService.CharacterCreationSheetInstance.AddOptionalDisciplineTalents(Disciplines[CurrentIndex].Disciplines.TalentOptions["Novice"]);
-        
-        //
-        //
-        // Discipline discipline = Disciplines[CurrentIndex].Disciplines;
-        // _characterSheetService.CharacterSheetInstance.CharacterDiscipline = discipline;
-        //
-        // _characterSheetService.CharacterSheetInstance.Discipline = Disciplines[CurrentIndex].Name;
-
+        _navigationService.NavigateTo(ApplicationPageNames.CharacterCustomizations);
     }
 
 }

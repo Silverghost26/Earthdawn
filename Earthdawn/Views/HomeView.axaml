@@ -10,6 +10,14 @@
     <Design.DataContext><vm:HomeViewModel></vm:HomeViewModel></Design.DataContext>
     
     <StackPanel VerticalAlignment="Center">
-        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="500" FontSize="30" Content="Character Creation" Background="CornflowerBlue" HorizontalContentAlignment="Center"></Button>
+        <Button HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                Width="500" 
+                FontSize="30" 
+                Content="Character Creation" 
+                Command="{Binding CharacterCreationSelectedCommand}" 
+                Classes="TextureButton"
+                HorizontalContentAlignment="Center">
+        </Button>
     </StackPanel>
 </UserControl>

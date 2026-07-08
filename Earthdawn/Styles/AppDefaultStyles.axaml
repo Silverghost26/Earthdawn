@@ -84,6 +84,22 @@
         <Setter Property="Background" Value="{DynamicResource ButtonPrimaryBackgroundHover}"/>
     </Style>   
     
+    <Style Selector="Button.TextureButton">
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush Source="/Assets/Textures/blackmarble.png" Stretch="UniformToFill"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="BorderThickness" Value="3"/>
+        <Setter Property="FontFamily" Value="{DynamicResource Vinque}"/>
+        <Setter Property="Foreground" Value="Azure"/>
+    </Style>
+    
+    <Style Selector="Button.TextureButton:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="#50FFFFFF" />
+    </Style>
+    
     <!--Backgrounds-->
     <Style Selector="Grid.application-background">
         <Setter Property="Background">
