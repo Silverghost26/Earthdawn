@@ -76,6 +76,14 @@
                         Command="{Binding NextCommand}"
                         Width="100" Height="40"/>
             </StackPanel>
+            <Panel HorizontalAlignment="Center" VerticalAlignment="Top" >
+                <Button Classes="TextureButton" 
+                        Command="{Binding SaveAndContinueCommand}"
+                        Content="Save &amp; Continue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"
+                        HorizontalAlignment="Center"
+                        Height="64" Width="256"/>
+            </Panel>
         </StackPanel>
     </ScrollViewer>
+
 </UserControl>

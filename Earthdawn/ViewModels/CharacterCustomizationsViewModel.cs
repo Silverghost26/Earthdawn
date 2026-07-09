@@ -18,7 +18,6 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
     [ObservableProperty] private string? _talentButtonItem;
     [ObservableProperty] private string? _selectedOptionalTalent;
     [ObservableProperty] private Talent? _currentTalent;
-    //[ObservableProperty] private Talent? _selectedCharacterTalent;
     [ObservableProperty] private TalentViewModel? _selectedCharacterTalent;
     [ObservableProperty] private int _dexterity;
     [ObservableProperty] private int _strength;
@@ -60,8 +59,9 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
     
     
     private Dictionary<string, Talent> CharacterTalents { get; }
+    private readonly NavigationService _navigationService;
 
-    public CharacterCustomizationsViewModel(IDataServices dataServices, ICharacterSheetService characterSheetService)
+    public CharacterCustomizationsViewModel(IDataServices dataServices, ICharacterSheetService characterSheetService, NavigationService navigationService)
     {
         _characterSheetService = characterSheetService;
         foreach (DisciplineDisplayCard ddc in dataServices.LoadDisciplines())
@@ -92,12 +92,14 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
         WoundThreshold = _characterSheetService.CharacterCreationSheetInstance.WoundThreshold;
         RecoveryTests = _characterSheetService.CharacterCreationSheetInstance.RecoveryTests;
         RemainingAttributePoints = _characterSheetService.CharacterCreationSheetInstance.RemainingAttributePoints;
+        RemainingTalentPoints =  _characterSheetService.CharacterCreationSheetInstance.RemainingTalentPoints;
         
         DisciplineTalents =
             new ObservableCollection<TalentViewModel>(_characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0]
                 .GetDisciplineTalents().Select(t => new TalentViewModel(t)));
         FreeTalents = new ObservableCollection<TalentViewModel>(
             _characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0].GetDisciplineFreeTalents().Select(t => new TalentViewModel(t)));
+        _navigationService =  navigationService;
     }
     
     partial void OnTalentSelectedItemChanged(string? value)
@@ -326,6 +328,12 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
         }
         RemainingAttributePoints = _characterSheetService.CharacterCreationSheetInstance.RemainingAttributePoints;
         Karma = _characterSheetService.CharacterCreationSheetInstance.Karma;
+    }
+
+    [RelayCommand]
+    private void SaveAndContinue()
+    {
+        _navigationService.GoToSkillsPage();
     }
     
     public int RacialKarma => _characterSheetService.CharacterCreationSheetInstance.KarmaModifier;

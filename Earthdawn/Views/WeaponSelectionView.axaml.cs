@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace Earthdawn.Views;
 
-public partial class EquipmentView : UserControl
+public partial class WeaponSelectionView : UserControl
 {
-    public EquipmentView()
+    public WeaponSelectionView()
     {
         InitializeComponent();
     }

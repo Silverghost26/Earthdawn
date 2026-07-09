@@ -200,7 +200,7 @@
             </Grid>
         </Border>
         <Border Classes="background" CornerRadius="30">
-            <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto, *">
+            <Grid ColumnDefinitions="*, Auto" RowDefinitions="*, *">
                 <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Classes="PrimarySubHeader" Content="Talent Description" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                 <StackPanel Grid.Row="1" Grid.Column="0">
                     <StackPanel Orientation="Horizontal">
@@ -212,15 +212,19 @@
                         <TextBlock Classes="PrimaryDescriptionText" Text="{Binding CurrentTalent.Action, TargetNullValue='No Value'}" Padding="3 5 0 0"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-    
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-    
+            
                     </StackPanel>
                     <Label Classes="PrimaryText" Content="Description:" Padding="10 5 5 1"/>
                     <TextBlock Classes="PrimaryDescriptionText" Text="{Binding CurrentTalent.Description, TargetNullValue='No Value'}" TextWrapping="Wrap" Padding="20 5 5 15"/>
                 </StackPanel>
             </Grid>
         </Border>
+        <Panel HorizontalAlignment="Center" VerticalAlignment="Bottom" >
+            <Button Classes="TextureButton" 
+                    Command="{Binding SaveAndContinueCommand}"
+                    Content="Save &amp; Continue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"
+                    HorizontalAlignment="Center"
+                    Height="64" Width="256"/>
+        </Panel>
     </StackPanel>
 </UserControl>

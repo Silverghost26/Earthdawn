@@ -11,17 +11,21 @@ namespace Earthdawn.ViewModels;
 public partial class SkillsViewModel : PageViewModel
 {
     private readonly IDataServices _dataServices;
+    private readonly NavigationService _navigationService;
+    private ICharacterSheetService _characterSheetService;
 
     [ObservableProperty]
     private int _selectedIndex = 0;
 
     public ObservableCollection<SkillDisplayCard> Skills { get; }
 
-    public SkillsViewModel(IDataServices dataServices)
+    public SkillsViewModel(IDataServices dataServices, ICharacterSheetService characterSheetService, NavigationService navigationService)
     {
         _dataServices = dataServices;
         PageName = ApplicationPageNames.Skills;
         Skills = new ObservableCollection<SkillDisplayCard>(dataServices.LoadSkillsList());
+        _navigationService = navigationService;
+        _characterSheetService = characterSheetService;
     }
 
     public Skill SelectedSkill => Skills.Count > 0 && SelectedIndex >= 0 ? Skills[SelectedIndex].Skills : null;
@@ -57,6 +61,24 @@ public partial class SkillsViewModel : PageViewModel
         {
             Console.WriteLine($"Selected skill: {SelectedSkill.Name}");
             // TODO: Implement actual selection logic here
+        }
+    }
+
+    [RelayCommand]
+    private void SaveAndContinue()
+    {
+        string disciplineName = _characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0].DisciplineName;
+        if (disciplineName != null
+            && (disciplineName == "Wizard"
+                || disciplineName == "Illusionist"
+                || disciplineName == "Elementalist"
+                || disciplineName == "Nethermancer"))
+        {
+            _navigationService.GoToSpellsPage();
+        }
+        else
+        {
+            _navigationService.GoToEquipmentSelectionPage();
         }
     }
 }

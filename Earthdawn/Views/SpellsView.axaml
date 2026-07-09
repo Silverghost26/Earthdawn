@@ -112,5 +112,12 @@
                 </StackPanel>
             </StackPanel>
         </Border>
+        <Panel HorizontalAlignment="Center" VerticalAlignment="Bottom" >
+            <Button Classes="TextureButton" 
+                    Command="{Binding SaveAndContinueCommand}"
+                    Content="Save &amp; Continue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"
+                    HorizontalAlignment="Center"
+                    Height="64" Width="256"/>
+        </Panel>
     </StackPanel>
 </UserControl>

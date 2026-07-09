@@ -32,8 +32,9 @@ public partial class SpellsViewModel : PageViewModel
     public ObservableCollection<SpellDisplayCard> Spells { get; }
     private ICharacterSheetService _characterSheetService;
     private IDataServices _dataServices;
+    private NavigationService _navigationService;
 
-    public SpellsViewModel(IDataServices dataServices, ICharacterSheetService characterSheetService)
+    public SpellsViewModel(IDataServices dataServices, ICharacterSheetService characterSheetService, NavigationService navigationService)
     {
         _characterSheetService = characterSheetService;
         _dataServices = dataServices;
@@ -47,6 +48,7 @@ public partial class SpellsViewModel : PageViewModel
         // Initialize Spell Select button
         UpdateCircleOneButtonText();
         UpdateCircleTwoButtonText();
+        _navigationService = navigationService;
     }
 
     partial void OnDisciplineNameChanged(string value)
@@ -215,5 +217,11 @@ public partial class SpellsViewModel : PageViewModel
         }
         
         SpellPointsRemaining = _characterSheetService.CharacterCreationSheetInstance.SpellPoints;
+    }
+
+    [RelayCommand]
+    private void SaveAndContinue()
+    {
+        _navigationService.GoToEquipmentSelectionPage();
     }
 }
