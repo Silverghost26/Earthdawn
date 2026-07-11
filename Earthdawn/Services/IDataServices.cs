@@ -13,6 +13,7 @@ public interface IDataServices
     List<WeaponDisplayCard> LoadWeaponsList();
     List<ArmorDisplayCard> LoadArmorList();
     List<ShieldDisplayCard> LoadShieldsList();
+    List<EquipmentDisplayCard> LoadEquipmentList();
     Dictionary<string, Talent> LoadTalents();
 
 }

@@ -333,7 +333,7 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
     [RelayCommand]
     private void SaveAndContinue()
     {
-        _navigationService.GoToSkillsPage();
+        _navigationService.GoToSkillSelectionPage();
     }
     
     public int RacialKarma => _characterSheetService.CharacterCreationSheetInstance.KarmaModifier;

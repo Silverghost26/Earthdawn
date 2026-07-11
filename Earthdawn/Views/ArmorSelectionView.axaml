@@ -6,5 +6,166 @@
              xmlns:vm="clr-namespace:Earthdawn.ViewModels"
              x:DataType="vm:ArmorSelectionViewModel"
              x:Class="Earthdawn.Views.ArmorSelectionView">
-    Welcome to Avalonia!
+
+    <Design.DataContext>
+        <vm:ArmorSelectionViewModel />
+    </Design.DataContext>
+
+    <ScrollViewer>
+        <StackPanel Orientation="Vertical" Margin="20">
+            <Label Classes="PrimaryHeader" Content="Armor &amp; Shield Selection" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+            <!-- Armor Carousel -->
+            <Border Classes="background" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Padding="15" Margin="0,0,0,20">
+                <StackPanel>
+                    <Label Content="Armor" Classes="PrimarySubHeader" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                    
+                    <Carousel ItemsSource="{Binding Armor}" 
+                              SelectedIndex="{Binding SelectedArmorIndex}"
+                              Width="1800" Height="300">
+                        <Carousel.PageTransition>
+                            <PageSlide Duration="0:00:00.5" Orientation="Horizontal"/>
+                        </Carousel.PageTransition>
+                        <Carousel.ItemTemplate>
+                            <DataTemplate>
+                                <Border BorderBrush="Black" BorderThickness="1" CornerRadius="5" Padding="15">
+                                    <Grid ColumnDefinitions="250, *" RowDefinitions="Auto, *">
+                                        <!-- Armor Name Centered at the Top -->
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                                                   Text="{Binding Name}" 
+                                                   HorizontalAlignment="Center" 
+                                                   FontSize="20" FontWeight="Bold" 
+                                                   Margin="0,0,0,15"/>
+
+                                        <!-- Armor Properties in a Bordered Box on the Left Side -->
+                                        <Border Grid.Column="0" Grid.Row="1" 
+                                                BorderBrush="Black" BorderThickness="1" 
+                                                CornerRadius="3" Padding="10" 
+                                                Margin="0,0,15,0">
+                                            <StackPanel>
+                                                <TextBlock Text="{Binding Armors.PhysicalArmor, StringFormat='Physical Armor: {0}'}" 
+                                                           Margin="0,0,0,5"/>
+                                                <TextBlock Text="{Binding Armors.MysticArmor, StringFormat='Mystic Armor: {0}'}" 
+                                                           Margin="0,0,0,5"/>
+                                                <TextBlock Text="{Binding Armors.InitiativePenalty, StringFormat='Initiative Penalty: {0}'}" 
+                                                           Margin="0,0,0,5"/>
+                                                <TextBlock Text="{Binding Armors.Cost, StringFormat='Cost: {0}'}" 
+                                                           Margin="0,0,0,5"/>
+                                                <TextBlock Text="{Binding Armors.Weight, StringFormat='Weight: {0}'}" 
+                                                           Margin="0,0,0,5"/>
+                                                <TextBlock Text="{Binding Armors.Availability, StringFormat='Availability: {0}'}" 
+                                                           Margin="0,0,0,5"/>
+                                                <TextBlock Text="{Binding Armors.Living, StringFormat='Living: {0}'}" 
+                                                           Margin="0,0,0,5"/>
+                                            </StackPanel>
+                                        </Border>
+
+                                        <!-- Description Taking Up Remaining Space -->
+                                        <StackPanel Grid.Column="1" Grid.Row="1">
+                                            <TextBlock Text="Description:" 
+                                                       FontWeight="Bold" 
+                                                       Margin="0,0,0,5"/>
+                                            <TextBlock Text="{Binding Armors.Description}" 
+                                                       TextWrapping="Wrap" 
+                                                       MaxHeight="200"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </Carousel.ItemTemplate>
+                    </Carousel>
+
+                    <!-- Armor Navigation Buttons -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="15" Margin="0,15,0,0">
+                        <Button Content="Previous" 
+                                Command="{Binding PreviousArmorCommand}"
+                                Width="100" Height="35"/>
+                        <Button Content="Select" 
+                                Command="{Binding SelectArmorCommand}"
+                                Width="100" Height="35"/>
+                        <Button Content="Next" 
+                                Command="{Binding NextArmorCommand}"
+                                Width="100" Height="35"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- Shields Carousel -->
+            <Border Classes="background" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Padding="15">
+                <StackPanel>
+                    <Label Content="Shields" Classes="PrimarySubHeader" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                    
+                    <Carousel ItemsSource="{Binding Shields}" 
+                              SelectedIndex="{Binding SelectedShieldIndex}"
+                              Width="1800" Height="300">
+                        <Carousel.PageTransition>
+                            <PageSlide Duration="0:00:00.5" Orientation="Horizontal"/>
+                        </Carousel.PageTransition>
+                        <Carousel.ItemTemplate>
+                            <DataTemplate>
+                                <Border BorderBrush="Black" BorderThickness="1" CornerRadius="5" Padding="15">
+                                    <Grid ColumnDefinitions="250, *" RowDefinitions="Auto, *">
+                                        <!-- Shield Name Centered at the Top -->
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                                                   Text="{Binding Name}" 
+                                                   HorizontalAlignment="Center" 
+                                                   FontSize="20" FontWeight="Bold" 
+                                                   Margin="0,0,0,15"/>
+
+                                        <!-- Shield Properties in a Bordered Box on the Left Side -->
+                                        <Border Grid.Column="0" Grid.Row="1" 
+                                                BorderBrush="Black" BorderThickness="1" 
+                                                CornerRadius="3" Padding="10" 
+                                                Margin="0,0,15,0">
+                                            <StackPanel>
+                                                <TextBlock Text="{Binding Shields.PhysicalDefense, StringFormat='Physical Defense: {0}'}" 
+                                                           Margin="0,0,0,5"/>
+                                                <TextBlock Text="{Binding Shields.MysticDefense, StringFormat='Mystic Defense: {0}'}" 
+                                                           Margin="0,0,0,5"/>
+                                                <TextBlock Text="{Binding Shields.InitiativePenalty, StringFormat='Initiative Penalty: {0}'}" 
+                                                           Margin="0,0,0,5"/>
+                                                <TextBlock Text="{Binding Shields.ShatterThreshold, StringFormat='Shatter Threshold: {0}'}" 
+                                                           Margin="0,0,0,5"/>
+                                                <TextBlock Text="{Binding Shields.Cost, StringFormat='Cost: {0}'}" 
+                                                           Margin="0,0,0,5"/>
+                                                <TextBlock Text="{Binding Shields.Weight, StringFormat='Weight: {0}'}" 
+                                                           Margin="0,0,0,5"/>
+                                                <TextBlock Text="{Binding Shields.Availability, StringFormat='Availability: {0}'}" 
+                                                           Margin="0,0,0,5"/>
+                                                <TextBlock Text="{Binding Shields.Living, StringFormat='Living: {0}'}" 
+                                                           Margin="0,0,0,5"/>
+                                            </StackPanel>
+                                        </Border>
+
+                                        <!-- Description Taking Up Remaining Space -->
+                                        <StackPanel Grid.Column="1" Grid.Row="1">
+                                            <TextBlock Text="Description:" 
+                                                       FontWeight="Bold" 
+                                                       Margin="0,0,0,5"/>
+                                            <TextBlock Text="{Binding Shields.Description}" 
+                                                       TextWrapping="Wrap" 
+                                                       MaxHeight="200"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </Carousel.ItemTemplate>
+                    </Carousel>
+
+                    <!-- Shield Navigation Buttons -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="15" Margin="0,15,0,0">
+                        <Button Content="Previous" 
+                                Command="{Binding PreviousShieldCommand}"
+                                Width="100" Height="35"/>
+                        <Button Content="Select" 
+                                Command="{Binding SelectShieldCommand}"
+                                Width="100" Height="35"/>
+                        <Button Content="Next" 
+                                Command="{Binding NextShieldCommand}"
+                                Width="100" Height="35"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
 </UserControl>

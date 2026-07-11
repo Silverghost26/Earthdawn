@@ -36,41 +36,53 @@ namespace EarthDawn.Services
             CurrentPage = _pageFactory.GetPageViewModel(pageName);
         }
 
-        public void GoToHomePage() => NavigateTo(ApplicationPageNames.Home);
+        public void GoToHomePage() => NavigateTo(ApplicationPageNames.HomePage);
         public void GoToCharacterCustomizationPage() => NavigateTo(ApplicationPageNames.CharacterCustomizations);
-        public void GoToCharacterPage() => NavigateTo(ApplicationPageNames.Character);
-        public void GoToDisciplinesPage() => NavigateTo(ApplicationPageNames.Disciplines);
+        public void GoToCharacterCompletionPage() => NavigateTo(ApplicationPageNames.CharacterCompletion);
+        public void GoToDisciplineSelectionPage() => NavigateTo(ApplicationPageNames.DisciplineSelection);
         public void GoToEquipmentSelectionPage() => NavigateTo(ApplicationPageNames.EquipmentSelection);
-        public void GoToRacesPage() => NavigateTo(ApplicationPageNames.Races);
-        public void GoToSkillsPage() => NavigateTo(ApplicationPageNames.Skills);
-        public void GoToSpellsPage() => NavigateTo(ApplicationPageNames.Spells);
+        public void GoToRaceSelectionPage() => NavigateTo(ApplicationPageNames.RaceSelection);
+        public void GoToSkillSelectionPage() => NavigateTo(ApplicationPageNames.SkillSelection);
+        public void GoToSpellSelectionPage() => NavigateTo(ApplicationPageNames.SpellSelection);
+        public void GoToWeaponSelectionPage() => NavigateTo(ApplicationPageNames.WeaponSelection);
+        public void GoToArmorSelectionPage() => NavigateTo(ApplicationPageNames.ArmorSelection);
+        public void GoToMountSelectionPage() => NavigateTo((ApplicationPageNames.MountSelection));
 
         public void GoToNextPage()
         {
             switch (CurrentPage.PageName)
             {
-                case ApplicationPageNames.Home:
-                    GoToRacesPage();
+                case ApplicationPageNames.HomePage:
+                    GoToRaceSelectionPage();
                     break;
-                case ApplicationPageNames.Races:
-                    GoToDisciplinesPage();
+                case ApplicationPageNames.RaceSelection:
+                    GoToDisciplineSelectionPage();
                     break;
-                case ApplicationPageNames.Disciplines:
+                case ApplicationPageNames.DisciplineSelection:
                     GoToCharacterCustomizationPage();
                     break;
                 case ApplicationPageNames.CharacterCustomizations:
-                    GoToSkillsPage();
+                    GoToSkillSelectionPage();
                     break;
-                case ApplicationPageNames.Skills:
-                    GoToSpellsPage();
+                case ApplicationPageNames.SkillSelection:
+                    GoToSpellSelectionPage();
                     break;
-                case ApplicationPageNames.Spells:
+                case ApplicationPageNames.SpellSelection:
+                    GoToWeaponSelectionPage();
+                    break;
+                case ApplicationPageNames.WeaponSelection:
+                    GoToArmorSelectionPage();
+                    break;
+                case ApplicationPageNames.ArmorSelection:
                     GoToEquipmentSelectionPage();
                     break;
                 case ApplicationPageNames.EquipmentSelection:
-                    GoToCharacterPage();
+                    GoToMountSelectionPage();
                     break;
-                case ApplicationPageNames.Character:
+                case ApplicationPageNames.MountSelection:
+                    GoToCharacterCompletionPage();
+                    break;
+                case ApplicationPageNames.CharacterCompletion:
                     break;
                 default:
                     break;
@@ -81,28 +93,37 @@ namespace EarthDawn.Services
         {
             switch (CurrentPage.PageName)
             {
-                case ApplicationPageNames.Home:
+                case ApplicationPageNames.HomePage:
                     break;
-                case ApplicationPageNames.Races:
+                case ApplicationPageNames.RaceSelection:
                     GoToHomePage();
                     break;
-                case ApplicationPageNames.Disciplines:
-                    GoToRacesPage();
+                case ApplicationPageNames.DisciplineSelection:
+                    GoToRaceSelectionPage();
                     break;
                 case ApplicationPageNames.CharacterCustomizations:
-                    GoToDisciplinesPage();
+                    GoToDisciplineSelectionPage();
                     break;
-                case ApplicationPageNames.Skills:
-                    GoToCharacterCustomizationPage();
+                case ApplicationPageNames.SkillSelection:
+                    GoToSkillSelectionPage();
                     break;
-                case ApplicationPageNames.Spells:
-                    GoToSkillsPage();
+                case ApplicationPageNames.SpellSelection:
+                    GoToSkillSelectionPage();
+                    break;
+                case ApplicationPageNames.WeaponSelection:
+                    GoToSpellSelectionPage();
+                    break;
+                case ApplicationPageNames.ArmorSelection:
+                    GoToWeaponSelectionPage();
                     break;
                 case ApplicationPageNames.EquipmentSelection:
-                    GoToSpellsPage();
+                    GoToArmorSelectionPage();
                     break;
-                case ApplicationPageNames.Character:
+                case ApplicationPageNames.MountSelection:
                     GoToEquipmentSelectionPage();
+                    break;
+                case ApplicationPageNames.CharacterCompletion:
+                    GoToMountSelectionPage();
                     break;
                 default:
                     break;

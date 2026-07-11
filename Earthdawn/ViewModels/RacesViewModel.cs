@@ -24,7 +24,7 @@ public partial class RacesViewModel : PageViewModel
     public RacesViewModel(IDataServices dataService, ICharacterSheetService characterSheetService, NavigationService navigationService)
     {
         _characterSheetService = characterSheetService;
-        PageName = ApplicationPageNames.Races;
+        PageName = ApplicationPageNames.RaceSelection;
         Races = new ObservableCollection<RaceDisplayCard>(dataService.LoadRaces());
         foreach(RaceDisplayCard race in Races)
         {
@@ -55,6 +55,6 @@ public partial class RacesViewModel : PageViewModel
         _characterSheetService.CharacterCreationSheetInstance.KarmaModifier = race.KarmaMod;
         _characterSheetService.CharacterCreationSheetInstance.RacialAbilities = race.Abilities;
         _characterSheetService.CharacterCreationSheetInstance.Race = Races[CurrentIndex].Name;
-        _navigationService.GoToDisciplinesPage();
+        _navigationService.GoToDisciplineSelectionPage();
     }
 }

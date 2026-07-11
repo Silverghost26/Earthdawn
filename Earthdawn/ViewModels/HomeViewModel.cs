@@ -9,13 +9,13 @@ public partial class HomeViewModel : PageViewModel
     private readonly NavigationService _navigationService;
     public HomeViewModel(NavigationService navigationService)
     {
-        PageName = ApplicationPageNames.Home;
+        PageName = ApplicationPageNames.HomePage;
         _navigationService = navigationService;
     }
 
     [RelayCommand]
     private void CharacterCreationSelected()
     {
-        _navigationService.NavigateTo(ApplicationPageNames.Races);
+        _navigationService.NavigateTo(ApplicationPageNames.RaceSelection);
     }
 }

@@ -22,7 +22,7 @@ public partial class DisciplinesViewModel : PageViewModel
     public DisciplinesViewModel(IDataServices dataService, ICharacterSheetService characterSheetService, NavigationService navigationService)
     {
         _characterSheetService = characterSheetService;
-        PageName = ApplicationPageNames.Disciplines;
+        PageName = ApplicationPageNames.DisciplineSelection;
         Disciplines = new ObservableCollection<DisciplineDisplayCard>(dataService.LoadDisciplines());
         foreach (DisciplineDisplayCard discipline in Disciplines)
         {

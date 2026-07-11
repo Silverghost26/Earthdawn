@@ -38,7 +38,7 @@ public partial class SpellsViewModel : PageViewModel
     {
         _characterSheetService = characterSheetService;
         _dataServices = dataServices;
-        PageName = ApplicationPageNames.Spells;
+        PageName = ApplicationPageNames.SpellSelection;
         Spells = new ObservableCollection<SpellDisplayCard>(dataServices.LoadSpells());
         DisciplineName = _characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0].DisciplineName;
         SpellPointsRemaining = _characterSheetService.CharacterCreationSheetInstance.SpellPoints;

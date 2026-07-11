@@ -36,21 +36,27 @@ public partial class App : Application
         collection.AddTransient<CharacterViewModel>();
         collection.AddTransient<DisciplinesViewModel>();
         collection.AddTransient<EquipmentSelectionViewModel>();
+        collection.AddTransient<ArmorSelectionViewModel>(); // Add ArmorSelectionViewModel
         collection.AddTransient<HomeViewModel>();
         collection.AddTransient<RacesViewModel>();
         collection.AddTransient<SkillsViewModel>();
         collection.AddTransient<SpellsViewModel>();
+        collection.AddTransient<WeaponSelectionViewModel>(); // Add WeaponSelectionViewModel
+        collection.AddTransient<MountSelectionViewModel>();
 
         collection.AddSingleton<Func<ApplicationPageNames, PageViewModel>>(x => name => name switch
         {
-            ApplicationPageNames.Home => x.GetRequiredService<HomeViewModel>(),
+            ApplicationPageNames.HomePage => x.GetRequiredService<HomeViewModel>(),
             ApplicationPageNames.CharacterCustomizations => x.GetRequiredService<CharacterCustomizationsViewModel>(),
-            ApplicationPageNames.Character => x.GetRequiredService<CharacterViewModel>(),
-            ApplicationPageNames.Disciplines => x.GetRequiredService<DisciplinesViewModel>(),
+            ApplicationPageNames.CharacterCompletion => x.GetRequiredService<CharacterViewModel>(),
+            ApplicationPageNames.DisciplineSelection => x.GetRequiredService<DisciplinesViewModel>(),
             ApplicationPageNames.EquipmentSelection => x.GetRequiredService<EquipmentSelectionViewModel>(),
-            ApplicationPageNames.Races => x.GetRequiredService<RacesViewModel>(),
-            ApplicationPageNames.Skills => x.GetRequiredService<SkillsViewModel>(),
-            ApplicationPageNames.Spells => x.GetRequiredService<SpellsViewModel>(),
+            ApplicationPageNames.RaceSelection => x.GetRequiredService<RacesViewModel>(),
+            ApplicationPageNames.SkillSelection => x.GetRequiredService<SkillsViewModel>(),
+            ApplicationPageNames.SpellSelection => x.GetRequiredService<SpellsViewModel>(),
+            ApplicationPageNames.WeaponSelection => x.GetRequiredService<WeaponSelectionViewModel>(),
+            ApplicationPageNames.ArmorSelection => x.GetRequiredService<ArmorSelectionViewModel>(),
+            ApplicationPageNames.MountSelection => x.GetRequiredService<MountSelectionViewModel>(),
             _ => throw new InvalidOperationException()
         });
 

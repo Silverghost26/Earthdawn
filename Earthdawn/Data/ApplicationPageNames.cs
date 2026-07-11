@@ -3,13 +3,15 @@
 public enum ApplicationPageNames
 {
     Unknown,
-    Home,
-    Races,
-    Disciplines,
+    HomePage,
+    RaceSelection,
+    DisciplineSelection,
     CharacterCustomizations,
-    Talents,
-    Skills,
-    Spells,
+    WeaponSelection,
+    SkillSelection,
+    SpellSelection,
     EquipmentSelection,
-    Character
+    CharacterCompletion,
+    ArmorSelection,
+    MountSelection
 }

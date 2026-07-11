@@ -64,6 +64,17 @@ public class DataServices : IDataServices
         return shieldDictionary.Select(kvp => new ShieldDisplayCard() { Name = kvp.Key, Shields = kvp.Value }).ToList();
     }
 
+    public List<EquipmentDisplayCard> LoadEquipmentList()
+    {
+        Dictionary<string, Equipment> equipmentDictionary = DataLoader.LoadJson<Dictionary<string, Equipment>>(GetJson("Equipment.json"));
+        foreach (var key in equipmentDictionary.Keys)
+        {
+            equipmentDictionary[key].Name = key;
+        }
+        return equipmentDictionary.Select(kvp => new EquipmentDisplayCard() { Name = kvp.Key, Equipment = kvp.Value }).ToList();
+        
+    }
+
     public Dictionary<string, Talent> LoadTalents()
     {
         return DataLoader.LoadJson<Dictionary<string, Talent>>(GetJson("Talents.json"));

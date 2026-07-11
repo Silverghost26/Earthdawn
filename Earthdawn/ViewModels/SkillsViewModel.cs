@@ -22,7 +22,7 @@ public partial class SkillsViewModel : PageViewModel
     public SkillsViewModel(IDataServices dataServices, ICharacterSheetService characterSheetService, NavigationService navigationService)
     {
         _dataServices = dataServices;
-        PageName = ApplicationPageNames.Skills;
+        PageName = ApplicationPageNames.SkillSelection;
         Skills = new ObservableCollection<SkillDisplayCard>(dataServices.LoadSkillsList());
         _navigationService = navigationService;
         _characterSheetService = characterSheetService;
@@ -74,11 +74,11 @@ public partial class SkillsViewModel : PageViewModel
                 || disciplineName == "Elementalist"
                 || disciplineName == "Nethermancer"))
         {
-            _navigationService.GoToSpellsPage();
+            _navigationService.GoToSpellSelectionPage();
         }
         else
         {
-            _navigationService.GoToEquipmentSelectionPage();
+            _navigationService.GoToWeaponSelectionPage();
         }
     }
 }
