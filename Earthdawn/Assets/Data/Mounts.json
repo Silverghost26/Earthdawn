@@ -8,7 +8,7 @@
         "Lifespan": "25",
         "FeedCost": "5",
         "StableCost": "2",
-        "Description": ""
+        "Description": "Ork cavalrymen prize the dyre as a mount because of its huge size, quick  brain, and irritable temper. Most ork cavalries have at least one or two in their Ranks,  if not several. Standing twelve feet tall at the shoulder, the dyre is covered in long,  matted brown fur. Its back rises sharply in the middle as if humped, and it resembles a  cross between a bear and bull. Like a bear, the dyre has squat, stubby legs and a short  tail. Its head looks like a bull’s, only wider, with sharply curving horns. The beast has  hardly any neck, holding its head so low to the ground that only its back shows over  the top of the high plains grass."
     },
     "Elephant": {
         "Availability": "Very Rare",
@@ -19,7 +19,7 @@
         "Lifespan": "70",
         "FeedCost": "30",
         "StableCost": "NA",
-        "Description": ""
+        "Description": "In some regions elephants are used to haul heavy carts and wagons overland along the trade routes that link the coastal cities."
     },
     "Goat, Riding": {
         "Availability": "Average",
@@ -30,7 +30,7 @@
         "Lifespan": "15",
         "FeedCost": "1cp",
         "StableCost": "NA",
-        "Description": ""
+        "Description": "Windlings who cannot afford a more specialized creature often  ride goats because they’re easy to train, can carry a proportionally huge amount of  weight, and eat nearly anything."
     },
     "Granlain": {
         "Availability": "Rare",
@@ -41,18 +41,18 @@
         "Lifespan": "20",
         "FeedCost": "1",
         "StableCost": "3cp",
-        "Description": ""
+        "Description": "Granlains are unusually large, strong horses that often serve as draft  animals, standing at least seven feet tall at the shoulder. Granlains are stubborn, and  trolls are often the only Namegivers strong enough to deal with these massive, willful  beasts. Granlains are not common. Wild granlains live only in the plains and foothills  near mountainous regions."
     },
     "Griffin": {
         "Availability": "Very Rare",
         "Cost": "7,500!",
         "Weight": "600",
-        "CarryingCapacity": "360**",
-        "Speed": "18/18*",
+        "CarryingCapacity": "360",
+        "Speed": "18/18",
         "Lifespan": "45",
         "FeedCost": "10",
         "StableCost": "5",
-        "Description": ""
+        "Description": "These creatures combine a lion’s body with the head, front legs, and  wings of a large eagle. Like an eagle, a griffin’s front legs are covered in feathers and  end in sharp talons; its hind legs resemble those of a lion, covered in soft fur and ending  in paws. Typically, griffins stand 4 feet tall at the shoulder, and are five to six feet  long with an average wingspan of seven to nine feet. Its wings are covered with bright  feathers, usually yellow and white, but sometimes red and orange. Humanoids of average  human size and smaller, except for windlings, can use griffins as aerial mounts.  Before a griffin can be used in this way, however, it must undergo extensive training,  which keeps the cost of these animals high. Though difficult to train, tame griffins  make excellent and loyal steeds. A Griffin's carrying capacity is the same wither in flight or on the ground."
     },
     "Horse, Draft": {
         "Availability": "Average",
@@ -63,7 +63,7 @@
         "Lifespan": "30",
         "FeedCost": "5cp",
         "StableCost": "3cp",
-        "Description": ""
+        "Description": "Draft horses are used as pack animals and to pull carts and wagons.  They are generally stronger than riding horses, but are also slower."
     },
     "Horse, Pony": {
         "Availability": "Average",
@@ -74,7 +74,7 @@
         "Lifespan": "25",
         "FeedCost": "5cp",
         "StableCost": "3cp",
-        "Description": ""
+        "Description": "A smaller breed of horse used mainly by dwarfs for transportation  and war. Many ork, elf, and human children train their horse riding skills on ponies as  they grow up."
     },
     "Horse, Riding": {
         "Availability": "Average",
@@ -85,7 +85,7 @@
         "Lifespan": "25",
         "FeedCost": "5cp",
         "StableCost": "3cp",
-        "Description": ""
+        "Description": "The most common type of horses used, riding horses make strong  mounts, but cannot wear barding or armor."
     },
     "Horse, War": {
         "Availability": "Unusual",
@@ -96,7 +96,7 @@
         "Lifespan": "25",
         "FeedCost": "5cp",
         "StableCost": "3cp",
-        "Description": ""
+        "Description": "Larger and stronger than riding horses, war horses are bred to carry  heavy loads while remaining able to canter and gallop. War horses can wear barding,  and are often used by armies and cavalry units, particularly ork scorcher tribes."
     },
     "Huttawa": {
         "Availability": "Unusual",
@@ -107,7 +107,7 @@
         "Lifespan": "15",
         "FeedCost": "8cp",
         "StableCost": "3cp",
-        "Description": ""
+        "Description": "The huttawa’s body resembles that of a lion or tiger, but it has an eagle-  like head with a large beak and bird-like eyes. Standing four feet tall at the shoulder  and six feet long, huttawa are a favored mount for dwarf cavalrymen, and often  help pull caravan wagons belonging to dwarf trading companies. Though not overly  bright, huttawa are easy to train."
     },
     "Kue": {
         "Availability": "Unusual",
@@ -118,7 +118,7 @@
         "Lifespan": "10",
         "FeedCost": "2cp",
         "StableCost": "1cp",
-        "Description": ""
+        "Description": "The kue resembles a cross between a lizard and a cat, with a reptilian body  and feline mannerisms. Like cats, kue possess excellent night vision, and sometimes  serve windling communities as watch animals. A kue has long, slender legs rather  than the short squat legs typical of most lizards. They are about two feet tall at the  shoulder, three to four feet long, and have ridges on their heads and tails. Kues are  native to jungles and forests, and make ideal mounts for the windling Cavalrymen and  Warriors who protect their communities and villages. Kues are generally sold only in  larger cities and those towns located near jungles."
     },
     "Mule, Pack": {
         "Availability": "Average",
@@ -129,7 +129,7 @@
         "Lifespan": "20",
         "FeedCost": "2cp",
         "StableCost": "2cp",
-        "Description": ""
+        "Description": "Pack mules pull carts and wagons. Slow but strong, these animals  can travel through terrain that horses and other larger pack animals cannot."
     },
     "Staijan": {
         "Availability": "Rare",
@@ -140,7 +140,7 @@
         "Lifespan": "25",
         "FeedCost": "3",
         "StableCost": "1",
-        "Description": ""
+        "Description": "Stajian are large, bison-like animals often used as mounts by ork cavalry.  They stand six feet tall at the shoulder and are less massive than a thundra beast, but  stronger than a horse. Their broad hooves make them good navigators in both swamp  and mountains."
     },
     "Thundra Beast": {
         "Availability": "Rare",
@@ -151,7 +151,7 @@
         "Lifespan": "45",
         "FeedCost": "5",
         "StableCost": "2",
-        "Description": ""
+        "Description": "This large, four-legged animal looks like a cross between a rhinoceros  and a dinosaur, with a tough, rock-like skin covering its entire body. Thundra  beasts stand at least seven feet tall at the shoulder, are ten to twelve feet long, and  weigh about five thousand pounds. Each thundra beast has a large horn in the center  of its forehead, which it uses to attack opponents. Ork scorcher groups frequently ride  thundra beasts."
     },
     "Troajin": {
         "Availability": "Unusual",
@@ -162,17 +162,17 @@
         "Lifespan": "20",
         "FeedCost": "2",
         "StableCost": "3cp",
-        "Description": ""
+        "Description": "Troajin are tiger-like animals native to jungle and mountain country.  The average troajin stands approximately four feet tall at the shoulder and is eight  feet long—a combination of a five foot body and a three foot tail. Wild troajin are  fiercely territorial and defend themselves with sharp claws and teeth. Troajin often  become animal companions for Beastmasters."
     },
     "Zoak": {
         "Availability": "Rare",
         "Cost": "115",
         "Weight": "25",
         "CarryingCapacity": "80**",
-        "Speed": "4/18*",
+        "Speed": "4/18",
         "Lifespan": "15",
         "FeedCost": "1cp",
         "StableCost": "NA",
-        "Description": ""
+        "Description": "The zoak looks like a cross between a large bird and a bat, with feathers  on its body and head and a leathery neck, wings, and tail. The creature’s feathered  legs each end in four eagle-like talons. Zoaks measure roughly four feet from beak to  tail-tip. The zoak’s neck is long and flexible. These jungle and forest animals are favored  by windling Cavalrymen, and also often serve as companions for Beastmasters.  Because they are difficult to train, zoaks are rarely offered for sale. Merchants in cities  are known to trade and sell zoaks.  Zoaks' carrying capacity is the same wither in flight or on the ground."
     }
 }

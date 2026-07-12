@@ -2,7 +2,7 @@
 
 namespace Earthdawn.Data;
 
-public class WeaponDisplayCard
+public class MountDisplayCard
 {
     public string Name
     {
@@ -13,15 +13,15 @@ public class WeaponDisplayCard
         }
     }
     private string? _name;
-
-    public Weapon Weapons
+    
+    public Mount Mounts 
     {
-        get => _weapon ?? new Weapon();
+        get => _mount ?? new Mount();
         set
         {
-            _weapon = value;
-            _weapon.WeaponName = _name;
+            _mount = value;
+            _mount.Name = _name;
         }
     }
-    private Weapon? _weapon;
+    private Mount? _mount;
 }

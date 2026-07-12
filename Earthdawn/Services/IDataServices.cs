@@ -14,6 +14,7 @@ public interface IDataServices
     List<ArmorDisplayCard> LoadArmorList();
     List<ShieldDisplayCard> LoadShieldsList();
     List<EquipmentDisplayCard> LoadEquipmentList();
+    List<MountDisplayCard> LoadMountsList();
     Dictionary<string, Talent> LoadTalents();
 
 }

@@ -105,7 +105,7 @@ namespace EarthDawn.Services
                     GoToDisciplineSelectionPage();
                     break;
                 case ApplicationPageNames.SkillSelection:
-                    GoToSkillSelectionPage();
+                    GoToCharacterCustomizationPage();
                     break;
                 case ApplicationPageNames.SpellSelection:
                     GoToSkillSelectionPage();

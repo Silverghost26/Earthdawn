@@ -75,6 +75,12 @@ public class DataServices : IDataServices
         
     }
 
+    public List<MountDisplayCard> LoadMountsList()
+    {
+        Dictionary<string, Mount> mountDictionary = DataLoader.LoadJson<Dictionary<string, Mount>>(GetJson("Mounts.json"));
+        return mountDictionary.Select(kvp => new MountDisplayCard() { Name = kvp.Key, Mounts = kvp.Value }).ToList();
+    }
+
     public Dictionary<string, Talent> LoadTalents()
     {
         return DataLoader.LoadJson<Dictionary<string, Talent>>(GetJson("Talents.json"));

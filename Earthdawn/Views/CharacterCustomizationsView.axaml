@@ -166,7 +166,7 @@
                 <Label Classes="PrimaryText" Content="Discipline Free Talents" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="25"></Label>
                 <ListBox ItemsSource="{Binding FreeTalents}" Background="Transparent" HorizontalAlignment="Center">
                     <ListBox.ItemTemplate>
-                        <DataTemplate x:DataType="models:Talent">
+                        <DataTemplate>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Name}"/>
                                 <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text=" - Rank: " Padding="10 0 0 0"/>
