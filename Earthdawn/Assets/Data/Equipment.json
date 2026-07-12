@@ -6,7 +6,7 @@
     "Availability": "Rare",
     "Cost": "340",
     "Weight": "2",
-    "Description": ""
+    "Description": "Bedrolls of comfort are magically enchanted to change temperature as needed to keep their users comfortable. The bedrolls are made of glinsthin and frasth fibers—glinsthin grows on the highest and coldest mountain peaks, while frasth grows by the shores of Death's Sea. This combination of cold and warm plant fibers, plus a tiny infusion of True Air, enables the bedroll to magically adjust to the user's body temperature and keep him comfortable."
   },
   "Boots, Dry": {
     "type": "Common Magic Item",
@@ -15,7 +15,7 @@
     "Availability": "Rare",
     "Cost": "250",
     "Weight": "2",
-    "Description": ""
+    "Description": "Dry boots are leather boots able to repel water to keep the wearer's feet dry. Kernels of True Water are woven into the boots, essentially sealing the boots against outside moisture. This ability is constantly working, but has an unfortunate side-effect. Because of its nature, the True Water will keep moisture inside the boots as effectively as keeping it from entering. Therefore, this also means that the boots will take a very long time to dry out should water or liquid get inside them."
   },
   "Boots, Huntsman": {
     "type": "Common Magic Item",
@@ -24,7 +24,7 @@
     "Availability": "Rare",
     "Cost": "700",
     "Weight": "2",
-    "Description": ""
+    "Description": "Huntsman's boots are an improved version of the dry boots. These leather boots are designed for the huntsman who spends extended periods of time in the forest. Woven with kernels of True Air and True Water, these boots keep the wearer's feet both warm and dry, and add a spring to his stride that makes a long day of hunting less tiring. A character wearing a pair of huntsman's boots can walk an additional five miles each day."
   },
   "Cleaning Broom": {
     "type": "Common Magic Item",
@@ -33,7 +33,7 @@
     "Availability": "Rare",
     "Cost": "25",
     "Weight": "2",
-    "Description": ""
+    "Description": "Kernels of True Wood and True Earth are woven together in these magical whisk brooms, which capture all loose dust and dirt with which they come in contact. A simple command word allows the user to dump all the dust that the broom picks up, so that the broom can be used over and over again."
   },
   "Cloak, Dwarf Winternight": {
     "type": "Common Magic Item",
@@ -42,7 +42,7 @@
     "Availability": "Unusual",
     "Cost": "275",
     "Weight": "2",
-    "Description": ""
+    "Description": "Dwarf winternight cloaks are made with magically treated cloth. These waterproof garments have a lining with a special ribbed design that produces enough heat when rubbed to keep a traveler warm on the coldest night. These cloaks add +2 to the character's Physical and Mystic Armor against cold damage from spells, ice weapons, or other cold sources."
   },
   "Cloak, Everclean": {
     "type": "Common Magic Item",
@@ -51,7 +51,7 @@
     "Availability": "Rare",
     "Cost": "275",
     "Weight": "1",
-    "Description": ""
+    "Description": "Everclean cloaks repel dirt and stains to stay clean for extended periods. The kernels of True Water and True Air woven into the cloak repels dirt and oils that might cause stains. Eventually, after many months of use, these cloaks become stained and must be cleaned like other clothes. As with warm cloaks, all kinds of garments are made in the manner of everclean cloaks."
   },
   "Cloak, Warm": {
     "type": "Common Magic Item",
@@ -60,7 +60,7 @@
     "Availability": "Rare",
     "Cost": "300",
     "Weight": "2",
-    "Description": ""
+    "Description": "A warm cloak is a woolen cloak that keeps its wearer warm when temperatures outdoors drop below a certain point. The magic of these cloaks comes from the kernels of True Air and True Fire woven into them. The True Air reacts to changes in temperature, and the True Fire serves to warm the wearer. Though many types of garments are made in this fashion, the warm cloak is the most common."
   },
   "Divining Rod": {
     "type": "Common Magic Item",
@@ -69,7 +69,7 @@
     "Availability": "Rare",
     "Cost": "75",
     "Weight": "1",
-    "Description": ""
+    "Description": "Some adventurers use magical divining rods to locate water sources. These items resemble forked branches and are enchanted with True Water. A character with a magical divining rod gains a +3 bonus to Wilderness Survival tests to locate water."
   },
   "Elfweave Robe": {
     "type": "Common Magic Item",
@@ -78,7 +78,7 @@
     "Availability": "Unusual",
     "Cost": "80",
     "Weight": "2",
-    "Description": ""
+    "Description": "These beautiful garments display a fine, delicate craftsmanship that human and dwarf weavers envy, but cannot yet copy. Elves most commonly wear elfweave robes, though some humans also wear them. Though the elves disclaim the rumors attributing magical properties to the robes, courtiers have long noted that the robes never sit quite right on an ork or dwarf."
   },
   "Fire Starter": {
     "type": "Common Magic Item",
@@ -87,7 +87,7 @@
     "Availability": "Rare",
     "Cost": "100",
     "Weight": "2",
-    "Description": ""
+    "Description": "A fire starter is a short wand that will produce a small flame at one end. This flame can be used to start larger fires. Fire starters have a kernel of True Fire woven into them. The flame is activated by a spoken command word."
   },
   "Firefly Chalk (per stick)": {
     "type": "Common Magic Item",
@@ -96,7 +96,7 @@
     "Availability": "Unusual",
     "Cost": "12",
     "Weight": "Neg.",
-    "Description": ""
+    "Description": "Firefly chalk is made by enchanting a special type of soft clay, then forming the clay into sticks about four inches long and a quarter of an inch in diameter. The sticks remain the dull color of the original clay but produce a dimly glowing script that may be read under all lighting conditions. If more than five words are written with the chalk, the glow provides enough light to qualify as low-light conditions. Most people use the chalk to leave messages in naturally dark places, such as kaers or mines, though Troubadours and Illusionists sometimes paint their faces and bodies with it prior to night-time performances. Firefly chalk washes off most surfaces if rubbed or doused with water."
   },
   "Heat Stone": {
     "type": "Common Magic Item",
@@ -105,7 +105,7 @@
     "Availability": "Rare",
     "Cost": "100",
     "Weight": "3",
-    "Description": ""
+    "Description": "Heat stones contain nuggets of True Earth and True Fire that make the stone glow deep red and become as hot as a burning coal. The True Earth and True Fire are slowly consumed over a period of about a year, depending on the quality of the stone's enchantment. Heat stones are generally kept in metal or ceramic containers. The steady heat they give off makes them ideal as bed-warmers, room heaters and for starting fires."
   },
   "Hot Pot": {
     "type": "Common Magic Item",
@@ -114,7 +114,7 @@
     "Availability": "Rare",
     "Cost": "100",
     "Weight": "8",
-    "Description": ""
+    "Description": "A hot pot is a ceramic cooking pot that has been woven with kernels of True Fire. The True Fire heats the ceramic, allowing the user to cook food in the pot without actually using fire. A spoken command word can heat up the pot, but the temperature cannot be regulated. The hot pot simply heats to a given temperature, and no higher."
   },
   "Light Quartz, Small": {
     "type": "Common Magic Item",
@@ -123,7 +123,7 @@
     "Availability": "Unusual",
     "Cost": "75",
     "Weight": "2",
-    "Description": ""
+    "Description": "Enchanted with magical light, light quartz comes in a wide variety of sizes and colors. The most common pieces, roughly 3 inches in diameter, are used in lanterns. Light quartz was used extensively inside kaers (large quartzes) during the Scourge, and these gems can still be found in use in most towns and cities. Most light quartzes can be dimmed and turned on or off on command. To provide sustenance for the living crystal, the light quartz is enchanted. The enchantments must be renewed each year at a cost of 10 silver pieces. Without the enchantment the crystal loses its ability to glow and the living crystal becomes dormant."
   },
    "Light Quartz, Medium": {
     "type": "Common Magic Item",
@@ -132,7 +132,7 @@
     "Availability": "Unusual",
     "Cost": "125",
     "Weight": "6",
-    "Description": ""
+    "Description": "Enchanted with magical light, light quartz comes in a wide variety of sizes and colors. The most common pieces, roughly 3 inches in diameter, are used in lanterns. Light quartz was used extensively inside kaers (large quartzes) during the Scourge, and these gems can still be found in use in most towns and cities. Most light quartzes can be dimmed and turned on or off on command. To provide sustenance for the living crystal, the light quartz is enchanted. The enchantments must be renewed each year at a cost of 10 silver pieces. Without the enchantment the crystal loses its ability to glow and the living crystal becomes dormant."
   },
   "Light Quartz, Large": {
     "type": "Common Magic Item",
@@ -141,7 +141,7 @@
     "Availability": "Rare",
     "Cost": "200",
     "Weight": "20",
-    "Description": ""
+    "Description": "Enchanted with magical light, light quartz comes in a wide variety of sizes and colors. The most common pieces, roughly 3 inches in diameter, are used in lanterns. Light quartz was used extensively inside kaers (large quartzes) during the Scourge, and these gems can still be found in use in most towns and cities. Most light quartzes can be dimmed and turned on or off on command. To provide sustenance for the living crystal, the light quartz is enchanted. The enchantments must be renewed each year at a cost of 10 silver pieces. Without the enchantment the crystal loses its ability to glow and the living crystal becomes dormant."
   },
   "Light Quartz Weapon": {
     "type": "Common Magic Item",
@@ -150,7 +150,7 @@
     "Availability": "Rare",
     "Cost": "100",
     "Weight": "1",
-    "Description": ""
+    "Description": "Though rarely found in Barsaive, weapons with small light quartz crystals embedded in their hilts permit their wielders to use the weapons as light sources. Such weapons are favored by adventurers who explore underground regions, especially kaers. The light quartzes used are smaller than standard light quartzes and roughly half as effective. Also, light quartz crystals can be installed in a weapon's hilt only when a weapon is being made. The cost of the weapon is additional to the cost of the quartz. Like small light quartzes, the enchantment must be renewed each year at a cost of 10 silver pieces."
   },
   "Message Stone": {
     "type": "Common Magic Item",
@@ -159,7 +159,7 @@
     "Availability": "Unusual",
     "Cost": "300",
     "Weight": "2",
-    "Description": ""
+    "Description": "Message stones are living crystals woven with True Earth and True Air that enable them to capture sounds within their crystalline structure. A spoken command is used to release the message. Government couriers and wealthy merchants often use these stones to deliver important messages in the sender's own voice. More expensive message stones have wards cast on them to safeguard their messages against tampering."
   },
   "Message Stone (warded)": {
     "type": "Common Magic Item",
@@ -168,7 +168,7 @@
     "Availability": "Rare",
     "Cost": "600",
     "Weight": "2",
-    "Description": ""
+    "Description": "Message stones are living crystals woven with True Earth and True Air that enable them to capture sounds within their crystalline structure. A spoken command is used to release the message. Government couriers and wealthy merchants often use these stones to deliver important messages in the sender's own voice. More expensive message stones have wards cast on them to safeguard their messages against tampering."
   },
   "One-Size Hat": {
     "type": "Common Magic Item",
@@ -177,7 +177,7 @@
     "Availability": "Unusual",
     "Cost": "35",
     "Weight": "1",
-    "Description": ""
+    "Description": "This high-quality headgear is made with minor magics that makes the hat fit perfectly to any head. Any one-size hat of the correct basic size tailors itself to fit the individual customer's skull shape. Any race, including obsidimen and t'skrang, can wear a one-size hat."
   },
   "Orichalcum Container": {
     "type": "Common Magic Item",
@@ -186,7 +186,7 @@
     "Availability": "Rare",
     "Cost": "5,000",
     "Weight": "1",
-    "Description": ""
+    "Description": "A small container sufficient to hold up to twenty kernels of a True Element. These containers usually are fashioned in the form of small boxes with hinged lids and engraved with protective runes and symbols."
   },
   "Pot of Grumbah, Small": {
     "type": "Common Magic Item",
@@ -195,7 +195,7 @@
     "Availability": "Rare",
     "Cost": "75",
     "Weight": "2",
-    "Description": ""
+    "Description": "Pots of grumbah are heavy-lidded pots made of black iron and the hides of ice flyers, with kernels of True Air woven into them. They are most often used to carry food, and occasionally used to transport the remains of creatures. The pots are airtight once sealed and keep their contents cold, tripling the amount of time the contents remain fresh before decaying. The pots come in a variety of sizes ranging from one foot to one yard in diameter and weigh anywhere from two to five pounds."
   },
   "Pot of Grumbah, Large": {
     "type": "Common Magic Item",
@@ -204,7 +204,7 @@
     "Availability": "Rare",
     "Cost": "200",
     "Weight": "5",
-    "Description": ""
+    "Description": "Pots of grumbah are heavy-lidded pots made of black iron and the hides of ice flyers, with kernels of True Air woven into them. They are most often used to carry food, and occasionally used to transport the remains of creatures. The pots are airtight once sealed and keep their contents cold, tripling the amount of time the contents remain fresh before decaying. The pots come in a variety of sizes ranging from one foot to one yard in diameter and weigh anywhere from two to five pounds."
   },
   "Pure Water Pot": {
     "type": "Common Magic Item",
@@ -213,7 +213,7 @@
     "Availability": "Rare",
     "Cost": "150",
     "Weight": "2",
-    "Description": ""
+    "Description": "For the most part, water from running brooks, streams, or rivers is clean enough for drinking, though characters may wish to purify it just to be safe. Some adventurers carry magically enchanted pure water pots that cast the Purify Water spell, p. 190, with a Spellcasting and Effect Step of 8/2D6 on any liquid placed in them."
   },
   "Quiet Fingers Gloves": {
     "type": "Common Magic Item",
@@ -222,7 +222,7 @@
     "Availability": "Unusual",
     "Cost": "140",
     "Weight": "1",
-    "Description": ""
+    "Description": "These gloves muffle the sound of the character's hands bouncing or bumping against someone else's property. If another person tries to detect the character wearing these gloves while he is attempting to pick a lock or a pocket, add +1 to the Difficulty Number for the required Perception test. Quiet-fingers gloves only work when the character is actively using his hands."
   },
   "Quiet Pouch": {
     "type": "Common Magic Item",
@@ -231,7 +231,7 @@
     "Availability": "Rare",
     "Cost": "65",
     "Weight": "2",
-    "Description": ""
+    "Description": "Minor silencing illusions, such as those used in quiet-fingers gloves, are woven into the fabric of these pouches and prevent noise from emerging. Wealthy travelers often use quiet pouches to keep thieves and beggars from hearing the jingling of coins as they walk."
   },
   "Season Lamp": {
     "type": "Common Magic Item",
@@ -240,25 +240,25 @@
     "Availability": "Rare",
     "Cost": "350",
     "Weight": "NA",
-    "Description": ""
+    "Description": "These elaborate hanging lamps are made from brass or iron woven with True Air and fire. The two elements alternately warm or cool the room where the lamp hangs, keeping it at a constant temperature regardless of the weather outside. Season lamps are most commonly used in the homes of the well-to-do to create a comfortable environment."
   },
-  "Traveler’s Mug": {
+  "Traveler's Mug": {
     "type": "Common Magic Item",
     "magical": "True",
     "bloodCharm": "False",
     "Availability": "Rare",
     "Cost": "350",
     "Weight": "1",
-    "Description": ""
+    "Description": "Traveler's mugs are large steel mugs decorated with symbols of healing and endurance executed in precious metals. These pint mugs are enchanted with orichalcum and True Water and fill up once per day with cool fresh water upon a spoken command."
   },
-  "Upandal’s Blessings": {
+  "Upandal's Blessings": {
     "type": "Common Magic Item",
     "magical": "True",
     "bloodCharm": "False",
     "Availability": "Rare",
     "Cost": "275",
     "Weight": "3",
-    "Description": ""
+    "Description": "These wooden-handled tools, which combine a file with a chisel and hand drill, have won much praise from artisans and enchanters. The central shafts of each tool are made of rune-encrusted metals woven with generous amounts of True Earth and True Wood. The tools enable an artist to correct mistakes when crafting items from any substance, so long as he does so within five minutes of making the error. The tools are especially useful to artists working with precious metals or similar substances, as they can correct errors without whittling their carvings down to a smaller size. Often used by craftsmen to decorate shields and weapons, Upandal's blessings were also used to etch runes into kaer doors during the Scourge. Should the user of these tools fail a Craftsman or Artisan test he may immediately erase his mistake and make a second test. Using Upandal's blessings when crafting magical items requires a Craftsman or Artisan test against the item's Mystic Defense."
   },
   "Wind Instrument": {
     "type": "Common Magic Item",
@@ -267,7 +267,7 @@
     "Availability": "Rare",
     "Cost": "250",
     "Weight": "2+",
-    "Description": ""
+    "Description": "Wind instruments, such as flutes or trumpets, often have True Air woven into them to give the instrument a clearer, purer sound that carries much better than usual. The True Air also allows the musician to play the instrument with less effort and for longer periods of time than he could play a non-magical instrument. The musician gains a +1 bonus to his Emotion Song tests, if he possesses the talent or skill, and to any other Action tests made to determine how well he plays the instrument."
   },
   "AbsorbBlow": {
     "type": "",
@@ -276,7 +276,7 @@
     "Availability": "Unusual",
     "Cost": "100",
     "Weight": "1",
-    "Description": ""
+    "Description": "Absorb blow charms are usually made from quartz, veined red from the character's blood. Implanting the charm causes the character 2 Blood Magic Damage. When activated, it absorbs the first 12 Damage Points inflicted on the character. A character cannot use the charm if he is Surprised or Blindsided. After absorbing 12 Damage Points, the charm is destroyed, leaving only a cracked, blackened piece of stone."
   },
   "Astral-SensitiveEye": {
     "type": "",
@@ -285,7 +285,7 @@
     "Availability": "Unusual",
     "Cost": "325",
     "Weight": "1",
-    "Description": ""
+    "Description": "Astral-sensitive eyes are magically treated lumps of amber, hollowed out and filled with nourishing fluid and a gel worm, then attached to an eye patch. When first worn, the worm burrows into the character's eye, destroying it. Though the fluid in the gem makes it relatively painless, this process causes the character 2 permanent damage. Once implanted, the charm can never be removed, and the damage can never be healed. Though the character's normal vision through the gem is slightly cloudy, the eye allows him to see into astral space as if he possessed the Astral Sight talent, p. 129. The character gains a +1 bonus to Astral Sensing tests, using his Perception Step. If the character knows the Astral Sight talent, he gains a +1 bonus to his Astral Sight test. The character takes 1 Strain each time he uses the eye."
   },
   "BoneCharm": {
     "type": "",
@@ -294,7 +294,7 @@
     "Availability": "Rare",
     "Cost": "175",
     "Weight": "1",
-    "Description": ""
+    "Description": "Many ork tribes make magical charms from the bones of dead enemies who fought with valor, hoping to take the dead opponent's strength and courage for themselves. They are available in two versions: Common bone charms are left unshaped as small chunks of knuckle-sized bone set into the wearer's skin with a metal pin. Implanting the charm causes the character 1 Blood Magic Damage and grants a +1 bonus to his Recovery tests. Shaped bone charms are worn only by tribal chieftains or magicians and are carved into shapes meaningful to the wearer, often crude or intricate representations of one of the Passions. These may be up to four inches long, are attached along the character's forearm, and are otherwise identical to absorb blow charms."
   },
   "DarksightEye": {
     "type": "",
@@ -303,7 +303,7 @@
     "Availability": "Unusual",
     "Cost": "200",
     "Weight": "1",
-    "Description": ""
+    "Description": "A darksight eye is a magically treated piece of living crystal, hollowed out and filled with nourishing fluid and a gel worm, then attached to an eye patch. When first worn, the worm burrows into the character's eye, destroying it. Though the fluid in the gem makes it relatively painless, this process causes the character 2 permanent damage. Once implanted, the charm can never be removed, and the damage can never be healed. Though the character's normal vision through the gem is slightly cloudy, the eye allows him to see in the dark as if he possessed Low Light Vision, p. 46. A character who already has this ability gains no benefit from wearing a darksight eye."
   },
   "DeathCheat": {
     "type": "",
@@ -312,7 +312,7 @@
     "Availability": "Unusual",
     "Cost": "450",
     "Weight": "1",
-    "Description": ""
+    "Description": "Usually made of turquoise or tourmaline, this charm bears a characteristic red spot drawn from the wearer's blood. Implanting a death cheat charm causes the character 3 Blood Magic Damage. Upon the character's death, the death cheat charm allows the character to make a Recovery test with a +6 bonus. Should the character have no Recovery tests available, it grants a bonus Step 6/D10 Recovery test. If the result is enough to bring the character's Current Damage total below his Death Rating then he lives, otherwise he remains dead. Once the charm has been used, it becomes inert, appearing as a translucent stone drained of most of its color. Though the charm has no intrinsic value thereafter, nobles or would-be heroes sometimes offer up to 100 silver pieces for a used death cheat charm, openly wearing them as an unearned badge of honor."
   },
   "DesperateBlow": {
     "type": "",
@@ -321,7 +321,7 @@
     "Availability": "Unusual",
     "Cost": "275",
     "Weight": "1",
-    "Description": ""
+    "Description": "Charm makers usually fashion desperate blow charms from steel and quartz. Implanting the charm causes the character 3 Blood Magic damage. The character's blood infuses the quartz with red, and one drop of blood is perpetually suspended from the steel. When activated, a desperate blow charm grants a +6 bonus to an Attack or Damage test, chosen by the character. The charm may be recharged after use, which first requires the character to heal the damage caused by using the charm."
   },
   "DesperateSpell": {
     "type": "",
@@ -330,7 +330,7 @@
     "Availability": "Unusual",
     "Cost": "300",
     "Weight": "1",
-    "Description": ""
+    "Description": "Implanting a desperate spell charm causes the character 3 Blood Magic Damage. Made of silver and a small pearl, the character's blood leaves brilliant red speckles on the pearl. When activated, a desperate blow charm grants a +6 bonus to a Spellcasting or spell Effect test, chosen by the character. The charm may be recharged after use, which first requires the character to heal the damage caused by the charm."
   },
   "GarlenStone": {
     "type": "",
@@ -339,7 +339,7 @@
     "Availability": "Rare",
     "Cost": "250",
     "Weight": "1",
-    "Description": ""
+    "Description": "Garlen stones are small pebbles covered in golden caterpillar-like hairs. When swallowed, the hairs lengthen into spines and the stone attaches itself to the character's stomach or intestinal wall. Swallowing a Garlen stone causes the character 4 permanent damage. Once ingested, a stone cannot be removed without killing its owner. For this reason, the damage caused by swallowing a Garlen stone can never be healed. For 2 Strain, the character may use one of his available Recovery tests to heal a Wound instead of healing Damage Points. The Garlen stone cannot be used again until the character has healed all Wounds and Damage Points he has taken, and never twice within the same day. Garlen stones can only be created by questors of Garlen."
   },
   "HornNeedle": {
     "type": "",
@@ -348,7 +348,7 @@
     "Availability": "Rare",
     "Cost": "450",
     "Weight": "1",
-    "Description": ""
+    "Description": "These charms are small pieces of ivory or other animal horn painstakingly carved into thin needles. When implanted under the user's skin, the needle darkens from yellowish-gray to red with black streaks, and remains visible through the skin. This causes the character 3 Blood Magic Damage. The charm increases the wearer's resistance to poisons and diseases. For 2 Strain, the character gains a +3 bonus to Toughness-based tests or adds +3 to his Mystic Defense when resisting the effects of poison or disease."
   },
   "HorrorFend": {
     "type": "",
@@ -357,7 +357,7 @@
     "Availability": "Unusual",
     "Cost": "500",
     "Weight": "1",
-    "Description": ""
+    "Description": "Charm makers construct Horror fend charms from gold and silver designed around a piece of True Earth. Two drops of the wearer's blood travel along the gold, soak into the earth, emerge in the silver, then soak into the earth to start the pattern again. Implanting the charm causes the character 3 Blood Magic Damage. Horror fend charms offer protection against the Horrors or their constructs. For 1 Strain per round, the character adds +3 to his Physical and Mystic Defense against Horrors and Horror constructs. When the character stops using it, the charm falls inert from his body. The charm may be reattached, but requires the character to heal the damage caused by the charm before recharging."
   },
   "InitiativeBooster": {
     "type": "",
@@ -366,7 +366,7 @@
     "Availability": "Rare",
     "Cost": "600",
     "Weight": "1",
-    "Description": ""
+    "Description": "Made from ruby-colored crystal, Initiative booster charms turn as dark as obsidian when they absorb the wearer's blood. Implanting the charm causes the character 4 Blood Magic Damage. These charms grant their wearer a bonus to Initiative tests; for each point of Strain the character takes, he gains a +1 bonus to his Initiative test. The character must declare he is using the charm, and how much Strain he is taking, before he makes the test."
   },
   "StrengthBooster": {
     "type": "",
@@ -375,7 +375,7 @@
     "Availability": "Rare",
     "Cost": "300",
     "Weight": "1",
-    "Description": ""
+    "Description": "Strength boosters are most often made of clear crystal that turns deep red when activated by the wearer's blood. These charms grant their wearer a bonus to Strength tests; for every 2 Strain the character takes, he gains a +1 bonus to Strength tests. A strength booster charm cannot be used to augment Damage tests. Attaching a strength booster charm causes the character 2 Blood Magic Damage."
   },
   "TargetingEye": {
     "type": "",
@@ -384,7 +384,7 @@
     "Availability": "Unusual",
     "Cost": "450",
     "Weight": "1",
-    "Description": ""
+    "Description": "A targeting eye is a magically treated piece of quartz, hollowed out and filled with a gel worm and nourishing fluid, then attached to an eye patch. When first worn, the worm burrows into the wearer's eye, destroying it. Though the fluid in the gem makes it relatively painless, the process causes the character 2 permanent damage. Once implanted, the charm can never be removed, and the damage can never be healed. The character sees through the quartz normally, though his vision through that eye is a little cloudy. For 1 Strain, the character gains a +2 bonus to his next ranged combat Attack test. This may be used multiple times per round."
   },
   "WoundBalance": {
     "type": "",
@@ -393,7 +393,7 @@
     "Availability": "Unusual",
     "Cost": "200",
     "Weight": "1",
-    "Description": ""
+    "Description": "Wound Balance charms are made of amber-colored crystal and turn a deep orange when activated by the wearer's blood. Embedding the charm causes 3 Blood Magic Damage. For 1 Strain, the wearer gains a +3 bonus to a Knockdown test."
   },
   "BoosterPotion": {
     "type": "Healing Aid",
@@ -402,7 +402,7 @@
     "Availability": "Unusual",
     "Cost": "50",
     "Weight": "2",
-    "Description": ""
+    "Description": "A booster potion improves the effectiveness of the character's healing processes, granting a +8 bonus to the next Recovery test the character makes within 24 hours."
   },
   "CureDiseasePotion": {
     "type": "Healing Aid",
@@ -411,7 +411,7 @@
     "Availability": "Rare",
     "Cost": "500",
     "Weight": "2",
-    "Description": ""
+    "Description": "This potion helps a character resist the effects of a disease they have caught. It grants the character a new Resistance test against the disease, and boosts the character's immune system. For 24 hours, the potion grants a +5 bonus to any tests made to resist the effects of a disease."
   },
   "HaltIllnessPotion": {
     "type": "Healing Aid",
@@ -420,7 +420,7 @@
     "Availability": "Unusual",
     "Cost": "100",
     "Weight": "1",
-    "Description": ""
+    "Description": "This potion slows the progress of diseases and illnesses. Once ingested, it stops a disease's progression for 8 hours. Any effects caused before the potion was taken remain in effect. The illness runs its normal course once the potion's effects end. It is commonly used to stabilize a patient while a cure is sought."
   },
   "HealingPotion": {
     "type": "Healing Aid",
@@ -429,25 +429,25 @@
     "Availability": "Rare",
     "Cost": "300",
     "Weight": "2",
-    "Description": ""
+    "Description": "A healing potion automatically heals one Wound and grants a +8 bonus to the character's next Recovery test within 24 hours. If the character has no Recovery tests left when ingesting the potion, he may choose to make an immediate Recovery test with a Step 8/2D6."
   },
-  "Kelia’sAntidote": {
+  "Kelia'sAntidote": {
     "type": "Healing Aid",
     "magical": "True",
     "bloodCharm": "False",
     "Availability": "Rare",
     "Cost": "125",
     "Weight": "2",
-    "Description": ""
+    "Description": "Kelia's antidote neutralizes the effects of poison for 8 hours. After being used, the character does not suffer new ill effects from being poisoned, but any effects caused before the antidote was taken remain. If poisoned after taking the potion, the character makes tests to resist the poison as normal, but does not suffer from any negative effects until the Antidote's duration ends."
   },
-  "Kelix’sPoultice": {
+  "Kelix'sPoultice": {
     "type": "Healing Aid",
     "magical": "True",
     "bloodCharm": "False",
     "Availability": "Unusual",
     "Cost": "50",
     "Weight": "1",
-    "Description": ""
+    "Description": "Kelix's poultice helps a character shake off the effects of a poison. It grants the character a new Resistance test and adds a +5 bonus to any tests the character makes to resist the effects of a poison. The poultice must be applied to the injury where the poison entered the character's system. If no injury exists or if it cannot be identified, an injury must be caused. This reduces the poultice's effectiveness to a +3 bonus."
   },
   "LastChanceSalve": {
     "type": "Healing Aid",
@@ -456,7 +456,7 @@
     "Availability": "Very",
     "Cost": "600",
     "Weight": "1",
-    "Description": ""
+    "Description": "A last chance salve can be applied to a character who has been dead for a number of hours no greater than the higher of his Toughness or Willpower Steps. After it is smeared over the character's body, a process usually taking 5 minutes, the salve glows a gentle blue over the next ten minutes as it works its magic. The character may take all of his remaining Recovery tests. If he has no Recovery tests available, the last chance salve grants him a bonus Recovery test. If the character's Current Damage total is brought below his Death Rating, then he returns to life, otherwise he remains dead. Multiple last chance salves may be applied to a character, but only one salve will be effective during any one hour period."
   },
   "SalveofClosure": {
     "type": "Healing Aid",
@@ -465,7 +465,7 @@
     "Availability": "Rare",
     "Cost": "200",
     "Weight": "1",
-    "Description": ""
+    "Description": "A salve of closure automatically heals any Wound to which it is applied. Activating the salve costs the character one of his Recovery tests. If he has no Recovery tests available, then the salve has no effect."
   },
   "Adventuring Kit: Backpack, bedroll, flint and steel, torch, waterskin, large sack": {
     "type": "Adventuring Equipment",
@@ -474,7 +474,7 @@
     "Availability": "Average",
     "Cost": "15",
     "Weight": "14",
-    "Description": ""
+    "Description": "The adventuring equipment package deal includes basic equipment most adventurers can reasonably expect to need and use, and offers players a simple method of buying adventuring equipment for their characters. All characters begin game play with an adventurer's kit (see Equip Your Character, p. 72)."
   },
   "As above, with tent": {
     "type": "Adventuring Equipment",
@@ -483,25 +483,25 @@
     "Availability": "Average",
     "Cost": "40",
     "Weight": "34",
-    "Description": ""
+    "Description": "This adventuring kit includes a tent in addition to the basic equipment (backpack, bedroll, flint and steel, torch, waterskin, large sack)."
   },
-  "Alchemist’s Kit": {
+  "Alchemist's Kit": {
     "type": "Adventuring Equipment",
     "magical": "False",
     "bloodCharm": "False",
     "Availability": "Unusual",
     "Cost": "500",
     "Weight": "15",
-    "Description": ""
+    "Description": "This portable alchemy lab is used by traveling alchemists and fits into a case the size of a backpack. It contains the absolute minimum of equipment required to perform alchemical tasks. Characters using an alchemist's kit suffers a -3 penalty to his Alchemy tests (p. 191)."
   },
-  "Alchemist’s Shop": {
+  "Alchemist's Shop": {
     "type": "Adventuring Equipment",
     "magical": "False",
     "bloodCharm": "False",
     "Availability": "Unusual",
     "Cost": "2,000",
     "Weight": "NA",
-    "Description": ""
+    "Description": "A complete alchemy lab containing glassware, mortars, jars, elemental burners, crucibles and the like, for use with the Alchemy skill. An alchemist's shop is not portable because of all of the bulky and delicate apparatus involved."
   },
   "Carving": {
     "type": "Adventuring Equipment",
@@ -510,7 +510,7 @@
     "Availability": "Average",
     "Cost": "15",
     "Weight": "3",
-    "Description": ""
+    "Description": "Tools for carving, used with the Artisan skill."
   },
   "Embroidery/Sewing": {
     "type": "Adventuring Equipment",
@@ -519,7 +519,7 @@
     "Availability": "Average",
     "Cost": "25",
     "Weight": "1",
-    "Description": ""
+    "Description": "Embroidery or sewing tools, used with the Artisan skill."
   },
   "Forge": {
     "type": "Adventuring Equipment",
@@ -528,7 +528,7 @@
     "Availability": "Unusual",
     "Cost": "100",
     "Weight": "20",
-    "Description": ""
+    "Description": "A portable forge, used with the Artisan skill."
   },
   "Painting": {
     "type": "Adventuring Equipment",
@@ -537,7 +537,7 @@
     "Availability": "Average",
     "Cost": "45",
     "Weight": "2",
-    "Description": ""
+    "Description": "Painting supplies, used with the Artisan skill."
   },
   "Sculpting": {
     "type": "Adventuring Equipment",
@@ -546,7 +546,7 @@
     "Availability": "Average",
     "Cost": "30",
     "Weight": "3",
-    "Description": ""
+    "Description": "Sculpting tools, used with the Artisan skill."
   },
   "Backpack": {
     "type": "Adventuring Equipment",
@@ -555,7 +555,7 @@
     "Availability": "Average",
     "Cost": "5",
     "Weight": "3",
-    "Description": ""
+    "Description": "Usually made from leather or burlap, a standard backpack can hold approximately 50 pounds of goods."
   },
   "Bedroll": {
     "type": "Adventuring Equipment",
@@ -564,7 +564,7 @@
     "Availability": "Average",
     "Cost": "5",
     "Weight": "4",
-    "Description": ""
+    "Description": "Bedding and a blanket slim enough to be rolled up and tied for carrying. Adventurers use them to sleep in an impromptu fashion on the road. Each bedroll accommodates one person."
   },
   "Belt Pouch": {
     "type": "Adventuring Equipment",
@@ -573,7 +573,7 @@
     "Availability": "Everyday",
     "Cost": "8cp",
     "Weight": "1",
-    "Description": ""
+    "Description": "A small leather or cloth bag either tied to or threaded onto one's belt, the belt pouch typically holds approximately 5 pounds of goods."
   },
   "Blanket": {
     "type": "Adventuring Equipment",
@@ -582,7 +582,7 @@
     "Availability": "Everyday",
     "Cost": "15cp",
     "Weight": "2",
-    "Description": ""
+    "Description": "A thick, wool blanket. Standard gear for travel in cold, mountainous terrain."
   },
   "Candle": {
     "type": "Adventuring Equipment",
@@ -591,7 +591,7 @@
     "Availability": "Everyday",
     "Cost": "3cp",
     "Weight": "4oz",
-    "Description": ""
+    "Description": "A wax cylinder with a wick in its center and a clay or metal plate to hold the melting wax. The standard light source for home use, a candle illuminates a 3-yard radius. A favorite of troubadours and magicians when writing late at night."
   },
   "Heavy (10ft)": {
     "type": "Adventuring Equipment",
@@ -600,7 +600,7 @@
     "Availability": "Average",
     "Cost": "50",
     "Weight": "9",
-    "Description": ""
+    "Description": "A 10-foot length of heavy chain that can be used for binding and capturing as well as climbing. Obsidimen and trolls require the heavy version to assist them when climbing. If used to bind someone, light chain can be broken with a successful Strength (11) test; heavy chain with a successful Strength (14) test. A bound character is usually considered Harried for this test."
   },
   "Light (10ft)": {
     "type": "Adventuring Equipment",
@@ -609,7 +609,7 @@
     "Availability": "Average",
     "Cost": "10",
     "Weight": "6",
-    "Description": ""
+    "Description": "A 10-foot length of light chain that can be used for binding and capturing as well as climbing. If used to bind someone, the chain can be broken with a successful Strength (11) test. A bound character is usually considered Harried for this test."
   },
   "Chalk (5 pieces)": {
     "type": "Adventuring Equipment",
@@ -618,7 +618,7 @@
     "Availability": "Everyday",
     "Cost": "3cp",
     "Weight": "4oz",
-    "Description": ""
+    "Description": "Five pieces of ordinary chalk, useful for marking trails or drawing."
   },
   "Climbing Kit: Rope (20ft), Light Chain (10ft), 2 Pitons, Grappling Hook": {
     "type": "Adventuring Equipment",
@@ -627,7 +627,7 @@
     "Availability": "Average",
     "Cost": "36",
     "Weight": "19",
-    "Description": ""
+    "Description": "Comes with all the tools necessary for climbing."
   },
   "Craftsman Tools": {
     "type": "Adventuring Equipment",
@@ -636,7 +636,7 @@
     "Availability": "Average",
     "Cost": "25",
     "Weight": "5",
-    "Description": ""
+    "Description": "Different craftsman tools are necessary to use the Craftsman skill, p. 195."
   },
   "Disguise Kit": {
     "type": "Adventuring Equipment",
@@ -645,7 +645,7 @@
     "Availability": "Average",
     "Cost": "50",
     "Weight": "6",
-    "Description": ""
+    "Description": "A metal box filled with makeup, hair dye, cheap accessories, and clothing outfits useful for creating disguises. Essential for using the Disguise skill, p. 196."
   },
   "Fishing Kit: 10 Fish Hooks, Fishing Net, Fishing Rod, Bait Jar": {
     "type": "Adventuring Equipment",
@@ -654,7 +654,7 @@
     "Availability": "Average",
     "Cost": "20",
     "Weight": "14",
-    "Description": ""
+    "Description": "Comes with all the tools necessary for fishing. Used in conjunction with the Wilderness Survival skill, p. 179."
   },
   "Fishing Net (30 sq ft)": {
     "type": "Adventuring Equipment",
@@ -663,7 +663,7 @@
     "Availability": "Average",
     "Cost": "15",
     "Weight": "10",
-    "Description": ""
+    "Description": "A 30 square foot fishing net used for catching fish."
   },
   "Flint and Steel": {
     "type": "Adventuring Equipment",
@@ -672,7 +672,7 @@
     "Availability": "Everyday",
     "Cost": "1",
     "Weight": "8oz",
-    "Description": ""
+    "Description": "A piece of flint and steel that, when struck forcefully together, creates sparks for starting fires. Used to light tinder to create campfires and to ignite torches."
   },
   "Grappling Hook": {
     "type": "Adventuring Equipment",
@@ -681,7 +681,7 @@
     "Availability": "Average",
     "Cost": "10",
     "Weight": "5",
-    "Description": ""
+    "Description": "A hook with an eye for attachment to a length of chain or rope. The grappling hook is used to secure a rope or chain for climbing. Grappling hooks can be thrown by making a Throwing Weapons test against a Difficulty Number determined by the gamemaster (usually 7). The character must use the Called Shot combat option to hit the intended location."
   },
   "Healing Kit:": {
     "type": "Healing Kit",
@@ -690,7 +690,7 @@
     "Availability": "5",
     "Cost": "Basic (3 applications)",
     "Weight": "75",
-    "Description": ""
+    "Description": "A healing kit comes in a small shoulder bag and contains bandages, salves, and herbal potions that can speed recovery from injury. A character treated for at least ten minutes with a healing kit gains a +1 bonus to his next Recovery test. Each healing kit contains enough supplies for three applications. A three-application refill can be purchased separately but requires the basic components of a healing kit to be useful."
   },
   "Unusual": {
     "type": "Healing Kit",
@@ -699,7 +699,7 @@
     "Availability": "Neg.",
     "Cost": "Refill (3 applications)",
     "Weight": "50",
-    "Description": ""
+    "Description": "A three-application refill for a healing kit. Requires a basic healing kit to be useful."
   },
   "Iron Pot": {
     "type": "Adventuring Equipment",
@@ -708,7 +708,7 @@
     "Availability": "Average",
     "Cost": "20",
     "Weight": "8",
-    "Description": ""
+    "Description": "An iron pot is common in households throughout Barsaive as the standard form of cookware, but is sometimes used by adventurers to prepare meals on the road. Adventurers who hunt commonly carry this item to create stews from smaller game."
   },
   "Hooded": {
     "type": "Lantern",
@@ -717,7 +717,7 @@
     "Availability": "Average",
     "Cost": "9",
     "Weight": "3",
-    "Description": ""
+    "Description": "A hooded lantern illuminates a 10-yard-radius area. Most lanterns burn oil, but some use light quartz to provide illumination equivalent to a hooded lantern."
   },
   "Bullseye": {
     "type": "Lantern",
@@ -726,7 +726,7 @@
     "Availability": "Average",
     "Cost": "27",
     "Weight": "3",
-    "Description": ""
+    "Description": "A bull's-eye lantern focuses the light into a 2-yard-wide beam that extends to 20 yards. Most lanterns burn oil, but some use light quartz to provide illumination equivalent to a hooded lantern."
   },
   "Light Quartz": {
     "type": "Adventuring Equipment",
@@ -735,7 +735,7 @@
     "Availability": "Unusual",
     "Cost": "85",
     "Weight": "5",
-    "Description": ""
+    "Description": "Enchanted with magical light, light quartz comes in a wide variety of sizes and colors. To provide sustenance for the living crystal, the light quartz is enchanted. The enchantments must be renewed each year at a cost of 10 silver pieces. Without the enchantment the crystal loses its ability to glow and the living crystal becomes dormant."
   },
   "Map or Scroll Case": {
     "type": "Adventuring Equipment",
@@ -744,7 +744,7 @@
     "Availability": "Average",
     "Cost": "8cp",
     "Weight": "1",
-    "Description": ""
+    "Description": "A capped tube used for storing rolled pieces of paper or parchment. When capped, the case is water resistant, but not necessarily watertight."
   },
   "Drum": {
     "type": "Musical Instrument",
@@ -753,7 +753,7 @@
     "Availability": "Average",
     "Cost": "7",
     "Weight": "5",
-    "Description": ""
+    "Description": "A musical instrument for use with the Entertainer skill, p. 196."
   },
   "Flute": {
     "type": "Musical Instrument",
@@ -762,7 +762,7 @@
     "Availability": "Average",
     "Cost": "2",
     "Weight": "2",
-    "Description": ""
+    "Description": "A musical instrument for use with the Entertainer skill, p. 196."
   },
   "Horn": {
     "type": "Musical Instrument",
@@ -771,7 +771,7 @@
     "Availability": "Average",
     "Cost": "70",
     "Weight": "7",
-    "Description": ""
+    "Description": "A musical instrument for use with the Entertainer skill, p. 196."
   },
   "Lute": {
     "type": "Musical Instrument",
@@ -780,7 +780,7 @@
     "Availability": "Unusual",
     "Cost": "25",
     "Weight": "6",
-    "Description": ""
+    "Description": "A musical instrument for use with the Entertainer skill, p. 196."
   },
   "Whistle": {
     "type": "Musical Instrument",
@@ -789,7 +789,7 @@
     "Availability": "Everyday",
     "Cost": "2cp",
     "Weight": "1",
-    "Description": ""
+    "Description": "A musical instrument for use with the Entertainer skill, p. 196."
   },
   "Navigation Charts": {
     "type": "Adventuring Equipment",
@@ -798,7 +798,7 @@
     "Availability": "Average",
     "Cost": "15",
     "Weight": "2",
-    "Description": ""
+    "Description": "A map and scroll case with a basic chart of the stars. Required to use the Navigation talent, p. 160."
   },
   "Oil Flask": {
     "type": "Adventuring Equipment",
@@ -807,7 +807,7 @@
     "Availability": "Everyday",
     "Cost": "6",
     "Weight": "1",
-    "Description": ""
+    "Description": "Used as fuel, each flask holds enough oil to fuel a lantern for eight hours."
   },
   "Paper/Parchment (sheet)": {
     "type": "Adventuring Equipment",
@@ -816,25 +816,25 @@
     "Availability": "Unusual",
     "Cost": "1",
     "Weight": "Neg.",
-    "Description": ""
+    "Description": "A prepared piece of cloth or vellum suitable for writing on."
   },
   "Basic (3 applications)": {
-    "type": "Physician’s Kit",
+    "type": "Physician's Kit",
     "magical": "False",
     "bloodCharm": "False",
     "Availability": "Average",
     "Cost": "50",
     "Weight": "3",
-    "Description": ""
+    "Description": "A metal box filled with tools for diagnosing illness, as well as unguents, salves, and specialized components to treat more serious injuries. A basic physician's kit can be used three times before its consumable supplies are exhausted. A three-application refill can be purchased, but requires the tools from the basic kit to be useful. A physician's kit is required to use the Physician skill, p. 198."
   },
   "Refill (3 applications)": {
-    "type": "Physician’s Kit",
+    "type": "Physician's Kit",
     "magical": "False",
     "bloodCharm": "False",
     "Availability": "Average",
     "Cost": "25",
     "Weight": "1",
-    "Description": ""
+    "Description": "A three-application refill for a physician's kit. Requires the tools from a basic physician's kit to be useful."
   },
   "Quill Pen": {
     "type": "Adventuring Equipment",
@@ -843,7 +843,7 @@
     "Availability": "Average",
     "Cost": "1",
     "Weight": "Neg.",
-    "Description": ""
+    "Description": "A feather with a specially shaped tip. When dipped in a vial of ink, it draws the liquid in, and leaves a trail when drawn across a piece of paper or parchment. A common tool for Troubadours and magicians."
   },
   "Rope, per yard": {
     "type": "Adventuring Equipment",
@@ -852,7 +852,7 @@
     "Availability": "Average",
     "Cost": "3",
     "Weight": "1",
-    "Description": ""
+    "Description": "Rope of various lengths, usually made of hemp, and useful for binding and capturing, as well as climbing. If used to bind someone, the rope can be broken with a successful Strength (8) test. A bound character is usually considered Harried for this test."
   },
   "Sack": {
     "type": "Adventuring Equipment",
@@ -861,7 +861,7 @@
     "Availability": "Everyday",
     "Cost": "2",
     "Weight": "2",
-    "Description": ""
+    "Description": "Made of burlap or heavy cloth, a sack holds approximately 30 pounds of goods."
   },
   "Tent": {
     "type": "Adventuring Equipment",
@@ -870,16 +870,16 @@
     "Availability": "Average",
     "Cost": "30",
     "Weight": "20",
-    "Description": ""
+    "Description": "A simple canvas shelter large enough to accommodate two human-sized characters."
   },
-  "Thieves’ Picks and Tools": {
+  "Thieves' Picks and Tools": {
     "type": "Adventuring Equipment",
     "magical": "False",
     "bloodCharm": "False",
     "Availability": "Unusual",
     "Cost": "100",
     "Weight": "1",
-    "Description": ""
+    "Description": "A set of these specialist tools is required for a character to make use of the Lock Picking skill, p. 157."
   },
   "Torch": {
     "type": "Adventuring Equipment",
@@ -888,7 +888,7 @@
     "Availability": "Everyday",
     "Cost": "5cp",
     "Weight": "1",
-    "Description": ""
+    "Description": "A wooden rod with its tip wrapped with an oil soaked rag. It can be lit by the spark from a flint and steel and typically burns for around an hour. The standard light source for adventurers, a torch illuminates a 10 yard radius. Unlit, it can be used as a club in melee combat, but is treated as an improvised weapon (see Improvised Melee Weapons, p. 392). A lit torch may also set flammable targets such as dry straw or cloth alight."
   },
   "Whetstone": {
     "type": "Adventuring Equipment",
@@ -897,7 +897,7 @@
     "Availability": "Everyday",
     "Cost": "2cp",
     "Weight": "1",
-    "Description": ""
+    "Description": "A tool for sharpening and maintaining weapons."
   },
   "Water or Wine Skin": {
     "type": "Adventuring Equipment",
@@ -906,7 +906,7 @@
     "Availability": "Everyday",
     "Cost": "2",
     "Weight": "4",
-    "Description": ""
+    "Description": "A leather pouch with a constricted bottleneck useful for holding liquids. A typical waterskin holds enough water for one day. The weight shown on the Adventuring Equipment Table is for a full skin."
   },
   "Writing Ink (per vial)": {
     "type": "Adventuring Equipment",
@@ -915,7 +915,7 @@
     "Availability": "Unusual",
     "Cost": "10",
     "Weight": "8oz",
-    "Description": ""
+    "Description": "Black ink for writing. Each vial contains enough ink to write eight to ten pages of information. Dyed inks of other colors are harder to find—increase the Availability Rating by one level—and cost two or more times the price of black ink."
   },
   "Writing Kit: Quill Pen, Writing Ink, 10 sheets Parchment or Paper, 2 Candles, 10 Pieces of Chalk": {
     "type": "Adventuring Equipment",
@@ -924,7 +924,7 @@
     "Availability": "Unusual",
     "Cost": "23",
     "Weight": "2",
-    "Description": ""
+    "Description": "Comes with all the tools necessary for writing."
   },
   "Canoe": {
     "type": "Transport",
@@ -933,7 +933,7 @@
     "Availability": "Average",
     "Cost": "20",
     "Weight": "",
-    "Description": ""
+    "Description": "A small canoe for water transportation."
   },
   "Large Cart": {
     "type": "Transport",
@@ -942,7 +942,7 @@
     "Availability": "Average",
     "Cost": "40",
     "Weight": "",
-    "Description": ""
+    "Description": "A large cart for transporting heavy goods."
   },
   "Small Cart": {
     "type": "Transport",
@@ -951,7 +951,7 @@
     "Availability": "Average",
     "Cost": "15",
     "Weight": "",
-    "Description": ""
+    "Description": "A small cart for transporting goods."
   },
   "Rowboat": {
     "type": "Transport",
@@ -960,6 +960,6 @@
     "Availability": "Average",
     "Cost": "50",
     "Weight": "",
-    "Description": ""
+    "Description": "A rowboat for water transportation."
   }
 }

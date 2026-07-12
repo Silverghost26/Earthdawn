@@ -1,0 +1,67 @@
+﻿[
+  {
+    "Service": "Armorer, Basic Decoration",
+    "Cost": "35",
+    "Availability": "Average"
+  },
+  {
+    "Service": "Armorer, Ornate Decoration",
+    "Cost": "140+",
+    "Availability": "Unusual"
+  },
+  {
+    "Service": "Farrier",
+    "Cost": "5",
+    "Availability": "Average"
+  },
+  {
+    "Service": "Library Access, Major City",
+    "Cost": "25",
+    "Availability": "Average"
+  },
+  {
+    "Service": "Library Access, Throal",
+    "Cost": "20",
+    "Availability": "Average"
+  },
+  {
+    "Service": "Messenger, City to City",
+    "Cost": "30-75",
+    "Availability": "Unusual"
+  },
+  {
+    "Service": "Messenger, Local",
+    "Cost": "5",
+    "Availability": "Average"
+  },
+  {
+    "Service": "Sage",
+    "Cost": "15-100",
+    "Availability": "Unusual"
+  },
+  {
+    "Service": "Scribe",
+    "Cost": "50-75",
+    "Availability": "Average"
+  },
+  {
+    "Service": "Weaponsmith, Basic Decoration",
+    "Cost": "45",
+    "Availability": "Average"
+  },
+  {
+    "Service": "Weaponsmith, Ornate Decoration",
+    "Cost": "180+",
+    "Availability": "Unusual"
+  },
+  {
+    "Service": "Weaponsmith, Forge Armor",
+    "Cost": "Rank x50",
+    "Availability": "Unusual"
+  },
+  {
+    "Service": "Weaponsmith, Forge Weapon",
+    "Cost": "Rank x50",
+    "Availability": "Unusual"
+  }
+]

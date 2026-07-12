@@ -86,6 +86,27 @@ public class DataServices : IDataServices
         return DataLoader.LoadJson<Dictionary<string, Talent>>(GetJson("Talents.json"));
     }
     
+    // New loaders for equipment tables
+    public List<TradeService> LoadTradeServices()
+    {
+        return DataLoader.LoadJson<List<TradeService>>(GetJson("TradeServiceTable.json"));
+    }
+
+    public List<Accommodation> LoadAccommodations()
+    {
+        return DataLoader.LoadJson<List<Accommodation>>(GetJson("AccommodationTable.json"));
+    }
+
+    public List<Clothing> LoadClothingItems()
+    {
+        return DataLoader.LoadJson<List<Clothing>>(GetJson("ClothingTable.json"));
+    }
+
+    public List<Provender> LoadProvenderItems()
+    {
+        return DataLoader.LoadJson<List<Provender>>(GetJson("ProvenderTable.json"));
+    }
+    
 
     private string GetJson(string file)
     {

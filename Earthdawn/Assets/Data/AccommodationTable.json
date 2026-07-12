@@ -1,0 +1,47 @@
+﻿[
+  {
+    "Item": "Flophouse",
+    "Cost Per Night": "1cp",
+    "Availability": "Everyday"
+  },
+  {
+    "Item": "Cheap Inn, Public Room",
+    "Cost Per Night": "5cp",
+    "Availability": "Everyday"
+  },
+  {
+    "Item": "Cheap Inn, Private Room",
+    "Cost Per Night": "1",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Guild Inn",
+    "Cost Per Night": "8",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Luxury Inn",
+    "Cost Per Night": "25",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Luxury Inn, with amenities",
+    "Cost Per Night": "40",
+    "Availability": "Unusual"
+  },
+  {
+    "Item": "Luxury Inn, with valet",
+    "Cost Per Night": "55+tips",
+    "Availability": "Rare"
+  },
+  {
+    "Item": "Merchant Inn",
+    "Cost Per Night": "3",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Merchant Inn, with bath",
+    "Cost Per Night": "5",
+    "Availability": "Unusual"
+  }
+]

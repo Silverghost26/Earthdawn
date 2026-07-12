@@ -1,0 +1,74 @@
+﻿[
+  {
+    "Item": "Ale, Average",
+    "Cost": "5cp",
+    "Weight": "NA",
+    "Availability": "Everyday"
+  },
+  {
+    "Item": "Ale, Dwarf Stout",
+    "Cost": "2",
+    "Weight": "NA",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Ale, Good",
+    "Cost": "1",
+    "Weight": "NA",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Wine, Average (bottle)",
+    "Cost": "5cp",
+    "Weight": "1",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Wine, Fine (bottle)",
+    "Cost": "5",
+    "Weight": "1",
+    "Availability": "Unusual"
+  },
+  {
+    "Item": "Meal, Average",
+    "Cost": "1",
+    "Weight": "NA",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Meal, Good",
+    "Cost": "3",
+    "Weight": "NA",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Meal, Simple",
+    "Cost": "3cp",
+    "Weight": "NA",
+    "Availability": "Everyday"
+  },
+  {
+    "Item": "Meal, Sumptuous",
+    "Cost": "50",
+    "Weight": "NA",
+    "Availability": "Unusual"
+  },
+  {
+    "Item": "Rations, Mine (1 week)",
+    "Cost": "25",
+    "Weight": "6",
+    "Availability": "Unusual"
+  },
+  {
+    "Item": "Rations, Trail (1 week)",
+    "Cost": "10",
+    "Weight": "8",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Theran Uyglar",
+    "Cost": "25",
+    "Weight": "NA",
+    "Availability": "Rare"
+  }
+]

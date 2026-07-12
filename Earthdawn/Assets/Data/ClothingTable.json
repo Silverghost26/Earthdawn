@@ -1,0 +1,314 @@
+﻿[
+  {
+    "Item": "Belt",
+    "Cost": "5cp",
+    "Weight": "Neg.",
+    "Availability": "Everyday"
+  },
+  {
+    "Item": "Boots: Soft",
+    "Cost": "1",
+    "Weight": "1",
+    "Availability": "Everyday"
+  },
+  {
+    "Item": "Boots: Riding",
+    "Cost": "4",
+    "Weight": "2",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Boots: Mountain",
+    "Cost": "8",
+    "Weight": "2",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Breeches: Peasant",
+    "Cost": "4cp",
+    "Weight": "1",
+    "Availability": "Everyday"
+  },
+  {
+    "Item": "Breeches: Merchant",
+    "Cost": "1",
+    "Weight": "1",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Breeches: Guild Member",
+    "Cost": "7",
+    "Weight": "1",
+    "Availability": "Unusual"
+  },
+  {
+    "Item": "Brooch: Plain",
+    "Cost": "2",
+    "Weight": "1",
+    "Availability": "Everyday"
+  },
+  {
+    "Item": "Brooch: Ornamental",
+    "Cost": "12",
+    "Weight": "1",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Brooch: Silver",
+    "Cost": "15",
+    "Weight": "1",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Brooch: Gold",
+    "Cost": "120",
+    "Weight": "2",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Cloak: Wool",
+    "Cost": "5",
+    "Weight": "1",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Cloak: Satin-lined",
+    "Cost": "14",
+    "Weight": "1",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Cloak: Traveler's",
+    "Cost": "8",
+    "Weight": "1",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Cloak: Fur-trimmed",
+    "Cost": "50",
+    "Weight": "1",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Cloak: Theran",
+    "Cost": "380",
+    "Weight": "2",
+    "Availability": "Unusual"
+  },
+  {
+    "Item": "Dress: Plain",
+    "Cost": "2",
+    "Weight": "1",
+    "Availability": "Everyday"
+  },
+  {
+    "Item": "Dress: Patterned",
+    "Cost": "7",
+    "Weight": "1",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Dress: Embroidered",
+    "Cost": "22",
+    "Weight": "2",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Dress: Satin",
+    "Cost": "100",
+    "Weight": "2",
+    "Availability": "Unusual"
+  },
+  {
+    "Item": "Dress: Ballroom Gown",
+    "Cost": "250",
+    "Weight": "4",
+    "Availability": "Unusual"
+  },
+  {
+    "Item": "Dress: Theran",
+    "Cost": "560",
+    "Weight": "6",
+    "Availability": "Unusual"
+  },
+  {
+    "Item": "Gloves",
+    "Cost": "2",
+    "Weight": "Neg.",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Hat: Felt",
+    "Cost": "4cp",
+    "Weight": "Neg.",
+    "Availability": "Everyday"
+  },
+  {
+    "Item": "Hat: Woolen",
+    "Cost": "12cp",
+    "Weight": "Neg.",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Hat: Fine",
+    "Cost": "9",
+    "Weight": "Neg.",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Hat: Courtier's",
+    "Cost": "18",
+    "Weight": "1",
+    "Availability": "Unusual"
+  },
+  {
+    "Item": "Hooded Mask",
+    "Cost": "3",
+    "Weight": "Neg.",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Hose: Plain",
+    "Cost": "5cp",
+    "Weight": "Neg.",
+    "Availability": "Everyday"
+  },
+  {
+    "Item": "Hose: Silk",
+    "Cost": "20",
+    "Weight": "Neg.",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Jacket: Wool",
+    "Cost": "12",
+    "Weight": "1",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Jacket: Silk",
+    "Cost": "90",
+    "Weight": "1",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Jacket: Courtier's",
+    "Cost": "170",
+    "Weight": "2",
+    "Availability": "Unusual"
+  },
+  {
+    "Item": "Peasant's Garb: Shirt, belt, sandals, breeches",
+    "Cost": "12cp",
+    "Weight": "1",
+    "Availability": "Everyday"
+  },
+  {
+    "Item": "Peasant's Garb: With robe or dress instead of breeches",
+    "Cost": "3",
+    "Weight": "1",
+    "Availability": "Everyday"
+  },
+  {
+    "Item": "Pin or Clasp",
+    "Cost": "1",
+    "Weight": "Neg.",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Robe: Linen",
+    "Cost": "15cp",
+    "Weight": "1",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Robe: Embroidered",
+    "Cost": "15",
+    "Weight": "1",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Sandals",
+    "Cost": "2cp",
+    "Weight": "Neg.",
+    "Availability": "Everyday"
+  },
+  {
+    "Item": "Shirt: Plain",
+    "Cost": "2cp",
+    "Weight": "1",
+    "Availability": "Everyday"
+  },
+  {
+    "Item": "Shirt: Patterned",
+    "Cost": "1",
+    "Weight": "1",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Shirt: Silk",
+    "Cost": "45",
+    "Weight": "1",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Shoes: Merchant's",
+    "Cost": "2",
+    "Weight": "1",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Shoes: Courtier's",
+    "Cost": "40",
+    "Weight": "1",
+    "Availability": "Unusual"
+  },
+  {
+    "Item": "Scabbard",
+    "Cost": "5",
+    "Weight": "1",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Scarf",
+    "Cost": "5",
+    "Weight": "Neg.",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Toga",
+    "Cost": "6cp",
+    "Weight": "1",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Traveler's Garb: Soft Boots, Belt, Shirt, Breeches, Cloak",
+    "Cost": "8",
+    "Weight": "3",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Traveler's Garb: With robe or dress instead of breeches",
+    "Cost": "9",
+    "Weight": "3",
+    "Availability": "Average"
+  },
+  {
+    "Item": "Tunic",
+    "Cost": "4cp",
+    "Weight": "1",
+    "Availability": "Everyday"
+  },
+  {
+    "Item": "Wealthy Traveler's Garb: Riding Boots, Belt, Shoes, 3 patterned shirts and guild breeches or patterned dress, fine hat, satin-lined cloak, ornamental brooch",
+    "Cost": "40",
+    "Weight": "5",
+    "Availability": "Unusual"
+  },
+  {
+    "Item": "Wealthy Traveler's Garb: With embroidered robe instead of breeches",
+    "Cost": "50",
+    "Weight": "5",
+    "Availability": "Unusual"
+  }
+]

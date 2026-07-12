@@ -16,5 +16,8 @@ public interface IDataServices
     List<EquipmentDisplayCard> LoadEquipmentList();
     List<MountDisplayCard> LoadMountsList();
     Dictionary<string, Talent> LoadTalents();
-
+    List<TradeService> LoadTradeServices();
+    List<Accommodation> LoadAccommodations();
+    List<Clothing> LoadClothingItems();
+    List<Provender> LoadProvenderItems();
 }
