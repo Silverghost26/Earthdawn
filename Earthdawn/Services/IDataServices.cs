@@ -29,4 +29,13 @@ public interface IDataServices
     List<LegendAwardEntry> LoadLegendAwardTable();
     List<DragonPower> LoadDragonPowers(); // Added DragonPowers loader
     List<HorrorPower> LoadHorrorPowers(); // Added HorrorPowers loader
+    
+    // New loader for Horror Constructs
+    List<HorrorConstruct> LoadHorrorConstructs();
+    
+    // New loader for Dragon-like Creatures
+    List<DragonLikeCreature> LoadDragonLikeCreatures();
+    
+    // New loader for Horrors
+    List<Horror> LoadHorrors();
 }

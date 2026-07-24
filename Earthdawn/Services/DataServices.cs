@@ -165,6 +165,24 @@ public class DataServices : IDataServices
         return new List<LegendAwardEntry>(container.Values);
     }
 
+    // New loader for Horror Constructs
+    public List<HorrorConstruct> LoadHorrorConstructs()
+    {
+        return DataLoader.LoadJson<List<HorrorConstruct>>(GetJson("HorrorConstructs.json"));
+    }
+
+    // New loader for Dragon-like Creatures
+    public List<DragonLikeCreature> LoadDragonLikeCreatures()
+    {
+        return DataLoader.LoadJson<List<DragonLikeCreature>>(GetJson("DragonLikeCreatures.json"));
+    }
+
+    // New loader for Horrors
+    public List<Horror> LoadHorrors()
+    {
+        return DataLoader.LoadJson<List<Horror>>(GetJson("Horrors.json"));
+    }
+
     private string GetJson(string file)
     {
         string path = "avares://Earthdawn/Assets/Data/" + file;
