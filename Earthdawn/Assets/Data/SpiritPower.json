@@ -1,0 +1,158 @@
+[
+  {
+    "Name": "Adaptability",
+    "Step": "NA",
+    "Action": "Free",
+    "Description": "Water spirits only. This power allows a spirit to increase one of their characteristics by +3. The following characteristics may be affected: Initiative, Physical Defense, Mystic Defense, Social Defense, Physical Armor, Mystic Armor, Wound Threshold, Unarmed Attack, and Unarmed Damage. This must be used prior to initiative each round and may be changed at the beginning of each round."
+  },
+  {
+    "Name": "Aid Summoner",
+    "Step": "CHA+SR",
+    "Action": "Standard",
+    "Description": "This power allows a spirit to increase its summoner's magical abilities for the duration of a summoning. The spirit merges with the summoner, and makes an Aid Summoner test against the summoner's Mystic Defense. Each success grants the summoner a +1 bonus to talent tests. The summoner may only apply this bonus to one test per round, and takes 1 Strain each time they do so. While this power is in effect, the summoner takes on some superficial characteristics of the spirit that is aiding him. For example, his eyes glowing with a preternatural light, skin taking on a stony appearance, or hair growing small flowers."
+  },
+  {
+    "Name": "Astral Portal",
+    "Step": "WIL+SR",
+    "Action": "Standard",
+    "Description": "Ally spirits only. Minimum SR 9. The spirit creates a portal allowing entry into astral space. The spirit makes an Astral Portal test against a DN of 6+the modifier for astral corruption (Player's Guide, p. 209). The portal remains open for 1 minute per success. The portal is two-way, allowing entry into and exit from astral space."
+  },
+  {
+    "Name": "Confusion",
+    "Step": "WIL+SR",
+    "Action": "Standard",
+    "Description": "Ally spirits only. The spirit temporarily confuses a target by passing some of its own energy through him. The spirit makes a Confusion test against the Mystic Defense of a target within SR x 10 yards. For each success, the target suffers a -1 penalty to his Perception and Willpower tests, including talents and abilities based on those Attributes. The effect lasts for a number of minutes equal to the spirit's Strength Rating."
+  },
+  {
+    "Name": "Curse",
+    "Step": "WIL+SR",
+    "Action": "Standard",
+    "Description": "Ally spirits only. The spirit curses a target. It makes a Curse test against the Mystic Defense of a target within SR x 10 yards. If successful, the target suffers a -2 penalty to one Attribute Step for one hour per success. The penalty affects all tests based on that Attribute. The spirit or its summoner chooses the affected Attribute. A target can only be affected by one use of this power at a time."
+  },
+  {
+    "Name": "Destroy Weapon",
+    "Step": "SR",
+    "Action": "NA",
+    "Description": "Fire spirits only, requires Elemental Aura: The fire spirit's elemental aura also damages non-magical wooden or metal weapons which strike the spirit, unless the weapon is somehow fireproofed. Wooden weapons have their Damage Step reduced by the spirit's Strength Rating. Metal weapons have their Damage Step reduced by the amount the spirit's Strength Rating exceeds their Damage Step. For example, a normal broadsword (Step 5) suffers no ill effect from fire elementals up to Strength Rating 5. Bonuses provided by the Forge Weapon talent (Player's Guide, p. 148) count towards the weapon's Damage Step for the purposes of this comparison. For example, a metal broadsword that has a +2 bonus from Forge Blade suffers no effects from fire elementals up to Strength Rating 7. The effects of this power are cumulative, but damaged weapons may be repaired (Player's Guide, p. 411). If a weapon's Damage Step is reduced to 0, it is destroyed."
+  },
+  {
+    "Name": "Detect True Element",
+    "Step": "SR",
+    "Action": "Standard",
+    "Description": "Elemental spirits only. This power enables an elemental spirit to detect the presence of True Elements, but only of the same type. For example, an air spirit could detect True Air by using this power, but not any other True Element. The spirit can detect any presence of the True Element within a number of miles equal to its Strength Rating. Because Elementalists generally hope to locate True Elements for their own use, elemental spirits do not like using this power for their summoners. Any attempt to do so requires a Contest of Wills (Player's Guide, p. 368). If the summoner wins, the spirit leads the summoner to the nearest source of the relevant True Element within range. Elemental spirits will never aid a summoner in gathering True Elements, only in finding their location. Even a Contest of Wills cannot coerce a spirit to violate this principle."
+  },
+  {
+    "Name": "Elemental Aura",
+    "Step": "SR",
+    "Action": "NA",
+    "Description": "Elemental spirits only. Manifest elemental spirits with this power are surrounded by a damaging aura of their element. Air spirits may be surrounded by crackling lightning, fire by intense heat, while a water spirit may be surrounded by intense cold. All beings within 4 yards of the spirit suffer damage equal to the spirit's Strength Rating each round. Physical Armor protects against this damage."
+  },
+  {
+    "Name": "Engulf",
+    "Step": "STR+SR",
+    "Action": "Free",
+    "Description": "Elemental spirits only. The spirit surrounds a victim with its element, causing damage. The elemental must be physically manifest to use this power. This power allows the elemental to spend an additional success on an Attack test to automatically grapple the target. Once the victim is grappled, he is engulfed by the appropriate element and takes damage equal to the result of the Engulf test. The effect lasts until the grapple ends, and can be broken. Air: The spirit makes the air unbreatheable. The victim can hold his breath (see p. 169), but begins to take damage if he falls unconscious. Mystic Armor protects against this damage. Earth: The target suffers damage from the crushing weight. Physical Armor protects against this damage. Fire: The target is covered in fire and starts to burn. Physical Armor protects against this damage. Water: The spirit is capable of exerting great pressure on engulfed victims. Physical Armor protects against this damage and victims might also drown (see p. 168). Wood: The target is covered in thorny vines that pierce his skin. Physical Armor protects against this damage."
+  },
+  {
+    "Name": "Enhance Summoner",
+    "Step": "CHA+SR",
+    "Action": "Standard",
+    "Description": "The spirit is able to provide a significant increase to its summoner's magical ability, but only for a short time. The spirit merges with the summoner, and makes an Enhance Summoner test agains the summoner's Mystic Defense. Each success allows the summoner to add the spirit's Strength Rating to one talent test. When using this bonus, the summoner takes strain equal to the spirit's Strength Rating to reflect the difficulty inherent in channeling the spirit's energy. If multiple uses are available, each bonus may be applied to a different test, but only one test per round. The effect lasts until the summoning ends, or all uses of this power have been exhausted. While the power is in effect, the summoner takes on some superficial characteristics of the spirit, which are exaggerated when applying the bonus to a talent. For example, hair drifting as in a breeze, giving off streams of smoke, or movements becoming more fluid and graceful."
+  },
+  {
+    "Name": "Enrage Element",
+    "Step": "WIL+SR",
+    "Action": "Standard",
+    "Description": "Elemental spirits only. The spirit creates a tumultuous whirlwind of its element. For example, an earth elemental creates a small storm of flying rocks. The tempest covers an area with a radius of the spirit's Strength Rating in yards, centered on the spirit. The spirit makes an Enrage Element test to determine how much damage suffered by targets within the affected area, and may sustain the effect by using a Standard Action each round. Physical Armor protects against this damage. All targets within the area of effect are considered Harried (Player's Guide, p. 388)."
+  },
+  {
+    "Name": "Find",
+    "Step": "PER+SR",
+    "Action": "Standard",
+    "Description": "The spirit traces an item to its origin. For example, if a spirit has a lock of hair, it can locate the hair's owner. If it has a piece of a wall, it can locate the building from which the piece came. Elemental spirits with this power can only use it on items that are connected with their element. The target must be within SR x 10 miles to be affected by this power. The spirit makes a Find test against the target's Mystic Defense. If successful, the spirit is able to locate the target, but the search takes one hour per 10 miles to the target. If the summoning duration ends before the spirit can find the target and report back, the spirit often departs."
+  },
+  {
+    "Name": "Hardened Armor",
+    "Step": "NA",
+    "Action": "NA",
+    "Description": "Earth, invae, and wood spirits only. Additional successes from Attack tests deal one less damage per success against an elemental with this power. Typically, this means instead of +2 damage per additional success, the attacker only gets +1 damage per additional success."
+  },
+  {
+    "Name": "Insubstantial",
+    "Step": "NA",
+    "Action": "NA",
+    "Description": "Air, ally, fire, and water spirits only. Attacking a manifested spirit with this power using physical weapons (such as a sword or a bow) is very difficult. Attacks with such items require an additional success, unless the attack has an area of effect."
+  },
+  {
+    "Name": "Invisibility",
+    "Step": "DEX+SR",
+    "Action": "NA",
+    "Description": "Air, ally, and water spirits only. These spirits may become invisible to mundane sight at will. The spirit makes an Invisibility test, the result of which is the Difficulty Number for any attempts to detect the elemental. The spirit may be seen normally with Astral Sight."
+  },
+  {
+    "Name": "Karma",
+    "Step": "SR",
+    "Action": "NA",
+    "Description": "The spirit has the ability to use Karma. The spirit has a pool of SR x 4 Karma points, and may spend Karma on any test it performs. Each point allows the spirit to roll dice equal to its Karma Step and add them to the test result."
+  },
+  {
+    "Name": "Manifest",
+    "Step": "N/A",
+    "Action": "Standard",
+    "Description": "The spirit can manifest in the physical realm. It takes a Standard Action for the spirit to enter the physical realm, or to return to astral space. Remember that to affect the physical realm, the spirit must be manifest."
+  },
+  {
+    "Name": "Manipulate Element",
+    "Step": "WIL+SR",
+    "Action": "Standard",
+    "Description": "Elemental spirits only. The spirit can change the basic structure of any object composed of the spirit's native element. For example, a water elemental could turn a pool into solid ice. The gamemaster determines the specific effects of each use of the Manipulate Element power, but the radius of the affected area cannot exceed the spirit's Strength Rating in yards. The effect lasts for a number of minutes equal to the spirit's Manipulate Element test result."
+  },
+  {
+    "Name": "Poison",
+    "Step": "SR",
+    "Action": "N/A",
+    "Description": "Ally, invae, and wood spirits only. The spirit's attacks inflict poison. It is assumed any unarmed attacks benefit from this power, though other powers may benefit as noted. The most common poison causes damage, though some spirits may have debilitating or paralytic poison instead."
+  },
+  {
+    "Name": "Remove Element",
+    "Step": "WIL+SR",
+    "Action": "Standard",
+    "Description": "Elemental spirits only. The spirit can remove any trace of its native element from an area. For example, an earth spirit could use the power to damage a building by removing the dirt around one or more of the building's supporting walls. The radius of the area affected cannot exceed the spirit's Strength Rating in yards. The spirit makes a Remove Element test against the target's Mystic Defense. This power cannot be used on anything with a true pattern."
+  },
+  {
+    "Name": "Share Knowledge",
+    "Step": "PER+SR",
+    "Action": "Standard",
+    "Description": "Elemental spirits only. The spirit learns general information about recent activity in, on, or near its native element. For example, a breeze may carry snippets of conversation to an air spirit. The spirit makes a Share Knowledge (6) test. Each success allows the spirit to learn about events in the previous hour (so three successes allows a spirit to learn about events within the past three hours). The gamemaster determines exactly how much information the elemental learns."
+  },
+  {
+    "Name": "Soothe",
+    "Step": "CHA+SR",
+    "Action": "Standard",
+    "Description": "Elemental spirits only. The spirit produces soothing sounds or smells that cause its target to relax, such as a cool breeze, the sound of leaves rustling in the wind, or the sound of a crackling fire. The spirit makes a Soothe test against the target's Social Defense. Each success grants the target gains a +1 bonus to his next Recovery test."
+  },
+  {
+    "Name": "Spear",
+    "Step": "STR+SR",
+    "Action": "Standard",
+    "Description": "Elemental spirits only. The spirit forms a spear from its elemental essence to damage a target. For example, a water elemental might throw a spear in the form of an icicle, while a fire elemental might throw a bolt of flame. The spirit makes a Spellcasting test against the Mystic Defense of a target within SR x 10 yards. If successful, the spirit makes a Spear test to determine how much damage the target takes, reduced by Physical Armor. If the target suffers damage, an additional effect occurs based on elemental type: Air: The target must make a Knockdown test against the damage dealt. Earth: The target is slowed. Their movement rate is lowered by 2 yards per success on the Spellcasting test. Fire: The spear does +2 Damage per success on the Spellcasting test. Water: The spirit may choose one of the bonus effects from another element type. Wood: The target is harried (Player's Guide, p. 388) for 1 round per success on the Spellcasting test."
+  },
+  {
+    "Name": "Spells",
+    "Step": "Special",
+    "Action": "NA",
+    "Description": "Ally and elemental spirits only. The spirit knows spells. Elemental spirits may only cast spells of their native elements. Ally spirits can generally cast spells from one Discipline, though some powerful ally spirits can cast spells from two or more Disciplines. The spirit's Strength Rating determines the maximum spell Circle it may know. Thus, a Strength 6 ally spirit could know any spell up to Sixth Circle. Spirits typically know a number of spells equal to their Strength Rating. This power may be selected more than once to learn additional spells. Spirits may not know or cast summoning or binding spells. The normal requirements for weaving threads apply (spirits use their Spellcasting Step to weave any necessary threads), but spirits do not need spell matrices or suffer negative effects from casting raw magic. Spirits can weave additional threads using their Strength Rating for Circle in the casting discipline. Elemental spirits automatically weave these additional threads for free without requiring any additional threads to be woven."
+  },
+  {
+    "Name": "Talents",
+    "Step": "Special",
+    "Action": "Special (see text)",
+    "Description": "Some spirits have powers based on adept talents. Refer to the Talents chapter of the Player's Guide for a description of the talent in question. Spirits suffer Strain for using talents if indicated in the talent description. In place of the talent rank, use the spirit's Strength Rating."
+  },
+  {
+    "Name": "Temperature",
+    "Step": "WIL+SR",
+    "Action": "Standard",
+    "Description": "Air, fire, and water spirits only. The spirit can alter the temperature in an area with a radius up to its Strength Rating in yards. The spirit raises or lowers the temperature enough to cause discomfort or otherwise distract characters within the area of effect, but not enough to cause damage. The spirit makes a Temperature test, comparing it to the Mystic Defense of each character in the area of effect. Each success causes affected targets to suffer a -1 penalty to their Perception and Willpower based tests. The effect lasts for a number of minutes equal to the spirit's Strength Rating."
+  }
+]

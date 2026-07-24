@@ -1,0 +1,116 @@
+[
+  {
+    "Name": "Armored Scales",
+    "Step": "NA",
+    "Action": "NA",
+    "Description": "A dragon’s armored hide provides great physical and magical protection against attack. Damage resulting from extra successes on attacks is reduced by one per success. For example, under normal circumstances each additional success from an attack with a melee weapon does +2 damage. Against a dragon with Armored Scales, each additional success only does +1 damage. This damage reduction also applies to spells that deal extra damage with additional successes, but not extra damage based on additional threads."
+  },
+  {
+    "Name": "Dispel Magic",
+    "Step": "Rank + WIL",
+    "Action": "Simple",
+    "Description": "Because of their innate understanding of magical forces, dragons can disrupt magical effects at will. This power works like the Dispel Magic talent (Player’s Guide, p. 139), but does not require a Standard action, and has a range of 30 yards. Additionally, this power can be used to dispel the magical effects of creature powers (including Horror and dragon powers) with a sustained duration. Use the power’s Step Number as the Circle on the Dispel Difficulty Table (Player’s Guide, p. 265) to determine the Difficulty Number for the Dispel Magic test. If a creature power or ability Step Number is higher than 15, add +1 to the Dispel Difficulty for each Step above 15. For example, a power with Step 17 would have a Dispel Difficulty of 27 (25 + 2)."
+  },
+  {
+    "Name": "Disrupt Fate",
+    "Step": "Rank + WIL",
+    "Action": "Free",
+    "Description": "This power allows the dragon to alter the fate of other creatures. The dragon spends a Karma Point and then makes a Disrupt Fate test against the Mystic Defense of a target within line of sight. If successful, the target must immediately repeat the most recent test made. The new test result stands and cannot be disrupted a second time. As long as the dragon has Karma Points available, it may make as many Disrupt Fate tests as there are targets. Spending the Karma Point entitles the dragon to use this ability; the dragon’s Karma Step is not added to the test."
+  },
+  {
+    "Name": "Dominate Beast",
+    "Step": "Rank + WIL",
+    "Action": "Standard",
+    "Description": "This dragon can control beasts, similar to the Beastmaster talent of the same name (Player’s Guide, p. 140). The dragon makes a Dominate Beast test against the Mystic Defense of any beasts the dragon wishes to control. If successful, the dragon controls the target creatures for a number of minutes equal to its Dominate Beast Step. Unlike the Beastmaster talent, the dragon may use this power to dominate multiple creatures at once, but no more than their total Step in Dominate Beast. An animal under the effect of this power will not take any hostile action against the dragon, and will perform one simple task for the dragon that does not exceed the duration of the power. Attempts to dominate or control a beast under the effect of this power must exceed the dragon’s Dominate Beast Step."
+  },
+  {
+    "Name": "Dragon Breath",
+    "Step": "Rank + 15",
+    "Action": "Simple",
+    "Description": "Dragons are famous, and rightfully feared, for their fiery breath. Every culture has tales of a furious dragon raining destruction down on villages, towns, or cities. Dragon Breath targets everything within a 90-degree arc, using the dragon’s mouth as the arc’s center. The distance the flame extends is based on how much Strain the dragon is willing to take, as indicated on the Dragon Breath Table. The dragon makes a Dragon Breath test and compares the result against the Mystic Defense of each target within the area of effect. All affected targets catch fire, taking damage from the flames equal to the test result, reduced by Physical Armor. Dragon Breath damages and burns items, including armor and weapons. Combustible items are destroyed in short order, while non-combustible items takes damage each round, potentially rendering them useless, though magical items are only affected if the dragon’s Dragon Breath test equals or exceeds the item’s Mystic Defense. Armor and weapons suffer 2 points of item damage each round they are exposed to the flames, with the losses being spread as evenly as possible among the item’s ratings. For example, fernweave armor would lose 1 point each from its Physical and Mystic Armor each round. If a weapon’s Damage Step, a shield’s Physical Defense bonus, or suit of armor’s Armor ratings are reduced to 0, the item is destroyed. If an item is not completely destroyed, damage may be repaired as normal (Player’s Guide, p. 411 for damaged weapons, p. 415 for armor and shields)."
+  },
+  {
+    "Name": "Dragonsight",
+    "Step": "Rank + PER",
+    "Action": "Simple",
+    "Description": "A dragon’s affinity with magic gives them the ability to view astral space. Dragonsight is a heightened version of the Astral Sight talent (Player’s Guide, p. 129), except dragons do not have to spend Strain to use it. The dragon makes a Dragonsight test as an astral sensing test. For more information about the use of astral sensing abilities, see the Workings of Magic chapter in the Player’s Guide, p. 209."
+  },
+  {
+    "Name": "Dragonspeech",
+    "Step": "Rank + CHA",
+    "Action": "Free (Special, see below)",
+    "Description": "Dragonspeech is the natural method of communication between dragons. It allows the user to transmit thoughts directly to any being within range. The dragon can also send simple images as well as speech through its mental link. The target hears the dragon as a separate ‘voice’ in his head and recognizes it as the dragon. Dragonspeech transcends language, allowing a dragon to communicate with another being whether or not it normally understands the subject’s language. The dragon can communicate with spirits and uses this power in place of Spirit Talk or Elemental Tongues for negotiations. This power also allows a dragon to summon spirits. Unlike Namegiver magicians, dragons may summon any type of spirit. The power otherwise works as described as the Summon talent in the Player’s Guide, p. 171, including the Action type (i.e. a dragon using Dragonspeech to summon a spirit is a Sustained action, as per the Summon talent)."
+  },
+  {
+    "Name": "Fear",
+    "Step": "Rank + CHA",
+    "Action": "Simple",
+    "Description": "Dragons project an intimidating, even terrifying presence. Many would-be heroes flee in terror when coming face to face with a dragon. The dragon makes a Fear test and compares the result against the Mystic Defense of all characters within 40 yards. If successful against a given character, the victim will sweat, stammer, and exhibit other signs of fright. The affected character has a difficult time taking any kind of hostile action against the dragon. Any tests the character makes against the dragon suffer a -2 penalty per success scored on the dragon’s Fear test until the next sunrise or sunset (whichever comes first). This power cannot be used against a target again until the duration has expired, even if it was initially ineffective; this does not provide any protection for other targets in the area. This power has no effect on targets that are immune to fear."
+  },
+  {
+    "Name": "Karma Cancel",
+    "Step": "Rank + WIL",
+    "Action": "Simple (see below)",
+    "Description": "One of a dragon’s subtler but effective powers, Karma Cancel allows a dragon to override another character’s use of Karma. The dragon makes a Karma Cancel test against the Mystic Defense of a target character within line of sight. Once this power has been successfully used, the dragon may spend its Karma Points to cancel the target’s use of Karma on a test as a Free action until the next sunrise or sunset (whichever comes first). If a target spends multiple Karma Points on a test (for example, when using the True Shot talent), the dragon must spend the same number of points to cancel them. Karma Cancel does not require an action; a dragon may attempt to cancel an opponent’s use of Karma at any time so long as it still has Karma Points to spend."
+  },
+  {
+    "Name": "Karma Points",
+    "Step": "Special (see text)",
+    "Action": "NA",
+    "Description": "All dragons have the ability to use Karma. The value given in parentheses after the Karma power in the dragon’s description indicates the dragon’s Karma Step. The dragon has a pool of Karma Points equal to its Karma Step x 4, which it can spend on any test. Unless otherwise noted by a particular power, a dragon may only spend one point of Karma per test."
+  },
+  {
+    "Name": "Lair Sense",
+    "Step": "Rank + PER",
+    "Action": "Free",
+    "Description": "A dragon’s lair is an extension of itself, and it can notice intruders anywhere within its lair. The dragon makes a Lair Sense test against the Mystic Defense of a character who performs a test while in the dragon’s lair. If successful, the dragon detects the character and knows his location within the lair. This power can only be used against a given target once every ten minutes. Dragons often set traps in their lairs to take advantage of this power, forcing characters to beat the traps by performing an action that reveals their presence."
+  },
+  {
+    "Name": "Poison",
+    "Step": "Rank + TOU",
+    "Action": "NA",
+    "Description": "Dragons with this power are able to damage a victim with poison. If the victim suffers damage from an envenomed attack, they must resist the poison’s effects. Some dragons have venomous fangs; others have a stinger on their tail or glands that inject venom with their claws. The poison is typically a damaging poison as described in the game statistics, but may be of any variety. Some dragons even have a combination of poison types. See Poison, p. 171 for more information on the game statistics provided. A single character can only suffer from one use of the Poison power at a time."
+  },
+  {
+    "Name": "Regeneration",
+    "Step": "Rank + TOU",
+    "Action": "Simple",
+    "Description": "Dragons can easily heal damage done to them. The dragon makes a Regeneration test and reduces its Current Damage by the total. Use of this power costs the dragon a Recovery test and 1 Karma Point (the Karma Point spent does not add to the result of the test). This power may be used to heal a Wound, but if used in this fashion it does not reduce the Current Damage."
+  },
+  {
+    "Name": "Skills",
+    "Step": "Special (see text)",
+    "Action": "Special (see text)",
+    "Description": "Some Dragons have powers based on skills. Refer to the Skills chapter on p. 183 of the Player’s Guide for a description of each skill and how it works."
+  },
+  {
+    "Name": "Spellcasting",
+    "Step": "Rank + PER",
+    "Action": "Standard",
+    "Description": "Dragons have an inherent ability to manipulate the energy of astral space, and as a result cast spells. Dragons can use their Spellcasting power to cast any spell as Raw Magic. The dragon doesn’t need to know the spell, it simply shapes the astral energy to its will and the spell happens. Dragons still weave threads to cast spells, using their Thread Weaving power (p. 174). Hatchlings need to weave the normal number of threads to cast a spell, adults only need to weave half the normal number of threads (round down), and great dragons do not need to weave threads at all. Dragons do not use spell matrices, casting all of their spells as raw magic. A dragon casting a spell would still potentially suffer the effects of warping or damage, but their innate power and high magic resistance greatly reduce the effects of tainted astral energy on their spellcasting. Dragons are, however, wise enough to not recklessly cast powerful magic in corrupt areas. While the damage they might suffer is small, the threat posed by a Horror—especially one powerful enough to mark a dragon—gives even these mighty Namegivers pause."
+  },
+  {
+    "Name": "Spells",
+    "Step": "Special (see text)",
+    "Action": "NA",
+    "Description": "Dragons are natural born spellcasters, with an inherent knowledge of the workings of magic. They do not know spells in the same way as other Namegiver magicians. As described above under Spellcasting the dragon simply shapes astral energy into the desired form. When presented with a dragon’s game statistics, this represents the maximum Circle of spell effect the dragon can produce."
+  },
+  {
+    "Name": "Suppress Magic",
+    "Step": "Rank + WIL",
+    "Action": "Standard",
+    "Description": "Some dragons have developed their ability to shape magic to such a degree they can quash the use of magic by other creatures. The dragon makes a Suppress Magic test against the Mystic Defense of a target within 30 yards. If successful, the dragon reduces the target’s use of magical abilities by applying a -2 penalty per success to magical talents, the damage from magical weapons, and any other magic use. When applied to magic armor and weapons, this will not reduce the protection or damage beneath the mundane protection provided; e.g. a threaded troll sword enhanced with Forge Weapon cannot have a Damage Step less than STR + 6 due to this power. This power lasts until the next sunrise or sunset (whichever comes first) and may only be used against a given target once per day. A dragon can selectively use this ability to suppress a specific type of magic, such as talents, magic items or spells, instead of suppressing all types."
+  },
+  {
+    "Name": "Talents",
+    "Step": "Special (see text)",
+    "Action": "Special (see text)",
+    "Description": "Many dragons have powers based on adept talents beyond those described here. Refer to the Talents chapter on p. 119 of the Player’s Guide for a description of the talent in question."
+  },
+  {
+    "Name": "Wingbeat",
+    "Step": "Rank + STR",
+    "Action": "Standard",
+    "Description": "Dragons with wings can use them to knock over opponents. The power affects all characters in a 10-yard long 90-degree arc in front of the dragon. The dragon makes a Wingbeat test, and all characters within the area of effect must make a Knockdown test against the test result. If a character fails the Knockdown test, they are knocked back a number of yards equal to the amount they failed the test. For example, a character failing the Knockdown test by 8 is knocked back 8 yards."
+  }
+]

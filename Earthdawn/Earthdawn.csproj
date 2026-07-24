@@ -57,6 +57,14 @@
         <AvaloniaResource Include="Assets\Data\Weapons.json">
           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </AvaloniaResource>
+        <None Remove="Assets\Data\ClothingTable.json" />
+        <AvaloniaResource Include="Assets\Data\ClothingTable.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </AvaloniaResource>
+        <None Remove="Assets\Data\AccommodationTable.json" />
+        <AvaloniaResource Include="Assets\Data\AccommodationTable.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </AvaloniaResource>
     </ItemGroup>
 
     <ItemGroup>

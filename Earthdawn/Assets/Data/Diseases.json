@@ -1,0 +1,83 @@
+﻿{
+  "Bone Plague": {
+    "Name": "Bone Plague",
+    "Type": "Debilitation",
+    "OnsetTime": "3-4 days",
+    "EffectStep": 8,
+    "Interval": "3/1 week",
+    "Duration": "4-5 weeks",
+    "Description": "Bone plague begins with a mild fever, a feeling of listlessness, and pains in the joints. Over the course of a few days, the victim becomes progressively more fatigued, and his joints turn rubbery. In serious cases, the victim's joints and bones become so weak that they no longer function as they should; he cannot stand, walk, hold onto things, or lift so much as a feather. The illness itself is not fatal and passes within a few weeks even if left untreated. However, the weakness and paralysis that it causes can do great harm if the victim is far from help when the disease takes hold. There are cases where bone plague swept through a small village, striking down everyone virtually at once. With no able-bodied persons to help the sufferers eat and drink, many poor victims starved to death. While the effect of Bone Plague is treated like a debilitating poison, the penalty only applies to tests made for physical actions. Recovery from bone plague requires a week's rest and hearty food to fully regain their strength. Increased appetite is a sure sign that the disease is departing."
+  },
+  "Death's Caress": {
+    "Name": "Death's Caress",
+    "Type": "Debilitation (Deadly)",
+    "OnsetTime": "3–6 hours",
+    "EffectStep": 10,
+    "Interval": "4/1 day",
+    "Duration": "4–5 days",
+    "Description": "Known as fire plague in some areas of Barsaive, Death's Caress is the most deadly and virulent plague known in Barsaive. The disease brings high fever, sweating, chills, and painful muscle cramps. Victims become extremely sensitive to touch, smell, sound, and light, and are most comfortable in a darkened and quiet room. If the illness is left untreated, the fever burns the victim up from the inside until no more moisture remains in his body. Many victims see visions of Death's fiery kingdom while afflicted by this plague, and some scholars speculate that Death created the disease to avenge his imprisonment. Places where outbreaks of Death's caress are known to have occurred are shunned by the wise, to prevent infection. Infection can spread through food and water, or from exposure to infected people—the blood and other bodily fluids are especially dangerous. The bodies and clothing of victims are usually burned. There is no known cure for Death's caress, save for powerful healing magic. Certain methods of treatment offer comfort to the sufferer and may even give him strength enough to hold on to life while the illness runs its course—but this happens rarely. Most victims of Death's caress succumb within days of first displaying the symptoms. The principal treatment is to bring the fever down, using cool water or even ice (if it can be had). As with deadly debilitating poisons, the victim dies if the total penalty equals twice the victim's Toughness Step. A character who fails his tests to overcome this illness is likely to die without powerful magical healing."
+  },
+  "Horrorfever": {
+    "Name": "Horrorfever",
+    "Type": "Special (see text)",
+    "OnsetTime": "20 days",
+    "EffectStep": 12,
+    "Interval": "Chronic/20 days",
+    "Duration": "Chronic",
+    "Description": "This fever earned its name because the victim experiences nightmares and terrors while the illness is active. Despite the name, flies and other biting insects spread this disease, not by Horrors. Twenty days after infection, the victim is overcome with horrifying dreams and night terrors. For every success on the disease's Effect test, the active period lasts for 12 hours. After the active period ends, the affected character makes a Toughness test to resist the illness. If successful, he has shaken off the fever. If he fails, the active phase returns in 20 days. This continues until the character is cured, While the disease is active, the character is unable to get a full night's rest and does not regain Recovery tests. In addition, he suffers a -6 penalty to his tests, and finds sustained mental effort almost impossible. Once the active phase ends, the character recovers from the effects after a full night's rest."
+  },
+  "Lung-Rot": {
+    "Name": "Lung-Rot",
+    "Type": "Debilitation (Deadly)",
+    "OnsetTime": "1–4 months",
+    "EffectStep": 7,
+    "Interval": "Chronic/1 month",
+    "Duration": "Chronic",
+    "Description": "This disease, sometimes called galloping lung-rot, is usually contracted in cold and damp regions. It takes a few months to manifest, with the incubation period marked by congestion and coughing, labored breathing, and a mild fever. While the illness's slow progression usually allows for successful diagnoses and treatment, the disease is fatal if left untreated for too long. Victims of an extended bout of lung-rot can suffer from shortness of breath and weakened constitution for the rest of their lives. When lung-rot affects a victim, the maximum penalty applied per Effect test is -2, regardless of the Effect test success level. The penalty only applies to tests made for physical actions. If the disease progresses to the point where the penalty equals or exceeds the victim's Toughness Step, his lungs become scarred and he permanently reduces his Dexterity, Strength, and Toughness values by -3 each. As with other deadly debilitating poisons and diseases, if the accumulated penalty equals or exceeds double the victim's Toughness Step, he dies. Treatment for lung-rot usually involves boiling the leaves of certain plants, with the victim breathing in the steam. The steam relieves congestion and eases breathing. The most popular plant for this treatment is Rianna's Fan, which grows in clusters around trees and decaying stumps. The plant has broad, fan-shaped leaves, said to share the same dark green as the legendary elf healer's eyes."
+  },
+  "Quaking Fever": {
+    "Name": "Quaking Fever",
+    "Type": "Debilitation",
+    "OnsetTime": "1–3 days",
+    "EffectStep": 6,
+    "Interval": "4/2 days",
+    "Duration": "7–10 days",
+    "Description": "Quaking fever is usually contracted in marshy and swampy areas with standing and stagnant water. Symptoms include fever, trembling limbs, sore nose and throat, along with a wet cough. The disease is not contagious, so exposure to infected victims poses no danger. While no specific cure is known, the disease is not fatal unless to victim is already severely weakened in some other way. The symptoms typically persist for about a week, with many common treatments helping alleviate the coughing fits and nasal congestion."
+  },
+  "Smiling Death": {
+    "Name": "Smiling Death",
+    "Type": "Debilitation (Deadly)",
+    "OnsetTime": "1 week",
+    "EffectStep": 8,
+    "Interval": "4/3 days",
+    "Duration": "2 weeks",
+    "Description": "This strange disease can be caught from tainted water or from contact with an infected person; even breathing the air too near a victim may result in infection. The marks of smiling death include headaches, blurred vision, high fever, sweating, and muscle cramps severe enough to incapacitate the patient. As the disease progresses, victims suffer from facial grimaces and respiratory spasms that resemble smiling and faint laughter. In the most serious cases, victims lapse into unconsciousness and die. Healing magic can cure smiling death even after the patient has lapsed into unconsciousness, provided the healer is powerful enough and the patient has been unconscious for no more than two days."
+  },
+  "Stenchfoot": {
+    "Name": "Stenchfoot",
+    "Type": "Debilitation",
+    "OnsetTime": "1–4 days",
+    "EffectStep": 7,
+    "Interval": "4/48 hours (see text)",
+    "Duration": "1–2 weeks (see text)",
+    "Description": "This grisly disease is an unfortunately common danger to careless explorers, as it is most often contracted by walking in boggy ground and picking up parasites through the feet. This disease causes flesh to rot, with blood poisoning eventually setting in. It typically affects lower extremities first, but the infection can spread anywhere once contracted. Once contracted, the interval is 48 hours while the character is in jungle or swamp conditions, but if a character escapes to a cool, dry environment the interval period extends to 1 week. The penalties inflicted by the disease only affect a character's Toughness and Charisma tests. If the cumulative penalty equals or exceeds the victim's Toughness Step, the character loses an extremity. The extremity lost is usually the one where the disease first manifested, but could be any part of the body: for example a foot, an ear, the nose, or a hand. The effects of losing an extremity are left to the gamemaster, but some results are obvious. For example, a character that loses a hand will be unable to use a bow, and will likely have a hard time using a shield strapped to his forearm (perhaps resulting in a reduction to the shield's Physical Defense bonus). Cosmetic losses (ears or nose) could result in a penalty to Charisma or Interaction tests where appearance might matter, while the loss of a foot could result in penalties to a character's movement rate or Dexterity value. The penalties inflicted by the disease go away after the disease is cured, but the loss of body parts is permanent outside of powerful healing magic."
+  },
+  "Walking Fever": {
+    "Name": "Walking Fever",
+    "Type": "Death (See text)",
+    "OnsetTime": "1–2 days",
+    "EffectStep": 8,
+    "Interval": "3/1 week",
+    "Duration": "3 weeks",
+    "Description": "Scholars debate whether Walking Fever is a true disease or not, but healers still treat it, concerned more with saving lives than intellectual exercise. The illness is contracted through exposure to the spores of the darkbloom fungus, which grows in damp caves and dark forests where sunlight doesn't reach. Anyone who breathes in the spores and fails the initial Toughness test develops a sore throat, headaches, and a mild fever. The fever progresses until the victim falls unconscious, then after a day or two they awaken, making their second Toughness test to resist the disease. If successful, they have shaken off the infection and recover in a few days. If this second test fails, the fever continues and the victim develops sensitivity to bright light. After a week under the effects of the second stage of the infection, the victim makes a third and final Toughness test. If this test fails, the victim succumbs to the final stage of infection. They seek shelter in a dark, dank place, and the air around them becomes heavy with darkbloom spores. For the next ten to fourteen days, anybody that comes near the victim risks infection. At the end of that time, the victim dies and his body becomes host to new sprouts of fungus. Unlike other diseases, Walking Fever does not inflict penalties on the victim, and so the gamemaster does not make Effect tests for the disease. While they may be restless and uncomfortable, the victim is able to act normally until they fail the final Toughness test, at which point the influence of the fungus drives them to take shelter as described above."
+  },
+  "Yellow Jig": {
+    "Name": "Yellow Jig",
+    "Type": "Special (see text)",
+    "OnsetTime": "2–4 days",
+    "EffectStep": 8,
+    "Interval": "14/2 days",
+    "Duration": "2–4 weeks",
+    "Description": "Yellow jig can be caught from tainted water or by touching an infected victim. The disease causes a slight yellowing of the victim's skin, the whites of the eyes, and underside of the tongue. Within a few days of these initial signs, the victim experiences weakness and trembling limbs, and sometimes suffers from random fits of jerky, uncontrollable muscle spasms, as if engaged in some macabre dance. The disease itself is not fatal, though some have died from accidents caused by convulsions at the wrong moment. A popular tale mentions a hero from before the Scourge who broke his neck falling down a flight of stairs when spasms struck him. Yellow jig commonly passes within two to four weeks, during which time various potions and elixirs can be used to ease the spasms and provide the patient with much-needed rest. If the character does not resist the disease when an interval passes, the Effect test determines the intensity of the symptoms. A single success causes a -2 penalty to the character's tests, two successes cause a -4 test penalty, and 3 or more successes cause a -4 test penalty, and the victim will suffer 1-4 convulsive episodes, each lasting 2-12 combat rounds. During a convulsive episode, roll an Effect test for the disease against a Difficulty Number equal to the victim's Strength Step. If successful, the victim is considered Knocked Down and unable to act until the episode passes."
+  }
+}

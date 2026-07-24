@@ -72,7 +72,8 @@ public partial class SkillsViewModel : PageViewModel
             && (disciplineName == "Wizard"
                 || disciplineName == "Illusionist"
                 || disciplineName == "Elementalist"
-                || disciplineName == "Nethermancer"))
+                || disciplineName == "Nethermancer"
+                || disciplineName == "Shaman"))
         {
             _navigationService.GoToSpellSelectionPage();
         }

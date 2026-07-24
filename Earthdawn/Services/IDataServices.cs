@@ -20,4 +20,13 @@ public interface IDataServices
     List<Accommodation> LoadAccommodations();
     List<Clothing> LoadClothingItems();
     List<Provender> LoadProvenderItems();
+    List<Creature> LoadCreatures();
+    List<DragonType> LoadDragonTypes();
+    List<Disease> LoadDiseases();
+    List<Poison> LoadPoisons();
+    List<Trap> LoadTraps();
+    List<SpiritPower> LoadSpiritPowers();
+    List<LegendAwardEntry> LoadLegendAwardTable();
+    List<DragonPower> LoadDragonPowers(); // Added DragonPowers loader
+    List<HorrorPower> LoadHorrorPowers(); // Added HorrorPowers loader
 }

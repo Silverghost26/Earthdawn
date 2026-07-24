@@ -107,6 +107,63 @@ public class DataServices : IDataServices
         return DataLoader.LoadJson<List<Provender>>(GetJson("ProvenderTable.json"));
     }
     
+    public List<Creature> LoadCreatures()
+    {
+        return DataLoader.LoadJson<List<Creature>>(GetJson("Creatures.json"));
+    }
+    
+    // New loader for Dragon Types
+    public List<DragonType> LoadDragonTypes()
+    {
+        DragonTypesContainer container = DataLoader.LoadJson<DragonTypesContainer>(GetJson("DragonTypes.json"));
+        return container.DragonTypes ?? new List<DragonType>();
+    }
+    
+    // New loader for Diseases
+    public List<Disease> LoadDiseases()
+    {
+        DiseasesContainer container = DataLoader.LoadJson<DiseasesContainer>(GetJson("Diseases.json"));
+        return new List<Disease>(container.Values);
+    }
+    
+    // New loader for Poisons
+    public List<Poison> LoadPoisons()
+    {
+        PoisonsContainer container = DataLoader.LoadJson<PoisonsContainer>(GetJson("Poisons.json"));
+        return new List<Poison>(container.Values);
+    }
+    
+    // New loader for Traps
+    public List<Trap> LoadTraps()
+    {
+        TrapsContainer container = DataLoader.LoadJson<TrapsContainer>(GetJson("Traps.json"));
+        return new List<Trap>(container.Values);
+    }
+    
+    // New loader for Spirit Powers
+    public List<SpiritPower> LoadSpiritPowers()
+    {
+        return DataLoader.LoadJson<List<SpiritPower>>(GetJson("SpiritPower.json"));
+    }
+    
+    public List<DragonPower> LoadDragonPowers()
+    {
+        return DataLoader.LoadJson<List<DragonPower>>(GetJson("DragonPowers.json"));
+    }
+    
+    public List<HorrorPower> LoadHorrorPowers()
+    {
+        return DataLoader.LoadJson<List<HorrorPower>>(GetJson("HorrorPowers.json"));
+    }
+    
+    
+    
+    // New loader for Legend Award Table
+    public List<LegendAwardEntry> LoadLegendAwardTable()
+    {
+        LegendAwardTable container = DataLoader.LoadJson<LegendAwardTable>(GetJson("LegendAwardTable.json"));
+        return new List<LegendAwardEntry>(container.Values);
+    }
 
     private string GetJson(string file)
     {

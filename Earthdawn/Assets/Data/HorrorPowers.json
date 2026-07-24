@@ -1,0 +1,142 @@
+[
+  {
+    "Name": "Animate Dead",
+    "Action": "Standard",
+    "Description": "This power allows a Horror to animate the corpse of a dead Namegiver, resulting in the creation of a cadaver man, ghoul, or other undead construct (the type of undead will depend on the Horror). The Horror touches the victim and makes an Animate Dead test against the target’s Mystic Defense, using the Mystic Defense the target had while alive. If successful, the victim is raised. Not all Horrors are required to touch the victim to make use of this power. The Horror may have a number of individual undead under their control up to their Animate Dead Step. If the Horror is within Animate Dead Step miles of the undead, it can telepathically control the undead, issuing commands as a Simple action. Otherwise the undead acts on its own."
+  },
+  {
+    "Name": "Astral Camouflage",
+    "Action": "Standard",
+    "Description": "This power allows a Horror to hide its presence in astral space. The Horror increases the Difficulty number for Perception, Astral Sight, or similar tests to notice the Horror by the Astral Camouflage Step. This power lasts until the Horror takes an action that reveals its presence."
+  },
+  {
+    "Name": "Aura of Awe",
+    "Action": "Standard",
+    "Description": "This power allows a Horror to influence the attitude of characters towards it. The Horror makes an Aura of Awe test and compares it to the Social Defense of each character within Aura of Awe Step x 4 yards. If successful the target adopts a Neutral stance towards the Horror. For each additional success, the target’s attitude improves one degree to a maximum of Awestruck (see p. 142 for more information on Attitudes). The effects of this power last until the next sunrise, but can be extended by the Horror with additional uses of the power. When a player character is affected by this power, the gamemaster should secretly instruct the player to behave appropriately, and may overrule decisions that run counter to the effects of this power. 459 The effects of this power end if the Horror directly or obviously harms the target."
+  },
+  {
+    "Name": "Corrupt Compromise",
+    "Action": "Standard",
+    "Description": "This power intertwines the Horror mark on a victim in a complex fashion, creating an astral tumor on the victim’s pattern. The Horror spends one Karma Point and suggests a course of action to a victim they have marked, offering a bonus to one of the character’s traits or abilities. If the victim follows the course of action in spirit, not just letter, the victim gains a Corruption Point, but the bonus becomes permanent, acting like a thread tied to a pattern item (Player’s Guide, p. 226). Bonuses from this power apply to any circumstance, except actions against the marking Horror. If the marked victim does not follow the course of action with all sincerity, the marking Horror gains a bonus to one of its own traits or powers. These bonuses apply only against the victim. This power demonstrates the potential folly of striking a deal with a Horror. Resisting makes the Horror more powerful against the victim, making it easier for the Horror to carry out threats, or making it harder for the character to defeat. On the other hand, attempts to use the Horror’s power to good ends results in long-term corruption. The Horror can provide bonuses to a number of traits or powers equal to their Corrupt Compromise Step, and the maximum bonus to each individual trait is also equal to that Step. Bonuses can be provided to any trait or ability that can be increased by thread magic. A Horror’s powers count as talents for this purpose. Some powerful Horrors have the ability to use their trait bonuses against any target to whom the victim has a thread attached (such as through a pattern item), or even those with whom they share a Pattern (such as a group pattern or Blood Sworn)."
+  },
+  {
+    "Name": "Corrupt Karma",
+    "Action": "Standard",
+    "Description": "This power allows the Horror to override another character’s use of Karma. The Horror makes a Corrupt Karma test against the target’s Mystic Defense. Each success allows the Horror to prevent the target’s use of Karma on one test as a Free action. The target’s Karma Point is spent, but does not provide any additional dice to the test result."
+  },
+  {
+    "Name": "Corrupt Reality",
+    "Action": "Standard",
+    "Description": "This power allows a Horror to distort the fabric of reality, affecting the area around a victim it has previously marked. The Horror uses these effects to alarm and torment the victim and those in his vicinity. This will isolate the victim, as other people will avoid his company to escape the strange events. The Horror spends a Karma Point and makes a Corrupt Reality test and compares it to the Mystic Defense of each character the Horror wishes to affect. If successful, the target suffers a -1 penalty to Mystic and Social Defense for each success. 460 The Horror can selectively affect any characters within Corrupt Reality Step x 2 yards of the marked victim. The penalties fade at the rate of 1 per day; subsequent uses of this power stack with the previously accrued penalties. Typical manifestations include spoiling food and drink, changes in temperature, eerie sounds, mundane objects transforming into slime-covered parodies, or any number of other strange or surreal manifestations. These effects last for a number of rounds up to the Corrupt Reality Step, and cannot be dispelled or disbelieved, though the Horror may end them earlier if desired. An object transformed by this power returns to normal after the duration ends, with no trace of the change or permanent ill effect. This power cannot cause damage to living beings, though the fear and mental stress resulting from extended exposure to this ability may cause a victim or those near him to lash out and harm themselves or others."
+  },
+  {
+    "Name": "Cursed Luck",
+    "Action": "Free",
+    "Description": "This power allows a Horror to inflict bad luck on a target. The Horror makes a Cursed Luck test against the Mystic Defense of a target within line of sight. Each success reduces the result of one die rolled on a test to 1. The highest die values are affected first, and all reductions are done before any potential bonus dice are rolled. This power may be used once per round. Mica is attacking a Horror with his Melee Weapons talent, which is at Step 15/D12+2D6. The Horror uses its Cursed Luck power on the unfortunate Swordmaster, and rolls an 18 against Mica’s Mystic Defense of 11, scoring two successes, meaning two dice will be reduced to 1. On his Melee Weapons test, Mica’s player rolls a 5 on the D12, a 6 on one D6, and a 2 on the other D6. The 6 and the 5 are each reduced to a result of 1 (canceling the bonus die that would have resulted from the 6 on the D6) and the final test result is 4. The gamemaster is encouraged to describe the way the bad luck manifests and affects the result of the test. If the Horror scores more successes than the character is rolling dice, the attempt automatically fails and at gamemaster’s discretion may result in additional misfortune that inflicts a penalty on the character’s next related test, or require their next Standard action to overcome."
+  },
+  {
+    "Name": "Damage Shift",
+    "Action": "Simple",
+    "Description": "This power allows the Horror to shift damage it has taken to another character within line of sight. The Horror makes a Horror Power test against the victim’s Mystic Defense. If successful, it can transfer an amount of current damage from itself to the victim, up to a maximum equal to the result of a Damage Shift test. This power does not transfer Wounds, but the damage dealt from the transfer may cause a Wound to the victim. 461"
+  },
+  {
+    "Name": "Disease",
+    "Action": "N/A",
+    "Description": "This power allows the Horror to infect a victim with a disease. No test is required; the victim is infected if the Horror causes damage with a physical attack, or otherwise succeeds at infecting the victim based on the rules provided in the Horror’s description. The Step Number indicates the Difficulty Number for tests made to resist the effects of the disease, as well as attempts to diagnose or treat the illness. Additional details about the disease are provided in the Horror’s game statistics. See Disease, p. 186, for more information on diseases and how they work."
+  },
+  {
+    "Name": "Displace",
+    "Action": "Standard",
+    "Description": "This power allows a Horror to cross between the physical and astral realms. No test is required, but the Horror must use a Standard action to cross between realms. If a single-natured Horror with this power crosses into astral space, its body disappears from the physical."
+  },
+  {
+    "Name": "Disrupt Magic",
+    "Action": "Standard",
+    "Description": "This power allows a Horror to end sustained magical effects. It works like the Dispel Magic talent (Player’s Guide, p. 139) with a range of Disrupt Magic Step x 2 yards, but does not cost strain and can be used against any magical effect with an extended duration. The Horror makes a Disrupt Magic test against the effect’s Dispel Difficulty. For effects not the result of talents or spells, use the power’s Step Number as the Circle on the Dispel Difficulty Table (Player’s Guide, p. 265) to determine the Difficulty Number. If a creature power or ability Step Number is higher than 15, add +1 to the Dispel Difficulty for each Step above 15. For example, a power with Step 17 would have a Dispel Difficulty of 27 (25 + 2)."
+  },
+  {
+    "Name": "Forge Construct",
+    "Action": "Sustained",
+    "Description": "This power allows a Horror to create constructs from other life forms including mundane animals, magical creatures, and Namegivers, even inanimate objects. If a Horror uses this power on a living Namegiver, it often leaves some portion of the victim’s mind intact and aware of his fate. To use this power on a living target, the Horror must first successfully mark the victim. The Horror spends 5 Karma Points to infuse the target with the Horror’s twisted magical essence to begin the change. This Karma only powers the ability; it does not add dice to the test. The Horror makes a Forge Construct test against the target’s Mystic Defense. Each success allows the Horror to change one of the target’s attributes by one Step or grants the construct a power or special ability. The Horror can make multiple tests, but must wait a minimum of one day before making a new test. Some Horrors intentionally draw out the transformation in order to prolong the suffering of a victim aware of what is happening to them. The Horror only needs to spend the 5 Karma to initiate the process, Karma is not required to fuel subsequent tests. Living victims can resist the process. For each Forge Construct test, the victim may make a Willpower test and substitute it for their Mystic Defense if the result is higher. Once the Horror has made all the desired changes to the victim, it ends the process by making a final Horror Mark test to form a link between itself and the construct. If successful, the transformation is complete and the construct is under the control of the Horror who created it. Many Horrors will create a construct and set it loose to roam Barsaive causing pain and destruction on behalf of its master. Some dual-natured Horrors use this ability to create a new body if their current one is destroyed, and this power is sometimes built into cursed items that transform the user into a construct."
+  },
+  {
+    "Name": "Forge Trap",
+    "Action": "Standard",
+    "Description": "This power allows the Horror to alter the nature of a stone, metal, or earthen passage to become a trap or contain one. The Horror makes a Forge Trap test, and distributes the points from the test among the trap’s game statistics. See Traps, p. 179 for more information on traps. Horrors have the ability to feed off the pain created by the trap and use the Harvest Energy power to gain Karma from any character injured by the trap."
+  },
+  {
+    "Name": "Harvest Energy",
+    "Action": "Free",
+    "Description": "This power allows Horrors to regain Karma by feeding off their preferred nourishment. This is most commonly negative emotion, but other preferred meals exist. If a character is in the grip of strong negative emotions like hate, fear, jealousy, or pain (such as from suffering a Wound) the Horror can make a Harvest Energy test against the victim’s Social Defense. Each success restores one point of Karma to the Horror. Some Horrors have preferred sources of nourishment, and gain an additional point of Karma even if the test is a failure. Horrors with the ability to create constructs or undead may feed through any construct or undead under their control."
+  },
+  {
+    "Name": "Horror Power",
+    "Action": "Varies (typically Standard)",
+    "Description": "This ability is used in conjunction with other powers, typically against one of the target’s Defense Ratings. The description will note the power or powers with which it is associated and the appropriate action type."
+  },
+  {
+    "Name": "Horror Mark",
+    "Action": "Standard",
+    "Description": "This power allows a Horror to mark victims and items, linking the Horror and a target within line of sight. The Horror makes a Horror Mark test against the target’s Mystic Defense. If successful, the Horror places its mark on the target, concealed within their True Pattern. The mark links the Horror and the target over significant distances. This allows the Horror to keep track of its chosen victim, communicate with them, and in some cases even use its powers on the victim outside of their normal range. In general, if the Horror is within 10 miles of the victim it may use any of its powers on or through the victim with no restriction. Up to 100 miles the Horror may use powers that do not directly cause damage, and communication is possible up to 1,000 miles. A Horror mark typically lasts until the Horror dies. Some marks last only for a year and a day, though a Horror can extend the duration with a new Horror Mark test against the victim, typically there is no range limit for this renewal. 463 Unique Horror Marks The guidelines here outline the basic effects and most common manifestation of this power. It is not uncommon, however, for major Horrors to have variations of this power that demonstrate the entity’s strengths, weaknesses, and tactics. The game information for some Horrors (especially Named Horrors) will often include rules on how the particular Horror’s mark differs from normal. Gamemasters are encouraged to modify the nature and behavior of Horror marks to suit the needs of the story and the individual Horror. Horror marks should be mysterious and terrifying, and the information about them within the setting should be unreliable. Effects of Horror Marks A Horror mark should have an impact on the marked character, as well as the adventure or campaign. It can serve as a story element, allowing the gamemaster a way to bring a Horror into an adventure without it necessarily making an appearance in the flesh. Most people in Barsaive are aware that a Horror mark is a dangerous thing. If it becomes known that a character is marked, they will face difficulties when dealing with other Namegivers. Common folk are liable to avoid the character, and be willing to let them die rather than risk exposure to a Horror. There are countless superstitions surrounding Horror marks, and given the many different ways this power can work, some of them might even be true. Detecting Horror Marks A mark does not necessarily make itself known. There is no specific physical trace unless a particular variant of mark does so, and even the astral indications of a mark are deeply buried in a victim’s pattern and difficult to detect. To detect a Horror mark using astral sensing, the sensing character must make a test against the Mystic Defense of the Horror that left the mark, with a number additional successes equal to the level of astral corruption (safe = 1 additional success, open = 2 additional successes, etc.). If successful, the mark can be seen as a small stain on the victim’s pattern, and detailed examination might reveal clues that may point to the identity of the Horror that owns the mark. For example, the mark of the Horror Aazhvat Many-Eyes might appear as an unblinking eye. Despite the popular belief a character under the influence of a Horror is unable to create works of art, this method of detecting Horror marks is unreliable at best. While there are Horrors whose influence can result in the corruption of artisan skills, this belief is largely the result of centuries of legend and superstition. Horror Marks and Raw Magic If a magician is desperate enough to cast raw magic, they may find themselves Horror marked. While the rules for casting raw magic provided on pages 261-262 of the Player’s Guide offer values for the Horror Mark test, the gamemaster should feel free to substitute the Horror Mark Step if he has a particular Horror in mind. In many cases, the Horror mark may be unplanned. This gives the gamemaster an opportunity to introduce a Horror at a later point in the campaign. Just because a Horror has marked a victim does not mean the Horror will start tormenting the victim right away. Horrors can be patient and wily. It could be weeks or months before the mark comes into play. The magician might even believe he has avoided attracting a Horror’s attention. The dangers of raw magic are well known in Barsiave, and careless magicians will gain a reputation. Their disregard for the safety of themselves and others will eventually result in a Horror mark. Do not allow a player character to avoid the consequences of raw magic casting because bringing a Horror into the game wasn’t planned. Horror Marked Items and Places It is possible for items and places to be Horror marked as well. As previously mentioned, these are usually called cursed items or places. In general, a mark on an item or place works the same way as a Horror mark on an individual, but offer some small degree of protection as the Horror can only work indirectly. Any tests the Horror makes through a cursed item or place require an additional success. Given the many different ways Horror marks can work, it is possible a Horror might have a mark that works through an item to invoke a particular effect. For example, a cursed item slowly turns its user into a construct, or allows the Horror to use its Cursed Luck power without penalty when the item is being used."
+  },
+  {
+    "Name": "Horror Thread",
+    "Action": "Standard",
+    "Description": "This power eventually allows a Horror direct control of a chosen victim. A Horror may only use this power on a victim it has previously marked. It may then spend 5 Karma Points and make a Horror Thread test against the target’s Mystic Defense. The Karma spent only powers the ability; it does not add dice to the test. If successful, the Horror weaves a thread connecting its pattern to the victim’s. Once per month, the Horror uses the woven thread to try and learn Pattern Knowledge about the victim. It spends a Karma Point and makes a Horror Thread test against the victim’s Mystic Defense. As with the initial Karma spent to weave the thread, this Karma point does not add dice to the test. If successful, the Horror learns a piece of Pattern Knowledge and may weave a new thread to the victim, which costs an additional 5 Karma points. Each woven thread grants the Horror a +1 bonus to any tests it makes against the victim, and the Horror also has full access to the target’s thoughts and memories, allowing it more freedom to taunt and torment the victim. Once the Horror’s bonus from woven threads equals the victim’s Willpower Step, the Horror can take control of the victim’s body and use their abilities as its own. For example, the Horror could force a Beastmaster to attack his allies with Claw Frenzy. The Horror uses the appropriate Step Numbers for the victim’s talents, spells, and other abilities, and may spend the victim’s Karma points on them if applicable. The Horror may also use its own powers through the victim. While in the case of some abilities the control may not be obvious, the victim can sense the intrusion."
+  },
+  {
+    "Name": "Karma Boost",
+    "Action": "Free",
+    "Description": "This power allows the Horror to tempt a Horror marked victim in need. The marked victim may be unaware of the source of this power. This is particularly true for victims who do not yet realize they have been Horror marked, the character just finds reserves of powers they didn’t previously have. At the marking Horror’s discretion, the marked victim may spend an additional Karma Point on any test on which they could normally spend Karma. This Karma point comes from the marking Horror’s Karma pool and their Karma Step. Each time the marked victim uses this power, they gain a Corruption Point. See Corruption, p. 456, for information on Corruption ranks."
+  },
+  {
+    "Name": "Karma Drain",
+    "Action": "Standard",
+    "Description": "This power allows a Horror to drain Karma points from a victim it has marked. The Horror makes a Karma Drain test against the victim’s Mystic Defense. Each success transfers one Karma point from the victim to the Horror. The victim must have Karma points available. Once the Horror has failed a Karma Drain test against a victim, it must wait until the next day to attempt another Karma Drain test against that victim."
+  },
+  {
+    "Name": "Karma Points",
+    "Action": "NA",
+    "Description": "Nearly all Horrors, and some Horror constructs, have Karma Points they may spend on any test, though they may only spend one point on any given test. Horrors and their ilk do not naturally replenish Karma Points like dragons, Namegivers, and spirits. Instead they use the Harvest Energy power, and some Horrors may have other avenues as well. Horrors have a Karma Pool of their Karma Step x 4, while Horror constructs and undead with Karma generally have their Karma Step x 2. 466"
+  },
+  {
+    "Name": "Poison",
+    "Action": "NA",
+    "Description": "This power allows a Horror to poison a victim after dealing damage with claws, teeth, or stinger. No test is required. The Rank is the poison’s Step Number. Additional details about the poison are provided in the Horror’s game statistics. See Poison, p. 171, for more information on poisons and how they work."
+  },
+  {
+    "Name": "Skills",
+    "Action": "Varies",
+    "Description": "Some Horrors have powers based on skills. For more information on the listed skill, refer to the Player’s Guide, starting on page 183."
+  },
+  {
+    "Name": "Skin Shift",
+    "Action": "Simple",
+    "Description": "This power allows a Horror to mutilate a target’s body. The Horror touches the target and makes a Horror Power test against the target’s Mystic Defense. If successful, the Horror makes a Skin Shift test to determine damage. No armor reduces this damage. The victim’s skin tears loose from the muscle below, twisting and turning around his body. Each success on the Horror Power test inflicts one Wound on the victim in addition to the damage from the Skin Shift test."
+  },
+  {
+    "Name": "Spells",
+    "Action": "Varies",
+    "Description": "Many Horrors know how to cast spells. Horrors do not use Spell Matrices, as they suffer no ill effects from using Raw Magic. Horrors must still weave threads, but use their Spellcasting ability instead of traditional Thread Weaving talents. When casting spells, Horrors do not need to perform any of the actions required in a spell’s description to cast the spell. Horrors rarely learn spells affecting undead or astral entities like spirits and Horrors."
+  },
+  {
+    "Name": "Suppress Mark",
+    "Action": "Standard",
+    "Description": "This power allows a Horror to hide its mark deep within a victim’s pattern. The Horror increases the Difficulty to detect the mark by the Suppress Mark Step. While this power is in effect, the Horror is not able to use the mark to affect the victim."
+  },
+  {
+    "Name": "Talents",
+    "Action": "Varies",
+    "Description": "Some Horrors have powers based on talents. For more information on a listed talent, refer to the Player’s Guide, starting on page 119."
+  },
+  {
+    "Name": "Terror",
+    "Action": "Standard",
+    "Description": "This power allows a Horror to paralyze its victims with fear. The Horror makes a Terror test and compares the result to the Mystic Defense of each character within 20 yards. Each character suffers a -1 penalty to Action tests for each success on the Terror test. 467 As a Simple action at the beginning of an affected character’s turn, they may make a Willpower test against the Terror Step. This test is optional, with each success reducing the penalty by 1. If the penalty ever reaches 0, the effects of this power wear off. If the Willpower test is unsuccessful, the penalty increases by -1. If the penalty is ever greater than the character’s Willpower step, the character is unable to take any actions against the Horror. The character may still make Willpower tests to try and resist the effect, and at gamemaster discretion may use defensive abilities (such as Avoid Blow). Most characters in this state are panic-stricken, and will behave accordingly: fleeing, collapsing into the fetal position, or standing quivering helplessly."
+  },
+  {
+    "Name": "Unnatural Life",
+    "Action": "Standard",
+    "Description": "This power allows a Horror to grant a dead character the gift of life. This power can only be used on characters dead for less than a year and a day. The Horror touches the corpse and makes an Unnatural Life test against the Mystic Defense the victim had while alive. If successful, the character is brought back to life. This costs the Horror 1 point of Blood Magic, which cannot be healed until the victim is killed. While not as dreadful to behold as a cadaver man or ghoul, any decay or damage to the corpse remains. Other than the potentially horrific appearance, the revived character functions as he did in life with all talents and abilities intact. The character’s personality and memories are also restored. Victims of this power are difficult to destroy. They may make a Recovery test at any time as a Simple action, and have unlimited Recovery tests available. The Horror may end the effect of this power at any time, and often uses this to coerce the victim into serving it in some capacity."
+  }
+]

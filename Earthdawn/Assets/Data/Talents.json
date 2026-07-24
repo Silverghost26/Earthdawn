@@ -1190,5 +1190,501 @@
     "SkillUse": "Yes",
     "SkillLevel": "Novice",
     "Description": "The adept firmly stands his ground, substituting his Wound Balance Step for his Strength Step when making any Knockdown tests while supporting and balancing his own weight (as opposed to being mounted or carried by another character)."
+  },
+  "Ancient Bonds": {
+    "Step": "Rank+PER",
+    "Strain": 1,
+    "Action": "Special",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept can cast certain spells through a spirit they summoned, whether through a tasked spirit or the Summon talent, or assumed an agreement with. The adept makes an Ancient Bonds test against the spirit’s Mystic Defense within Ancient Bonds rank × 2 yards as a Standard action. If successful, the adept creates a bond between them and the spirit for one hour per success. The adept can cast spells with the Binding and/or Spirit keyword through the spirit for 1 Strain. This treats the spirit as the adept for casting spells, including targeting the spirit with “self” range spells. Spells cast in this fashion gain an additional success to the Spellcasting test (including abilities such as Concise Casting). The spirit must be within Ancient Bonds rank × 10 yards to use this effect. Using this talent in this fashion is a Free action - the action type for the spell does not change (e.g., Spellcasting tests are still Standard actions). The adept can also experience the spirit’s senses as a Sustained action and gains +2 to tests related to senses for each additional success (e.g., Astral Sight tests) while doing so. During this time the adept does not experience their senses, but still feels pain. If they take damage, they must make an Ancient Bonds test against the damage taken to continue experiencing the spirit’s senses. The spirit must be within Ancient Bonds rank × 100 yards to use this effect and this functions if the spirit is in astral space."
+  },
+  "Applied Knowledge": {
+    "Step": "Rank+CHA",
+    "Strain": 1,
+    "Action": "Simple",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept uses their accumulated knowledge to gain insight and an advantage on related activities. Immediately following a successful and relevant Knowledge test (made as a Standard action), the adept makes an Applied Knowledge (6) test or against the target’s Mystic Defense, whichever is higher. If successful, up to Applied Knowledge rank allies gain +1 per success to a specific Action test. The adept must impart this knowledge to their allies and they must understand the communication, but it doesn’t have to make sense to them - the adept’s confidence and the talent’s magic are all they need to benefit. This talent lasts for Applied Knowledge rank minutes and a character may only benefit from one use of Applied Knowledge at a time."
+  },
+  "Bane Strike": {
+    "Step": "Rank",
+    "Strain": 2,
+    "Action": "Free",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept infuses their attack with the power of blood and sacrifice to enhance the damage against Horrors and Horror constructs. On a successful attack against a Horror or Horror construct, the adept adds their Bane Strike rank as a bonus to a Damage or Effect test (only if it inflicts damage)."
+  },
+  "Bear Mark": {
+    "Step": "Rank+WIL",
+    "Strain": 2,
+    "Action": "Free",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "This talent allows an adept to prevent a Horror Mark from doing something terrible to them and allow them to make more poor life decisions. Immediately after being Horror Marked, the adept can make a Bear Mark test against the Horror Mark Step. If successful, the Horror Mark is sequestered in the adept's pattern and cannot affect them. If unsuccessful, they are affected as normal. Each time the Horror attempts to use a power on or through them via the Horror Mark, they may repeat this test. If successful, they resist the Horror's attempt to use its power on or through them. If they get four successes on this test, they successfully sequester the Horror Mark and it can no longer be used to affect them. This does not prevent the Horror from communicating with the adept as normal, just affecting them with powers (including those which affect “normal” communication). The adept can bear a number of Horror Marks up to their Bear Mark rank. Horrors are unaware if their Mark is sequestered and cannot place multiple Horror Marks on a target. If they successfully Horror Mark the target again, it simply increases the duration of the sequestered Horror Mark."
+  },
+  "Body Control": {
+    "Step": "Rank+STR (Special)",
+    "Strain": 0,
+    "Action": "Simple",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept hardens their body for unarmed strikes, using their Body Control Step for Damage tests in unarmed combat until the end of the next round. The adept gains their one-handed weapon size limit as a bonus to the Step. Their body is considered a weapon for the purposes of targeting, though may not be removed by Disarm. Body Control may be enhanced with other talents that increase damage, such as Crushing Blow, but not combined with abilities that can turn the body into a weapon, e.g. Body Weapon, Claw Shape, and Savage Limbs. Both the adept’s hands must be free and cannot be holding weapons, shields, and items which act as shields when using this talent."
+  },
+  "Brother of Stone": {
+    "Step": "Rank",
+    "Strain": 0,
+    "Action": "N/A",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "This talent measures the adept’s advancement on the Brother of Stone Path. The adept can learn one Brother of Stone talent option for each rank and gains their Brother of Stone rank as a bonus to Interaction tests for making an impression or asking for favors of other Brothers of Stone. See p. 17 for details and additional benefits. This talent’s maximum rank is 10 and costs Master tier to advance."
+  },
+  "Call of Harrow": {
+    "Step": "Rank+PER",
+    "Strain": 1,
+    "Action": "Simple",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept uses a type of divination magic to gain information about a Horrorspawn target they are observing. They make a Call of Harrow test against the target's Mystic Defense. For each success, the adept's player can ask a specific question that reveals one of the target's game statistics or abilities, such as, 'What is its Physical Defense?' or 'What is its Unconsciousness Rating?' The question must be about a specific trait - general questions such as 'How tough is it?' should warrant an equally vague answer ('Pretty tough'). The gamemaster should disallow questions comparing more than one statistic, such as 'is this jehuthra tougher than I am?' or 'Which is higher, it's Physical or Mystic Defense?' At the gamemaster's discretion, using this talent can yield insights about a target's vulnerabilities which can prove useful to an adventuring group about to tangle with a Horror."
+  },
+  "Ch’tard Dance": {
+    "Step": "Rank+DEX",
+    "Strain": 1,
+    "Action": "Free",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept moves their tail in deceptive or distracting way—indicative of the adept’s particular mentors and training—which conceals their intentions. The adept spends 1 Strain per target and makes a Ch’tard Dance test before Initiative is determined against the highest Social Defense of up to Rank target adjacent opponents, +1 for each additional opponent. The adept is not required to target all adjacent opponents. If successful, the targets are Blindsided against the first attack against each target from the adept’s tail that round. The adept’s tail must have a Size 1 bladed or piercing weapon attached and have successfully used Tail Dance this round. Additional successes from this talent can be spent on Ch’tard Dance and Tail Dance special maneuvers. The adept cannot use another school’s dance talent this round."
+  },
+  "Ch’tard Pierce": {
+    "Step": "Rank+DEX",
+    "Strain": 2,
+    "Action": "Simple",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept makes a lightning fast attack against a Blindsided, Harried, or Surprised opponent with their tail. The adept makes a Ch’tard Pierce test as an Attack test against the target. The target cannot use active defenses against this attack (e.g. Avoid Blow and Riposte). Unarmed Combat knacks can be applied to this attack. The adept must have a higher Initiative result than the target and the target must be affected by the adept’s Ch’tard Dance."
+  },
+  "Dance Partner": {
+    "Step": "Rank+PER",
+    "Strain": 1,
+    "Action": "Simple",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept studies and learns about their opponent, the particular moves and patterns of their new dance partner. The adept makes a Dance Partner test against a target’s Social Defense. This test requires 3 additional successes initially. However, each full round in close combat reduces the number of additional successes required by 1, until the fourth round when no additional successes are required. If successful, the adept takes 1 Blood Magic Damage and may spend a Karma point on any Dexterity-based close combat test (such as Avoid Blow, Maneuver, or Melee Weapons) against the target once per round. The Blood Magic Damage and benefit lasts for a year and a day. If the Blood Magic Damage is healed, the effect ends. The adept can have up to Dance Partner rank in dance partners. During this time, the adept recognizes any current dance partners as such, though may not know their identity, only they know them as dance partners. The adept can make a Dance Partner test against the test result of the ability the target is using to conceal their identity to recognize them (this does not cost Strain). This talent does not immediately detect abilities that require Sensing tests, but this talent grants a Sensing test every round the adept interacts with the target."
+  },
+  "Deliberate Assault": {
+    "Step": "Rank",
+    "Strain": 1,
+    "Action": "Free",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept concentrates and patiently waits for the perfect moment to attack; glowing mystic symbols appear on their weapon or form unique to each adept. For example, an adept may write a personal mantra in runes, or an obsidiman may use a symbol representative of their Liferock. As more time passes, more symbols decorate the weapon. The adept can reduce their Initiative result by any amount after action declaration, similar to a delayed action. However, this is not a delayed action or a reserved action. The reduction is applied after all other bonuses and penalties and cannot be used to reduce their Initiative result below 0; this talent allows the adept to reduce their Initiative result to 0. The adept gains a bonus to their next Attack test against an opponent with a higher Initiative result after all modifications equal to the difference between the Initiative results, up to the adept’s Deliberate Assault rank."
+  },
+  "Dive Attack": {
+    "Step": "Rank",
+    "Strain": 1,
+    "Action": "Free",
+    "SkillUse": "Yes",
+    "SkillLevel": "Journeyman",
+    "Description": "The adept dives towards their target, building speed and force for a devastating attack; this can be used with Swooping Attacks (Player’s Guide, p. 398). The adept must be flying and dive at least half their Movement Rate toward their target in a relatively straight line and make a close combat Attack test directly following the movement. If successful, the adept adds their Dive Attack rank to the Damage test. Dive Attack can be used with other talents that improve damage, such as Crushing Blow or Down Strike. This talent can be used once per round."
+  },
+  "Earth Bond": {
+    "Step": "Rank+WIL",
+    "Strain": 0,
+    "Action": "Standard",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept uses their connection to the land to either draw life force from it or spend theirs into it. They must have their feet on the ground and choose to either heal themselves or the land. The adept spends a Recovery Test and makes an Earth Bond (5) test. If the adept heals themselves, they immediately make a Recovery test with +2 for each additional success. This Recovery test can benefit from other talents the adept possesses, but no external bonuses (e.g. booster potions or spells). Every 5 points of damage the adept heals causes the surroundings to notably wither. In lush areas, this may have little significant effect, but barren areas may be rendered sterile. If the adept chooses to heal the land, it is treated as though the adept cast both Purify Earth (Player’s Guide, p. 273) and Purify Water (Player’s Guide, p. 274). The test result is treated as the Spellcasting and Effect tests as appropriate and additional successes are applied to both spells; one additional successes is one additional success for each spell as appropriate."
+  },
+  "Earth Speak": {
+    "Step": "Rank+CHA",
+    "Strain": 1,
+    "Action": "Standard",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept can beckon and communicate with nearby earth elemental spirits. Many adepts use this talent to establish a rapport with earth elementals near their liferock. Earth Speak can call out to earth elementals within rank ×100 yards, requesting them to come to the adept, by making an Earth Speak test against the Mystic Defense of all earth elementals within the area. If successful, affected earth elementals make their way to the adept as soon as they can without exposing themselves to danger. This call lasts for up to rank minutes. The adept can engage with the spirits or dismiss them as they arrive, and cancel the call before the duration is up if it has been answered to their satisfaction. This is considered to be polite. The adept can include the Name of an earth elemental in the call, giving a +5 bonus to the Earth Speak test for this purpose. Earth Speak can be used as Elemental Tongues (requiring a separate activation of the talent) when dealing with earth elementals. The adept can negotiate with earth spirits called by this talent, or encountered naturally as though they were summoned (Player’s Guide, p. 366). Most earth elementals are more favorably inclined to the adept when using this talent than when summoned from astral space, as long as the adept continues to show the spirit proper respect. There is no specific effect associated with this, but should have some impact when negotiating, including willingness to provide minor favors. Adepts who abuse this talent, such as lacking respect or summoning spirits to simply bother them, earn a bad reputation and word spreads throughout earth elementals regarding their boorish behavior. The adept can never use a Contest of Wills with this talent, and any adept who uses it within typical summoning of earth spirits finds their attention poorly received when interacting with this talent."
+  },
+  "Earth Walk": {
+    "Step": "Rank",
+    "Strain": 1,
+    "Action": "Sustained",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept must be in direct contact with the earth and their body changes to match the earth as they sink into it over the course of a round. The adept physically travels through the earth up to Earth Walk rank yards per round, and is vaguely aware of their surroundings within rank yards, such as their direction of travel, if there is “air”, obstructions (e.g., metal, roots, stones, etc.), and other creatures within the earth. The adept cannot travel through obstructions such as metal, roots, and stones, but can move around them, occupying roughly a one-foot cube of space, and cannot partially emerge or submerge into the earth. The adept cannot split their movement while using this talent; if they have already moved in a round, the adept cannot submerge, and if they emerge, the adept cannot continue moving. This talent lasts up to rank minutes, or until the adept emerges. The adept can pay the Strain cost to maintain using this talent while submerged."
+  },
+  "Edo Dance": {
+    "Step": "Rank+DEX",
+    "Strain": 1,
+    "Action": "Free",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept feints at their opponents with their tail, controlling their immediate surroundings. The adept spends 1 Strain per target and makes an Edo Dance test before Initiative is determined against the highest Social Defense of up to Rank target adjacent opponents, +1 for each additional opponent. The adept is not required to target all adjacent opponents. If successful, the targets make a Knockdown test against the Edo Dance result if they move away from the adept (they are aware of this effect). The adept’s tail may not be encumbered, such as armor or an attached weapon, and the adept must be using the Tail Attack combat option and have successfully used Tail Dance this round. Additional successes from this talent can be spent on Edo Dance and Tail Dance special maneuvers. The adept cannot use another school dance talent this round."
+  },
+  "Edo Sweep": {
+    "Step": "Rank+DEX",
+    "Strain": 2,
+    "Action": "Free",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept lashes out with their tail and trips an opponent in the blink of an eye that may preempt another action, but not interrupt one in progress. For example, the adept may use Edo Sweep before the target makes a Melee Weapons test, but once the Melee Weapons test has been made, Edo Sweep may not be used until the Melee Weapons test and its effects are resolved. The adept makes an Edo Sweep test as an Attack test against the Physical Defense of the target. If successful, the Attack test result is used as the Knockdown Difficulty for the opponent, +2 for each additional success on the Attack test. This talent may be used once per turn and the target must be affected by the adept’s Edo Dance. The adept cannot use another school’s dance talent this round."
+  },
+  "Engaging Dance": {
+    "Step": "Rank+DEX",
+    "Strain": 1,
+    "Action": "Free",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept uses their tail in conjunction with a complicated series of maneuors to control the movement of an opponent. The adept makes an Engaging Dance test before Initiative is determined against the Social Defense of one opponent. If successful, the opponent must remain adjacent to the adept, moving as a Free action to follow (this still counts against the target’s Movement Rate for the round). If the target chooses not to follow, they are Harried until the end of the next round. If the adept moves in a way where the target cannot follow, this talent immediately ends; the magic of the talent instinctively tells the adept if the target cannot follow. Additional successes from this talent can be spent on Tail Dance special maneuvers, though affected abilities can then only target the Engaging Dance target."
+  },
+  "Expansive Expertise": {
+    "Step": "Rank",
+    "Strain": 0,
+    "Action": "N/A",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept’s scholarly training and connections considerably broaden their access to knowledge and how they accumulate it. The adept selects a Knowledge skill with at least 5 ranks for each Expansive Expertise rank; the same Knowledge skill can be selected multiple times. The Knowledge skill is an “area of expertise” and each assigned Expansive Expertise rank adds a related Knowledge skill to the original Knowledge skill as part of the area of expertise. All added Knowledge skills must be related to the original Knowledge skill, not Knowledge skills added later through this talent. These added Knowledge skills use the rank of the original Knowledge skill and it is increased as normal for a Knowledge skill. When other abilities refer to the adept’s “area(s) of expertise”, this includes both areas of expertise and their associated related fields. Beispiel has Expansive Expertise rank 1 and selects Legends and Heroes as their area of expertise and Ancient Weapons as a related field. They increase Expansive Expertise to rank 2 and can add to their existing area of expertise, Legends and Heroes, or establish a new area of expertise by selecting a Knowledge skill with at least 5 ranks. If Beispiel adds to their Legends and Heroes area of expertise, the new Knowledge skill (a related field) must be related to Legends and Heroes (the area of expertise), not Ancient Weapons (a related field). When other abilities refer to Beispiel’s “areas of expertise”, this includes both Legends and Heroes and Ancient Weapons."
+  },
+  "Fire Eater": {
+    "Step": "Rank",
+    "Strain": 0,
+    "Action": "N/A",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "This talent measures the adept’s advancement on the Fire Eater Path. The adept can learn one Fire Eater talent option for each rank and gains their Fire Eater rank as a bonus to Interaction tests for making an impression or asking for favors of other Fire Eaters. See p. 31 for details and additional benefits. This talent’s maximum rank is 5 and costs Journeyman tier to advance."
+  },
+  "Fires of Gahad": {
+    "Step": "Rank+WIL",
+    "Strain": 1,
+    "Action": "Free",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept has learned how to be at peace with their gahad, either suppressing or harnessing it. When the adept is confronted with a gahad trigger, this talent can substitute their Fires of Gahad Step for their Willpower Step on a test to resist the trigger, or the adept can make a Fires of Gahad (10) test to release their gahad in a controlled, focused fashion. Each success increases the bonus from gahad by +1."
+  },
+  "Focused Strike": {
+    "Step": "Rank+WIL",
+    "Strain": 1,
+    "Action": "Free",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept channels their energy into a single devastating attack by enhancing it with their unique energy manifestation in a supreme effort of will. For example, the adept may conjure their personal glyph in front of their fist, or surround their weapon in a haze of blood infused with their will. The adept adds their Focused Strike Step to a Damage test result. The adept cannot have already made an Attack test this round and cannot make subsequent Attack tests (this includes Attack tests such as Riposte and Snapshot). This can be combined with other damage enhancing talents, such as Body Control and Crushing Blow."
+  },
+  "Forest Sense": {
+    "Step": "Rank+PER",
+    "Strain": 2,
+    "Action": "Sustained",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept spends at least one week in a forest or similar area of heavy foliage and bonds with the forest. They can use this talent to extend their senses over an area of rank miles. The adept perceives anything within this area as if they are present if they concentrate on a particular area, making Forest Sense tests as appropriate to perceive things in the area, or have a vague awareness of what is happening if concentrating on the whole area. The adept can make Forest Sense tests to search for something specific, which takes an hour with additional successes reducing the required time by 10 minutes per additional success."
+  },
+  "Gaze into the Abyss": {
+    "Step": "Rank",
+    "Strain": 1,
+    "Action": "Free",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept has learned to tap into the collective knowledge and memories of Horror Stalkers and those who came before to aid in their efforts against the common enemy. When performing a test to learn or recall information about a Horror or Horror construct, the adept adds their Gaze into the Abyss rank to the test result."
+  },
+  "Guardian’s Service": {
+    "Step": "Rank",
+    "Strain": 1,
+    "Action": "Simple",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept siphons their strength to empower the defenses of an adjacent ally. This has a visible component, such as a glow or a personal glyph, or the adept touches the target and says a short mantra. The adept may take penalties to their Defense Ratings and have an adjacent ally receive equal bonuses to the same Defense Ratings until the end of the next round or until the ally is no longer adjacent to the adept. The sum of the penalties taken cannot exceed the rank, nor reduce any Defense Rating below 3."
+  },
+  "Horror Stalker": {
+    "Step": "Rank",
+    "Strain": 0,
+    "Action": "N/A",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "This talent measures the adept’s advancement on the Horror Stalker Path. The adept can learn one Horror Stalker talent option for each rank and gains their Horror Stalker rank as a bonus to Interaction tests for making an impression or asking for favors of other Horror Stalkers. See p. 41 for details and additional benefits. This talent’s maximum rank is 10 and costs Master tier to advance."
+  },
+  "Journeyman": {
+    "Step": "Rank",
+    "Strain": 0,
+    "Action": "N/A",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "This talent measures the adept’s advancement on the Journeyman Path. The adept can learn one Journeyman talent option for each rank and gains their Journeyman rank as a bonus to Interaction tests for making an impression or asking for favors of other Journeymen. See p. 54 for details. This talent’s maximum rank is 5 and costs Master tier to advance."
+  },
+  "Liberation": {
+    "Step": "Rank+CHA",
+    "Strain": 2,
+    "Action": "Simple",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept rallies everyone to break free from their fears and any unnatural influence, to strike back and reclaim their liberty by making a Liberation test against the highest Social Defense of their allies and opponents within rank × 10 yards. If successful, everyone within range makes one Willpower test against all ongoing effects which are unnaturally altering the target’s emotions, related to compulsion or fear, or causing penalties to Social Defense, even if a Willpower test is not normally allowed. The tests gain the adept’s Liberation rank as a bonus. The Willpower test result is compared against the resistance Difficulty Number for each effect. If there is no specified resistance for an effect, the original Step is the Difficulty Number to end the effect. In addition, affected targets gain +2 to Mystic and Social Defense, and Willpower tests per success against future such effects for Liberation rank rounds. Affected targets may take this moment of clarity to instantly evaluate their actions, allegiances, standing, etc., and declare themselves allies of the adept."
+  },
+  "Liberator": {
+    "Step": "Rank",
+    "Strain": 0,
+    "Action": "N/A",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "This talent measures the adept’s advancement on the Liberator Path. The adept can learn one Liberator talent option for each rank and gains their Liberator rank as a bonus to Interaction tests for making an impression or asking for favors of other Liberators. See p. 67 for details and additional benefits. This talent’s maximum rank is 10 and costs Master tier to advance."
+  },
+  "Messenger": {
+    "Step": "Rank",
+    "Strain": 0,
+    "Action": "N/A",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "This talent measures the adept’s advancement on the Messenger Path. The adept can learn one Messenger talent option for each rank and gains their Messenger rank as a bonus to Interaction tests for making an impression or asking for favors of other Messengers. See p. 81 for details and additional benefits. This talent’s maximum rank is 10 and costs Master tier to advance."
+  },
+  "Morphism": {
+    "Step": "Rank+WIL",
+    "Strain": 2,
+    "Action": "Standard",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "Must have Journeyman rank 5 to learn. The adept touches a humanoid Namegiver and visibly alters their own body to be more like the target’s race, gaining bonus Attribute Values of the race by making a Morphism test against the target’s Mystic Defense. If successful, the adept gains +1 to their Attribute Values per success for rank minutes. The increase cannot exceed the difference between the human Starting Attribute Values and the target race’s Starting Attribute Values, but can affect all attributes. Eowlyn targets an elf with Morphism and gets four successes on her Morphism test. She can gain bonuses to Dexterity, Perception, Willpower, and Charisma, but no more than +2, +1, +1, and +1 respectively. Her four successes are divided among those Attributes up to their maximum. If the adept uses this talent again before the duration expires, the new usage replaces the previous usage. Blood elves are “normal” (unprotected) elves when targeted; this talent does not replicate the Ritual of Thorns."
+  },
+  "Outcast": {
+    "Step": "Rank",
+    "Strain": 0,
+    "Action": "N/A",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "This talent measures the adept’s advancement on the Outcast Path. The adept can learn one Outcast talent option for each rank. See p. 92 for details and additional benefits. This talent’s maximum rank is 5 and costs Journeyman tier to advance."
+  },
+  "Patient Resilience": {
+    "Step": "Rank",
+    "Strain": 2,
+    "Action": "Free",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept’s intense concentration focuses on their body in addition to their weapon. Their unique mystic symbols cover their body and blaze more intensely than before, creating a corona of energy around the adept. If the adept’s Initiative result is less than their Patient Resilience rank, they gain the difference between the two as a bonus divided evenly between their Physical and Mystic Armor until the end of the round. If the result is odd, the adept chooses which Armor gains the additional point. Additionally, the adept adds their Patient Resilience rank to their Deliberate Assault rank for the maximum bonus to their next Attack test. The adept’s Initiative result after modifications must be below their their Patient Resilience rank to use this talent. Beispiel reduces their Initiative to 0 with Deliberate Assault rank 13 and uses Patient Resilience rank 13. The difference between their Initiative result and Patient Resilience rank is 13, which they divide as evenly as possible between Physical and Mystic Armor. Since there is a remaining point, Beispiel decides to add it to Physical Armor, giving +7 Physical Armor and +6 Mystic Armor until the end of the round. They also increase their potential bonus to their next Attack test against a target with a higher Initiative result by +13, up to 26. Their planned target has a 22 Initiative result, which means they won’t be able to use the entire potential bonus."
+  },
+  "Pilot Boat": {
+    "Step": "As the skill, Player’s Guide, p. 199.",
+    "Strain": 0,
+    "Action": "N/A",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "As the skill, Player’s Guide, p. 199."
+  },
+  "Purge Karma": {
+    "Step": "Rank+WIL",
+    "Strain": 2,
+    "Action": "Simple",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept uses their force of will to force a connection between them and a Horror, tapping into the target’s unnatural magics. To use this ability, the adept makes a Purge Karma test as a Simple action against the Mystic Defense of a Horrorspawn target. If successful, whenever the target spends a Karma point, the adept may spend a Karma point to cancel the expenditure. The Karma is treated as though it was spent, though there is no effect. The adept may do this a number of times per turn equal to the successes on the Purge Karma test. This effect lasts for Purge Karma rank rounds."
+  },
+  "Purification": {
+    "Step": "Rank+WIL",
+    "Strain": 1,
+    "Action": "Standard",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept uses their connection to the elements to remove debilitating effects affecting them. Each adept uses this talent in a different way, for example, a centering kata or purifying phrase. The adept makes a Purification test against the highest Dispel Difficulty or Step (as appropriate) of the negative effects affecting them they wish to end. If successful, the adept ends one effect per success. This can include creature powers, devotions, diseases, Horror powers, poisons, spells, and talents, but does not include Horror marks or any powers used through Horror marks. During the round this talent is used, the adept may only perform Free actions (e.g. Avoid Blow) - they may not perform any Simple actions as their attention is drawn entirely into their purification ritual. If the adept already used Simple actions in the round, this talent may not be used."
+  },
+  "Purifier": {
+    "Step": "Rank",
+    "Strain": 0,
+    "Action": "N/A",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "This talent measures the adept’s advancement on the Purifier Path. The adept can learn one Purifier talent option for each rank and gains their Purifier rank as a bonus to Interaction tests for making an impression or asking for favors of other Purifiers. See p. 104 for details and additional benefits. This talent’s maximum rank is 5 and costs Journeyman tier to advance."
+  },
+  "Read River": {
+    "Step": "Rank+PER",
+    "Strain": 0,
+    "Action": "Sustained",
+    "SkillUse": "Yes",
+    "SkillLevel": "Novice",
+    "Description": "As the knack, Companion, p. 102."
+  },
+  "Rite of Kho’pesh": {
+    "Step": "Rank",
+    "Strain": 2,
+    "Action": "Sustained (1 minute)",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept declares kho’pesh by channeling their ka’tosh against a particular target, whether it be a person, group, or goal and declares kho’pesh. This declaration must avenge a significant personal slight to their ka’tosh or be directly related to their redemption. The adept focuses their intent and will, then makes a ritual cut and takes 2 Blood Magic Damage which cannot be healed until the adept resolves their kho’pesh or gives up. During this time, the adept refreshes their Honor Points, up to their Rite of Ka’tosh rank, when they perform their Karma Ritual. These may be spent in place of the adept’s normal Karma Points, but only on Action tests related to their kho’pesh and cannot be used by another target. This kho’pesh must feature during the adept’s Karma Ritual. If the adept abandons their kho’pesh, they receive a Blood Wound that heals after a year and a day and a runic scar displaying their failure which can never be removed."
+  },
+  "Sailing": {
+    "Step": "As the skill, Player’s Guide, p. 199.",
+    "Strain": 0,
+    "Action": "N/A",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "As the skill, Player’s Guide, p. 199."
+  },
+  "Scholar": {
+    "Step": "Rank",
+    "Strain": 0,
+    "Action": "N/A",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "This talent measures the adept’s advancement on the Scholar Path. The adept can learn one Scholar talent option for each rank and gains their Scholar rank as a bonus to Interaction tests for making an impression or asking for favors of other Scholars. See p. 116 for details and additional benefits. This talent’s maximum rank is 5 and costs Journeyman tier to advance."
+  },
+  "Sense Captive": {
+    "Step": "Rank+PER",
+    "Strain": 1,
+    "Action": "Standard",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept senses the presence and location of Namegivers held against their will. The adept makes a Sense Captive test against the Mystic Defense of all Namegivers held against their will within Sense Captive rank × 20 yards. If successful, the adept detects the Namegivers. For each additional success against the target, they learn the following information in order: 1) their direction from the adept, 2) their distance from the adept, 3) their race and gender, 4) their general emotional state, and 5) their general health. This does not automatically detect targets with illusions concealing their nature even if successful against the target’s Mystic Defense, but is a Sensing test against the illusion. This talent lasts for Sense Captive rank minutes and may be maintained by spending 1 Strain when it is about to expire. To make a new test, the talent must be allowed to expire, then used again."
+  },
+  "Sense Horrorspawn": {
+    "Step": "Rank+PER",
+    "Strain": 1,
+    "Action": "Standard",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept has learned to enhance their natural abilities to detect Horrospawn and gain additional information. To use this talent, the adept makes a Sense Horrorspawn test against the Mystic Defense of every viable target within Sense Horrorspawn rank x 10 yards. If successful, they detect the entity. For each additional success against the target, they learn the following information in order: 1) its type (Horror, Horror construct, or undead), 2) its direction from the adept, 3) its distance from the adept. If the test does not succeed against a target, it is not detected. Targets detected in this fashion are astrally sensed and are tracked while this talent is active. This talent lasts for Sense Horrorspawn rank rounds and may be maintained by spending 1 Strain when it is about to expire. To make a new test, the talent must be allowed to expire, then used again. This does not automatically detect targets using illusions to conceal their nature even if successful against the target’s Mystic Defense but is a Sensing test against the illusion."
+  },
+  "Shatter Will": {
+    "Step": "Rank+WIL",
+    "Strain": 2,
+    "Action": "Free",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept senses a target within Shatter Will rank × 2 yards and gathers their will, then focuses at the target as a psychic hammer. A brutal force that directly strikes the target’s mind, staggering them. The adept makes a Shatter Will test against their target’s Mystic Defense. If successful, the target suffers -2 to their Physical, Mental, and Social Defenses for each success until the end of the round. The adept must be able to detect the target by whatever means are at their disposal. This talent can only be used once per round."
+  },
+  "Shivoavara Dance": {
+    "Step": "Rank+DEX",
+    "Strain": 1,
+    "Action": "Free",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept leaps and tumbles around their opponents, taking advantage of openings during their acrobatic movements. The adept spends 1 Strain per target and makes a Shivoavara Dance test before Initiative is determined against the highest Social Defense of up to Rank target adjacent opponents, +1 for each additional opponent. The adept is not required to target all adjacent opponents. If successful, the adept gains +2 to Attack tests made with their tail against targets until the end of the round. The adept must be using the Tail Attack combat option and have successfully used Tail Dance this round. Additional successes from this talent can be spent on Shivoavara Dance and Tail Dance special maneuvers. The adept cannot use another school’s dance talent this round."
+  },
+  "Shivoavara Escalation": {
+    "Step": "Rank+DEX",
+    "Strain": 1,
+    "Action": "Simple",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept channels the rolling nature of the river into their attacks, building to a crescendo. The adept makes a Shivoavara Escalation (10) test. If successful, the adept gains +2 to all close combat Attack tests until the end of the round. Additionally, the adept gains +2 to all subsequent close combat Attack tests until the end of the round for each successful Attack test, limited by the number of successes. Up to a number of successful Attack tests equal to the number of successes. Ting makes a Shivoavara Escalation test with a result of 22, for three successes. She gains +2 to her first Attack test, which is successful. Her next Attack test gains +4. Continuing until her third successful Attack test gives all following Attack tests +8. A fourth successful Attack test does not increase the bonus; she has only three successes total. The talent only affects targets affected by Shivoavara Dance. Bonuses to not apply against or accrue from other targets."
+  },
+  "Shout of Justice": {
+    "Step": "Rank+CHA",
+    "Strain": 1,
+    "Action": "Simple",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "Shout of Justice is the adept’s personal battle cry that strikes fear in the hearts of tyrants and encourages the oppressed and their allies. The adept makes a Shout of Justice test against the highest opposing Social Defense within rank × 10 yards. If successful, enemies within range suffer -1 per success to their Action tests and Social Defense against fear effects until the end of the next round, and allies within range gain +1 per success to one test of their choice, and their Social Defense and Willpower tests against fear effects until the end of the next round. This talent has no effect on any targets if there are no tyrants opposing the adept and no effect against enemies which are immune to fear."
+  },
+  "Skora Dance": {
+    "Step": "Rank+DEX",
+    "Strain": 1,
+    "Action": "Free",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept uses their tail defensively to protect and parry against incoming attacks. The adept makes a Skora Dance test before Initiative is determined against the highest Social Defense of up to Skora Dance rank target adjacent opponents, +1 for each additional opponent. The adept is not required to target all adjacent opponents. If successful, the attacks from affected targets suffer a -2 penalty to Attack tests against the adept until the end of the round. The adept’s tail must be using the Skora school specially modified tail armor and the adept must have successfully used Tail Dance this round. The adept cannot use their tail to make attacks this round. Additional successes from this talent can be spent on Skora Dance and Tail Dance special maneuvers. The adept cannot use another school’s dance talent this round."
+  },
+  "Skora Slam": {
+    "Step": "Rank+DEX",
+    "Strain": 2,
+    "Action": "Free",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept slams their armored tail into their opponent in a lightning fast attack, staggering them. This may preempt another action, but not interrupt one in progress. For example, the adept may use Skora Slam before the target makes a Melee Weapons test, but once the Melee Weapons test has been made, Skora Slam may not be used until the Melee Weapons test and its effects are resolved. The adept makes a Skora Slam as an Attack test against the opponent. If successful, the target suffers a -1 penalty per success to all Action tests until the end of the round. This talent may be used once per turn and is allowed to be performed while using Skora Dance, and the target must be affected by the adept’s Skora Dance."
+  },
+  "Spirit Covenant": {
+    "Step": "Rank+CHA",
+    "Strain": 2,
+    "Action": "Standard",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "Requires Spirit Pact. The adept invokes their pact formed with spirits, assuming the agreement or absolving their obligations. The adept can target any spirit they can detect within Spirit Covenant rank × 2 yards. Against tasked spirits, the adept makes a Spirit Covenant test against the Dispel Difficulty (Player’s Guide, p. 265) of the ability or spell. If successful, the adept can assume control of the spirit with the original effect for the remaining duration, +2 rounds for each additional success. For effects such as binding spells, the adept can transfer the effect on to another target meeting all requirements - treat range as though it originates from the adept - and this talent does not prematurely end the spell. If the Spirit Covenant test is successful and the adept chooses to absolve an obligation, the spell, summoning, or talent ends, though this does not trigger effects for prematurely ending the obligation (e.g., binding spells). Such spirits depart immediately to their home realm. Against summoned spirits (using the Summon talent) or free spirits, the adept makes a Spirit Covenant test against the spirit’s Mystic Defense. If successful, the adept can assume the agreement of a summoned spirit for the remaining duration, +1 hour for each additional successes, or negotiate with a free spirit as though they were summoned by the adept (Player’s Guide, p. 366), which lasts one hour per success. Summoned spirits perform all agreed previously agreed tasks though now for the adept and the adept can negotiate with them for further services (this negotiation does not extend the duration). The adept must pay all costs to assume an agreement (the adept learns the costs before making this decision), though can defer this payment to a later point within the duration. If the adept cannot pay the costs or the target is a free spirit the adept did not negotiate with, the spirit is absolved of their remaining obligations. If the adept assumes an agreement and does not pay the costs, their Spirit Pact is broken and they must atone. This talent requires an additional success if they could not normally summon the targeted spirit (e.g., an elemental spirit without Summon [Elemental Spirits] or Orbiting Spy for the tasked spirit) and has no effect on insect spirits, familiars, or Horrors."
+  },
+  "Studied Counter": {
+    "Step": "Rank+PER",
+    "Strain": 1,
+    "Action": "Simple",
+    "SkillUse": "Yes",
+    "SkillLevel": "Journeyman",
+    "Description": "The adept waits for their opponent to act and finds their moment of weakness, capitalizing on it. The adept makes a Studied Counter test against the Mystic Defense of an opponent who has already taken a Standard action this round. The adept gains +2 per success to their next Attack test and the associated Damage test against the target."
+  },
+  "Swimming": {
+    "Step": "As the skill, Player’s Guide, p. 201.",
+    "Strain": 0,
+    "Action": "N/A",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "As the skill, Player’s Guide, p. 201."
+  },
+  "Tail Dance": {
+    "Step": "Rank+DEX",
+    "Strain": 1,
+    "Action": "Free",
+    "SkillUse": "Yes",
+    "SkillLevel": "Warden",
+    "Description": "The adept moves in a flowing fashion, as though dancing to music only they can hear. These complex movements are designed to give access to all their weaponry. The adept makes a Tail Dance (10) test before Initiative is determined. Success eliminates the penalties from using the Tail Attack combat option that round. Skill Use: This skill is never taught outside the War College and only to attendees."
+  },
+  "Tail Dancer": {
+    "Step": "Rank",
+    "Strain": 0,
+    "Action": "N/A",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "This talent measures the adept’s advancement on the Tail Dancer Path. The adept can learn one Tail Dancer talent option for each rank and gains their Tail Dancer rank as a bonus to Interaction tests for making an impression or asking for favors of other Tail Dancers. See p. 127 for details and additional benefits. This talent’s maximum rank is 10 and costs Master tier to advance."
+  },
+  "Tail Spike": {
+    "Step": "Rank+STR+3",
+    "Strain": 0,
+    "Action": "Simple",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept transforms their tail into a natural weapon, such as growing spikes, a stinger, etc, until the end of the round. Each adept manifests this in a different and consistent way. The adept uses their Tail Spike Step for Damage tests for attacks made with their tail. Their tail is considered a Size 1 weapon for the purposes of targeting, though may not be be removed with Disarm. Tail Spike may be enhanced with other talents that increase damage, such as Crushing Blow, but not combined with abilities that can turn the adept’s tail into a weapon, e.g. Body Weapon, Ch’tard Sting, and Savage Limbs."
+  },
+  "Tyranny’s Ruin": {
+    "Step": "Rank+WIL",
+    "Strain": 1,
+    "Action": "Free",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept stores the hurt and pain from an oppressor’s attack and turns it against them. If a known tyrant causes damage to the adept, the adept can make a Tyranny’s Ruin test against the attacker’s Social Defense. If successful, the adept gains +2 per success to their next Attack and Damage test against the target. This bonus must be used by the end of the next round, or it is lost. If the damaging attack caused a Wound, the adept gains a bonus to the Tyranny’s Ruin test equal to their Wound Threshold when the Wound was caused. This talent can be used once per round."
+  },
+  "Windmaster": {
+    "Step": "Rank",
+    "Strain": 0,
+    "Action": "N/A",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "This talent measures the adept’s advancement on the Windmaster Path. The adept can learn one Windmaster talent option for each rank and gains their Windmaster rank as a bonus to Interaction tests for making an impression or asking for favors of other Windmasters. See p. 139 for details and additional benefits. This talent’s maximum rank is 10 and costs Master tier to advance."
+  },
+  "Wing Blitz": {
+    "Step": "Rank",
+    "Strain": 1,
+    "Action": "Free",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "Electricity crackles along the adept’s body and they move as a lightning strike. The adept adds their Wing Blitz rank to their Initiative result. Wing Blitz can be used with other talents that improve Initiative, such as Air Dance and Tiger Spring. The adept must be flying under their own power."
+  },
+  "Wisdom of Ages": {
+    "Step": "Rank+WIL",
+    "Strain": 2,
+    "Action": "Sustained (1 min)",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept cultivates a connection to their liferock and gains the ability meditate on that connection and communicate with it over any distance. To do so, the adept makes a Wisdom of Ages (5) test. If successful, the adept can gain a general sense of the brotherhood’s wellbeing with additional successes granting more and/or more specific information. The adept can also seek the combined guidance of the brotherhood by choosing any skill and making a Wisdom of Ages (10) test. If successful, the adept gains +1 rank in the skill per success for rank minutes. The ranks gained cannot exceed the ranks in this talent, and may not increase the adept’s skill rank above 10. This cannot impart devotions, knacks, talents, or any other inherently magical information and the adept cannot spend Karma to improve tests using the skill. The adept must spend a Karma Point for each test they make with the skill, but does not add Karma dice. If the Wisdom of Ages test fails, the adept cannot attempt another test on the chosen skill again until after the next sunrise."
+  },
+  "Wood Speak": {
+    "Step": "Rank+CHA",
+    "Strain": 1,
+    "Action": "Standard",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "The adept can beckon and communicate with nearby wood elemental spirits. Many adepts use this talent to establish a rapport with wood elementals in their home forests. Wood Speak can call out to wood elementals within rank ×100 yards, requesting them to come to the adept, by making a Wood Speak test against the Mystic Defense of all wood elementals within the area. If successful, affected wood elementals make their way to the adept as soon as they can without exposing themselves to danger. This call lasts for up to rank minutes. The adept can engage with the spirits or dismiss them as they arrive, and cancel the call before the duration is up if it has been answered to their satisfaction. This is considered to be polite. The adept can include the Name of a wood spirit in the call, giving a +5 bonus to the Wood Speak test for this purpose. Wood Speak can be used as Elemental Tongues (this requires a separate activation of the talent) when dealing with wood elementals. The adept can negotiate with wood spirits called by this talent, or encountered naturally as though they were summoned (Player’s Guide, p. 366). Most wood elementals are more favorably inclined to the adept when using this talent than when summoned from astral space, as long as the adept continues to show proper respect to the spirit. There is no specific effect associated with this, but should have some impact when negotiating, including willingness to provide minor favors. Adepts who abuse this talent, such as lacking respect or summoning spirits to simply bother them, earn a poor reputation and word spreads throughout wood elementals regarding their boorish behavior. The adept can never use a Contest of Wills with this talent, and any adept who uses it within typical summoning of wood spirits finds their attention poorly received when interacting with this talent."
+  },
+  "Wood Walk": {
+    "Step": "Rank",
+    "Strain": 1,
+    "Action": "Simple",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "Wood Walk allows the adept to quickly move from tree to tree in an instant. The adept touches a tree and merges with the forest’s pattern, seeming to disappear and reappear up to Wood Walk rank yards away as they exit the forest’s pattern and their destination tree. The adept must be able to see their destination or know the exact location (either through some other sense or detailed knowledge of the area)."
+  },
+  "Woodsman": {
+    "Step": "Rank",
+    "Strain": 0,
+    "Action": "N/A",
+    "SkillUse": "No",
+    "SkillLevel": "N/A",
+    "Description": "This talent measures the adept’s advancement on the Woodsman Path. The adept can learn one Woodsman talent option for each rank and gains their Woodsman rank as a bonus to Interaction tests for making an impression or asking for favors of other Woodsmen. See p. 152 for details and additional benefits. This talent’s maximum rank is 10 and costs Master tier to advance."
   }
 }

@@ -4306,5 +4306,581 @@
                 ]
             }
         }
+    },
+    "Gauntlet": {
+        "Description": "Gauntlets turn their bodies into living weapons, enhancing their abilities through force of will and pursuing a single, perfect attack. They can be self-reliant, but seek to experience the world and reflect on those experiences, opening their minds to deeper mysteries within.",
+        "ImportantAttributes": "Perception, Strength, Willpower",
+        "HalfMagic": "Gauntlets use Half-Magic for knowledge of the elements, different unarmed fighting techniques, and which prominent unarmed combatants shaped someone's fighting style. They also use it to resist fatigue, distractions, and similar expressions of willpower and endurance.",
+        "Durability": "7",
+        "TalentOptions": {
+            "Novice": [
+                "Awareness",
+                "Battle Shout",
+                "Danger Sense",
+                "Etiquette",
+                "Fireblood",
+                "Item History",
+                "Maneuver",
+                "Mystic Pursuit",
+                "Wilderness Survival",
+                "Wood Skin"
+            ],
+            "Journeyman": [
+                "Astral Sight",
+                "Cold Purify",
+                "Evidence Analysis",
+                "Fire Heal",
+                "Iron Constitution",
+                "Lion Heart",
+                "Resist Taunt",
+                "Spot Armor Flaw",
+                "Steely Stare",
+                "Waterfall Slam"
+            ],
+            "Warden": [
+                "Blood Share",
+                "Burning Vigor",
+                "Defensive Posture",
+                "Life Check",
+                "Lion Spirit",
+                "Matrix Sight",
+                "Relentless Recovery",
+                "Resist Pain",
+                "Vine Armor",
+                "Vital Strike"
+            ],
+            "Master": [
+                "Aura Armor",
+                "Champion Challenge",
+                "Chilling Strike",
+                "Elemental Walk",
+                "Ethereal Weapon",
+                "Second Chance",
+                "Soul Aegis",
+                "Vital Ward"
+            ]
+        },
+        "Circles": {
+            "First": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 0,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Avoid Blow",
+                    "Body Control",
+                    "Thread Weaving (Gauntlet Weaving)",
+                    "Unarmed Combat",
+                    "Wound Balance"
+                ]
+            },
+            "Second": {
+                "PhysicalDefense": 1,
+                "MysticalDefense": 0,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Deliberate Assault"
+                ]
+            },
+            "Third": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 0,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "The adept may spend a Karma Point on a Recovery test.",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Steel Thought"
+                ]
+            },
+            "Fourth": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 1,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Studied Counter"
+                ]
+            },
+            "Fifth": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 0,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "The adept may spend a Karma Point on any unarmed Damage test.",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "Elemental Stance: After actions are declared for the round, but before any are taken, the adept can spend 1 Strain to use Elemental Stance. They gain +2 to their unarmed Attack test, unarmed Damage test, Physical Armor, or Mystic Armor. The adept can only make one Attack test in a round where this ability is used.",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Earth Skin"
+                ]
+            },
+            "Sixth": {
+                "PhysicalDefense": 2,
+                "MysticalDefense": 0,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Temper Flesh"
+                ]
+            },
+            "Seventh": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 0,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "",
+                "Initiative": 0,
+                "Recovery": 1,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Crushing Blow"
+                ]
+            },
+            "Eighth": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 2,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Focused Strike"
+                ]
+            },
+            "Ninth": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 0,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "The adept may spend a Karma Point on any active defense test (e.g., Avoid Blow, Resist Taunt, Steel Thought, etc.)",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "Pattern Infusion: The adept performs an eight-hour ritual to draw on their pattern, strengthening it and infusing it into their physical body. The manifestation of the ritual depends on the adept and how they choose to use their pattern. Infusing it into their hands may cause glowing runes on the surface as they anticipate or engage in combat, while similar runes could exist across their body if their pattern is used defensively. Each adept's ritual is unique, based on their training and personal philosophy. Some travel to a location where the barrier between worlds is weak, a location of great power, one of personal significance, or that supports contemplation and introspection. The ritual is often performed as the last step of becoming a Warden, but may be done at any time. After the ritual, the adept takes 1 Blood Magic Damage and chooses one of the following effects: +3 to their unarmed Damage tests or +3 to their Physical Armor. The adept can perform this ritual again to change their bonus or remove it entirely.",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Critical Hit"
+                ]
+            },
+            "Tenth": {
+                "PhysicalDefense": 3,
+                "MysticalDefense": 0,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 1,
+                "Karma": "",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Unflinching Fortitude"
+                ]
+            },
+            "Eleventh": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 0,
+                "SocialDefense": 1,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "The adept may spend a Karma Point on any unarmed Attack test once per round.",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Spirit Strike"
+                ]
+            },
+            "Twelfth": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 3,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "",
+                "Initiative": 0,
+                "Recovery": 2,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Patient Resilience"
+                ]
+            },
+            "Thirteenth": {
+                "PhysicalDefense": 4,
+                "MysticalDefense": 0,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "The adept increases their Karma +1 Step to a d8.",
+                "Initiative": 1,
+                "Recovery": 0,
+                "Special": "Pattern Manifestation: As a Simple action for 4 Strain, the adept fully manifests and strengthens their pattern in their body, amplifying the visible effects from Pattern Manifestation. All attacks made with Body Control gain one of the following keywords: Earth, Earth - Metal, Fire, Water - Cold, or Wood. Additionally, the adept gains +3 to unarmed Attack tests, unarmed Damage tests, Physical Armor, and Mystic Armor (this does not stack with the bonus from Pattern Infusion).",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Stone Skin"
+                ]
+            },
+            "Fourteenth": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 4,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 2,
+                "Karma": "",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Vicious Wound"
+                ]
+            },
+            "Fifteenth": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 0,
+                "SocialDefense": 2,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "",
+                "Initiative": 0,
+                "Recovery": 3,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Shatter Will"
+                ]
+            }
+        }
+    },
+    "Shaman": {
+        "Description": "Shamans are spellcasters who specialize in the magic of life, spirits, and animals. They live in two worlds and can see the connections and patterns between living beings and astral. Their relationship with spirits is different than other spellcasters, seeing them as companions and partners. Much of their magic focuses on their allies, who they often see as their \"pack\". Shamans prefer natural and open spaces, but some adapt to urban life.",
+        "ImportantAttributes": "Perception, Willpower",
+        "HalfMagic": "These adepts may use half-magic to recognize different animals, animal tracks, and abnormal behavior among animals and creatures. The Shaman may make a Perception-based Half-Magic test to detect the presence of beast spirits within 30 yards. The difficulty for detecting the beast spirit is the spirit's Mystic Defense. If the test succeeds, the adept can sense the presence of the beast spirit and use spells or talents, such as Spirit Hold or Spirit Talk, to communicate and interact with it. The gamemaster can choose to make the test on behalf of the adept at any time, as this innate sense is always active.",
+        "Durability": "3",
+        "TalentOptions": {
+            "Novice": [
+                "Animal Bond",
+                "Animal Training",
+                "Avoid Blow",
+                "Climbing",
+                "Creature Analysis",
+                "Enhance Animal Companion",
+                "Navigation",
+                "Standard Matrix",
+                "Stealthy Stride",
+                "Tracking"
+            ],
+            "Journeyman": [
+                "Animal Companion Durability",
+                "Animal Talk",
+                "Anticipate Blow",
+                "Borrow Sense",
+                "Call Animal Companion",
+                "Enhanced Matrix",
+                "Safe Path",
+                "Spirit Mount",
+                "Steel Thought",
+                "Tenacious Weave"
+            ],
+            "Warden": [
+                "Armor Mount",
+                "Armored Matrix",
+                "Banish",
+                "Blood Share",
+                "Bloodhound Form",
+                "Dispel Magic",
+                "Eagle Eye",
+                "Hold Thread",
+                "Orbiting Spy",
+                "Tiger Spring"
+            ],
+            "Master": [
+                "Animal Leadership",
+                "Chameleon",
+                "Echolocation",
+                "Effect Pattern",
+                "Netherwalk",
+                "Resist Pain",
+                "Shared Matrix",
+                "Unflinching Fortitude"
+            ]
+        },
+        "Circles": {
+            "First": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 0,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [
+                    "Standard Matrix",
+                    "Standard Matrix"
+                ],
+                "Talents": [
+                    "Awareness",
+                    "Patterncraft",
+                    "Thread Weaving (Shamanism)",
+                    "Spellcasting",
+                    "Wilderness Survival"
+                ]
+            },
+            "Second": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 1,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Astral Sight"
+                ]
+            },
+            "Third": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 0,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "The adept may spend a Karma Point on a test to Summon or interact with a spirit.",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Spirit Talk"
+                ]
+            },
+            "Fourth": {
+                "PhysicalDefense": 1,
+                "MysticalDefense": 0,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Danger Sense"
+                ]
+            },
+            "Fifth": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 0,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "The adept may spend a Karma Point to gain the benefit of an extra thread woven for Increased Effect on a spell with the Binding or Spirit keyword. This does not require weaving an extra thread or count against the adept's limits for extra threads.",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "Pack Leadership: The adept performs a 30 minute ritual, then Names and places a drop of blood on up to Shamanism rank allies, marking them and taking 1 Blood Magic Damage per ally. The blood forms into a personal glyph of the adept which can be detected astrally until the next sunrise, when the Blood Magic damage can be healed. When the adept casts a spell with the Pack keyword, they can spend 1 Strain per target to affect up to all Named targets within the range of the spell. The adept does not have to affect all eligible targets. The adept must pay one additional Karma Point per target if the spell has the Binding keyword. This is one casting of the spell, despite the number of targets affected. Using this ability replaces the normal number of targets for the spell and extra threads cannot increase the number of targets.",
+                "FreeTalents": [
+                    "One of the adept's free Standard Matrix talents is upgraded to an Enhanced Matrix."
+                ],
+                "Talents": [
+                    "Summon (Beast Spirits)"
+                ]
+            },
+            "Sixth": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 2,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Willforce"
+                ]
+            },
+            "Seventh": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 0,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "",
+                "Initiative": 1,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Lifesight"
+                ]
+            },
+            "Eighth": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 3,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Lion Heart"
+                ]
+            },
+            "Ninth": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 0,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "The adept may spend a Karma Point on Recovery tests.",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "Spirit Pact: The Shaman performs an eight-hour ritual to summon a powerful Named spirit and seals a pact with it in blood. Each ritual is unique, often handed down and sometimes adapted to their personal philosophy. Shamans typically learn the spirit's Name from their instructor, but others search for particular spirits. The spirit acts as the Shaman's patron and take their role seriously, often watching over an unbroken chain from mentors to students. The ritual is often performed as the last step in becoming a Warden, but may be done at any time. After the ritual, the adept takes 1 Blood Magic Damage to seal their pact. From then on, when the Shaman summons any spirit, they choose an additional power the spirit possesses for free, and gain an additional success when summoning and negotiating for services. Additionally, summoning Named spirits does not require an additional success if the Shaman knows the spirit's Name. As long as the Shaman is respectful and never demanding or coercive of a spirit (including entering a Contest of Wills), the spirit generally offers better terms in negotiations. If the adept breaks this taboo, they lose the benefits of the pact and must perform the ritual again with the Shaman's Named spirit patron and atone by performing an appropriate service for the Named pact spirit. It can be dangerous, but shouldn't be foolhardy - enough to show the adept is devoted to and honors their pact and its history, not simply treating it as an inconvenience when it gets in the way. If the identity of the wronged spirit is known, the Named spirit typically has the act performed on behalf of said spirit. The Named spirit is aware of the circumstances of the broken pact through the blood magic connection - the Shaman can heal this damage when the pact is broken, but this severs the relationship and it may be difficult to find a new patron. If the Blood Magic Damage is carried through the new ritual, it does not need to be paid again.",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Summoning Circle"
+                ]
+            },
+            "Tenth": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 0,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 1,
+                "Karma": "",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Spirit Covenant"
+                ]
+            },
+            "Eleventh": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 0,
+                "SocialDefense": 1,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "The adept may spend a Karma Point to gain the benefit of an extra thread woven for Increased Range on a spell with the Pack or Spirit keyword. This does not require weaving an extra thread or count against the adept's limits for extra threads.",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Lion Spirit"
+                ]
+            },
+            "Twelfth": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 0,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "",
+                "Initiative": 2,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Concise Casting"
+                ]
+            },
+            "Thirteenth": {
+                "PhysicalDefense": 3,
+                "MysticalDefense": 0,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "The adept increases their Karma +1 Step to a d8.",
+                "Initiative": 0,
+                "Recovery": 1,
+                "Special": "Spirit Fuse: The adept performs an eight-hour ritual and summons the Named spirit they forged a Spirit Pact with. This ritual reaffirms and expands the pact, with a piece of the spirit's pattern becoming part of the adept and part of the adept's pattern becoming part of the spirit. The adept gains an additional success on all Binding and Spirit spells and can imbue a spell with the power of their pact as a Free action for 1 Strain, adding the Spirit keyword.",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Ancient Bonds"
+                ]
+            },
+            "Fourteenth": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 5,
+                "SocialDefense": 0,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 2,
+                "Karma": "",
+                "Initiative": 0,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Soul Aegis"
+                ]
+            },
+            "Fifteenth": {
+                "PhysicalDefense": 0,
+                "MysticalDefense": 0,
+                "SocialDefense": 2,
+                "PhysicalArmor": 0,
+                "MysticalArmor": 0,
+                "Karma": "",
+                "Initiative": 3,
+                "Recovery": 0,
+                "Special": "",
+                "FreeTalents": [""],
+                "Talents": [
+                    "Spliced Weave"
+                ]
+            }
+        }
     }
 }
+

@@ -1,0 +1,137 @@
+﻿{
+  "Black Brine": {
+    "Name": "Black Brine",
+    "Type": "Debilitation",
+    "OnsetTime": "2 rounds",
+    "Duration": "2 hours",
+    "EffectStep": 8,
+    "Interval": "3/2 rounds",
+    "Description": "Black brine is extracted from the shelgar fish native to Lake Vors. A dark oil that smells strongly of salted fish, it is most commonly used on the tips of weapons, but may also be ingested. The t'skrang of House Ishkarat often dip their arrowheads and dagger blades in black brine, and rumors say that many secret societies use it to advance their goals. The toxin causes muscle weakness and a painful stiffness in the tendons, making it difficult to move quickly or perform any feats of strength such as fighting or running."
+  },
+  "Black Mercy": {
+    "Name": "Black Mercy",
+    "Type": "Paralysis",
+    "OnsetTime": "Instant",
+    "Duration": "6 hours",
+    "EffectStep": 8,
+    "Interval": "4/1 round",
+    "Description": "This poison comes from the black mercy flower. In the wild, the flower's pollen attracts animals, which soon die; their decomposing bodies enrich the soil around the plant. When ingested or inhaled, black mercy induces a sense of euphoria and vivid hallucinations in which the victim imagines his fondest wishes granted. While under the poison's influence, the victim is unaware of the world around him. If he is given regular doses—for example, by lingering near the plant to keep breathing the pollen—he will eventually die from starvation or thirst. A single dose, however, wears off in a matter of hours with no lasting effect."
+  },
+  "Elfbane": {
+    "Name": "Elfbane",
+    "Type": "Debilitating (Deadly)",
+    "OnsetTime": "1 hour",
+    "Duration": "Permanent",
+    "EffectStep": 9,
+    "Interval": "6/1 hour",
+    "Description": "This poison is derived from a rare flower that grows in the northern reaches of Barsaive, near the Blood Wood. The blossoms are pale blue with three petals, each roughly the size of a human's thumb. When boiled and distilled, the flowers produce a bitter-smelling liquid that can be mixed with wine or spread on the edges of weapons. Elfbane causes wracking joint pain, muscle spasms, and eventual death. Even if the victim isn't killed, the effects can take some time to fade (the only way to remove the penalties caused by this poison are through the use of Recovery tests as described under Recovering from Poisons, p. 173). For some reason, this poison only affects elves. According to legend, bitter feelings plagued the Elven Court during the Separation before the Scourge. Many of the elves cast out by Queen Alachia were so heartsick at leaving Wyrm Wood that they preferred to die, and took their own lives. Elfbane is said to grow where these exiles spilled their blood, and to this day the blossoms carry the pain they felt."
+  },
+  "Eyebite": {
+    "Name": "Eyebite",
+    "Type": "Special (see text)",
+    "OnsetTime": "3 rounds",
+    "Duration": "4 hours",
+    "EffectStep": 8,
+    "Interval": "3/1 round",
+    "Description": "The corak shrub is a hardy plant that grows in and around Barsaive's mountain ranges. When its roots are boiled, they produce a greasy, dark liquid called eyebite. It must be ingested, and its bitter, burnt taste is usually disguised in spiced dishes or savory sauces, and only a few drops are needed to affect most Namegivers. Eyebite causes the victim's pupils to contract so tightly that they appear to vanish, resulting in temporary blindness. The Effect test result is compared to the victim's Toughness, and each success imposes a -2 penalty to sight-based Perception tests. The drug wears off after a few hours and the victim's eyesight returns. Eyebite is sometimes administered to imprisoned magicians and adepts to prevent them from using spells and talents that require clear vision."
+  },
+  "Fireleaf": {
+    "Name": "Fireleaf",
+    "Type": "Damage",
+    "OnsetTime": "1 round",
+    "Duration": "Until healed",
+    "EffectStep": 7,
+    "Interval": "4/1 round",
+    "Description": "This creeping vine grows at ground level, and bears small, dark, glossy, arrowshaped leaves that some say resemble tongues of dark flame. The leaves produce colorless oil that severely irritates the skin, causing a red, itching rash similar to a mild burn. Though uncomfortable, the rash is largely harmless. When collected and distilled, fireleaf oil can cause more serious blistering and scarring where they touch bare skin. The pain and itching of fireleaf can be relieved with soothing poultices of aloe and mist blossoms, both of which help to keep down swelling and promote swift healing."
+  },
+  "Hemlock": {
+    "Name": "Hemlock",
+    "Type": "Debilitating (Deadly)",
+    "OnsetTime": "10 minutes",
+    "Duration": "12 hours",
+    "EffectStep": 9,
+    "Interval": "4/10 minutes",
+    "Description": "The juices of this fleshy plant are a deadly poison. When consumed, they cause nausea, chills, convulsions, and eventually death. Victims of hemlock poisoning often feel cold and lethargic when the toxin begins to work. Hemlock grows in cool, damp places and is most prevalent along the Serpent River and its tributaries."
+  },
+  "Keesra": {
+    "Name": "Keesra",
+    "Type": "Paralysis (see text)",
+    "OnsetTime": "Instant",
+    "Duration": "8 hours",
+    "EffectStep": 8,
+    "Interval": "4/1 round",
+    "Description": "Keesra is made by windlings from the same berries that they use for keesris wine. The poison is soporific, putting victims into a deep sleep. They awaken several hours later with splitting headaches and other symptoms that resemble a severe hangover. The poison is absorbed through the skin. Windling hunters typically soak their nets in keesra to take down dangerous creatures or other enemies."
+  },
+  "Laésal": {
+    "Name": "Laésal",
+    "Type": "Paralysis (see text)",
+    "OnsetTime": "5 rounds",
+    "Duration": "6 hours",
+    "EffectStep": 10,
+    "Interval": "5/3 rounds",
+    "Description": "The laésal tree is native to the Blood Wood, and bears a fruit that resembles a gold-colored cherry. The fruit is sweet and produces feelings of mild euphoria. The fleshy red center of the fruit is filled with small, dark seeds, which can be ground into a powder that dissolves easily in food or liquids. When consumed, laésal powder causes the victim to fall into a deep sleep for a brief time; when he wakes, he has forgotten the experiences of the past several hours. There is no known way for a victim to recover these lost memories. Laésal is often used by the Blood Warders of Alachia's court when removing intruders from the Blood Wood."
+  },
+  "Night Pollen": {
+    "Name": "Night Pollen",
+    "Type": "Damage",
+    "OnsetTime": "1 round",
+    "Duration": "Until healed",
+    "EffectStep": 8,
+    "Interval": "3/1 round",
+    "Description": "This fine, gray powder is the pollen of a night-blooming moon creeper that grows throughout the Servos Jungle. Inhaling night pollen causes irritation of the throat and lungs, severe coughing and shortness of breath. Victims of this poison may suffocate, but most recover soon after exposure. Many tribes in the Servos use night pollen as a weapon, blowing it from hollow tubes into the faces of their enemies."
+  },
+  "Padendra": {
+    "Name": "Padendra",
+    "Type": "Paralysis (Deadly)",
+    "OnsetTime": "2 rounds",
+    "Duration": "4 hours",
+    "EffectStep": 10,
+    "Interval": "5/2 rounds",
+    "Description": "Padendra may be injected or ingested, and is the only fatal poison known to be used by windlings in Barsaive. It causes nausea and paralyzes muscles with painful cramps. In many cases, the paralysis causes the victim to stop breathing and suffocate. If the victim manages to survive, the paralysis wears off after a few hours with no lasting ill effect. Windlings carefully guard the secret of padendra's production, and never use it lightly. Some scholars believe that the poison comes from the same insect that produces the less deadly whadrya venom."
+  },
+  "Poison Gas": {
+    "Name": "Poison Gas",
+    "Type": "Damage",
+    "OnsetTime": "1 round",
+    "Duration": "Until healed",
+    "EffectStep": 5,
+    "Interval": "See text/1 round",
+    "Description": "This is an example of poisonous or toxic air characters might encounter while exploring underground caverns. Unlike most poisons, the damage continues as long as the character is exposed to the gas. The damage can be avoided by the character holding his breath, or by leaving the affected area. See Drowning and Suffocation, p. 168, for rules and effects on a character holding his breath."
+  },
+  "Remis Berries": {
+    "Name": "Remis Berries",
+    "Type": "Debilitating (Deadly)",
+    "OnsetTime": "2 hours",
+    "Duration": "24 hours",
+    "EffectStep": 8,
+    "Interval": "5/1 hour",
+    "Description": "When the small white berries of the remis bush are ripe, they can be pressed to yield a tangy, milky juice. If ingested, it leads to painful muscle cramps, internal bleeding, and death. The potion is commonly called \"whiteberry wine,\" and mockingly called \"mother's milk\" in some circles. It is commonly sold in Kratas, and can be found in black markets around Barsaive."
+  },
+  "Shadowmant Venom": {
+    "Name": "Shadowmant Venom",
+    "Type": "Damage",
+    "OnsetTime": "Instant",
+    "Duration": "Until healed",
+    "EffectStep": 10,
+    "Interval": "10/1 round",
+    "Description": "The shadowmant is a flying subterranean animal that resembles a cross between a bat and a manta ray. It is a familiar hazard to adventurers and explorers of old ruins and forgotten kaers. Its venom is highly toxic when mingled with a victim's blood, and is so virulent that it can kill almost any Namegiver in minutes. Shadowmant venom is a popular poison for coating spear points and sword blades. Fortunately, the dangers involved in acquiring the venom keep this toxin expensive and rare. Many would-be collectors wind up falling victim to their desired prize in the dark caves the creatures haunt."
+  },
+  "Whadrya Venom": {
+    "Name": "Whadrya Venom",
+    "Type": "Paralysis",
+    "OnsetTime": "Instant",
+    "Duration": "1 hour",
+    "EffectStep": 9,
+    "Interval": "3/2 rounds",
+    "Description": "Whadrya venom is derived from the natural venom of a common wasp. The venom causes temporary paralysis when injected. Windlings often use it to tip arrows or blowgun darts. The substance must be handled carefully, as even small amounts can affect the user if they are accidentally exposed."
+  },
+  "Witherfang Venom": {
+    "Name": "Witherfang Venom",
+    "Type": "Debilitating (see text)",
+    "OnsetTime": "Instant",
+    "Duration": "Permanent",
+    "EffectStep": 9,
+    "Interval": "4/2 rounds",
+    "Description": "The witherfang serpent is found in and around the Blood Wood. Unlike most venomous snakes, the witherfang's venom is injected through a stinger on its tail. The thin, clear liquid it produces can be harvested and kept for up to a year in an airtight container without losing much potency. The venom must enter the victim's bloodstream through a cut in the skin. It causes severe weakness and muscle pain, but only in the affected area. The affected limb withers and weakens until it becomes useless. The penalty from the poison only affects tests made with the affected limb. Apart from healing magic, no known antidote for witherfang venom exists. Many believe that Archers among the blood elves harvest witherfang venom to coat their arrowheads."
+  }
+}

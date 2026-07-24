@@ -1,0 +1,136 @@
+{
+  "dragonTypes": [
+    {
+      "name": "Common Dragons",
+      "description": "The most common type of dragon in Barsaive, known for their solid, strong bodies filled with wisdom. They have long, powerful bodies with front and hind legs, wings, large heads on powerful necks, and may have horns or a spiky ruff. They average about 60 feet in body length with 50-60 feet of tail, and wingspans of about 100 feet. loot: Magical items and a hoard of coins and gems worth about 300,000 silver pieces (counts as treasure worth Legend Points). Scales: black, deep blue, emerald green, reddish brown, golden orange, pale silver",
+      "challenge": "Master (Thirteenth Circle)",
+      "DEX": 16,
+      "STR": 26,
+      "TOU": 27,
+      "PER": 17,
+      "WIL": 18,
+      "CHA": 15,
+      "physicalDefense": 21,
+      "mysticDefense": 22,
+      "socialDefense": 22,
+      "unconsciousness": 172,
+      "deathRating": 212,
+      "woundThreshold": 40,
+      "physicalArmor": 30,
+      "mysticArmor": 10,
+      "movement": "base: 16, flying: 24",
+      "actions": 4,
+      "attacks": {
+        "bite": "25 (35)",
+        "claws": "x4 26 (34)",
+        "horns": "25 (34)",
+        "tail": "25 (34)"
+      },
+      "powers": 
+        "Armored Scales, Dragonsight (21), Dragonspeech (19), Resist Pain (2), Spellcasting (21), Spells (6th Circle in one discipline), Wingbeat (30)",
+      "powerRanks": 60,
+      "specialManeuvers": [
+        "Clip the Wing (Opponent)",
+        "Grab and Bite (Common Dragon, Claws)",
+        "Horn Sweep (Common Dragon, Horns)",
+        "Tail Sweep (Common Dragon, Tail)"
+      ],
+      "culturalNotes": "Known as 'common' dragons but prefer the title 'Dragons of the Earth' View the term 'common' as somewhat humorous but potentially offensive to younger dragons In Cathay lands, known as 'western' dragons Have a tendency to talk extensively about creature mating and life habits"
+    },
+    {
+      "name": "Leviathans",
+      "description": "Sea dragons granted dominion over the waters by Dayheart. They are smaller and more slender than western dragons, about half the length, with shimmering scales that tend toward blue and green coloration. They lack wings and have short limbs resembling clawed fins, but can fly short distances using innate magical ability.  loot: Treasure hoard worth up to 100,000 silver pieces (counts as treasure worth Legend Points), scale colors: blue, green, black, mother-of-pearl",
+      "challenge": "Master (Thirteenth Circle)",
+      "DEX": 18,
+      "STR": 24,
+      "TOU": 25,
+      "PER": 21,
+      "WIL": 20,
+      "CHA": 12,
+      "physicalDefense": 24,
+      "mysticDefense": 24,
+      "socialDefense": 17,
+      "unconsciousness": 166,
+      "deathRating": 204,
+      "woundThreshold": 37,
+      "physicalArmor": 28,
+      "mysticArmor": 12,
+      "movement": "base: 8, flying: 20, swimming: 24",
+      "actions": 4,
+      "attacks": {
+        "bite": "23 (30)",
+        "claws": "x2 23 (26)",
+        "tail": "23 (28)"
+      },
+      "powers": "Armored Scales, Dragonsight (25), Dragonspeech (16), Regeneration (29), Resist Pain (2), Spellcasting (25), Spells (6th Circle in one discipline)",
+      "powerRanks": 60,
+      "specialManeuvers": [
+        "Coil (Leviathan)"
+      ],
+      "culturalNotes": "Tend to be insular and isolated, preferring solitude in sea depths Have little interest in history or affairs of surface dwellers Only contact other dragon-kind when necessary Individuals like Wavedancer near Urupa on Aras Sea are more public Study magic and spend time in shal-mora uninterrupted in their lairs"
+    },
+    {
+      "name": "Cathay Dragons",
+      "description": "Dragons of Cathay resembling long serpents but with highly developed limbs and exceptional dexterity. They have brightly colored iridescent scales, whiskers along chin and cheeks, and horns resembling deer/elk antlers. They lack wings but are graceful flyers, moving in undulating motions resembling swimming.  loot: Scrolls, books, gems, artwork, and precious metals worth around 300,000 silver pieces (counts as treasure worth Legend Points).  Scale Colors: iridescent green and gold, brilliant crimson, bright blue",
+      "challenge": "Master (Thirteenth Circle)",
+      "DEX": 20,
+      "STR": 19,
+      "TOU": 19,
+      "PER": 24,
+      "WIL": 22,
+      "CHA": 16,
+      "physicalDefense": 26,
+      "mysticDefense": 26,
+      "socialDefense": 23,
+      "unconsciousness": 148,
+      "deathRating": 180,
+      "woundThreshold": 28,
+      "physicalArmor": 20,
+      "mysticArmor": 13,
+      "movement": "base: 16, flying: 26",
+      "actions": 4,
+      "attacks": {
+        "bite": "23 (30)",
+        "claws": "x4 23 (26)"
+      },
+      "powers": "Armored Scales, Dragonsight (28), Dragonspeech (20), Resist Pain (2), Spellcasting (28), Spells (10th Circle in one discipline)",
+      "powerRanks": 60,
+      "specialManeuvers": [
+        "Grab and Bite (Cathay Dragon, Claws)"
+      ],
+      "culturalNotes": "Have the closest relationship with Namegivers among all dragon-kind  with reverence and respect for wisdom, age, and power Have a tradition of adopting Namegivers as children to raise and educate Title 'Son/Daughter of a Dragon' is common among noble houses and heroes Great patrons of the arts, often displaying their collections to deferential visitors Even more dedicated to protocol and tradition than other dragon types Skilled in elemental magic and illusion, using elementals as spies, guards, and servants Practice a form of slavery where offenders become servants rather than being killed"
+    },
+    {
+      "name": "Feathered Dragons",
+      "description": "The rarest dragons, living in hot tropical lands and most common across the great western ocean near Araucania. They are long and sinuous like large serpents with large wings but only one pair of limbs. Their most distinguishing feature is being covered in brightly colored feathers along their entire body.  loot: Magical items and a hoard of precious metals and gems worth around 300,000 silver pieces (counts as treasure worth Legend Points)",
+      "challenge": "Master (Thirteenth Circle)",
+      "DEX": 19,
+      "STR": 23,
+      "TOU": 23,
+      "PER": 23,
+      "WIL": 19,
+      "CHA": 13,
+      "physicalDefense": 25,
+      "mysticDefense": 25,
+      "socialDefense": 18,
+      "unconsciousness": 160,
+      "deathRating": 196,
+      "woundThreshold": 34,
+      "physicalArmor": 26,
+      "mysticArmor": 11,
+      "movement": "base: 14, flying: 24",
+      "actions": 4,
+      "attacks": { 
+        "bite": "23 (30)",
+        "claws": "x4 23 (28)"
+      },
+      "powers": "Armored Scales, Dragonsight (27), Dragonspeech (17), Poison (27), Resist Pain (2), Spellcasting (27), Spells (6th Circle in one discipline)",
+      "powerRanks": 60,
+      "specialManeuvers": [
+        "Grab and Bite (Feathered Dragon, Bite)",
+        "Clip the Wing (Opponent)"
+      ],
+      "culturalNotes": "Tend to be shy and conceal themselves from strangers Prefer to observe interlopers discreetly before taking action Frequently use illusion magic to mislead and distract rather than attack Have a mischievous sense of humor, playing elaborate pranks on Namegivers Have been known to aid lost younger races using illusion magic to lead them to safety Generally have little to do with younger races who see them as dangerous creatures Little cultural tradition of being keepers of knowledge and wisdom (unlike western/Cathay dragons) Notable for significant use of blood magic to heal Scourge damage and make land fertile Philosophical split exists regarding blood magic: some see it as inherently dangerous, others as neutral tools Tendency for philosophical disagreements to lead to conflicts between feathered dragons"
+    }
+  ]
+}
