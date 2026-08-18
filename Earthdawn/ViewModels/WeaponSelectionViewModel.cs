@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Earthdawn.Data;
@@ -19,10 +21,20 @@ public partial class WeaponSelectionViewModel : PageViewModel
     // Selected index for weapon carousel
     [ObservableProperty]
     private int _selectedWeaponIndex = 0;
+    
+    // Show the silver currently remaining to the character
+    [ObservableProperty]
+    private int _silverRemaining;
 
     // Property to expose the currently selected weapon
     public WeaponDisplayCard SelectedWeapon => Weapons.Count > 0 && SelectedWeaponIndex >= 0 ? Weapons[SelectedWeaponIndex] : null;
 
+    public ObservableCollection<EquipmentViewModel> CharacterWeapons { get; }
+    public ObservableCollection<EquipmentViewModel> CharacterArmor { get; }
+    public ObservableCollection<EquipmentViewModel> CharacterShields { get; }
+    public ObservableCollection<EquipmentViewModel> CharacterEquipment { get; }
+    public ObservableCollection<EquipmentViewModel> CharacterMounts { get; }
+    
     public WeaponSelectionViewModel(IDataServices dataServices, ICharacterSheetService characterSheetService)
     {
         _dataServices = dataServices;
@@ -31,6 +43,14 @@ public partial class WeaponSelectionViewModel : PageViewModel
 
         // Load the weapons data
         Weapons = new ObservableCollection<WeaponDisplayCard>(_dataServices.LoadWeaponsList());
+        
+        // Load silver available
+        _silverRemaining =_characterSheetService.CharacterCreationSheetInstance.Money.Silver;
+        
+        //Assign the equipment
+        CharacterWeapons =  
+            new ObservableCollection<EquipmentViewModel>(_characterSheetService.CharacterCreationSheetInstance.Weapons
+                .Select(w => new EquipmentViewModel(w)));
     }
 
     // Weapon Navigation Commands
@@ -63,10 +83,10 @@ public partial class WeaponSelectionViewModel : PageViewModel
     {
         if (SelectedWeapon != null)
         {
-            Console.WriteLine($"Selected weapon: {SelectedWeapon.Name}");
-            // TODO: Implement actual selection logic here
-            // For example, you might want to update the character sheet:
-            // _characterSheetService.UpdateWeapon(SelectedWeapon);
+            _characterSheetService.CharacterCreationSheetInstance.AddWeapon(SelectedWeapon.Weapons);
+            CharacterWeapons.Add(new EquipmentViewModel(SelectedWeapon.Weapons));
+            _characterSheetService.CharacterCreationSheetInstance.BuyItem(SelectedWeapon.Weapons.Cost);
+            SilverRemaining = _characterSheetService.CharacterCreationSheetInstance.Money.Silver;
         }
     }
 }

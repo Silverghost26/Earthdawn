@@ -20,7 +20,7 @@ public class WeaponDisplayCard
         set
         {
             _weapon = value;
-            _weapon.WeaponName = _name;
+            _weapon.Name = _name;
         }
     }
     private Weapon? _weapon;

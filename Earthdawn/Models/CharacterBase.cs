@@ -1,22 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices.JavaScript;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using System.Collections.Generic;
 using Earthdawn.Data;
-using EarthDawn.Services;
+using EarthDawn.Models;
 
 namespace Earthdawn.Models;
 public class CharacterBase
 {
     //**********************************************Private Members********************************************
     protected List<Discipline> _disciplines;
+    private List<Weapon> _weapons;
     //**********************************************Constructors***********************************
     public CharacterBase()
     {
         _charAttributes = new Attributes();
         _disciplines = new ();
+        _weapons = new List<Weapon>();
     }
     
     //***********************************Private Vars*************************************************
@@ -46,7 +43,10 @@ public class CharacterBase
     public int FlyingMovementRate { get; set; }
     public int CarryingCapacity { get; set; }
 
- public int Dexterity
+    public Money Money { get; set; }
+    public List<Weapon> Weapons { get {return _weapons;} }
+    
+    public int Dexterity
     {
         get
         {
@@ -199,16 +199,6 @@ public class CharacterBase
             return;
         _disciplines.Add(discipline);
     }
-
-    // public List<Discipline> GetDisciplines()
-    // {
-    //     List<Discipline> newDisciplineList = new();
-    //     foreach (Discipline discipline in _disciplines)
-    //     {
-    //         newDisciplineList.Add(new(discipline));
-    //     }
-    //     return newDisciplineList;
-    // }
     public int GetNumberOfDisciplines()
     {
         return _disciplines.Count;
@@ -227,6 +217,22 @@ public class CharacterBase
             {
                 ds.AddNewOptionalTalent(talent);
             }
+        }
+    }
+
+    public void AddWeapon(Weapon weapon)
+    {
+        if (weapon != null)
+        {
+            _weapons.Add(weapon);
+        }
+    }
+
+    public void RemoveWeapon(Weapon weapon)
+    {
+        if (_weapons.Contains(weapon))
+        {
+            _weapons.Remove(weapon);
         }
     }
     

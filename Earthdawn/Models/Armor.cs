@@ -8,7 +8,7 @@ namespace Earthdawn.Models
     {
 
     }
-    public class Armor
+    public class Armor : EquipmentBase
     {
         public Armor()
         {
@@ -27,13 +27,8 @@ namespace Earthdawn.Models
             Name = armor.Name;
         }
         public string Living { get; set; } = string.Empty;
-        public string Availability { get; set; } = string.Empty;
         public int PhysicalArmor { get; set; } = 0;
         public int MysticArmor { get; set; } = 0;
         public int InitiativePenalty {  get; set; }
-        public string Cost {  get; set; } = string.Empty;
-        public string Weight {  get; set; } = string.Empty;
-        public string Description { get; set; } =  string.Empty;
-        public string Name {get; set; } = string.Empty;
     }
 }

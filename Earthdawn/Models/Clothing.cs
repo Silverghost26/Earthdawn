@@ -2,18 +2,9 @@
 
 namespace Earthdawn.Models
 {
-    public class Clothing
+    public class Clothing : EquipmentBase
     {
         [JsonPropertyName("Item")]
         public string Item { get; set; } = string.Empty;
-
-        [JsonPropertyName("Cost")]
-        public string Cost { get; set; } = string.Empty;
-
-        [JsonPropertyName("Weight")]
-        public string Weight { get; set; } = string.Empty;
-
-        [JsonPropertyName("Availability")]
-        public string Availability { get; set; } = string.Empty;
     }
 }

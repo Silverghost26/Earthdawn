@@ -35,6 +35,8 @@ public class  CharacterCreationSheet : CharacterBase
         _artisanSkillPoints = 1;
         _readWriteSkillPoints = 1;
         _spellPoints = 2;
+        Money = new Money();
+        Money.Silver = 200;
     }
     
    
@@ -415,6 +417,43 @@ public class  CharacterCreationSheet : CharacterBase
     public int GetAttributeDecrementCostChr()
     {
         return Math.Abs(CalculateAttributePointChange(Charisma - _racialChr));
+    }
+
+    public void BuyItem(float cost)
+    {
+        if (cost % 1 == 0)
+        {
+            Money.Silver -= (int)cost;
+        }
+        else
+        {
+            float remainder = cost % 1;
+            Money.Silver -= (int)Math.Floor(cost);
+            Money.Silver -= 1;
+            Money.Copper += (int)(remainder * 10);
+        }
+    }
+
+    public void ReturnItem(float cost)
+    {
+        if (cost % 1 == 0)
+        {
+            Money.Silver += (int)cost;
+        }
+        else
+        {
+            float remainder = cost % 1;
+            Money.Silver += (int)Math.Floor(cost);
+            if ((Money.Copper + (remainder * 10)) >= 10)
+            {
+                Money.Silver += 1;
+                Money.Copper -= 10;
+            }
+            else
+            {
+                Money.Copper += (int)(remainder * 10);
+            }
+        }
     }
     
     private int CalculateAttributePointChange(int attributeDiff)

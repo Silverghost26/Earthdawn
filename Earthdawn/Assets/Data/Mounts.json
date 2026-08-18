@@ -1,7 +1,7 @@
 {
     "Dyre": {
         "Availability": "Rare",
-        "Cost": "4,500!",
+        "Cost": 4500,
         "Weight": "2tons",
         "CarryingCapacity": "2,740",
         "Speed": "16",
@@ -12,7 +12,7 @@
     },
     "Elephant": {
         "Availability": "Very Rare",
-        "Cost": "3,000",
+        "Cost": 3000,
         "Weight": "3.5tons",
         "CarryingCapacity": "1,760",
         "Speed": "16",
@@ -23,7 +23,7 @@
     },
     "Goat, Riding": {
         "Availability": "Average",
-        "Cost": "10",
+        "Cost": 10,
         "Weight": "150",
         "CarryingCapacity": "250",
         "Speed": "16",
@@ -34,7 +34,7 @@
     },
     "Granlain": {
         "Availability": "Rare",
-        "Cost": "115",
+        "Cost": 115,
         "Weight": "1.5tons",
         "CarryingCapacity": "1,020",
         "Speed": "16",
@@ -45,7 +45,7 @@
     },
     "Griffin": {
         "Availability": "Very Rare",
-        "Cost": "7,500!",
+        "Cost": 7500,
         "Weight": "600",
         "CarryingCapacity": "360",
         "Speed": "18/18",
@@ -56,7 +56,7 @@
     },
     "Horse, Draft": {
         "Availability": "Average",
-        "Cost": "150",
+        "Cost": 150,
         "Weight": "1,800",
         "CarryingCapacity": "520",
         "Speed": "16",
@@ -67,7 +67,7 @@
     },
     "Horse, Pony": {
         "Availability": "Average",
-        "Cost": "110",
+        "Cost": 110,
         "Weight": "700",
         "CarryingCapacity": "250",
         "Speed": "16",
@@ -78,7 +78,7 @@
     },
     "Horse, Riding": {
         "Availability": "Average",
-        "Cost": "125",
+        "Cost": 125,
         "Weight": "1,000",
         "CarryingCapacity": "360",
         "Speed": "20",
@@ -89,7 +89,7 @@
     },
     "Horse, War": {
         "Availability": "Unusual",
-        "Cost": "1,500!",
+        "Cost": 1500,
         "Weight": "1,800",
         "CarryingCapacity": "740",
         "Speed": "16",
@@ -100,7 +100,7 @@
     },
     "Huttawa": {
         "Availability": "Unusual",
-        "Cost": "95",
+        "Cost": 95,
         "Weight": "600",
         "CarryingCapacity": "520",
         "Speed": "16",
@@ -111,7 +111,7 @@
     },
     "Kue": {
         "Availability": "Unusual",
-        "Cost": "100",
+        "Cost": 100,
         "Weight": "25",
         "CarryingCapacity": "100",
         "Speed": "16",
@@ -122,7 +122,7 @@
     },
     "Mule, Pack": {
         "Availability": "Average",
-        "Cost": "100",
+        "Cost": 100,
         "Weight": "900",
         "CarryingCapacity": "360",
         "Speed": "16",
@@ -133,7 +133,7 @@
     },
     "Staijan": {
         "Availability": "Rare",
-        "Cost": "3,500!",
+        "Cost": 3500,
         "Weight": "1ton",
         "CarryingCapacity": "1,020",
         "Speed": "20",
@@ -144,7 +144,7 @@
     },
     "Thundra Beast": {
         "Availability": "Rare",
-        "Cost": "4,000!",
+        "Cost": 4000,
         "Weight": "2.5tons",
         "CarryingCapacity": "1,360",
         "Speed": "16",
@@ -155,7 +155,7 @@
     },
     "Troajin": {
         "Availability": "Unusual",
-        "Cost": "100",
+        "Cost": 100,
         "Weight": "400",
         "CarryingCapacity": "250",
         "Speed": "16",
@@ -166,7 +166,7 @@
     },
     "Zoak": {
         "Availability": "Rare",
-        "Cost": "115",
+        "Cost": 115,
         "Weight": "25",
         "CarryingCapacity": "80**",
         "Speed": "4/18",

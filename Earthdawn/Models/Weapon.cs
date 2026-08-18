@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
+using Earthdawn.Models;
 
 namespace EarthDawn.Models
 {
-    public class Weapon
+    public class Weapon : EquipmentBase
     {
         public Weapon()
         {
@@ -25,11 +26,11 @@ namespace EarthDawn.Models
             Entangle = weapon.Entangle;
             TwoHanded = weapon.TwoHanded;
             Description = weapon.Description;
-            WeaponName = weapon.WeaponName;
+            Name = weapon.Name;
         }
 
         // General Information
-        public string Availability { get; set; }
+
         public string DamageStep { get; set; }
         public string MinStr { get; set; }
         public string MinDex { get; set; }
@@ -38,18 +39,9 @@ namespace EarthDawn.Models
         // Range (can be null if not applicable)
         public string ShortRange { get; set; }
         public string LongRange { get; set; }
-
-        // Core Stats
-        public string Cost { get; set; }
-        public string Weight { get; set; }
-
+        
         // Transformed Boolean fields
         public bool Entangle { get; set; }
         public bool TwoHanded { get; set; }
-
-        // Descriptive Text
-        public string Description { get; set; }
-        
-        public string WeaponName { get; set; }
     }
 }

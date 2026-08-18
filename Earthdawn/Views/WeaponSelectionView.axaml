@@ -95,6 +95,19 @@
                                 Command="{Binding NextWeaponCommand}"
                                 Width="100" Height="35"/>
                     </StackPanel>
+                    <Label Classes="PrimaryText" Content="Remaining Silver: "></Label>
+                    <TextBlock Classes="PrimaryDescriptionText" Text="{Binding SilverRemaining}"/>
+                    <StackPanel Orientation="Horizontal">
+                        <ListBox ItemsSource="{Binding CharacterWeapons }" Background="Transparent">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <DockPanel LastChildFill="True">
+                                        <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Name}" DockPanel.Dock="Left" />
+                                    </DockPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
                 </StackPanel>
             </Border>
         </StackPanel>
