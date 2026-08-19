@@ -83,10 +83,13 @@ public partial class WeaponSelectionViewModel : PageViewModel
     {
         if (SelectedWeapon != null)
         {
-            _characterSheetService.CharacterCreationSheetInstance.AddWeapon(SelectedWeapon.Weapons);
-            CharacterWeapons.Add(new EquipmentViewModel(SelectedWeapon.Weapons));
-            _characterSheetService.CharacterCreationSheetInstance.BuyItem(SelectedWeapon.Weapons.Cost);
-            SilverRemaining = _characterSheetService.CharacterCreationSheetInstance.Money.Silver;
+            if (_characterSheetService.CharacterCreationSheetInstance.BuyItem(SelectedWeapon.Weapons.Cost))
+            {
+                _characterSheetService.CharacterCreationSheetInstance.AddWeapon(SelectedWeapon.Weapons);
+                CharacterWeapons.Add(new EquipmentViewModel(SelectedWeapon.Weapons));
+                SilverRemaining = _characterSheetService.CharacterCreationSheetInstance.Money.Silver;
+            }
+            
         }
     }
 }

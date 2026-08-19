@@ -419,19 +419,25 @@ public class  CharacterCreationSheet : CharacterBase
         return Math.Abs(CalculateAttributePointChange(Charisma - _racialChr));
     }
 
-    public void BuyItem(float cost)
+    public bool BuyItem(float cost)
     {
-        if (cost % 1 == 0)
+        if (cost <= Money.Silver)
         {
-            Money.Silver -= (int)cost;
+            if (cost % 1 == 0)
+            {
+                Money.Silver -= (int)cost;
+            }
+            else
+            {
+                float remainder = cost % 1;
+                Money.Silver -= (int)Math.Floor(cost);
+                Money.Silver -= 1;
+                Money.Copper += (int)(remainder * 10);
+            }
+
+            return true;
         }
-        else
-        {
-            float remainder = cost % 1;
-            Money.Silver -= (int)Math.Floor(cost);
-            Money.Silver -= 1;
-            Money.Copper += (int)(remainder * 10);
-        }
+        return false;
     }
 
     public void ReturnItem(float cost)

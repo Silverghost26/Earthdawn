@@ -37,6 +37,7 @@ public partial class App : Application
         collection.AddTransient<DisciplinesViewModel>();
         collection.AddTransient<EquipmentSelectionViewModel>();
         collection.AddTransient<ArmorSelectionViewModel>(); // Add ArmorSelectionViewModel
+        collection.AddTransient<ShieldSelectionViewModel>();
         collection.AddTransient<HomeViewModel>();
         collection.AddTransient<RacesViewModel>();
         collection.AddTransient<SkillsViewModel>();
@@ -56,6 +57,7 @@ public partial class App : Application
             ApplicationPageNames.SpellSelection => x.GetRequiredService<SpellsViewModel>(),
             ApplicationPageNames.WeaponSelection => x.GetRequiredService<WeaponSelectionViewModel>(),
             ApplicationPageNames.ArmorSelection => x.GetRequiredService<ArmorSelectionViewModel>(),
+            ApplicationPageNames.ShieldSelection => x.GetRequiredService<ShieldSelectionViewModel>(),
             ApplicationPageNames.MountSelection => x.GetRequiredService<MountSelectionViewModel>(),
             _ => throw new InvalidOperationException()
         });

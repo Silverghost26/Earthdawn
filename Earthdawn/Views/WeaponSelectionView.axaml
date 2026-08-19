@@ -22,7 +22,7 @@
 
                     <Carousel ItemsSource="{Binding Weapons}" 
                               SelectedIndex="{Binding SelectedWeaponIndex}"
-                              Width="1800" Height="300">
+                              Width="1800" Height="330">
                         <Carousel.PageTransition>
                             <PageSlide Duration="0:00:00.5" Orientation="Horizontal"/>
                         </Carousel.PageTransition>

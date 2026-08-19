@@ -16,18 +16,17 @@ public partial class ArmorSelectionViewModel : PageViewModel
 
     // Observable collections for our equipment (excluding weapons)
     public ObservableCollection<ArmorDisplayCard> Armor { get; }
-    public ObservableCollection<ShieldDisplayCard> Shields { get; }
+
 
     // Selected indices for each carousel
     [ObservableProperty]
     private int _selectedArmorIndex = 0;
 
-    [ObservableProperty]
-    private int _selectedShieldIndex = 0;
+
 
     // Properties to expose the currently selected items
     public ArmorDisplayCard SelectedArmor => Armor.Count > 0 && SelectedArmorIndex >= 0 ? Armor[SelectedArmorIndex] : null;
-    public ShieldDisplayCard SelectedShield => Shields.Count > 0 && SelectedShieldIndex >= 0 ? Shields[SelectedShieldIndex] : null;
+   
 
     public ArmorSelectionViewModel(ICharacterSheetService characterSheetService, IDataServices dataServices,
         NavigationService navigationService)
@@ -39,7 +38,7 @@ public partial class ArmorSelectionViewModel : PageViewModel
 
         // Load the equipment data (excluding weapons)
         Armor = new ObservableCollection<ArmorDisplayCard>(_dataServices.LoadArmorList());
-        Shields = new ObservableCollection<ShieldDisplayCard>(_dataServices.LoadShieldsList());
+
     }
 
     // Armor Navigation Commands
@@ -77,38 +76,4 @@ public partial class ArmorSelectionViewModel : PageViewModel
         }
     }
 
-    // Shield Navigation Commands
-    [RelayCommand]
-    private void PreviousShield()
-    {
-        if (Shields.Count == 0) return;
-
-        SelectedShieldIndex--;
-        if (SelectedShieldIndex < 0)
-        {
-            SelectedShieldIndex = Shields.Count - 1; // Wrap to end
-        }
-    }
-
-    [RelayCommand]
-    private void NextShield()
-    {
-        if (Shields.Count == 0) return;
-
-        SelectedShieldIndex++;
-        if (SelectedShieldIndex >= Shields.Count)
-        {
-            SelectedShieldIndex = 0; // Wrap to beginning
-        }
-    }
-
-    [RelayCommand]
-    private void SelectShield()
-    {
-        if (SelectedShield != null)
-        {
-            Console.WriteLine($"Selected shield: {SelectedShield.Name}");
-            // TODO: Implement actual selection logic here
-        }
-    }
 }

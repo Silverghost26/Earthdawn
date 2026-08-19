@@ -46,6 +46,7 @@ namespace EarthDawn.Services
         public void GoToSpellSelectionPage() => NavigateTo(ApplicationPageNames.SpellSelection);
         public void GoToWeaponSelectionPage() => NavigateTo(ApplicationPageNames.WeaponSelection);
         public void GoToArmorSelectionPage() => NavigateTo(ApplicationPageNames.ArmorSelection);
+        public void GoToShieldSelectionPage() => NavigateTo(ApplicationPageNames.ShieldSelection);
         public void GoToMountSelectionPage() => NavigateTo((ApplicationPageNames.MountSelection));
 
         public void GoToNextPage()
@@ -74,6 +75,9 @@ namespace EarthDawn.Services
                     GoToArmorSelectionPage();
                     break;
                 case ApplicationPageNames.ArmorSelection:
+                    GoToShieldSelectionPage();
+                    break;
+                case ApplicationPageNames.ShieldSelection:
                     GoToEquipmentSelectionPage();
                     break;
                 case ApplicationPageNames.EquipmentSelection:
@@ -116,8 +120,11 @@ namespace EarthDawn.Services
                 case ApplicationPageNames.ArmorSelection:
                     GoToWeaponSelectionPage();
                     break;
-                case ApplicationPageNames.EquipmentSelection:
+                case ApplicationPageNames.ShieldSelection:
                     GoToArmorSelectionPage();
+                    break;
+                case ApplicationPageNames.EquipmentSelection:
+                    GoToShieldSelectionPage();
                     break;
                 case ApplicationPageNames.MountSelection:
                     GoToEquipmentSelectionPage();

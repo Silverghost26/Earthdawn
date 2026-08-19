@@ -9,6 +9,7 @@ public enum ApplicationPageNames
     CharacterCustomizations,
     WeaponSelection,
     SkillSelection,
+    ShieldSelection,
     SpellSelection,
     EquipmentSelection,
     CharacterCompletion,
