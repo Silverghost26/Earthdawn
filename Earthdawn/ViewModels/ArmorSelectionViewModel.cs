@@ -3,43 +3,42 @@ using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Earthdawn.Data;
-using Earthdawn.Models;
+using Earthdawn.Interfaces;
 using EarthDawn.Services;
 
 namespace Earthdawn.ViewModels;
 
 public partial class ArmorSelectionViewModel : PageViewModel
 {
-    private ICharacterSheetService _characterSheetService;
-    private readonly IDataServices _dataServices;
-    private readonly NavigationService _navigationService;
-
-    // Observable collections for our equipment (excluding weapons)
-    public ObservableCollection<ArmorDisplayCard> Armor { get; }
-
-
-    // Selected indices for each carousel
-    [ObservableProperty]
-    private int _selectedArmorIndex = 0;
-
-
-
-    // Properties to expose the currently selected items
-    public ArmorDisplayCard SelectedArmor => Armor.Count > 0 && SelectedArmorIndex >= 0 ? Armor[SelectedArmorIndex] : null;
-   
-
     public ArmorSelectionViewModel(ICharacterSheetService characterSheetService, IDataServices dataServices,
-        NavigationService navigationService)
+        ObservableCollection<EquipmentViewModel> equipmentViewModel, IEquipmentViewModel parentViewModel)
     {
         _characterSheetService = characterSheetService;
         _dataServices = dataServices;
-        _navigationService = navigationService;
+        // _navigationService = navigationService;
         PageName = ApplicationPageNames.ArmorSelection;
 
         // Load the equipment data (excluding weapons)
         Armor = new ObservableCollection<ArmorDisplayCard>(_dataServices.LoadArmorList());
+        CharacterArmor = equipmentViewModel;
+        _equipmentViewModel = parentViewModel;
 
     }
+    
+    private ICharacterSheetService _characterSheetService;
+    private readonly IDataServices _dataServices;
+    private readonly IEquipmentViewModel _equipmentViewModel;
+
+    // Observable collections for our equipment (excluding weapons)
+    public ObservableCollection<ArmorDisplayCard> Armor { get; }
+    public ObservableCollection<EquipmentViewModel> CharacterArmor { get; }
+    
+    // Selected indices for each carousel
+    [ObservableProperty]
+    private int _selectedArmorIndex = 0;
+    
+    // Properties to expose the currently selected items
+    public ArmorDisplayCard SelectedArmor => Armor.Count > 0 && SelectedArmorIndex >= 0 ? Armor[SelectedArmorIndex] : null;
 
     // Armor Navigation Commands
     [RelayCommand]
@@ -71,8 +70,12 @@ public partial class ArmorSelectionViewModel : PageViewModel
     {
         if (SelectedArmor != null)
         {
-            Console.WriteLine($"Selected armor: {SelectedArmor.Name}");
-            // TODO: Implement actual selection logic here
+            if (_characterSheetService.CharacterCreationSheetInstance.BuyItem(SelectedArmor.Armors.Cost))
+            {
+                _characterSheetService.CharacterCreationSheetInstance.AddArmor(SelectedArmor.Armors);
+                CharacterArmor.Add(new EquipmentViewModel(SelectedArmor.Armors));
+                _equipmentViewModel.UpdateSilverRemaining(_characterSheetService.CharacterCreationSheetInstance.Money.Silver);
+            }
         }
     }
 

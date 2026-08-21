@@ -14,14 +14,13 @@
     <!-- Shields Carousel -->
     <ScrollViewer>
         <StackPanel Orientation="Vertical" Margin="20">
-            <Label Classes="PrimaryHeader" Content="Shield Selection" HorizontalAlignment="Center" Margin="0,0,0,20"/>
-            <Border Classes="background" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Padding="15">
+            <Border Classes="background" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Padding="15" Margin="0,0,0,20">
                 <StackPanel>
                     <Label Content="Shields" Classes="PrimarySubHeader" HorizontalAlignment="Center" Margin="0,0,0,10"/>
                     
                     <Carousel ItemsSource="{Binding Shields}" 
                               SelectedIndex="{Binding SelectedShieldIndex}"
-                              Width="1800" Height="260">
+                              Width="1800" Height="330">
                         <Carousel.PageTransition>
                             <PageSlide Duration="0:00:00.5" Orientation="Horizontal"/>
                         </Carousel.PageTransition>
@@ -42,6 +41,8 @@
                                                 CornerRadius="3" Padding="10" 
                                                 Margin="0,0,15,0">
                                             <StackPanel>
+                                                <TextBlock Text="{Binding Shields.Cost, StringFormat='Cost: {0}'}" 
+                                                           Margin="0,0,0,5"/>
                                                 <TextBlock Text="{Binding Shields.PhysicalDefense, StringFormat='Physical Defense: {0}'}" 
                                                            Margin="0,0,0,5"/>
                                                 <TextBlock Text="{Binding Shields.MysticDefense, StringFormat='Mystic Defense: {0}'}" 
@@ -49,8 +50,6 @@
                                                 <TextBlock Text="{Binding Shields.InitiativePenalty, StringFormat='Initiative Penalty: {0}'}" 
                                                            Margin="0,0,0,5"/>
                                                 <TextBlock Text="{Binding Shields.ShatterThreshold, StringFormat='Shatter Threshold: {0}'}" 
-                                                           Margin="0,0,0,5"/>
-                                                <TextBlock Text="{Binding Shields.Cost, StringFormat='Cost: {0}'}" 
                                                            Margin="0,0,0,5"/>
                                                 <TextBlock Text="{Binding Shields.Weight, StringFormat='Weight: {0}'}" 
                                                            Margin="0,0,0,5"/>

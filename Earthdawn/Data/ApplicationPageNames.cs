@@ -7,6 +7,7 @@ public enum ApplicationPageNames
     RaceSelection,
     DisciplineSelection,
     CharacterCustomizations,
+    EquipmentPurchase,
     WeaponSelection,
     SkillSelection,
     ShieldSelection,

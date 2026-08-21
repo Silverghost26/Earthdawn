@@ -44,6 +44,7 @@ public partial class App : Application
         collection.AddTransient<SpellsViewModel>();
         collection.AddTransient<WeaponSelectionViewModel>(); // Add WeaponSelectionViewModel
         collection.AddTransient<MountSelectionViewModel>();
+        collection.AddTransient<EquipmentPurchaseViewModel>();
 
         collection.AddSingleton<Func<ApplicationPageNames, PageViewModel>>(x => name => name switch
         {
@@ -55,6 +56,7 @@ public partial class App : Application
             ApplicationPageNames.RaceSelection => x.GetRequiredService<RacesViewModel>(),
             ApplicationPageNames.SkillSelection => x.GetRequiredService<SkillsViewModel>(),
             ApplicationPageNames.SpellSelection => x.GetRequiredService<SpellsViewModel>(),
+            ApplicationPageNames.EquipmentPurchase => x.GetRequiredService<EquipmentPurchaseViewModel>(),
             ApplicationPageNames.WeaponSelection => x.GetRequiredService<WeaponSelectionViewModel>(),
             ApplicationPageNames.ArmorSelection => x.GetRequiredService<ArmorSelectionViewModel>(),
             ApplicationPageNames.ShieldSelection => x.GetRequiredService<ShieldSelectionViewModel>(),

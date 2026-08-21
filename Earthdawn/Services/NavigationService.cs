@@ -40,6 +40,7 @@ namespace EarthDawn.Services
         public void GoToCharacterCustomizationPage() => NavigateTo(ApplicationPageNames.CharacterCustomizations);
         public void GoToCharacterCompletionPage() => NavigateTo(ApplicationPageNames.CharacterCompletion);
         public void GoToDisciplineSelectionPage() => NavigateTo(ApplicationPageNames.DisciplineSelection);
+        public void GoToEquipmentPurchasePage() => NavigateTo(ApplicationPageNames.EquipmentPurchase);
         public void GoToEquipmentSelectionPage() => NavigateTo(ApplicationPageNames.EquipmentSelection);
         public void GoToRaceSelectionPage() => NavigateTo(ApplicationPageNames.RaceSelection);
         public void GoToSkillSelectionPage() => NavigateTo(ApplicationPageNames.SkillSelection);
@@ -69,23 +70,23 @@ namespace EarthDawn.Services
                     GoToSpellSelectionPage();
                     break;
                 case ApplicationPageNames.SpellSelection:
-                    GoToWeaponSelectionPage();
+                    GoToEquipmentPurchasePage();
                     break;
-                case ApplicationPageNames.WeaponSelection:
-                    GoToArmorSelectionPage();
-                    break;
-                case ApplicationPageNames.ArmorSelection:
-                    GoToShieldSelectionPage();
-                    break;
-                case ApplicationPageNames.ShieldSelection:
-                    GoToEquipmentSelectionPage();
-                    break;
-                case ApplicationPageNames.EquipmentSelection:
-                    GoToMountSelectionPage();
-                    break;
-                case ApplicationPageNames.MountSelection:
+                // case ApplicationPageNames.WeaponSelection:
+                //     GoToArmorSelectionPage();
+                //     break;
+                // case ApplicationPageNames.ArmorSelection:
+                //     GoToShieldSelectionPage();
+                //     break;
+                // case ApplicationPageNames.ShieldSelection:
+                //     GoToEquipmentSelectionPage();
+                //     break;
+                case ApplicationPageNames.EquipmentPurchase:
                     GoToCharacterCompletionPage();
                     break;
+                // case ApplicationPageNames.MountSelection:
+                //     GoToCharacterCompletionPage();
+                //     break;
                 case ApplicationPageNames.CharacterCompletion:
                     break;
                 default:
@@ -114,23 +115,26 @@ namespace EarthDawn.Services
                 case ApplicationPageNames.SpellSelection:
                     GoToSkillSelectionPage();
                     break;
-                case ApplicationPageNames.WeaponSelection:
+                case ApplicationPageNames.EquipmentPurchase:
                     GoToSpellSelectionPage();
                     break;
-                case ApplicationPageNames.ArmorSelection:
-                    GoToWeaponSelectionPage();
-                    break;
-                case ApplicationPageNames.ShieldSelection:
-                    GoToArmorSelectionPage();
-                    break;
-                case ApplicationPageNames.EquipmentSelection:
-                    GoToShieldSelectionPage();
-                    break;
-                case ApplicationPageNames.MountSelection:
-                    GoToEquipmentSelectionPage();
-                    break;
+                // case ApplicationPageNames.WeaponSelection:
+                //     GoToSpellSelectionPage();
+                //     break;
+                // case ApplicationPageNames.ArmorSelection:
+                //     GoToWeaponSelectionPage();
+                //     break;
+                // case ApplicationPageNames.ShieldSelection:
+                //     GoToArmorSelectionPage();
+                //     break;
+                // case ApplicationPageNames.EquipmentSelection:
+                //     GoToShieldSelectionPage();
+                //     break;
+                // case ApplicationPageNames.MountSelection:
+                //     GoToEquipmentSelectionPage();
+                //     break;
                 case ApplicationPageNames.CharacterCompletion:
-                    GoToMountSelectionPage();
+                    GoToEquipmentPurchasePage();
                     break;
                 default:
                     break;

@@ -222,6 +222,6 @@ public partial class SpellsViewModel : PageViewModel
     [RelayCommand]
     private void SaveAndContinue()
     {
-        _navigationService.GoToEquipmentSelectionPage();
+        _navigationService.GoToEquipmentPurchasePage();
     }
 }

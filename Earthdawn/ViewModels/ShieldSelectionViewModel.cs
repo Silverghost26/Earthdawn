@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Earthdawn.Data;
+using Earthdawn.Interfaces;
 using EarthDawn.Services;
 using Earthdawn.Models;
 
@@ -11,23 +12,26 @@ namespace Earthdawn.ViewModels;
 public partial class ShieldSelectionViewModel: PageViewModel
 {
     public ShieldSelectionViewModel(ICharacterSheetService characterSheetService, IDataServices dataServices,
-        NavigationService navigationService)
+        ObservableCollection<EquipmentViewModel> equipmentViewModel, IEquipmentViewModel parentViewModel)
     {
         _characterSheetService = characterSheetService;
         _dataServices = dataServices;
-        _navigationService = navigationService;
         PageName = ApplicationPageNames.ShieldSelection;
+        
         Shields = new ObservableCollection<ShieldDisplayCard>(_dataServices.LoadShieldsList());
+        CharacterShields = equipmentViewModel;
+        _equipmentViewModel = parentViewModel;
     }
     
     private ICharacterSheetService _characterSheetService;
     private readonly IDataServices _dataServices;
-    private readonly NavigationService _navigationService;
+    private readonly IEquipmentViewModel _equipmentViewModel;
     
     [ObservableProperty]
     private int _selectedShieldIndex = 0;
     
     public ObservableCollection<ShieldDisplayCard> Shields { get; }
+    public ObservableCollection<EquipmentViewModel> CharacterShields { get; }
     public ShieldDisplayCard SelectedShield => Shields.Count > 0 && SelectedShieldIndex >= 0 ? Shields[SelectedShieldIndex] : null;
     
     
@@ -61,8 +65,12 @@ public partial class ShieldSelectionViewModel: PageViewModel
     {
         if (SelectedShield != null)
         {
-            Console.WriteLine($"Selected shield: {SelectedShield.Name}");
-            // TODO: Implement actual selection logic here
+            if (_characterSheetService.CharacterCreationSheetInstance.BuyItem(SelectedShield.Shields.Cost))
+            {
+                _characterSheetService.CharacterCreationSheetInstance.AddShield(SelectedShield.Shields);
+                CharacterShields.Add(new EquipmentViewModel(SelectedShield.Shields));
+                _equipmentViewModel.UpdateSilverRemaining(_characterSheetService.CharacterCreationSheetInstance.Money.Silver);
+            }
         }
     }
 }

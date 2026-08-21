@@ -26,6 +26,7 @@ public partial class MainWindowViewModel : ViewModelBase
     [NotifyPropertyChangedFor(nameof(WeaponIsActive))]
     [NotifyPropertyChangedFor(nameof(ArmorIsActive))]
     [NotifyPropertyChangedFor(nameof(MountIsActive))]
+    [NotifyPropertyChangedFor(nameof(EquipmentPurchaseIsActive))]
     private PageViewModel _currentPage;
 
     public bool CharacterCustomizationsIsActive => CurrentPage.PageName == ApplicationPageNames.CharacterCustomizations;
@@ -39,6 +40,7 @@ public partial class MainWindowViewModel : ViewModelBase
     public bool WeaponIsActive => CurrentPage.PageName == ApplicationPageNames.WeaponSelection;
     public bool ArmorIsActive => CurrentPage.PageName == ApplicationPageNames.ArmorSelection;
     public bool MountIsActive => CurrentPage.PageName == ApplicationPageNames.MountSelection;
+    public bool EquipmentPurchaseIsActive => CurrentPage.PageName == ApplicationPageNames.EquipmentPurchase;
 
     public MainWindowViewModel()
     {

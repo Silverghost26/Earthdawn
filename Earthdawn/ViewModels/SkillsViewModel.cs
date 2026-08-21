@@ -79,7 +79,7 @@ public partial class SkillsViewModel : PageViewModel
         }
         else
         {
-            _navigationService.GoToWeaponSelectionPage();
+            _navigationService.GoToEquipmentPurchasePage();
         }
     }
 }

@@ -1,0 +1,79 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:vm="clr-namespace:Earthdawn.ViewModels"
+             x:DataType="vm:EquipmentPurchaseViewModel"
+             x:Class="Earthdawn.Views.EquipmentPurchaseView">
+    
+    <Grid ColumnDefinitions="Auto" RowDefinitions="Auto, Auto, Auto, Auto, *, *">
+        <Label Classes="PrimaryHeader" HorizontalAlignment="Center" Content="Equipment Selection"/>
+        <StackPanel Grid.Row="1" DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+            <Button Classes="TextureButton" Content="Weapons" Command="{Binding NavigateToWeaponsCommand}" Margin="5,0"/>
+            <Button Classes="TextureButton" Content="Armor" Command="{Binding NavigateToArmorCommand}" Margin="5,0"/>
+            <Button Classes="TextureButton" Content="Shield" Command="{Binding NavigateToShieldsCommand}" Margin="5,0"/>
+            <Button Classes="TextureButton" Content="General Equipment" Command="{Binding NavigateToEquipmentCommand}" Margin="5,0"/>
+            <Button Classes="TextureButton" Content="Cloths" Command="{Binding NavigateToClothsCommand}" Margin="5,0"/>
+            <Button Classes="TextureButton" Content="Mounts" Command="{Binding NavigateToMountsCommand}" Margin="5,0"/>
+        </StackPanel>
+        <ContentControl Grid.Row="2" Content="{Binding CurrentChildViewModel}" />
+        <StackPanel Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal">
+            <Label Classes="PrimarySubHeader" Content="Remaining Silver: "></Label>
+            <Label Classes="PrimarySubHeader" Content="{Binding SilverRemaining}"/>
+        </StackPanel>
+        <Grid Grid.Row="4" ColumnDefinitions="*, *, *, *, *, *" RowDefinitions="Auto, *">
+            <Label Grid.Row="0" Grid.Column="0" Classes="PrimarySubHeader" HorizontalAlignment="Center" Content="Weapons"/>
+            <ListBox Grid.Column="0" Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Auto" ItemsSource="{Binding CharacterWeapons}" Background="Transparent" HorizontalAlignment="Center">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Name}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Label Grid.Row="0" Grid.Column="1" Classes="PrimarySubHeader" HorizontalAlignment="Center" Content="Armor"/>
+            <ListBox Grid.Column="1" Grid.Row="1" ItemsSource="{Binding CharacterArmor}" Background="Transparent" HorizontalAlignment="Center">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Name}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Label Grid.Row="0" Grid.Column="2" Classes="PrimarySubHeader" HorizontalAlignment="Center" Content="Shields"/>
+            <ListBox Grid.Column="2" Grid.Row="1" ItemsSource="{Binding CharacterShields}" Background="Transparent" HorizontalAlignment="Center">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Name}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Label Grid.Row="0" Grid.Column="3" Classes="PrimarySubHeader" HorizontalAlignment="Center" Content="Equipment"/>
+            <ListBox Grid.Column="3" Grid.Row="1" ItemsSource="{Binding CharacterEquipment}" Background="Transparent" HorizontalAlignment="Center">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Name}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Label Grid.Row="0" Grid.Column="4" Classes="PrimarySubHeader" Content="Mounts" HorizontalAlignment="Center"/>
+            <ListBox Grid.Column="4" Grid.Row="1" ItemsSource="{Binding CharacterMounts}" Background="Transparent" HorizontalAlignment="Center">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Name}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <!-- <Label Grid.Row="0" Grid.Column="5" Classes="PrimarySubHeader" Content="Cloths" HorizontalAlignment="Center"/> -->
+            <!-- <ListBox Grid.Column="5" Grid.Row="1" ItemsSource="{Binding CharacterCloths}" Background="Transparent" HorizontalAlignment="Center"> -->
+            <!--     <ListBox.ItemTemplate> -->
+            <!--         <DataTemplate> -->
+            <!--              <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Name}" /> -->
+            <!--         </DataTemplate> -->
+            <!--     </ListBox.ItemTemplate> -->
+            <!-- </ListBox> -->
+        </Grid>
+        <DockPanel Grid.Row="5">
+            <Button DockPanel.Dock="Bottom" HorizontalAlignment="Center" Classes="TextureButton" Content="Continue to Character Finalization" Margin="5,0"/>
+        </DockPanel>
+    </Grid>
+</UserControl>

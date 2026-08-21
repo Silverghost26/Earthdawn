@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Earthdawn.Data;
+using Earthdawn.Interfaces;
 using Earthdawn.Models;
 using EarthDawn.Services;
 
@@ -10,20 +11,8 @@ namespace Earthdawn.ViewModels;
 
 public partial class MountSelectionViewModel : PageViewModel
 {
-    private readonly IDataServices _dataServices;
-    private readonly ICharacterSheetService _characterSheetService;
-
-    // Observable collections for our mounts
-    public ObservableCollection<MountDisplayCard> Mounts { get; }
-
-    // Selected index for mount carousel
-    [ObservableProperty]
-    private int _selectedMountIndex = 0;
-
-    // Property to expose the currently selected mount
-    public MountDisplayCard SelectedMount => Mounts.Count > 0 && SelectedMountIndex >= 0 ? Mounts[SelectedMountIndex] : null;
-
-    public MountSelectionViewModel(IDataServices dataServices, ICharacterSheetService characterSheetService)
+    public MountSelectionViewModel(ICharacterSheetService characterSheetService, IDataServices dataServices,
+        ObservableCollection<EquipmentViewModel> mountViewModel, IEquipmentViewModel parentViewModel)
     {
         _dataServices = dataServices;
         _characterSheetService = characterSheetService;
@@ -31,7 +20,24 @@ public partial class MountSelectionViewModel : PageViewModel
 
         // Load the mounts data
         Mounts = new ObservableCollection<MountDisplayCard>(_dataServices.LoadMountsList());
+        CharacterMounts = mountViewModel;
+        _equipmentViewModel = parentViewModel;
     }
+    
+    private readonly IDataServices _dataServices;
+    private readonly ICharacterSheetService _characterSheetService;
+    private readonly IEquipmentViewModel _equipmentViewModel;
+
+    // Observable collections for our mounts
+    public ObservableCollection<MountDisplayCard> Mounts { get; }
+    public ObservableCollection<EquipmentViewModel> CharacterMounts { get; }
+
+    // Selected index for mount carousel
+    [ObservableProperty]
+    private int _selectedMountIndex = 0;
+
+    // Property to expose the currently selected mount
+    public MountDisplayCard SelectedMount => Mounts.Count > 0 && SelectedMountIndex >= 0 ? Mounts[SelectedMountIndex] : null;
 
     // Mount Navigation Commands
     [RelayCommand]
@@ -63,10 +69,12 @@ public partial class MountSelectionViewModel : PageViewModel
     {
         if (SelectedMount != null)
         {
-            Console.WriteLine($"Selected mount: {SelectedMount.Name}");
-            // TODO: Implement actual selection logic here
-            // For example, you might want to update the character sheet:
-            // _characterSheetService.UpdateMount(SelectedMount);
+            if (_characterSheetService.CharacterCreationSheetInstance.BuyItem(SelectedMount.Mounts.Cost))
+            {
+                _characterSheetService.CharacterCreationSheetInstance.AddMount(SelectedMount.Mounts);
+                CharacterMounts.Add(new EquipmentViewModel(SelectedMount.Mounts));
+                _equipmentViewModel.UpdateSilverRemaining(_characterSheetService.CharacterCreationSheetInstance.Money.Silver);
+            }
         }
     }
 }

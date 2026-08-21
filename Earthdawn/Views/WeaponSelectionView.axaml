@@ -13,8 +13,6 @@
 
     <ScrollViewer>
         <StackPanel Orientation="Vertical" Margin="20">
-            <Label Classes="PrimaryHeader" Content="Weapon Selection" HorizontalAlignment="Center" Margin="0,0,0,20"/>
-
             <!-- Weapons Carousel -->
             <Border Classes="background" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Padding="15" Margin="0,0,0,20">
                 <StackPanel>
@@ -43,6 +41,8 @@
                                                 CornerRadius="3" Padding="10" 
                                                 Margin="0,0,15,0">
                                             <StackPanel>
+                                                <TextBlock Text="{Binding Weapons.Cost, StringFormat='Cost: {0}'}" 
+                                                           Margin="0,0,0,5"/>
                                                 <TextBlock Text="{Binding Weapons.DamageStep, StringFormat='Damage Step: {0}'}" 
                                                            Margin="0,0,0,5"/>
                                                 <TextBlock Text="{Binding Weapons.Size, StringFormat='Size: {0}'}" 
@@ -54,8 +54,6 @@
                                                 <TextBlock Text="{Binding Weapons.ShortRange, StringFormat='Short Range: {0}'}" 
                                                            Margin="0,0,0,5"/>
                                                 <TextBlock Text="{Binding Weapons.LongRange, StringFormat='Long Range: {0}'}" 
-                                                           Margin="0,0,0,5"/>
-                                                <TextBlock Text="{Binding Weapons.Cost, StringFormat='Cost: {0}'}" 
                                                            Margin="0,0,0,5"/>
                                                 <TextBlock Text="{Binding Weapons.Weight, StringFormat='Weight: {0}'}" 
                                                            Margin="0,0,0,5"/>
@@ -94,19 +92,6 @@
                         <Button Content="Next" 
                                 Command="{Binding NextWeaponCommand}"
                                 Width="100" Height="35"/>
-                    </StackPanel>
-                    <Label Classes="PrimaryText" Content="Remaining Silver: "></Label>
-                    <TextBlock Classes="PrimaryDescriptionText" Text="{Binding SilverRemaining}"/>
-                    <StackPanel Orientation="Horizontal">
-                        <ListBox ItemsSource="{Binding CharacterWeapons }" Background="Transparent">
-                            <ListBox.ItemTemplate>
-                                <DataTemplate>
-                                    <DockPanel LastChildFill="True">
-                                        <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Name}" DockPanel.Dock="Left" />
-                                    </DockPanel>
-                                </DataTemplate>
-                            </ListBox.ItemTemplate>
-                        </ListBox>
                     </StackPanel>
                 </StackPanel>
             </Border>

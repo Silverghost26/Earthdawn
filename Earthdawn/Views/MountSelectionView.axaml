@@ -13,8 +13,6 @@
 
     <ScrollViewer>
         <StackPanel Orientation="Vertical" Margin="20">
-            <Label Classes="PrimaryHeader" Content="Mount Selection" HorizontalAlignment="Center" Margin="0,0,0,20"/>
-
             <!-- Mounts Carousel -->
             <Border Classes="background" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Padding="15" Margin="0,0,0,20">
                 <StackPanel>
@@ -22,7 +20,7 @@
 
                     <Carousel ItemsSource="{Binding Mounts}" 
                               SelectedIndex="{Binding SelectedMountIndex}"
-                              Width="1800" Height="270">
+                              Width="1800" Height="330">
                         <Carousel.PageTransition>
                             <PageSlide Duration="0:00:00.5" Orientation="Horizontal"/>
                         </Carousel.PageTransition>
@@ -43,9 +41,9 @@
                                                 CornerRadius="3" Padding="10" 
                                                 Margin="0,0,15,0">
                                             <StackPanel>
-                                                <TextBlock Text="{Binding Mounts.Availability, StringFormat='Availability: {0}'}" 
-                                                           Margin="0,0,0,5"/>
                                                 <TextBlock Text="{Binding Mounts.Cost, StringFormat='Cost: {0}'}" 
+                                                           Margin="0,0,0,5"/>
+                                                <TextBlock Text="{Binding Mounts.Availability, StringFormat='Availability: {0}'}" 
                                                            Margin="0,0,0,5"/>
                                                 <TextBlock Text="{Binding Mounts.Weight, StringFormat='Weight: {0}'}" 
                                                            Margin="0,0,0,5"/>
