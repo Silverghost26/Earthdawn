@@ -69,7 +69,8 @@ public partial class ShieldSelectionViewModel: PageViewModel
             {
                 _characterSheetService.CharacterCreationSheetInstance.AddShield(SelectedShield.Shields);
                 CharacterShields.Add(new EquipmentViewModel(SelectedShield.Shields));
-                _equipmentViewModel.UpdateSilverRemaining(_characterSheetService.CharacterCreationSheetInstance.Money.Silver);
+                _equipmentViewModel.UpdateSilverRemaining(_characterSheetService.CharacterCreationSheetInstance.Money.Silver, 
+                    _characterSheetService.CharacterCreationSheetInstance.Money.Copper);
             }
         }
     }

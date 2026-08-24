@@ -14,7 +14,7 @@ public partial class EquipmentViewModel : ObservableObject
     [ObservableProperty] private string _weight;
     [ObservableProperty] private float _cost;
 
-    private readonly EquipmentBase? _equipmentBase;
+    //private readonly EquipmentBase? _equipmentBase;
     
     public EquipmentViewModel(EquipmentBase equipment)
     {
@@ -25,4 +25,5 @@ public partial class EquipmentViewModel : ObservableObject
         _weight = equipment.Weight;
         _cost = equipment.Cost;
     }
+    public EquipmentBase Equipment => _equipment;
 }

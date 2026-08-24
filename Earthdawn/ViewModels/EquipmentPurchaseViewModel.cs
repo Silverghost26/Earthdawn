@@ -4,7 +4,8 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using EarthDawn.Services;
 using Earthdawn.Interfaces;
-
+using Earthdawn.Models;
+using EarthDawn.Models;
 
 namespace Earthdawn.ViewModels;
 
@@ -17,8 +18,9 @@ public partial class EquipmentPurchaseViewModel : PageViewModel, IEquipmentViewM
         _characterSheetService = characterSheetService;
         _dataServices = dataServices;
         
-        // Load silver available
+        // Load coin available
         _silverRemaining =_characterSheetService.CharacterCreationSheetInstance.Money.Silver;
+        _copperRemaining =_characterSheetService.CharacterCreationSheetInstance.Money.Copper;
         
         //Assign the equipment
         CharacterWeapons = 
@@ -48,18 +50,82 @@ public partial class EquipmentPurchaseViewModel : PageViewModel, IEquipmentViewM
     private ICharacterSheetService _characterSheetService;
     
     [ObservableProperty] private PageViewModel _currentChildViewModel;
-    // Show the silver currently remaining to the character
+    // Show the coin currently remaining to the character
     [ObservableProperty] private int _silverRemaining;
+    [ObservableProperty] private int _copperRemaining;
+    [ObservableProperty] private EquipmentViewModel? _selectedEquipment;
     
     public ObservableCollection<EquipmentViewModel> CharacterWeapons { get; }
     public ObservableCollection<EquipmentViewModel> CharacterArmor { get; }
     public ObservableCollection<EquipmentViewModel> CharacterShields { get; }
     public ObservableCollection<EquipmentViewModel> CharacterEquipment { get; }
     public ObservableCollection<EquipmentViewModel> CharacterMounts { get; }
-    
-    public void UpdateSilverRemaining(int silverRemaining)
+
+    partial void OnSelectedEquipmentChanged(EquipmentViewModel? value)
+    {
+        if (value == null)
+            return;
+        if (value.Equipment is Weapon)
+        {
+            Avalonia.Threading.Dispatcher.UIThread.Post(() =>
+                {
+                    CharacterWeapons.Remove(value);
+                }
+            );
+        }
+        else if (value.Equipment is Armor)
+        {
+            Avalonia.Threading.Dispatcher.UIThread.Post(() =>
+                {
+                    CharacterArmor.Remove(value);
+                }
+            );
+        }
+        else if (value.Equipment is Shield)
+        {
+            Avalonia.Threading.Dispatcher.UIThread.Post(() =>
+                {
+                    CharacterShields.Remove(value);
+                }
+            );
+        }
+        else if (value.Equipment is Equipment)
+        {
+            Avalonia.Threading.Dispatcher.UIThread.Post(() =>
+                {
+                    CharacterEquipment.Remove(value);
+                }
+            );
+        }
+        else if (value.Equipment is Mount)
+        {
+            Avalonia.Threading.Dispatcher.UIThread.Post(() =>
+                {
+                    CharacterMounts.Remove(value);
+                }
+            );
+        }
+        // else if (value.Equipment is Colths)
+        // {
+        //     Avalonia.Threading.Dispatcher.UIThread.Post(() =>
+        //         {
+        //             CharacterCloths.Remove(value);
+        //         }
+        //     );
+        // }
+        ReturnItem(value.Cost);
+    }
+
+    public void ReturnItem(float cost)
+    {
+        _characterSheetService.CharacterCreationSheetInstance.ReturnItem(cost);
+        UpdateSilverRemaining(_characterSheetService.CharacterCreationSheetInstance.Money.Silver, 
+            _characterSheetService.CharacterCreationSheetInstance.Money.Copper);
+    }
+    public void UpdateSilverRemaining(int silverRemaining, int copperRemaining)
     {
         SilverRemaining = silverRemaining;
+        CopperRemaining = copperRemaining;
     }
     
     [RelayCommand]
@@ -94,6 +160,12 @@ public partial class EquipmentPurchaseViewModel : PageViewModel, IEquipmentViewM
     private void NavigateToCloths()
     {
         //CurrentChildViewModel = new ClothsSelectionViewModel(_dataServices, _characterSheetService);
+    }
+
+    [RelayCommand]
+    private void SaveAndContinueToCharacterSummary()
+    {
+        _navigationSerivces.GoToCharacterCompletionPage();
     }
 }
 

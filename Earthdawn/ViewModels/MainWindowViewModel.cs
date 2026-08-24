@@ -97,10 +97,10 @@ public partial class MainWindowViewModel : ViewModelBase
     
     [RelayCommand]
     private void MountSelectionPage() => _navigationService.GoToMountSelectionPage();
-
-    [RelayCommand]
-    private void GoToNextPage() => _navigationService.GoToNextPage();
-
-    [RelayCommand]
-    private void GoToPreviousPage() => _navigationService.GoToPreviousPage();
+    //
+    // [RelayCommand]
+    // private void GoToNextPage() => _navigationService.GoToNextPage();
+    //
+    // [RelayCommand]
+    // private void GoToPreviousPage() => _navigationService.GoToPreviousPage();
 }

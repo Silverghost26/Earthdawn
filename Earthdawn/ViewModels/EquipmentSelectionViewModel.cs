@@ -73,7 +73,8 @@ public partial class EquipmentSelectionViewModel : PageViewModel
             {
                 _characterSheetService.CharacterCreationSheetInstance.AddEquipment(SelectedEquipment);
                 CharacterEquipment.Add(new EquipmentViewModel(SelectedEquipment));
-                _equipmentViewModel.UpdateSilverRemaining(_characterSheetService.CharacterCreationSheetInstance.Money.Silver);
+                _equipmentViewModel.UpdateSilverRemaining(_characterSheetService.CharacterCreationSheetInstance.Money.Silver,
+                    _characterSheetService.CharacterCreationSheetInstance.Money.Copper);
             }
         }
     }

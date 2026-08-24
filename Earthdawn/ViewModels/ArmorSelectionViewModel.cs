@@ -74,7 +74,8 @@ public partial class ArmorSelectionViewModel : PageViewModel
             {
                 _characterSheetService.CharacterCreationSheetInstance.AddArmor(SelectedArmor.Armors);
                 CharacterArmor.Add(new EquipmentViewModel(SelectedArmor.Armors));
-                _equipmentViewModel.UpdateSilverRemaining(_characterSheetService.CharacterCreationSheetInstance.Money.Silver);
+                _equipmentViewModel.UpdateSilverRemaining(_characterSheetService.CharacterCreationSheetInstance.Money.Silver, 
+                    _characterSheetService.CharacterCreationSheetInstance.Money.Copper);
             }
         }
     }

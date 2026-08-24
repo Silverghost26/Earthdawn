@@ -26,8 +26,8 @@ public partial class SpellsViewModel : PageViewModel
     [ObservableProperty] private int _spellPointsRemaining;
     
     // Properties to track button text for select/remove functionality
-    [ObservableProperty] private string _circleOneButtonText = "Select";
-    [ObservableProperty] private string _circleTwoButtonText = "Select";
+    [ObservableProperty] private string _circleOneButtonText;
+    [ObservableProperty] private string _circleTwoButtonText;
 
     public ObservableCollection<SpellDisplayCard> Spells { get; }
     private ICharacterSheetService _characterSheetService;
@@ -46,8 +46,8 @@ public partial class SpellsViewModel : PageViewModel
         // Initialize with first discipline
         UpdateSpellsForDiscipline();
         // Initialize Spell Select button
-        UpdateCircleOneButtonText();
-        UpdateCircleTwoButtonText();
+        CircleOneButtonText = "Select";
+        CircleTwoButtonText = "Select";
         _navigationService = navigationService;
     }
 
@@ -94,7 +94,15 @@ public partial class SpellsViewModel : PageViewModel
         }
         
         var currentSpell = CircleOneSpells.Spells[CircleOneCurrentIndex];
-        CircleOneButtonText = IsSpellSelected(currentSpell) ? "Remove" : "Select";
+        // CircleOneButtonText = IsSpellSelected(currentSpell) ? "Remove" : "Select";
+        if (IsSpellSelected(currentSpell))
+        {
+            CircleOneButtonText = "Remove";
+        }
+        else
+        {
+            CircleOneButtonText = "Select";
+        }
     }
 
     private void UpdateCircleTwoButtonText()
@@ -106,7 +114,14 @@ public partial class SpellsViewModel : PageViewModel
         }
         
         var currentSpell = CircleTwoSpells.Spells[CircleTwoCurrentIndex];
-        CircleTwoButtonText = IsSpellSelected(currentSpell) ? "Remove" : "Select";
+        if (IsSpellSelected(currentSpell))
+        {
+            CircleTwoButtonText = "Remove";
+        }
+        else
+        {
+            CircleTwoButtonText = "Select";
+        }
     }
 
     [RelayCommand]
@@ -148,18 +163,16 @@ public partial class SpellsViewModel : PageViewModel
         
         if (IsSpellSelected(currentSpell))
         {
-            // Update the button Text
-            UpdateCircleOneButtonText();
             // If spell is already selected, remove it
             _characterSheetService.CharacterCreationSheetInstance.RemoveSpell(currentSpell);
         }
         else
         {
-            // Update the button Text
-            UpdateCircleOneButtonText();
             // If spell is not selected, add it
             _characterSheetService.CharacterCreationSheetInstance.AddNewSpell(currentSpell);
         }
+        // Update the button Text
+        UpdateCircleOneButtonText();
         SpellPointsRemaining = _characterSheetService.CharacterCreationSheetInstance.SpellPoints;
     }
 
@@ -203,19 +216,16 @@ public partial class SpellsViewModel : PageViewModel
         
         if (IsSpellSelected(currentSpell))
         {
-            //Update the button text
-            UpdateCircleTwoButtonText();
             // If spell is already selected, remove it
             _characterSheetService.CharacterCreationSheetInstance.RemoveSpell(currentSpell);
         }
         else
         {
-            // Update the button text
-            UpdateCircleTwoButtonText();
             // If spell is not selected, add it
             _characterSheetService.CharacterCreationSheetInstance.AddNewSpell(currentSpell);
         }
-        
+        // Update the button text
+        UpdateCircleTwoButtonText();
         SpellPointsRemaining = _characterSheetService.CharacterCreationSheetInstance.SpellPoints;
     }
 

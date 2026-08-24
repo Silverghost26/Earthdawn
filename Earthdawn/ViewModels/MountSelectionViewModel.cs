@@ -73,7 +73,8 @@ public partial class MountSelectionViewModel : PageViewModel
             {
                 _characterSheetService.CharacterCreationSheetInstance.AddMount(SelectedMount.Mounts);
                 CharacterMounts.Add(new EquipmentViewModel(SelectedMount.Mounts));
-                _equipmentViewModel.UpdateSilverRemaining(_characterSheetService.CharacterCreationSheetInstance.Money.Silver);
+                _equipmentViewModel.UpdateSilverRemaining(_characterSheetService.CharacterCreationSheetInstance.Money.Silver, 
+                    _characterSheetService.CharacterCreationSheetInstance.Money.Copper);
             }
         }
     }

@@ -19,7 +19,7 @@
                 <Label Content="Circle 1 Spells" Classes="PrimarySubHeader" Margin="0,0,0,10" HorizontalAlignment="Center"/>
                 <Carousel SelectedIndex="{Binding CircleOneCurrentIndex}" 
                             ItemsSource="{Binding CircleOneSpells.Spells}" 
-                            Width="1800" Height="300">
+                            Width="1800" Height="260">
                     <Carousel.PageTransition>
                         <PageSlide Duration="0:00:00.5" Orientation="Horizontal"/>
                     </Carousel.PageTransition>
@@ -69,7 +69,7 @@
                 <Label Content="Circle 2 Spells" Classes="PrimarySubHeader" Margin="0,0,0,10" HorizontalAlignment="Center"/>
                 <Carousel SelectedIndex="{Binding CircleTwoCurrentIndex}" 
                           ItemsSource="{Binding CircleTwoSpells.Spells}" 
-                          Width="1800" Height="275">
+                          Width="1800" Height="260">
                     <Carousel.PageTransition>
                         <PageSlide Duration="0:00:00.5" Orientation="Horizontal"/>
                     </Carousel.PageTransition>

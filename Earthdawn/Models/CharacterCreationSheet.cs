@@ -423,18 +423,25 @@ public class  CharacterCreationSheet : CharacterBase
     {
         if (cost <= Money.Silver)
         {
-            if (cost % 1 == 0)
+            if ((int)((cost % 1) * 10) == 0)
             {
                 Money.Silver -= (int)cost;
             }
             else
             {
                 float remainder = cost % 1;
-                Money.Silver -= (int)Math.Floor(cost);
-                Money.Silver -= 1;
-                Money.Copper += (int)(remainder * 10);
-            }
+                int copper = (int)(remainder * 10);
 
+                if (Money.Copper >= copper)
+                {
+                    Money.Copper -= copper;
+                }
+                else
+                {
+                    Money.Silver -= ((int)Math.Floor(cost) + 1);
+                    Money.Copper = ((Money.Copper + 10) - copper);
+                }
+            }
             return true;
         }
         return false;
@@ -442,22 +449,22 @@ public class  CharacterCreationSheet : CharacterBase
 
     public void ReturnItem(float cost)
     {
-        if (cost % 1 == 0)
+        if ((int)((cost % 1) * 10) == 0)
         {
             Money.Silver += (int)cost;
         }
         else
         {
-            float remainder = cost % 1;
+            int copper = (int)((cost % 1) * 10);
             Money.Silver += (int)Math.Floor(cost);
-            if ((Money.Copper + (remainder * 10)) >= 10)
+            if ((Money.Copper + copper) >= 10)
             {
                 Money.Silver += 1;
-                Money.Copper -= 10;
+                Money.Copper = (Money.Copper + copper) - 10;
             }
             else
             {
-                Money.Copper += (int)(remainder * 10);
+                Money.Copper += copper;
             }
         }
     }
