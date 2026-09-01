@@ -15,31 +15,37 @@ public class  CharacterCreationSheet : CharacterBase
     private int _racialWil;
     private int _racialChr;
     
+    IDataServices dataService = new DataServices();
     private List<string> _optionalTalensList;
+    private Dictionary<string, Talent> talents;
+    private List<SkillDisplayCard> _skillDisplayCards;
+    private List<Skill> _availableSkillList;
     private int _spellPoints;
-    private int _generalSkillPoints;
-    private int _knowledgeSkillPoints;
-    private int _artisanSkillPoints;
-    private int _speakLanguageSkillPoints;
-    private int _readWriteSkillPoints;
     public CharacterCreationSheet()
     {
+        _availableSkillList = new List<Skill>();
         RemainingAttributePoints = 25;
         RemainingTalentPoints = 8;
         RemainingGeneralSkillPoints = 8;
         RemainingKnowledgeSkillPoints = 2;
+        RemainingArtisanSkillPoints = 1;
+        RemainingSpeakLanguageSkillPoints = 2;
+        RemainingReadWriteSkillPoints = 1;
         _optionalTalensList = new();
         _spellPoints = 0;
-        _generalSkillPoints = 8;
-        _knowledgeSkillPoints = 2;
-        _artisanSkillPoints = 1;
-        _readWriteSkillPoints = 1;
-        _spellPoints = 2;
-        Money = new Money();
-        Money.Silver = 200;
+        Money = new Money
+        {
+            Silver = 200
+        };
+        talents = dataService.LoadTalents();
+        CreateSkillList(dataService.LoadSkillsList());
     }
-    
-   
+
+    public List<Skill> AvailableSkillList
+    {
+        get => _availableSkillList;
+    }
+
     //Properties
     public int RemainingAttributePoints
     {
@@ -55,6 +61,9 @@ public class  CharacterCreationSheet : CharacterBase
     public int RemainingTalentPoints { get; set; }
     public int RemainingGeneralSkillPoints { get; set; }
     public int RemainingKnowledgeSkillPoints { get; set; }
+    public int RemainingReadWriteSkillPoints { get; set; }
+    public int RemainingArtisanSkillPoints { get; set; }
+    public int RemainingSpeakLanguageSkillPoints { get; set; }
     public int SpellPoints
     {
         get => _spellPoints;
@@ -62,10 +71,37 @@ public class  CharacterCreationSheet : CharacterBase
     
     
     //*************************************************Functions*********************************************
+    private void CreateSkillList(List<SkillDisplayCard> skillDisplayCards)
+    {
+        foreach (SkillDisplayCard sdc in skillDisplayCards)
+        {
+            if (string.Equals(sdc.Skills.Tier, "novice", StringComparison.OrdinalIgnoreCase))
+            {
+                _availableSkillList.Add(sdc.Skills);
+            }
+        }
+
+        foreach (string t in talents.Keys)
+        {
+            if (talents[t].SkillUse == "Yes" && talents[t].SkillLevel == "Novice")
+            {
+                _availableSkillList.Add(new Skill
+                {
+                    Action = talents[t].Action,
+                    Description = talents[t].Description,
+                    Name = t,
+                    Rank = talents[t].Rank,
+                    Step = talents[t].Step,
+                    Strain = talents[t].Strain,
+                    Tier = talents[t].SkillLevel
+                });
+            }
+        }
+    }
     public void AddDiscipline(DisciplineDisplayCard card)
     {
-        IDataServices dataService = new DataServices();
-        var talents = dataService.LoadTalents();
+        //IDataServices dataService = new DataServices();
+        //var talents = dataService.LoadTalents();
         Discipline newDiscipline = new Discipline();
         newDiscipline.DisciplineName = card.Name;
         newDiscipline.DisciplineCircleLevel = 1;
@@ -258,51 +294,51 @@ public class  CharacterCreationSheet : CharacterBase
         {
             case AttributesTypes.Chr:
                 cost = GetAttributeIncreaseCostChr();
-                if (cost <= RemainingAttributePoints && (Charisma - _racialChr) < 8)
+                if (cost <= RemainingAttributePoints && (CharacterAttributes.Charisma - _racialChr) < 8)
                 {
                     RemainingAttributePoints -= cost;
-                    Charisma += 1;
+                    CharacterAttributes.Charisma += 1;
                 }
                 break;
             case AttributesTypes.Per:
                 cost = GetAttributeIncreaseCostPer();
-                if (cost <= RemainingAttributePoints && (Perception - _racialPer) < 8)
+                if (cost <= RemainingAttributePoints && (CharacterAttributes.Perception - _racialPer) < 8)
                 {
                     RemainingAttributePoints -= cost;
-                    Perception += 1;
+                    CharacterAttributes.Perception += 1;
                     _spellPoints = _charAttributes.GetStepNumber(AttributesTypes.Per);
                 }
                 break;
             case AttributesTypes.Str:
                 cost = GetAttributeIncreaseCostStr();
-                if (cost <= RemainingAttributePoints && (Strength - _racialStr) < 8)
+                if (cost <= RemainingAttributePoints && (CharacterAttributes.Strength - _racialStr) < 8)
                 {
                     RemainingAttributePoints -= cost;
-                    Strength += 1;
+                    CharacterAttributes.Strength += 1;
                 }
                 break;
             case AttributesTypes.Tou:
                 cost = GetAttributeIncreaseCostTou();
-                if (cost <= RemainingAttributePoints && (Toughness - _racialTou) < 8)
+                if (cost <= RemainingAttributePoints && (CharacterAttributes.Toughness - _racialTou) < 8)
                 {
                     RemainingAttributePoints -= cost;
-                    Toughness += 1;
+                    CharacterAttributes.Toughness += 1;
                 }
                 break;
             case AttributesTypes.Wil:
                 cost = GetAttributeIncreaseCostWil();
-                if (cost <= RemainingAttributePoints && (Willpower - _racialWil) < 8)
+                if (cost <= RemainingAttributePoints && (CharacterAttributes.Willpower - _racialWil) < 8)
                 {
                     RemainingAttributePoints -= cost;
-                    Willpower += 1;
+                    CharacterAttributes.Willpower += 1;
                 }
                 break;
             case AttributesTypes.Dex:
                 cost = GetAttributeIncreaseCostDex();
-                if (cost <= RemainingAttributePoints && (Dexterity - _racialDex) < 8)
+                if (cost <= RemainingAttributePoints && (CharacterAttributes.Dexterity - _racialDex) < 8)
                 {
                     RemainingAttributePoints -= cost;
-                    Dexterity += 1;
+                    CharacterAttributes.Dexterity += 1;
                 }
                 break;
         }
@@ -315,54 +351,54 @@ public class  CharacterCreationSheet : CharacterBase
         {
             case AttributesTypes.Chr:
                 cost = GetAttributeDecrementCostChr();
-                if ((Charisma - _racialChr) > -2)
+                if ((CharacterAttributes.Charisma - _racialChr) > -2)
                 {
                     RemainingAttributePoints += cost;
-                    Charisma -= 1;
+                    CharacterAttributes.Charisma -= 1;
                 }
                 break;
             case AttributesTypes.Per:
                 cost = GetAttributeDecrementCostPer();
-                if ((Perception - _racialPer) > -2)
+                if ((CharacterAttributes.Perception - _racialPer) > -2)
                 {
                     RemainingAttributePoints += cost;
-                    Perception -= 1;
+                    CharacterAttributes.Perception -= 1;
                     // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
             case AttributesTypes.Str:
                 cost = GetAttributeDecrementCostStr();
-                if ((Strength - _racialStr) > -2)
+                if ((CharacterAttributes.Strength - _racialStr) > -2)
                 {
                     RemainingAttributePoints += cost;
-                    Strength -= 1;
+                    CharacterAttributes.Strength -= 1;
                     // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
             case AttributesTypes.Tou:
                 cost = GetAttributeDecrementCostTou();
-                if ((Toughness - _racialTou) > -2)
+                if ((CharacterAttributes.Toughness - _racialTou) > -2)
                 {
                     RemainingAttributePoints += cost;
-                    Toughness -= 1;
+                    CharacterAttributes.Toughness -= 1;
                     // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
             case AttributesTypes.Wil:
                 cost = GetAttributeDecrementCostWil();
-                if ((Willpower - _racialWil) > -2)
+                if ((CharacterAttributes.Willpower - _racialWil) > -2)
                 {
                     RemainingAttributePoints += cost;
-                    Willpower -= 1;
+                    CharacterAttributes.Willpower -= 1;
                     // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
             case AttributesTypes.Dex:
                 cost = GetAttributeDecrementCostDex();
-                if ((Dexterity - _racialDex) > -2)
+                if ((CharacterAttributes.Dexterity - _racialDex) > -2)
                 {
                     RemainingAttributePoints += cost;
-                    Dexterity -= 1;
+                    CharacterAttributes.Dexterity -= 1;
                     // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
@@ -371,52 +407,52 @@ public class  CharacterCreationSheet : CharacterBase
     
     public int GetAttributeIncreaseCostDex()
     {
-        return Math.Abs(CalculateAttributePointChange(Dexterity - _racialDex + 1));
+        return Math.Abs(CalculateAttributePointChange(CharacterAttributes.Dexterity - _racialDex + 1));
     }
     public int GetAttributeIncreaseCostStr()
     {
-        return Math.Abs(CalculateAttributePointChange(Strength - _racialStr + 1));
+        return Math.Abs(CalculateAttributePointChange(CharacterAttributes.Strength - _racialStr + 1));
     }
     public int GetAttributeIncreaseCostTou()
     {
-        return Math.Abs(CalculateAttributePointChange(Toughness - _racialTou + 1));
+        return Math.Abs(CalculateAttributePointChange(CharacterAttributes.Toughness - _racialTou + 1));
     }
     public int GetAttributeIncreaseCostPer()
     {
-        return Math.Abs(CalculateAttributePointChange(Perception - _racialPer + 1));
+        return Math.Abs(CalculateAttributePointChange(CharacterAttributes.Perception - _racialPer + 1));
     }
     public int GetAttributeIncreaseCostWil()
     {
-        return Math.Abs(CalculateAttributePointChange(Willpower - _racialWil + 1));
+        return Math.Abs(CalculateAttributePointChange(CharacterAttributes.Willpower - _racialWil + 1));
     }
     public int GetAttributeIncreaseCostChr()
     {
-        return Math.Abs(CalculateAttributePointChange(Charisma - _racialChr + 1));
+        return Math.Abs(CalculateAttributePointChange(CharacterAttributes.Charisma - _racialChr + 1));
     }
     public int GetAttributeDecrementCostDex()
     {
-        return Math.Abs(CalculateAttributePointChange(Dexterity - _racialDex));
+        return Math.Abs(CalculateAttributePointChange(CharacterAttributes.Dexterity - _racialDex));
     }
     
     public int GetAttributeDecrementCostStr()
     {
-        return Math.Abs(CalculateAttributePointChange(Strength - _racialStr));
+        return Math.Abs(CalculateAttributePointChange(CharacterAttributes.Strength - _racialStr));
     }
     public int GetAttributeDecrementCostTou()
     {
-        return Math.Abs(CalculateAttributePointChange(Toughness - _racialTou));
+        return Math.Abs(CalculateAttributePointChange(CharacterAttributes.Toughness - _racialTou));
     }
     public int GetAttributeDecrementCostPer()
     {
-        return Math.Abs(CalculateAttributePointChange(Perception - _racialPer));
+        return Math.Abs(CalculateAttributePointChange(CharacterAttributes.Perception - _racialPer));
     }
     public int GetAttributeDecrementCostWil()
     {
-        return Math.Abs(CalculateAttributePointChange(Willpower - _racialWil));
+        return Math.Abs(CalculateAttributePointChange(CharacterAttributes.Willpower - _racialWil));
     }
     public int GetAttributeDecrementCostChr()
     {
-        return Math.Abs(CalculateAttributePointChange(Charisma - _racialChr));
+        return Math.Abs(CalculateAttributePointChange(CharacterAttributes.Charisma - _racialChr));
     }
 
     public bool BuyItem(float cost)

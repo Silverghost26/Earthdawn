@@ -7,14 +7,8 @@ using Earthdawn.Data;
 
 namespace Earthdawn.Models;
 
-public class Attributes : INotifyPropertyChanged
+public class Attributes
 {
-    public event PropertyChangedEventHandler? PropertyChanged;
-
-    protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-    }
     private Dictionary<string, int> _attributes;
     private Dictionary<AttributesTypes, int> _legendPointIncrease;
     public Attributes()
@@ -91,7 +85,7 @@ public class Attributes : INotifyPropertyChanged
             if (value >= 0)
             {
                 _attributes["Dexterity"] = value;
-                OnPropertyChanged();
+                // OnPropertyChanged();
             }
             else
             {
@@ -108,7 +102,6 @@ public class Attributes : INotifyPropertyChanged
             if (value >= 0)
             {
                 _attributes["Strength"] = value;
-                OnPropertyChanged();
             }
             else
             {
@@ -125,7 +118,6 @@ public class Attributes : INotifyPropertyChanged
             if (value >= 0)
             {
                 _attributes["Toughness"] = value;
-                OnPropertyChanged();
             }
             else
             {
@@ -142,7 +134,6 @@ public class Attributes : INotifyPropertyChanged
             if (value >= 0)
             {
                 _attributes["Perception"] = value;
-                OnPropertyChanged();
             }
             else
             {
@@ -159,7 +150,6 @@ public class Attributes : INotifyPropertyChanged
             if (value >= 0)
             {
                 _attributes["Willpower"] = value;
-                OnPropertyChanged();
             }
             else
             {
@@ -176,7 +166,6 @@ public class Attributes : INotifyPropertyChanged
             if (value >= 0)
             {
                 _attributes["Charisma"] = value;
-                OnPropertyChanged();
             }
             else
             {

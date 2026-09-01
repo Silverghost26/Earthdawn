@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Earthdawn.Data;
@@ -10,6 +11,16 @@ namespace Earthdawn.ViewModels;
 
 public partial class SkillsViewModel : PageViewModel
 {
+    public SkillsViewModel(IDataServices dataServices, ICharacterSheetService characterSheetService, NavigationService navigationService)
+    {
+        _dataServices = dataServices;
+        PageName = ApplicationPageNames.SkillSelection;
+        _navigationService = navigationService;
+        _characterSheetService = characterSheetService;
+        Skills = new ObservableCollection<Skill>(_characterSheetService.CharacterCreationSheetInstance.AvailableSkillList);
+        GeneralSkillPoints = _characterSheetService.CharacterCreationSheetInstance.RemainingGeneralSkillPoints;
+    }
+    
     private readonly IDataServices _dataServices;
     private readonly NavigationService _navigationService;
     private ICharacterSheetService _characterSheetService;
@@ -17,18 +28,11 @@ public partial class SkillsViewModel : PageViewModel
     [ObservableProperty]
     private int _selectedIndex = 0;
 
-    public ObservableCollection<SkillDisplayCard> Skills { get; }
+    [ObservableProperty] private int _generalSkillPoints;
 
-    public SkillsViewModel(IDataServices dataServices, ICharacterSheetService characterSheetService, NavigationService navigationService)
-    {
-        _dataServices = dataServices;
-        PageName = ApplicationPageNames.SkillSelection;
-        Skills = new ObservableCollection<SkillDisplayCard>(dataServices.LoadSkillsList());
-        _navigationService = navigationService;
-        _characterSheetService = characterSheetService;
-    }
+    public ObservableCollection<Skill> Skills { get; }
 
-    public Skill SelectedSkill => Skills.Count > 0 && SelectedIndex >= 0 ? Skills[SelectedIndex].Skills : null;
+    public Skill SelectedSkill => Skills.Count > 0 && SelectedIndex >= 0 ? Skills[SelectedIndex] : null;
 
     [RelayCommand]
     private void Previous()
@@ -63,6 +67,19 @@ public partial class SkillsViewModel : PageViewModel
             // TODO: Implement actual selection logic here
         }
     }
+    
+    // Helper method to check if a spell is already selected
+    private bool IsSkillSelected(Skill skill)
+    {
+        var selectedSkills = _characterSheetService.CharacterCreationSheetInstance.Skills;
+
+        if (selectedSkills.Any(s => s.Name == skill.Name))
+        {
+            return true;
+        }
+        return false;
+    }
+    
 
     [RelayCommand]
     private void SaveAndContinue()

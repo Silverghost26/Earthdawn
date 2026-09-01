@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using Earthdawn.Data;
 using EarthDawn.Models;
 
@@ -7,6 +9,7 @@ public class CharacterBase
 {
     //**********************************************Private Members********************************************
     protected List<Discipline> _disciplines;
+    protected List<Skill> _skills;
     private List<Weapon> _weapons;
     private List<Armor> _armor;
     private List<Shield> _shields;
@@ -24,6 +27,7 @@ public class CharacterBase
         _equipment = new List<Equipment>();
         _mounts = new List<Mount>();
         _clothing = new List<Clothing>();
+        _racialAbilities  = new List<SpecialAbility>();
     }
     
     //***********************************Private Vars*************************************************
@@ -38,7 +42,7 @@ public class CharacterBase
     public string Race { get; set; }
     public List<SpecialAbility> RacialAbilities
     {
-        get => _racialAbilities ??= new List<SpecialAbility>();
+        get => _racialAbilities;
         set => _racialAbilities = value ?? new List<SpecialAbility>();
     }
     private List<SpecialAbility> _racialAbilities;
@@ -60,74 +64,16 @@ public class CharacterBase
     public List<Equipment> Equipment { get {return _equipment;} }
     public List<Mount> Mounts { get {return _mounts;} }
     public List<Clothing> Clothing { get {return _clothing;} }
+    public List<Skill> Skills { get {return _skills;} }
     
-    public int Dexterity
+    public Attributes CharacterAttributes
     {
-        get
-        {
-            return _charAttributes.Dexterity;
-        }
-        set
-        {
-            _charAttributes.Dexterity = value;
-        }
-    }
-    public int Strength
-    {
-        get
-        {
-            return _charAttributes.Strength;
-        }
-        set
-        {
-            _charAttributes.Strength = value;
-        }
-    }
-    public int Toughness {
-        get
-        {
-            return _charAttributes.Toughness;
-        }
-        set
-        {
-            _charAttributes.Toughness = value;
-        }
+        get { return _charAttributes; }
     }
 
-    public int Perception
+    public List<Skill> CharacterSkills
     {
-        get
-        {
-            return _charAttributes.Perception;
-        }
-        set
-        {
-            _charAttributes.Perception = value;
-        }
-    }
-
-    public int Willpower
-    {
-        get
-        {
-            return _charAttributes.Willpower;
-        }
-        set
-        {
-            _charAttributes.Willpower = value;
-        }
-    }
-
-    public int Charisma
-    {
-        get
-        {
-            return _charAttributes.Charisma;
-        }
-        set
-        {
-            _charAttributes.Charisma = value;
-        }
+        get { return _skills; }
     }
     
     public int Initiative {
@@ -137,7 +83,7 @@ public class CharacterBase
         }
         set; 
     }
-
+    
     public int PhysicalDefense
     {
         get
@@ -156,7 +102,7 @@ public class CharacterBase
         }
         set;
     }
-
+    
     public int PhysicalArmor
     {
         get
@@ -165,7 +111,7 @@ public class CharacterBase
         }
         set;
     }
-
+    
     public int MysticalArmor
     {
         get
@@ -173,7 +119,7 @@ public class CharacterBase
             return _charAttributes.GetMysticArmor();
         }
     }
-
+    
     public int SocialDefense
     {
         get
@@ -182,22 +128,22 @@ public class CharacterBase
         }
         set;
     }
-
+    
     public int UnconsciousRating
     {
         get => _charAttributes.GetUnconsciousnessRating();
     }
-
+    
     public int DeathRating
     {
         get => _charAttributes.GetDeathRating();
     }
-
+    
     public int RecoveryTests
     {
         get => _charAttributes.GetRecoveryTests();
     }
-
+    
     public int WoundThreshold
     {
         get => _charAttributes.GetWoundThreshold();
@@ -328,6 +274,34 @@ public class CharacterBase
         {
             _clothing.Remove(clothing);
         }
+    }
+
+    public bool AddSkill(Skill skill)
+    {
+        if (skill == null)
+        {
+            return false;
+        }
+
+        if (_skills.Any(s => s.Name == skill.Name))
+        {
+            return false;
+        }
+        _skills.Add(skill);
+        return true;
+    }
+
+    public bool RemoveSkill(Skill skill)
+    {
+        if (skill == null)
+            return false;
+ 
+        if (_skills.Any(s => s.Name == skill.Name))
+        {
+            _skills.RemoveAll(obj => obj.Name == skill.Name);
+            return true;
+        }
+        return false;
     }
     
 }

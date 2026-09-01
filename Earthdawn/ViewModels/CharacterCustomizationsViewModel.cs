@@ -86,7 +86,6 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
         MysticDefense = _characterSheetService.CharacterCreationSheetInstance.MysticDefense;
         SocialDefense = _characterSheetService.CharacterCreationSheetInstance.SocialDefense;
         MysticalArmor = _characterSheetService.CharacterCreationSheetInstance.MysticalArmor;
-        Karma = _characterSheetService.CharacterCreationSheetInstance.Karma;
         UnconsciousRating = _characterSheetService.CharacterCreationSheetInstance.UnconsciousRating;
         DeathRating = _characterSheetService.CharacterCreationSheetInstance.DeathRating;
         WoundThreshold = _characterSheetService.CharacterCreationSheetInstance.WoundThreshold;
@@ -287,19 +286,19 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
         switch (attribute)
         {
             case "Dexterity":
-                Dexterity = _characterSheetService.CharacterCreationSheetInstance.Dexterity;
+                Dexterity = _characterSheetService.CharacterCreationSheetInstance.CharacterAttributes.Dexterity;
                 DexIncrementCost = _characterSheetService.CharacterCreationSheetInstance.GetAttributeIncreaseCostDex();
                 DexDecrementCost = _characterSheetService.CharacterCreationSheetInstance.GetAttributeDecrementCostDex();
                 Initiative = _characterSheetService.CharacterCreationSheetInstance.Initiative;
                 PhysicalDefense = _characterSheetService.CharacterCreationSheetInstance.PhysicalDefense;
                 break;
             case "Strength":
-                Strength = _characterSheetService.CharacterCreationSheetInstance.Strength;
+                Strength = _characterSheetService.CharacterCreationSheetInstance.CharacterAttributes.Strength;
                 StrIncrementCost = _characterSheetService.CharacterCreationSheetInstance.GetAttributeIncreaseCostStr();
                 StrDecrementCost = _characterSheetService.CharacterCreationSheetInstance.GetAttributeDecrementCostStr();
                 break;
             case "Toughness":
-                Toughness = _characterSheetService.CharacterCreationSheetInstance.Toughness;
+                Toughness = _characterSheetService.CharacterCreationSheetInstance.CharacterAttributes.Toughness;
                 TouIncrementCost = _characterSheetService.CharacterCreationSheetInstance.GetAttributeIncreaseCostTou();
                 TouDecrementCost = _characterSheetService.CharacterCreationSheetInstance.GetAttributeDecrementCostTou();
                 UnconsciousRating = _characterSheetService.CharacterCreationSheetInstance.UnconsciousRating;
@@ -308,19 +307,19 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
                 RecoveryTests = _characterSheetService.CharacterCreationSheetInstance.RecoveryTests;
                 break;
             case "Perception":
-                Perception = _characterSheetService.CharacterCreationSheetInstance.Perception;
+                Perception = _characterSheetService.CharacterCreationSheetInstance.CharacterAttributes.Perception;
                 PerIncrementCost = _characterSheetService.CharacterCreationSheetInstance.GetAttributeIncreaseCostPer();
                 PerDecrementCost = _characterSheetService.CharacterCreationSheetInstance.GetAttributeDecrementCostPer();
                 MysticDefense = _characterSheetService.CharacterCreationSheetInstance.MysticDefense;
                 break;
             case "Willpower":
-                Willpower = _characterSheetService.CharacterCreationSheetInstance.Willpower;
+                Willpower = _characterSheetService.CharacterCreationSheetInstance.CharacterAttributes.Willpower;
                 WilIncrementCost = _characterSheetService.CharacterCreationSheetInstance.GetAttributeIncreaseCostWil();
                 WilDecrementCost = _characterSheetService.CharacterCreationSheetInstance.GetAttributeDecrementCostWil();
                 MysticalArmor = _characterSheetService.CharacterCreationSheetInstance.MysticalArmor;
                 break;
             case "Charisma":
-                Charisma = _characterSheetService.CharacterCreationSheetInstance.Charisma;
+                Charisma = _characterSheetService.CharacterCreationSheetInstance.CharacterAttributes.Charisma;
                 ChrIncrementCost = _characterSheetService.CharacterCreationSheetInstance.GetAttributeIncreaseCostChr();
                 ChrDecrementCost = _characterSheetService.CharacterCreationSheetInstance.GetAttributeDecrementCostChr();
                 SocialDefense = _characterSheetService.CharacterCreationSheetInstance.SocialDefense;

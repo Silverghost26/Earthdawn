@@ -14,10 +14,14 @@
     <ScrollViewer>
         <StackPanel Orientation="Vertical" Margin="20">
             <Label Classes="PrimaryHeader" Content="Skills" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Label Classes="PrimaryText" Content="General Skill Points: "/>
+                <Label Classes="PrimaryText" Content="{Binding GeneralSkillPoints}"></Label>
+            </StackPanel>
 
             <Carousel ItemsSource="{Binding Skills}" 
                       SelectedIndex="{Binding SelectedIndex}"
-                      Width="1800" Height="500">
+                      Width="1800" Height="355">
                 <Carousel.PageTransition>
                     <PageSlide Duration="0:00:00.5" Orientation="Horizontal"/>
                 </Carousel.PageTransition>
@@ -38,28 +42,30 @@
                                         CornerRadius="10" Padding="30" 
                                         Margin="0,0,20,0">
                                     <StackPanel>
-                                        <TextBlock Text="{Binding Skills.Step, StringFormat='Step: {0}'}" 
+                                        <TextBlock Text="{Binding Step, StringFormat='Step: {0}'}" 
                                                    Classes="PrimaryDescriptionText" Margin="0,0,0,10"/>
-                                        <TextBlock Text="{Binding Skills.Strain, StringFormat='Strain: {0}'}" 
+                                        <TextBlock Text="{Binding Strain, StringFormat='Strain: {0}'}" 
                                                    Classes="PrimaryDescriptionText" Margin="0,0,0,10"/>
-                                        <TextBlock Text="{Binding Skills.Action, StringFormat='Action: {0}'}" 
+                                        <TextBlock Text="{Binding Action, StringFormat='Action: {0}'}" 
                                                    Classes="PrimaryDescriptionText" Margin="0,0,0,10"/>
-                                        <TextBlock Text="{Binding Skills.Cost, StringFormat='Cost: {0}'}" 
+                                        <TextBlock Text="{Binding Tier, StringFormat='Cost: {0}'}" 
                                                    Classes="PrimaryDescriptionText" Margin="0,0,0,10"/>
                                     </StackPanel>
                                 </Border>
-
+                                <ScrollViewer Grid.Column="1" Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
                                 <!-- Description Taking Up Remaining Space -->
                                 <StackPanel Grid.Column="1" Grid.Row="1">
                                     <TextBlock Text="Description:" 
                                                Classes="PrimaryDescriptionText" FontWeight="Bold" 
                                                Margin="0,0,0,5"/>
-                                    <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Skills.Description}" 
+                                    <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Description}" 
                                                TextWrapping="Wrap" 
                                                MaxHeight="400"/>
                                 </StackPanel>
+                                </ScrollViewer>
                             </Grid>
                         </Border>
+                        
                     </DataTemplate>
                 </Carousel.ItemTemplate>
             </Carousel>
