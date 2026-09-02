@@ -1,0 +1,19 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Earthdawn.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="vm:KnowledgeSkillsViewModel"
+             x:Class="Earthdawn.Views.KnowledgeSkillsView">
+
+    <Design.DataContext>
+        <vm:KnowledgeSkillsViewModel />
+    </Design.DataContext>
+
+    <StackPanel Orientation="Vertical" Margin="20">
+        <Label Classes="PrimaryHeader" Content="Knowledge Skills" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+        <Label Classes="PrimaryText" Content="Knowledge Skills content will be implemented here." HorizontalAlignment="Center"/>
+    </StackPanel>
+
+</UserControl>

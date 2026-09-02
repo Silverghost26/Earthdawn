@@ -41,6 +41,9 @@ public partial class App : Application
         collection.AddTransient<HomeViewModel>();
         collection.AddTransient<RacesViewModel>();
         collection.AddTransient<SkillsViewModel>();
+        collection.AddTransient<GeneralSkillsViewModel>();
+        collection.AddTransient<KnowledgeSkillsViewModel>();
+        collection.AddTransient<LanguageSkillsViewModel>();
         collection.AddTransient<SpellsViewModel>();
         collection.AddTransient<WeaponSelectionViewModel>(); // Add WeaponSelectionViewModel
         collection.AddTransient<MountSelectionViewModel>();

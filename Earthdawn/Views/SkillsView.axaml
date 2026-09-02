@@ -1,4 +1,4 @@
-﻿<UserControl xmlns="https://github.com/avaloniaui"
+<UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -14,75 +14,50 @@
     <ScrollViewer>
         <StackPanel Orientation="Vertical" Margin="20">
             <Label Classes="PrimaryHeader" Content="Skills" HorizontalAlignment="Center" Margin="0,0,0,20"/>
-            <StackPanel Orientation="Horizontal" Margin="10">
-                <Label Classes="PrimaryText" Content="General Skill Points: "/>
-                <Label Classes="PrimaryText" Content="{Binding GeneralSkillPoints}"></Label>
+            
+            <!-- Navigation Buttons Horizontally Spaced -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="20" Margin="0,0,0,20">
+                <Button Classes="TextureButton" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                        Content="General Skills"
+                        Command="{Binding NavigateToGeneralSkillsCommand}"
+                        Width="200" Height="55"/>
+                <Button Classes="TextureButton"  FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                        Content="Knowledge Skills" 
+                        Command="{Binding NavigateToKnowledgeSkillsCommand}"
+                        Width="200" Height="55"/>
+                <Button Classes="TextureButton" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+                        Content="Language Skills" 
+                        Command="{Binding NavigateToLanguageSkillsCommand}"
+                        Width="200" Height="55"/>
             </StackPanel>
-
-            <Carousel ItemsSource="{Binding Skills}" 
-                      SelectedIndex="{Binding SelectedIndex}"
-                      Width="1800" Height="355">
-                <Carousel.PageTransition>
-                    <PageSlide Duration="0:00:00.5" Orientation="Horizontal"/>
-                </Carousel.PageTransition>
-                <Carousel.ItemTemplate>
-                    <DataTemplate>
-                        <Border Classes="background" BorderBrush="Black" BorderThickness="5" CornerRadius="30" Padding="20">
-                            <Grid ColumnDefinitions="300, *" RowDefinitions="Auto, *">
-                                <!-- Skill Name Centered at the Top -->
-                                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
-                                           Classes="PrimarySubHeader" Content="{Binding Name}" 
-                                           HorizontalAlignment="Center" 
-                                           FontSize="24" FontWeight="Bold" 
-                                           Margin="0,0,0,20"/>
-
-                                <!-- Skill Properties in a Bordered Box on the Left Side -->
-                                <Border Grid.Column="0" Grid.Row="1" 
-                                        BorderBrush="Black" BorderThickness="2" 
-                                        CornerRadius="10" Padding="30" 
-                                        Margin="0,0,20,0">
-                                    <StackPanel>
-                                        <TextBlock Text="{Binding Step, StringFormat='Step: {0}'}" 
-                                                   Classes="PrimaryDescriptionText" Margin="0,0,0,10"/>
-                                        <TextBlock Text="{Binding Strain, StringFormat='Strain: {0}'}" 
-                                                   Classes="PrimaryDescriptionText" Margin="0,0,0,10"/>
-                                        <TextBlock Text="{Binding Action, StringFormat='Action: {0}'}" 
-                                                   Classes="PrimaryDescriptionText" Margin="0,0,0,10"/>
-                                        <TextBlock Text="{Binding Tier, StringFormat='Cost: {0}'}" 
-                                                   Classes="PrimaryDescriptionText" Margin="0,0,0,10"/>
-                                    </StackPanel>
-                                </Border>
-                                <ScrollViewer Grid.Column="1" Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-                                <!-- Description Taking Up Remaining Space -->
-                                <StackPanel Grid.Column="1" Grid.Row="1">
-                                    <TextBlock Text="Description:" 
-                                               Classes="PrimaryDescriptionText" FontWeight="Bold" 
-                                               Margin="0,0,0,5"/>
-                                    <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Description}" 
-                                               TextWrapping="Wrap" 
-                                               MaxHeight="400"/>
-                                </StackPanel>
-                                </ScrollViewer>
-                            </Grid>
-                        </Border>
-                        
-                    </DataTemplate>
-                </Carousel.ItemTemplate>
-            </Carousel>
-
-            <!-- Navigation and Selection Buttons -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="20" Margin="0,20,0,0">
-                <Button Content="Previous" 
-                        Command="{Binding PreviousCommand}"
-                        Width="100" Height="40"/>
-                <Button Content="Select" 
-                        Command="{Binding SelectCommand}"
-                        Width="100" Height="40"/>
-                <Button Content="Next" 
-                        Command="{Binding NextCommand}"
-                        Width="100" Height="40"/>
+            
+            <!-- Skill Points Labels Horizontally Spaced -->
+            <Border Width="1100" Padding="5" CornerRadius="30" Classes="background" BorderThickness="1" BorderBrush="Black">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="30" Margin="0,0,0,20">
+                <StackPanel Orientation="Vertical">
+                    <Label FontSize="20" Classes="PrimaryText" Content="General Skill Points:"/>
+                    <Label Classes="PrimaryText" Content="{Binding GeneralSkillPoints}" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Label FontSize="20" Classes="PrimaryText" Content="Knowledge Skill Points:"/>
+                    <Label Classes="PrimaryText" Content="{Binding KnowledgeSkillPoints}" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Label FontSize="20" Classes="PrimaryText" Content="Speak Language Skill Points:"/>
+                    <Label Classes="PrimaryText" Content="{Binding SpeakLanguageSkillPoints}" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Label FontSize="20" Classes="PrimaryText" Content="Read Language Skill Points:"/>
+                    <Label Classes="PrimaryText" Content="{Binding ReadLanguageSkillPoints}" HorizontalAlignment="Center"/>
+                </StackPanel>
             </StackPanel>
-            <Panel HorizontalAlignment="Center" VerticalAlignment="Top" >
+            </Border>
+            
+            <!-- Child View Container -->
+            <ContentControl Content="{Binding CurrentChildView}" Margin="0,20,0,0"/>
+            
+            <!-- Save and Continue Button -->
+            <Panel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0">
                 <Button Classes="TextureButton" 
                         Command="{Binding SaveAndContinueCommand}"
                         Content="Save &amp; Continue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"
