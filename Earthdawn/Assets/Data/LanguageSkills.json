@@ -1,0 +1,80 @@
+[
+  {
+    "Language": "Throalic",
+    "Race": "Dwarf",
+    "Description": "While it is the native language of the Dwarves, Throalic also servers as the de facto common tongue and trade language across Barsaive.  The vast majority of Name Giver races can speak and most can read and write Throalic.",
+    "Continent": "Barsaive"
+  },
+  {
+    "Language": "Sperethiel",
+    "Race": "Elf",
+    "Description": "The fraceful, flowery racial language of the elves, heavily preserved by immortal elves and tied closely to elven culture.",
+    "Continent": "Barsaive"
+  },
+  {
+    "Language": "Or'zet",
+    "Race": "Orc",
+    "Description": "The traditional language of the orks, uniquely adapted to their tusks. It was largely lost during the Scourge and later rediscovered via ancient stone tablets.",
+    "Continent": "Barsaive"
+  },
+  {
+    "Language": "Human",
+    "Race": "Human",
+    "Description": "The standard tongue used by humans, though many speak Throalic for trade.",
+    "Continent": "Barsaive"
+  },
+  {
+    "Language": "Obsidiman",
+    "Race": "Obsidiman",
+    "Description": "The deep, rumbling language used by the stony Obsidimen.",
+    "Continent": "Barsaive"
+  },
+  {
+    "Language": "T'skrang",
+    "Race": "T'skrang",
+    "Description": "The expressive and dramatic language of the lizard-like T'skrang.",
+    "Continent": "Barsaive"
+  },
+  {
+    "Language": "Trollish",
+    "Race": "Troll",
+    "Description": "The harsh, booming language spoken by trolls.",
+    "Continent": "Barsaive"
+  },
+  {
+    "Language": "Windling",
+    "Race": "Windling",
+    "Description": "The delicate, quick language of the tiny windlings.",
+    "Continent": "Barsaive"
+  },
+  {
+    "Language": "Theran",
+    "Race": "Human",
+    "Description": "The language of the Theran Empire. It is actually a simplified, streamlined offshoot of Sperethiel. It sacrifices the deeper, multi-layered cultural meaning of the elven tongue in favor of rigid efficiency, making it easier to administer a global empire. In Barsaive, it is still spoken in the southwest near Vivane and Sky Point, though it has heavily fallen out of favor since the war.",
+    "Continent": "Barsaive"
+  },
+  {
+    "Language": "Queen's Sperethiel",
+    "Race": "Blood Elf",
+    "Description": "The formal language spoken within the Blood Wood. Due to the court's physical alteration (the Ritual of Thorns) and centuries of isolation during the Scourge, they have added distinct new vocabulary, creating a noticeable linguistic drift from the rest of the world.",
+    "Continent": "Barsaive"
+  },
+  {
+    "Language": "Sereathan",
+    "Race": "Elf",
+    "Description": "A dialect spoken in the elven City of Spires (Sereatha). While its speakers pride themselves on using the \"truest, purest\" form of Sperethiel, it has actually mutated subtly over centuries to reflect their unique urban culture.",
+    "Continent": "Barsaive"
+  },
+  {
+    "Language": "Shosaran",
+    "Race": "Elf",
+    "Description": "A unique pidgin language that arose in the far-flung elven nation of Shosar. It is a blend of Sperethiel mixed with local human and Namegiver languages after hundreds of years of commingling.",
+    "Continent": "Barsaive"
+  },
+  {
+    "Language": "Cathan",
+    "Race": "Generic",
+    "Description": "Spoken by the isolated tribes of the Servos Jungle. It shares a common ancestor with regional human tongues like Iopan and Landisian but evolved entirely independently over centuries.",
+    "Continent": "Barsaive"
+  }
+]

@@ -38,4 +38,10 @@ public interface IDataServices
     
     // New loader for Horrors
     List<Horror> LoadHorrors();
+
+    // New loader for Knowledge Skills
+    List<KnowledgeSkillDisplayCard> LoadKnowledgeSkillsList();
+
+    // New loader for Language Skills
+    List<LanguageSkillDisplayCard> LoadLanguageSkillsList();
 }

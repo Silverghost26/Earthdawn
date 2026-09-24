@@ -183,6 +183,20 @@ public class DataServices : IDataServices
         return DataLoader.LoadJson<List<Horror>>(GetJson("Horrors.json"));
     }
 
+    // New loader for Knowledge Skills
+    public List<KnowledgeSkillDisplayCard> LoadKnowledgeSkillsList()
+    {
+        List<KnowledgeSkill> knowledgeSkills = DataLoader.LoadJson<List<KnowledgeSkill>>(GetJson("KnowledgeSkills.json"));
+        return knowledgeSkills.Select(ks => new KnowledgeSkillDisplayCard() { Name = ks.Name, KnowledgeSkill = ks }).ToList();
+    }
+
+    // New loader for Language Skills
+    public List<LanguageSkillDisplayCard> LoadLanguageSkillsList()
+    {
+        List<LanguageSkill> languageSkills = DataLoader.LoadJson<List<LanguageSkill>>(GetJson("LanguageSkills.json"));
+        return languageSkills.Select(ls => new LanguageSkillDisplayCard() { Name = ls.Language, LanguageSkill = ls }).ToList();
+    }
+
     private string GetJson(string file)
     {
         string path = "avares://Earthdawn/Assets/Data/" + file;

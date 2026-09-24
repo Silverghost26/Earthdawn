@@ -65,10 +65,9 @@ public partial class GeneralSkillsViewModel : PageViewModel
         }
     }
     
-    // Helper method to check if a spell is already selected
     private bool IsSkillSelected(Skill skill)
     {
-        var selectedSkills = _characterSheetService.CharacterCreationSheetInstance.Skills;
+        var selectedSkills = _characterSheetService.CharacterCreationSheetInstance.GeneralSkills;
 
         if (selectedSkills.Any(s => s.Name == skill.Name))
         {

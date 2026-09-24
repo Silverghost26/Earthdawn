@@ -9,7 +9,9 @@ public class CharacterBase
 {
     //**********************************************Private Members********************************************
     protected List<Discipline> _disciplines;
-    protected List<Skill> _skills;
+    protected List<Skill> _generalSkills;
+    protected List<LanguageSkill> _languageSkills;
+    protected List<KnowledgeSkill> _knowledgeSkills;
     private List<Weapon> _weapons;
     private List<Armor> _armor;
     private List<Shield> _shields;
@@ -28,6 +30,9 @@ public class CharacterBase
         _mounts = new List<Mount>();
         _clothing = new List<Clothing>();
         _racialAbilities  = new List<SpecialAbility>();
+        _generalSkills = new List<Skill>();
+        _knowledgeSkills = new List<KnowledgeSkill>();
+        _languageSkills = new List<LanguageSkill>();
     }
     
     //***********************************Private Vars*************************************************
@@ -64,16 +69,13 @@ public class CharacterBase
     public List<Equipment> Equipment { get {return _equipment;} }
     public List<Mount> Mounts { get {return _mounts;} }
     public List<Clothing> Clothing { get {return _clothing;} }
-    public List<Skill> Skills { get {return _skills;} }
+    public List<Skill> GeneralSkills { get {return _generalSkills;} }
+    public List<LanguageSkill> LanguageSkills {get {return  _languageSkills;} }
+    public List<KnowledgeSkill>  KnowledgeSkills { get {return _knowledgeSkills;} }
     
     public Attributes CharacterAttributes
     {
         get { return _charAttributes; }
-    }
-
-    public List<Skill> CharacterSkills
-    {
-        get { return _skills; }
     }
     
     public int Initiative {
@@ -276,29 +278,85 @@ public class CharacterBase
         }
     }
 
-    public bool AddSkill(Skill skill)
+    public bool AddGeneralSkill(Skill skill)
     {
         if (skill == null)
         {
             return false;
         }
 
-        if (_skills.Any(s => s.Name == skill.Name))
+        if (_generalSkills.Any(s => s.Name == skill.Name))
         {
             return false;
         }
-        _skills.Add(skill);
+        _generalSkills.Add(skill);
         return true;
     }
 
-    public bool RemoveSkill(Skill skill)
+    public bool RemoveGeneralSkill(Skill skill)
     {
         if (skill == null)
             return false;
  
-        if (_skills.Any(s => s.Name == skill.Name))
+        if (_generalSkills.Any(s => s.Name == skill.Name))
         {
-            _skills.RemoveAll(obj => obj.Name == skill.Name);
+            _generalSkills.RemoveAll(obj => obj.Name == skill.Name);
+            return true;
+        }
+        return false;
+    }
+    
+    public bool AddKnowledgeSkill(KnowledgeSkill skill)
+    {
+        if (skill == null)
+        {
+            return false;
+        }
+
+        if (_knowledgeSkills.Any(s => s.Name == skill.Name))
+        {
+            return false;
+        }
+        _knowledgeSkills.Add(skill);
+        return true;
+    }
+
+    public bool RemoveKnowledgeSkill(KnowledgeSkill skill)
+    {
+        if (skill == null)
+            return false;
+ 
+        if ( _knowledgeSkills.Any(s => s.Name == skill.Name))
+        {
+            _knowledgeSkills.RemoveAll(obj => obj.Name == skill.Name);
+            return true;
+        }
+        return false;
+    }
+    
+    public bool AddLanguageSkill(LanguageSkill skill)
+    {
+        if (skill == null)
+        {
+            return false;
+        }
+
+        if (_languageSkills.Any(s => s.Language == skill.Language))
+        {
+            return false;
+        }
+        _languageSkills.Add(skill);
+        return true;
+    }
+
+    public bool RemoveLanguageSkill(LanguageSkill skill)
+    {
+        if (skill == null)
+            return false;
+ 
+        if (_languageSkills.Any(s => s.Language == skill.Language))
+        {
+            _languageSkills.RemoveAll(obj => obj.Language == skill.Language);
             return true;
         }
         return false;
