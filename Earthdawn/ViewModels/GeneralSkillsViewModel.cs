@@ -11,13 +11,18 @@ namespace Earthdawn.ViewModels;
 
 public partial class GeneralSkillsViewModel : PageViewModel
 {
-    public GeneralSkillsViewModel(IDataServices dataServices, ICharacterSheetService characterSheetService, NavigationService navigationService)
+    private readonly Action _onSkillPointsChanged;
+    
+    public GeneralSkillsViewModel(IDataServices dataServices, ICharacterSheetService characterSheetService, NavigationService navigationService, Action onSkillPointsChanged)
     {
         _dataServices = dataServices;
         PageName = ApplicationPageNames.SkillSelection;
         _navigationService = navigationService;
         _characterSheetService = characterSheetService;
+        _onSkillPointsChanged = onSkillPointsChanged;
         Skills = new ObservableCollection<Skill>(_characterSheetService.CharacterCreationSheetInstance.AvailableSkillList);
+        // Initialize select button text
+        UpdateSelectButtonText();
     }
     
     private readonly IDataServices _dataServices;
@@ -26,6 +31,9 @@ public partial class GeneralSkillsViewModel : PageViewModel
 
     [ObservableProperty]
     private int _selectedIndex = 0;
+
+    [ObservableProperty]
+    private string _selectButtonText = "Select";
 
     public ObservableCollection<Skill> Skills { get; }
 
@@ -41,6 +49,8 @@ public partial class GeneralSkillsViewModel : PageViewModel
         {
             SelectedIndex = Skills.Count - 1; // Wrap to end
         }
+        // Update button text when selection changes
+        UpdateSelectButtonText();
     }
 
     [RelayCommand]
@@ -53,16 +63,46 @@ public partial class GeneralSkillsViewModel : PageViewModel
         {
             SelectedIndex = 0; // Wrap to beginning
         }
+        // Update button text when selection changes
+        UpdateSelectButtonText();
     }
 
     [RelayCommand]
     private void Select()
     {
-        if (SelectedSkill != null)
+        if (SelectedSkill == null) return;
+        
+        if (IsSkillSelected(SelectedSkill))
         {
-            Console.WriteLine($"Selected skill: {SelectedSkill.Name}");
-            // TODO: Implement actual selection logic here
+            // If skill is already selected, remove it
+            if (_characterSheetService.CharacterCreationSheetInstance.RemoveGeneralSkill(SelectedSkill))
+            {
+                // Restore skill point
+                _characterSheetService.CharacterCreationSheetInstance.RemainingGeneralSkillPoints += 1;
+                // Notify that skill points changed
+                _onSkillPointsChanged?.Invoke();
+            }
         }
+        else
+        {
+            // If skill is not selected, add it (check if we have skill points)
+            if (_characterSheetService.CharacterCreationSheetInstance.RemainingGeneralSkillPoints > 0)
+            {
+                // Create a copy of the skill to add
+                var skillToAdd = new Skill(SelectedSkill);
+                skillToAdd.Rank = 1; // Initialize rank to 1
+                
+                if (_characterSheetService.CharacterCreationSheetInstance.AddGeneralSkill(skillToAdd))
+                {
+                    // Deduct skill point
+                    _characterSheetService.CharacterCreationSheetInstance.RemainingGeneralSkillPoints -= 1;
+                    // Notify that skill points changed
+                    _onSkillPointsChanged?.Invoke();
+                }
+            }
+        }
+        // Update the button text
+        UpdateSelectButtonText();
     }
     
     private bool IsSkillSelected(Skill skill)
@@ -74,5 +114,17 @@ public partial class GeneralSkillsViewModel : PageViewModel
             return true;
         }
         return false;
+    }
+
+    private void UpdateSelectButtonText()
+    {
+        if (SelectedSkill != null && IsSkillSelected(SelectedSkill))
+        {
+            SelectButtonText = "Remove";
+        }
+        else
+        {
+            SelectButtonText = "Select";
+        }
     }
 }

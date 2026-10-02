@@ -18,10 +18,7 @@ public partial class SkillsViewModel : PageViewModel
         _navigationService = navigationService;
         _characterSheetService = characterSheetService;
         Skills = new ObservableCollection<Skill>(_characterSheetService.CharacterCreationSheetInstance.AvailableSkillList);
-        GeneralSkillPoints = _characterSheetService.CharacterCreationSheetInstance.RemainingGeneralSkillPoints;
-        KnowledgeSkillPoints = _characterSheetService.CharacterCreationSheetInstance.RemainingKnowledgeSkillPoints;
-        SpeakLanguageSkillPoints = _characterSheetService.CharacterCreationSheetInstance.RemainingSpeakLanguageSkillPoints;
-        ReadLanguageSkillPoints = _characterSheetService.CharacterCreationSheetInstance.RemainingReadWriteSkillPoints;
+        RefreshSkillPoints();
         ArtesianSkill = _characterSheetService.CharacterCreationSheetInstance.ArtesianSkill;
         
         // Start with General Skills view
@@ -59,19 +56,25 @@ public partial class SkillsViewModel : PageViewModel
     [RelayCommand]
     private void NavigateToGeneralSkills()
     {
-        CurrentChildView = new GeneralSkillsViewModel(_dataServices, _characterSheetService, _navigationService);
+        CurrentChildView = new GeneralSkillsViewModel(_dataServices, _characterSheetService, _navigationService, RefreshSkillPoints);
+        // Refresh skill points when changing views
+        RefreshSkillPoints();
     }
     
     [RelayCommand]
     private void NavigateToKnowledgeSkills()
     {
-        CurrentChildView = new KnowledgeSkillsViewModel(_dataServices,  _characterSheetService, _navigationService);
+        CurrentChildView = new KnowledgeSkillsViewModel(_dataServices,  _characterSheetService, _navigationService, RefreshSkillPoints);
+        // Refresh skill points when changing views
+        RefreshSkillPoints();
     }
     
     [RelayCommand]
     private void NavigateToLanguageSkills()
     {
-        CurrentChildView = new LanguageSkillsViewModel(_dataServices,  _characterSheetService, _navigationService);
+        CurrentChildView = new LanguageSkillsViewModel(_dataServices,  _characterSheetService, _navigationService, RefreshSkillPoints);
+        // Refresh skill points when changing views
+        RefreshSkillPoints();
     }
 
     [RelayCommand]
@@ -94,5 +97,13 @@ public partial class SkillsViewModel : PageViewModel
         {
             _navigationService.GoToEquipmentPurchasePage();
         }
+    }
+
+    public void RefreshSkillPoints()
+    {
+        GeneralSkillPoints = _characterSheetService.CharacterCreationSheetInstance.RemainingGeneralSkillPoints;
+        KnowledgeSkillPoints = _characterSheetService.CharacterCreationSheetInstance.RemainingKnowledgeSkillPoints;
+        SpeakLanguageSkillPoints = _characterSheetService.CharacterCreationSheetInstance.RemainingSpeakLanguageSkillPoints;
+        ReadLanguageSkillPoints = _characterSheetService.CharacterCreationSheetInstance.RemainingReadWriteSkillPoints;
     }
 }

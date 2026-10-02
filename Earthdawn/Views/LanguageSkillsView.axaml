@@ -65,9 +65,12 @@
                 <Button Content="Previous" 
                         Command="{Binding PreviousCommand}"
                         Width="100" Height="40"/>
-                <Button Content="Select" 
-                        Command="{Binding SelectCommand}"
-                        Width="100" Height="40"/>
+                <Button Content="{Binding SelectButtonText}" 
+                        Command="{Binding SelectSpeakCommand}"
+                        Width="140" Height="40"/>
+                <Button Content="{Binding SelectReadWriteButtonText}" 
+                        Command="{Binding SelectReadWriteCommand}"
+                        Width="160" Height="40"/>
                 <Button Content="Next" 
                         Command="{Binding NextCommand}"
                         Width="100" Height="40"/>

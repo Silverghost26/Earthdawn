@@ -69,9 +69,9 @@
                 <Button Content="Previous" 
                         Command="{Binding PreviousCommand}"
                         Width="100" Height="40"/>
-                <Button Content="Select" 
+                <Button Content="{Binding SelectButtonText}" 
                         Command="{Binding SelectCommand}"
-                        Width="100" Height="40"/>
+                        Width="120" Height="40"/>
                 <Button Content="Next" 
                         Command="{Binding NextCommand}"
                         Width="100" Height="40"/>
