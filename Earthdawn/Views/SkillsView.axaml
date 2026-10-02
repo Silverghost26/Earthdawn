@@ -52,9 +52,22 @@
                 </StackPanel>
             </StackPanel>
             </Border>
-            
+
             <!-- Child View Container -->
             <ContentControl Content="{Binding CurrentChildView}" Margin="0,20,0,0"/>
+            
+            <!-- Artesian Skill Input -->
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,20,0,0">
+                <Label Classes="PrimaryText" Content="Artesian Skill" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+                <TextBox 
+                    Classes="PrimaryText"
+                    Text="{Binding ArtesianSkill}"
+                    Width="300"
+                    MaxLength="25"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    Background="Transparent"/>
+            </StackPanel>
             
             <!-- Save and Continue Button -->
             <Panel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0">

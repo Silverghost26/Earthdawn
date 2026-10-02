@@ -22,6 +22,7 @@ public partial class SkillsViewModel : PageViewModel
         KnowledgeSkillPoints = _characterSheetService.CharacterCreationSheetInstance.RemainingKnowledgeSkillPoints;
         SpeakLanguageSkillPoints = _characterSheetService.CharacterCreationSheetInstance.RemainingSpeakLanguageSkillPoints;
         ReadLanguageSkillPoints = _characterSheetService.CharacterCreationSheetInstance.RemainingReadWriteSkillPoints;
+        ArtesianSkill = _characterSheetService.CharacterCreationSheetInstance.ArtesianSkill;
         
         // Start with General Skills view
         NavigateToGeneralSkills();
@@ -44,6 +45,9 @@ public partial class SkillsViewModel : PageViewModel
     
     [ObservableProperty]
     private int _readLanguageSkillPoints;
+    
+    [ObservableProperty] 
+    private string _artesianSkill;
     
     [ObservableProperty]
     private object _currentChildView;
@@ -73,6 +77,9 @@ public partial class SkillsViewModel : PageViewModel
     [RelayCommand]
     private void SaveAndContinue()
     {
+        // Save ArtesianSkill to character sheet
+        _characterSheetService.CharacterCreationSheetInstance.ArtesianSkill = ArtesianSkill;
+        
         string disciplineName = _characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0].DisciplineName;
         if (disciplineName != null
             && (disciplineName == "Wizard"

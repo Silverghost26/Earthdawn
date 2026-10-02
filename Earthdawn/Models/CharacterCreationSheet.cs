@@ -63,6 +63,7 @@ public class  CharacterCreationSheet : CharacterBase
     public int RemainingKnowledgeSkillPoints { get; set; }
     public int RemainingReadWriteSkillPoints { get; set; }
     public int RemainingArtisanSkillPoints { get; set; }
+    public string ArtesianSkill { get; set; }
     public int RemainingSpeakLanguageSkillPoints { get; set; }
     public int SpellPoints
     {
