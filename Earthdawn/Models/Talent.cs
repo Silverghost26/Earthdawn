@@ -1,4 +1,7 @@
-﻿namespace Earthdawn.Models;
+﻿using System;
+using Earthdawn.Data;
+
+namespace Earthdawn.Models;
 
 public class Talent
 {
@@ -41,4 +44,21 @@ public class Talent
     public int Rank { get; set; }
     public int CircleObtained { get; set; }
     public string Name { get; set; }
+
+    public AttributesTypes GetStepAttributeEnum()
+    {
+        if(Step.Contains("PER", StringComparison.OrdinalIgnoreCase))
+            return AttributesTypes.Per;
+        if(Step.Contains("STR", StringComparison.OrdinalIgnoreCase))
+            return AttributesTypes.Str;
+        if(Step.Contains("DEX", StringComparison.OrdinalIgnoreCase))
+            return AttributesTypes.Dex;
+        if(Step.Contains("TOU", StringComparison.OrdinalIgnoreCase))
+            return AttributesTypes.Tou;
+        if(Step.Contains("WIL", StringComparison.OrdinalIgnoreCase))
+            return AttributesTypes.Wil;
+        if(Step.Contains("CHR", StringComparison.OrdinalIgnoreCase))
+            return AttributesTypes.Chr;
+        return AttributesTypes.None;
+    }
 }

@@ -13,172 +13,306 @@
         <Border Classes="background" CornerRadius="30" Padding="20">
             <StackPanel Spacing="5">
                 <Label Classes="PrimarySubHeader" Content="Attributes" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                <Grid ColumnDefinitions="Auto,Auto,Auto,*,*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto, Auto">
-                    <Label Grid.Row="0" Grid.Column="0" Classes="PrimaryText" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Current Attributes" ></Label>
-                    <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
-                        <Button Content="-" Width="30" Height="30" Command="{Binding DecrementAttributeCommand}" CommandParameter="Dexterity"/>
-                        <Button Content="+" Width="30" Height="30" Command="{Binding IncrementAttributeCommand}" CommandParameter="Dexterity"/>
+                <Grid ColumnDefinitions="Auto,Auto,*,*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" ColumnSpacing="5">
+                    <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Grid.ColumnSpan="2">
+                        <Label Classes="PrimaryText" Content="Remaining Attribute Points:" Padding="20 0 5 10" FontSize="30"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding RemainingAttributePoints}" 
+                                   FontSize="30" Padding="5 0 0 0" 
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Left">
                         <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Dexterity, StringFormat='Dexterity:     {0}'}" FontSize="20"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Classes="TextureButton" 
+                                    Content="{Binding DexDecrementCost, StringFormat='{}Refund&#x0a;{0}'}" 
+                                    FontSize="10"
+                                    Width="75" Height="56" 
+                                    HorizontalAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    TextBlock.TextAlignment="Center"
+                                    Command="{Binding DecrementAttributeCommand}" CommandParameter="Dexterity"/>
+                            <Button Classes="TextureButton"
+                                    FontSize="10"
+                                    Content="{Binding DexIncrementCost, StringFormat='{}Cost&#x0a;{0}'}" 
+                                    Width="75" Height="56" 
+                                    HorizontalAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    TextBlock.TextAlignment="Center"
+                                    Command="{Binding IncrementAttributeCommand}" CommandParameter="Dexterity"/>
+                        </StackPanel>
                     </StackPanel>
-                    <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
-                        <Button Content="-" Width="30" Height="30" Command="{Binding DecrementAttributeCommand}" CommandParameter="Strength"/>
-                        <Button Content="+" Width="30" Height="30" Command="{Binding IncrementAttributeCommand}" CommandParameter="Strength"/>
+                    <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Left">
                         <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Strength, StringFormat='Strength:      {0}'}" FontSize="20" HorizontalAlignment="Right"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Classes="TextureButton" 
+                                    Content="{Binding StrDecrementCost, StringFormat='{}Refund&#x0a;{0}'}" 
+                                    FontSize="10"
+                                    Width="75" Height="56" 
+                                    HorizontalAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    TextBlock.TextAlignment="Center"
+                                    Command="{Binding DecrementAttributeCommand}" CommandParameter="Strength"/>
+                            <Button Classes="TextureButton"
+                                    FontSize="10"
+                                    Content="{Binding StrIncrementCost, StringFormat='{}Cost&#x0a;{0}'}" 
+                                    Width="75" Height="56" 
+                                    HorizontalAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    TextBlock.TextAlignment="Center"
+                                    Command="{Binding IncrementAttributeCommand}" CommandParameter="Strength"/>
+                        </StackPanel>
                     </StackPanel>
-                    <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
-                        <Button Content="-" Width="30" Height="30" Command="{Binding DecrementAttributeCommand}" CommandParameter="Toughness"/>
-                        <Button Content="+" Width="30" Height="30" Command="{Binding IncrementAttributeCommand}" CommandParameter="Toughness"/>
+                    <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Left">
                         <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Toughness, StringFormat='Toughness:  {0}'}" FontSize="20" HorizontalAlignment="Right"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Classes="TextureButton" 
+                                    Content="{Binding TouDecrementCost, StringFormat='{}Refund&#x0a;{0}'}" 
+                                    FontSize="10"
+                                    Width="75" Height="56" 
+                                    HorizontalAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    TextBlock.TextAlignment="Center"
+                                    Command="{Binding DecrementAttributeCommand}" CommandParameter="Toughness"/>
+                            <Button Classes="TextureButton"
+                                    FontSize="10"
+                                    Content="{Binding TouIncrementCost, StringFormat='{}Cost&#x0a;{0}'}" 
+                                    Width="75" Height="56" 
+                                    HorizontalAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    TextBlock.TextAlignment="Center"
+                                    Command="{Binding IncrementAttributeCommand}" CommandParameter="Toughness"/>
+                        </StackPanel>
                     </StackPanel>
-                    <StackPanel Grid.Row="4" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
-                        <Button Content="-" Width="30" Height="30" Command="{Binding DecrementAttributeCommand}" CommandParameter="Perception"/>
-                        <Button Content="+" Width="30" Height="30" Command="{Binding IncrementAttributeCommand}" CommandParameter="Perception"/>
+                    <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center">
                         <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Perception, StringFormat='Perception:   {0} '}" FontSize="20"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Classes="TextureButton" 
+                                    Content="{Binding PerDecrementCost, StringFormat='{}Refund&#x0a;{0}'}" 
+                                    FontSize="10"
+                                    Width="75" Height="56" 
+                                    HorizontalAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    TextBlock.TextAlignment="Center"
+                                    Command="{Binding DecrementAttributeCommand}" CommandParameter="Perception"/>
+                            <Button Classes="TextureButton"
+                                    FontSize="10"
+                                    Content="{Binding PerIncrementCost, StringFormat='{}Cost&#x0a;{0}'}" 
+                                    Width="75" Height="56" 
+                                    HorizontalAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    TextBlock.TextAlignment="Center"
+                                    Command="{Binding IncrementAttributeCommand}" CommandParameter="Perception"/>
+                        </StackPanel>
                     </StackPanel>
-                    <StackPanel Grid.Row="5" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
-                        <Button Content="-" Width="30" Height="30" Command="{Binding DecrementAttributeCommand}" CommandParameter="Willpower"/>
-                        <Button Content="+" Width="30" Height="30" Command="{Binding IncrementAttributeCommand}" CommandParameter="Willpower"/>
+                    <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center">
                         <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Willpower, StringFormat='Willpower:   {0}'}" FontSize="20"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Classes="TextureButton" 
+                                    Content="{Binding WilDecrementCost, StringFormat='{}Refund&#x0a;{0}'}" 
+                                    FontSize="10"
+                                    Width="75" Height="56" 
+                                    HorizontalAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    TextBlock.TextAlignment="Center"
+                                    Command="{Binding DecrementAttributeCommand}" CommandParameter="Willpower"/>
+                            <Button Classes="TextureButton"
+                                    FontSize="10"
+                                    Content="{Binding WilIncrementCost, StringFormat='{}Cost&#x0a;{0}'}" 
+                                    Width="75" Height="56" 
+                                    HorizontalAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    TextBlock.TextAlignment="Center"
+                                    Command="{Binding IncrementAttributeCommand}" CommandParameter="Willpower"/>
+                        </StackPanel>
                     </StackPanel>
-                    <StackPanel Grid.Row="6" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
-                        <Button Content="-" Width="30" Height="30" Command="{Binding DecrementAttributeCommand}" CommandParameter="Charisma"/>
-                        <Button Content="+" Width="30" Height="30" Command="{Binding IncrementAttributeCommand}" CommandParameter="Charisma"/>
+                    <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center">
                         <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Charisma, StringFormat='Charisma:    {0}'}" FontSize="20"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Classes="TextureButton" 
+                                    Content="{Binding ChrDecrementCost, StringFormat='{}Refund&#x0a;{0}'}" 
+                                    FontSize="10"
+                                    Width="75" Height="56" 
+                                    HorizontalAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    TextBlock.TextAlignment="Center"
+                                    Command="{Binding DecrementAttributeCommand}" CommandParameter="Charisma"/>
+                            <Button Classes="TextureButton"
+                                    FontSize="10"
+                                    Content="{Binding ChrIncrementCost, StringFormat='{}Cost&#x0a;{0}'}" 
+                                    Width="75" Height="56" 
+                                    HorizontalAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    TextBlock.TextAlignment="Center"
+                                    Command="{Binding IncrementAttributeCommand}" CommandParameter="Charisma"/>
+                        </StackPanel>
                     </StackPanel>
                     
-                    <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Left">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding DexIncrementCost}" FontSize="20" Padding="15 0 5 0"/>
-                        <Label Classes="PrimaryText" Content="|" FontSize="20" Padding="3 0 3 0"/>
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding DexDecrementCost}" FontSize="20" Padding="5 0 0 0"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Left">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding StrIncrementCost}" FontSize="20" Padding="15 0 5 0"/>
-                        <Label Classes="PrimaryText" Content="|" FontSize="20" Padding="3 0 3 0"/>
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding StrDecrementCost}" FontSize="20" Padding="5 0 5 0"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Left">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding TouIncrementCost}" FontSize="20" Padding="15 0 5 0"/>
-                        <Label Classes="PrimaryText" Content="|" FontSize="20" Padding="3 0 3 0"/>
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding TouDecrementCost}" FontSize="20" Padding="5 0 5 0"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="4" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Left">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding PerIncrementCost}" FontSize="20" Padding="15 0 5 0"/>
-                        <Label Classes="PrimaryText" Content="|" FontSize="20" Padding="3 0 3 0"/>
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding PerDecrementCost}" FontSize="20" Padding="5 0 5 0"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="5" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Left">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding WilIncrementCost}" FontSize="20" Padding="15 0 5 0"/>
-                        <Label Classes="PrimaryText" Content="|" FontSize="20" Padding="3 0 3 0"/>
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding WilDecrementCost}" FontSize="20" Padding="5 0 5 0"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="6" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Left">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding ChrIncrementCost}" FontSize="20" Padding="15 0 5 0"/>
-                        <Label Classes="PrimaryText" Content="|" FontSize="20" Padding="3 0 3 0"/>
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding ChrDecrementCost}" FontSize="20" Padding="5 0 5 0"/>
-                    </StackPanel>
-    
-                    <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Center" Grid.ColumnSpan="2" Grid.RowSpan="3">
-                        <Label Classes="PrimaryText" Content="Remaining Attribute Points:" Padding="20 0 5 10" FontSize="30"/>
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding RemainingAttributePoints}" FontSize="30" HorizontalAlignment="Center"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="1" Grid.Column="4" Orientation="Horizontal">
-                        <Label Classes="PrimaryText" Content="{Binding RacialKarma, StringFormat='Starting Karma: ({0})'}" FontSize="20" Padding="100 0 5 10"/>
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Karma}" FontSize="20"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="1" Grid.Column="5" Orientation="Horizontal">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Initiative, StringFormat='Initiative: {0}'}" FontSize="20" Padding="100 0 5 10"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="2" Grid.Column="4" Orientation="Horizontal">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding PhysicalDefense, StringFormat='PhysicalDefense: {0}'}" FontSize="20" Padding="100 0 5 10"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="2" Grid.Column="5" Orientation="Horizontal">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding MysticDefense, StringFormat='MysticDefense: {0}'}" FontSize="20" Padding="100 0 5 10"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="3" Grid.Column="4" Orientation="Horizontal">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding SocialDefense, StringFormat='SocialDefense: {0}'}" FontSize="20" Padding="100 0 5 10"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="3" Grid.Column="5" Orientation="Horizontal">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding UnconsciousRating, StringFormat='UnconsciousRating: {0}'}" FontSize="20" Padding="100 0 5 10"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="4" Grid.Column="4" Orientation="Horizontal">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding DeathRating, StringFormat='DeathRating: {0}'}" FontSize="20" Padding="100 0 5 10"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="4" Grid.Column="5" Orientation="Horizontal">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding WoundThreshold, StringFormat='WoundThreshold: {0}'}" FontSize="20" Padding="100 0 5 10"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="5" Grid.Column="4" Orientation="Horizontal">
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding RecoveryTests, StringFormat='RecoveryTests: {0}'}" FontSize="20" Padding="100 0 5 10"/>
-                    </StackPanel>                                                                                    
+                    <Border Grid.Row="1" Grid.Column="2" Grid.RowSpan="3" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="2" CornerRadius="25">
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Label Classes="PrimaryText" 
+                                       Content="{Binding RacialKarma, StringFormat='Starting Karma: ({0})'}" 
+                                       FontSize="25" Padding="10 0 5 10"/>
+                                <TextBlock Classes="PrimaryDescriptionText" 
+                                           Text="{Binding Karma}" 
+                                           FontSize="25"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Classes="PrimaryDescriptionText" 
+                                           Text="{Binding Initiative, StringFormat='Initiative: {0}'}" 
+                                           FontSize="25" Padding="10 0 5 10"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                    
+                    <Border Grid.Row="1" Grid.Column="3" Grid.RowSpan="3" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="2" CornerRadius="25">
+                        <StackPanel  Orientation="Vertical"  HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Classes="PrimaryDescriptionText" 
+                                           Text="{Binding PhysicalDefense, StringFormat='PhysicalDefense:       {0}'}" 
+                                           FontSize="25" Padding="10 0 5 10"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Classes="PrimaryDescriptionText" 
+                                           Text="{Binding MysticDefense, StringFormat='MysticDefense:          {0}'}" 
+                                           FontSize="25" Padding="10 0 5 10"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Classes="PrimaryDescriptionText" 
+                                           Text="{Binding SocialDefense, StringFormat='SocialDefense:          {0}'}" 
+                                           FontSize="25" Padding="10 0 5 10"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Grid.Row="1" Grid.Column="4" Grid.RowSpan="3" BorderBrush="Black" BorderThickness="2" CornerRadius="25" VerticalAlignment="Top">
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Classes="PrimaryDescriptionText" 
+                                           Text="{Binding UnconsciousRating, StringFormat='UnconsciousRating:     {0}'}" 
+                                           FontSize="25" Padding="0 0 5 10"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Classes="PrimaryDescriptionText" 
+                                           Text="{Binding DeathRating, StringFormat='DeathRating:               {0}'}" 
+                                           FontSize="25" Padding="0 0 5 10"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Classes="PrimaryDescriptionText" 
+                                           Text="{Binding WoundThreshold, StringFormat='WoundThreshold:         {0}'}" 
+                                           FontSize="25" Padding="0 0 5 10"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Classes="PrimaryDescriptionText" 
+                                           Text="{Binding RecoveryTests, StringFormat='RecoveryTests:             {0}'}" 
+                                           FontSize="25" Padding="0 0 5 10"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
                 </Grid>
             </StackPanel>
         </Border>
-        <Border Classes="background" CornerRadius="30">
-            <Grid ColumnDefinitions="*,Auto,*,Auto" RowDefinitions="Auto,Auto,Auto">
-                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Classes="PrimarySubHeader" Content="Talents" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-            <StackPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">
-                <Label Classes="PrimaryText" Content="Discipline Talents" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25"/>
-                <StackPanel Orientation="Horizontal">
-                    <ListBox ItemsSource="{Binding DisciplineTalents}" Background="Transparent" Margin="0, 0, 0, 0" Padding="0"
+        <Border Classes="background" CornerRadius="30" Padding="0 0 0 10">
+            <Grid ColumnDefinitions="*,*,Auto" RowDefinitions="Auto,Auto,Auto">
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" 
+                       Classes="PrimaryText" 
+                       Content="{Binding RemainingTalentPoints, StringFormat='{}Talent Points Remaining: {0}'}" 
+                       VerticalAlignment="Top" HorizontalAlignment="Center" 
+                       FontSize="30"></Label>
+                <Grid Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" RowDefinitions="Auto, Auto">
+                    <Grid Grid.Row="0" ColumnDefinitions="25, 25, 330, 60, 60">
+                        <TextBlock Grid.Column="0" Grid.ColumnSpan="3" 
+                                   Classes="PrimaryDescriptionText"
+                                   FontSize="25"
+                                   HorizontalAlignment="Center"
+                                   Text="Discipline Talent"></TextBlock>
+                        <TextBlock Grid.Column="3" 
+                                   Classes="PrimaryDescriptionText"
+                                   HorizontalAlignment="Center"
+                                   FontSize="20"
+                                   Text="Rank"></TextBlock>
+                        <TextBlock Grid.Column="4" 
+                                   Classes="PrimaryDescriptionText"
+                                   HorizontalAlignment="Center"
+                                   FontSize="20"
+                                   Text="Step"></TextBlock>
+                    </Grid>
+                    <ListBox Grid.Row="1"
+                             Background="Transparent" Margin="0, 0, 0, 0" Padding="0"
+                             ItemsSource="{Binding DisciplineTalents}" 
                              SelectedItem="{Binding SelectedCharacterTalent}"
                              SelectionMode="Single">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <DockPanel LastChildFill="True">
-                                    <Button Content="-"
+                                <Grid ColumnDefinitions="25, 25, 330, 60, 60">
+                                    <Button Grid.Column="0" Content="-"
                                             Command="{Binding $parent[ListBox].((vm:CharacterCustomizationsViewModel)DataContext).TalentDecreaseButtonClickedCommand}"
-                                            CommandParameter="{Binding}"
-                                            DockPanel.Dock="Left" Width="30" Height="30" VerticalAlignment="Center"/>
-                                    <Button Content="+"
+                                            CommandParameter="{Binding}"/>
+                                    <Button Grid.Column="1" Content="+"
                                             Command="{Binding $parent[ListBox].((vm:CharacterCustomizationsViewModel)DataContext).TalentIncreaseButtonClickedCommand}"
-                                            CommandParameter="{Binding}"
-                                            DockPanel.Dock="Left" Width="30" Height="30" VerticalAlignment="Center" />
-                                    <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Name}" DockPanel.Dock="Left" Padding="5 0 0 0"/>
-                                    <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" Margin="15 0 0 0">
-                                        <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="Rank: "/>
-                                        <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Rank}"/>
-                                        <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text=" | Step: " Padding="10 0 0 0"/>
-                                        <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Step}"/>
-                                    </StackPanel>
-                                </DockPanel>
+                                            CommandParameter="{Binding}"/>
+                                    <TextBlock Grid.Column="2" Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Name}"/>
+                                    <TextBlock Grid.Column="3" Classes="PrimaryDescriptionText" HorizontalAlignment="Center" FontSize="20" Text="{Binding Rank}"/>
+                                    <TextBlock Grid.Column="4" Classes="PrimaryDescriptionText" HorizontalAlignment="Center" FontSize="20" Text="{Binding Step}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+                <StackPanel Grid.Row="1" Grid.Column="1">
+                    <TextBlock Classes="PrimaryDescriptionText" Text="Selected Optional Talent" FontSize="25" HorizontalAlignment="Center"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="-" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0 0 12 0"
+                                Command="{Binding OptionalTalentDecreaseButtonClickedCommand}"
+                                CommandParameter="{Binding SelectedOptionalTalent}"/>
+                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding SelectedOptionalTalent}" FontSize="20" HorizontalAlignment="Left" Padding="5 0 0 0"/>
+                        
+                        <Button Content="+" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="12 0 0 0 "
+                                Command="{Binding OptionalTalentIncrementButtonClickedCommand}"
+                                CommandParameter="{Binding SelectedOptionalTalent}"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Grid.Column="1">
+                    <Label Classes="PrimaryText" Content="Discipline Free Talents" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="25"></Label>
+                    <ListBox ItemsSource="{Binding FreeTalents}" Background="Transparent" HorizontalAlignment="Center">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Name}"/>
+                                    <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text=" - Rank: " Padding="10 0 0 0"/>
+                                    <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Rank}"/>
+                                    <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text=" | Step: " Padding="10 0 0 0"/>
+                                    <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Step}"/>
+                                </StackPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
                 </StackPanel>
-            </StackPanel>
-            <StackPanel Grid.Row="1" Grid.Column="1">
-                <Label Classes="PrimaryText" Content="Talent Points Remaining: " VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="25"></Label>
-                <TextBlock Classes="PrimaryDescriptionText" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding RemainingTalentPoints}" FontSize="25"/>
-            </StackPanel>
-            <StackPanel Grid.Row="1" Grid.Column="2">
-                <TextBlock Classes="PrimaryDescriptionText" Text="Selected Optional Talent" FontSize="25" HorizontalAlignment="Center"/>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Button Content="-" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0 0 12 0"
-                            Command="{Binding OptionalTalentDecreaseButtonClickedCommand}"
-                            CommandParameter="{Binding SelectedOptionalTalent}"/>
-                    <TextBlock Classes="PrimaryDescriptionText" Text="{Binding SelectedOptionalTalent}" FontSize="20" HorizontalAlignment="Left" Padding="5 0 0 0"/>
-                    
-                    <Button Content="+" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="12 0 0 0 "
-                            Command="{Binding OptionalTalentIncrementButtonClickedCommand}"
-                            CommandParameter="{Binding SelectedOptionalTalent}"/>
-                </StackPanel>
-            </StackPanel>
-            <StackPanel Grid.Row="2" Grid.Column="2">
-                <Label Classes="PrimaryText" Content="Discipline Free Talents" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="25"></Label>
-                <ListBox ItemsSource="{Binding FreeTalents}" Background="Transparent" HorizontalAlignment="Center">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Name}"/>
-                                <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text=" - Rank: " Padding="10 0 0 0"/>
-                                <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Rank}"/>
-                                <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text=" | Step: " Padding="10 0 0 0"/>
-                                <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Step}"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
-            </StackPanel>
-                <StackPanel Grid.Row="1" Grid.Column="3" Grid.RowSpan="2">
+                <StackPanel Grid.Row="1" Grid.Column="2" Grid.RowSpan="2">
                     <TextBlock Classes="PrimaryDescriptionText" Text="Available Optional Talents:" FontSize="25"/>
                     <ItemsControl ItemsSource="{Binding OptionalTalents}" FontSize="20">
                         <ItemsControl.ItemsPanel>

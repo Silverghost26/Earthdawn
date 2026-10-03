@@ -87,13 +87,13 @@
     <Style Selector="Button.TextureButton">
         <Setter Property="Background">
             <Setter.Value>
-                <ImageBrush Source="/Assets/Textures/blackmarble.png" Stretch="UniformToFill"/>
+                <ImageBrush Source="/Assets/Textures/whitemarble.png" Stretch="UniformToFill"/>
             </Setter.Value>
         </Setter>
         <Setter Property="CornerRadius" Value="10"/>
         <Setter Property="BorderThickness" Value="12"/>
         <Setter Property="FontFamily" Value="{DynamicResource Vinque}"/>
-        <Setter Property="Foreground" Value="#95f016"/>
+        <Setter Property="Foreground" Value="#042259"/>
     </Style>
     
     <Style Selector="Button.TextureButton /template/ ContentPresenter#PART_ContentPresenter">
@@ -107,10 +107,10 @@
     </Style>
     
     <Style Selector="Button.TextureButton:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-        <Setter Property="Foreground" Value="#04c0d9"/>
+        <Setter Property="Foreground" Value="#165de0"/>
         <Setter Property="Background">
             <Setter.Value>
-                <ImageBrush Source="/Assets/Textures/blackmarble.png" Stretch="UniformToFill" Opacity=".9"/>
+                <ImageBrush Source="/Assets/Textures/whitemarble.png" Stretch="UniformToFill" Opacity=".9"/>
             </Setter.Value>
         </Setter>
         <Setter Property="BoxShadow" Value="0 0 25 6  #2590e8" />

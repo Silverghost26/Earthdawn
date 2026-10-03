@@ -12,10 +12,11 @@ public partial class TalentViewModel : ObservableObject
 
     public TalentViewModel(Talent talent)
     {
+        
         _talent = talent;
         _rank = talent.Rank;
         _name = talent.Name;
-        _step = talent.Step;
+        _step = talent.Rank;
     }
     [ObservableProperty] private Talent? _selectedCharacterTalent;
     
@@ -30,22 +31,5 @@ public partial class TalentViewModel : ObservableObject
     private int _rank;
 
     [ObservableProperty] private string _name;
-    [ObservableProperty] private string _step;
-    
-    // partial void OnSelectedCharacterTalentChanged(Talent? value)
-    // {
-    //     if (value != null)
-    //     {
-    //         string talentName = value.Name;
-    //         if (talentName.Contains("Thread Weaving"))
-    //             talentName = "Thread Weaving";
-    //     }
-    // }
-    //
-    // [RelayCommand]
-    // private void TalentSelectionChanged(string selectedItem)
-    // {
-    //     if (selectedItem.Contains("Thread Weaving"))
-    //         selectedItem = "Thread Weaving";
-    // }
+    [ObservableProperty] private int _step;
 }

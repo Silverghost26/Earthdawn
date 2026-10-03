@@ -361,5 +361,45 @@ public class CharacterBase
         }
         return false;
     }
+
+    public int GetTalentStepNumber(string talentName)
+    {
+        int step = 0;
+        
+        foreach(Discipline d in GetDiscipline())
+        {
+            foreach (Talent t in d.GetDisciplineTalents())
+            {
+                if (t.Name == talentName)
+                {
+                    step = t.Rank;
+                    step += _charAttributes.GetStepNumber(t.GetStepAttributeEnum());
+                    return step;
+                }
+            }
+
+            foreach (Talent t in d.GetDisciplineTalents())
+            {
+                if (t.Name == talentName)
+                {
+                    step = t.Rank;
+                    step += _charAttributes.GetStepNumber(t.GetStepAttributeEnum());
+                    return step;
+                }
+            }
+
+            foreach (Talent t in d.GetDisciplineFreeTalents())
+            {
+                if (t.Name == talentName)
+                {
+                    step = t.Rank;
+                    step += _charAttributes.GetStepNumber(t.GetStepAttributeEnum());
+                    return step;
+                }
+            }
+        }
+
+        return step;
+    }
     
 }

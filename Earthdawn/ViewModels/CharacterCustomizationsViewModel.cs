@@ -99,6 +99,7 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
         FreeTalents = new ObservableCollection<TalentViewModel>(
             _characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0].GetDisciplineFreeTalents().Select(t => new TalentViewModel(t)));
         _navigationService =  navigationService;
+        UpdateAllTalents();
     }
     
     partial void OnTalentSelectedItemChanged(string? value)
@@ -213,6 +214,7 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
                 if (talent.Name == dt.Name)
                 {
                     dt.Rank = talent.Rank;
+                    dt.Step = _characterSheetService.CharacterCreationSheetInstance.GetTalentStepNumber(talent.Name);
                     break;
                 }
             }
@@ -252,6 +254,7 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
                 break;
         }
         UpdateAttributeValues(selectedAttribute);
+        UpdateAllTalents();
     }
 
     [RelayCommand]
@@ -279,6 +282,7 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
                 break;
         }
         UpdateAttributeValues(selectedAttribute);
+        UpdateAllTalents();
     }
 
     private void UpdateAttributeValues(string attribute)
