@@ -189,7 +189,9 @@
                         </StackPanel>
                     </Border>
                     
-                    <Border Grid.Row="1" Grid.Column="3" Grid.RowSpan="3" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="2" CornerRadius="25">
+                    <Border Grid.Row="1" Grid.Column="3" Grid.RowSpan="3" 
+                            VerticalAlignment="Top" 
+                            BorderBrush="Black" BorderThickness="2" CornerRadius="25">
                         <StackPanel  Orientation="Vertical"  HorizontalAlignment="Center">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Classes="PrimaryDescriptionText" 
@@ -295,9 +297,15 @@
                                 Command="{Binding OptionalTalentIncrementButtonClickedCommand}"
                                 CommandParameter="{Binding SelectedOptionalTalent}"/>
                     </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Classes="PrimaryText" HorizontalAlignment="Center" FontSize="20" Content="Rank: "></Label>
+                        <Label Classes="PrimaryText" HorizontalAlignment="Center" FontSize="20" Content="{Binding OptionalTalentRank}" Padding="0 3 20 0"/>
+                        <Label Classes="PrimaryText" HorizontalAlignment="Center" FontSize="20" Content="Step: "></Label>
+                        <Label Classes="PrimaryText" HorizontalAlignment="Center" FontSize="20" Content="{Binding OptionalTalentStep}" Padding="0 3 0 0"></Label>
+                    </StackPanel>
                 </StackPanel>
                 <StackPanel Grid.Row="2" Grid.Column="1">
-                    <Label Classes="PrimaryText" Content="Discipline Free Talents" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="25"></Label>
+                    <Label Classes="PrimaryText" Content="Discipline Free Talents" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="25" Padding="0 20 0 0"></Label>
                     <ListBox ItemsSource="{Binding FreeTalents}" Background="Transparent" HorizontalAlignment="Center">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
@@ -305,7 +313,7 @@
                                     <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Name}"/>
                                     <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text=" - Rank: " Padding="10 0 0 0"/>
                                     <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Rank}"/>
-                                    <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text=" | Step: " Padding="10 0 0 0"/>
+                                    <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="   Step: " Padding="10 0 0 0"/>
                                     <TextBlock Classes="PrimaryDescriptionText" FontSize="20" Text="{Binding Step}"/>
                                 </StackPanel>
                             </DataTemplate>
@@ -337,13 +345,20 @@
             <Grid ColumnDefinitions="*, Auto" RowDefinitions="*, *">
                 <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Classes="PrimarySubHeader" Content="Talent Description" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                 <StackPanel Grid.Row="1" Grid.Column="0">
+                    <Label Classes="PrimaryText" Content="{Binding  CurrentTalent.Name, TargetNullValue='No Value'}"/>
                     <StackPanel Orientation="Horizontal">
                         <Label Classes="PrimaryText" Content="Governing Attribute:" Padding="10 5 5 0"/>
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding CurrentTalent.Step, TargetNullValue='No Value'}" Padding="3 5 0 0"/>
+                        <TextBlock Classes="PrimaryDescriptionText" 
+                                   Text="{Binding CurrentTalent.Step, TargetNullValue='No Value'}" 
+                                   Padding="3 5 0 0"/>
                         <Label Classes="PrimaryText" Content="Strain:" Padding="75 5 5 0"/>
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding CurrentTalent.Strain, TargetNullValue='No Value'}" Padding="3 5 0 0"/>
+                        <TextBlock Classes="PrimaryDescriptionText" 
+                                   Text="{Binding CurrentTalent.Strain, TargetNullValue='No Value'}" 
+                                   Padding="3 5 0 0"/>
                         <Label Classes="PrimaryText" Content="Action:" Padding="75 5 5 0"/>
-                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding CurrentTalent.Action, TargetNullValue='No Value'}" Padding="3 5 0 0"/>
+                        <TextBlock Classes="PrimaryDescriptionText" 
+                                   Text="{Binding CurrentTalent.Action, TargetNullValue='No Value'}" 
+                                   Padding="3 5 0 0"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
             

@@ -83,7 +83,13 @@ public class DataServices : IDataServices
 
     public Dictionary<string, Talent> LoadTalents()
     {
-        return DataLoader.LoadJson<Dictionary<string, Talent>>(GetJson("Talents.json"));
+        Dictionary<string, Talent> tl = DataLoader.LoadJson<Dictionary<string, Talent>>(GetJson("Talents.json"));
+        foreach (var key in tl.Keys)
+        {
+            tl[key].Name = key;
+        }
+
+        return tl;
     }
     
     // New loaders for equipment tables

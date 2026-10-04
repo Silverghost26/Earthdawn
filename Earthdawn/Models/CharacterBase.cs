@@ -378,7 +378,7 @@ public class CharacterBase
                 }
             }
 
-            foreach (Talent t in d.GetDisciplineTalents())
+            foreach (Talent t in d.GetDisciplineOptionalTalents())
             {
                 if (t.Name == talentName)
                 {

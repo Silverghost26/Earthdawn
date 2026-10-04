@@ -63,7 +63,9 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
 
     public CharacterCustomizationsViewModel(IDataServices dataServices, ICharacterSheetService characterSheetService, NavigationService navigationService)
     {
+        PageName = ApplicationPageNames.CharacterCustomizations;
         _characterSheetService = characterSheetService;
+        CharacterTalents = dataServices.LoadTalents();
         foreach (DisciplineDisplayCard ddc in dataServices.LoadDisciplines())
         {
             if (_characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0].DisciplineName == ddc.Name)
@@ -71,9 +73,10 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
                 OptionalTalents = new ObservableCollection<string>(ddc.Disciplines.TalentOptions["Novice"]);
             }
         }
+        // Auto populate the Optional Talent selection with the first talent in the optional talent list.
+        if(OptionalTalents != null && OptionalTalents.Count >= 1)
+            SelectNoviceOptionTalent(OptionalTalents.FirstOrDefault()); 
         
-        PageName = ApplicationPageNames.CharacterCustomizations;
-        CharacterTalents = dataServices.LoadTalents();
         UpdateAttributeValues("Dexterity");
         UpdateAttributeValues("Strength");
         UpdateAttributeValues("Toughness");
@@ -145,12 +148,14 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
     private void OptionalTalentDecreaseButtonClicked(string selectedTalent)
     {
         DecrementTalent(selectedTalent);
+        UpdateAllTalents();
     }
     
     [RelayCommand]
     private void OptionalTalentIncrementButtonClicked(string selectedTalent)
     {
         IncrementTalent(selectedTalent);
+        UpdateAllTalents();
     }
     
     [RelayCommand]
@@ -176,32 +181,30 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
     [RelayCommand]
     private void SelectNoviceOptionTalent(string selectedTalent)
     {
-        if (selectedTalent != SelectedOptionalTalent)
+        if (_currentlySelectedOptionalTalent != null && _currentlySelectedOptionalTalent.Name == selectedTalent)
         {
-            if (_currentlySelectedOptionalTalent != null && _currentlySelectedOptionalTalent.Name == selectedTalent)
+            TalentSelectedItem = selectedTalent;
+            SelectedOptionalTalent = selectedTalent;
+        }
+        else
+        {
+            _currentlySelectedOptionalTalent = new Talent(CharacterTalents[selectedTalent]);
+            _currentlySelectedOptionalTalent.Name = selectedTalent;
+            if (string.IsNullOrEmpty(SelectedOptionalTalent))
             {
-                TalentSelectedItem = selectedTalent;
-                SelectedOptionalTalent = selectedTalent;
+                    _characterSheetService.CharacterCreationSheetInstance.AddOptionalTalent(
+                        _currentlySelectedOptionalTalent);
             }
             else
             {
-                _currentlySelectedOptionalTalent = new Talent(CharacterTalents[selectedTalent]);
-                _currentlySelectedOptionalTalent.Name = selectedTalent;
-                if (string.IsNullOrEmpty(SelectedOptionalTalent))
-                {
-                        _characterSheetService.CharacterCreationSheetInstance.AddOptionalTalent(
-                            _currentlySelectedOptionalTalent);
-                }
-                else
-                {
-                        _characterSheetService.CharacterCreationSheetInstance.AddOptionalTalent(
-                            _currentlySelectedOptionalTalent, SelectedOptionalTalent);
-                }
-                TalentSelectedItem = selectedTalent;
-                SelectedOptionalTalent = selectedTalent;
+                    _characterSheetService.CharacterCreationSheetInstance.AddOptionalTalent(
+                        _currentlySelectedOptionalTalent, SelectedOptionalTalent);
             }
-            RemainingTalentPoints = _characterSheetService.CharacterCreationSheetInstance.RemainingTalentPoints;
+            TalentSelectedItem = selectedTalent;
+            SelectedOptionalTalent = selectedTalent;
         }
+        RemainingTalentPoints = _characterSheetService.CharacterCreationSheetInstance.RemainingTalentPoints;
+        UpdateAllTalents();
     }
 
     private void UpdateAllTalents()
@@ -209,23 +212,30 @@ public partial class CharacterCustomizationsViewModel : PageViewModel
         foreach (Talent talent in _characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0]
                      .GetDisciplineTalents())
         {
-            foreach (TalentViewModel dt in DisciplineTalents)
+            if (DisciplineTalents != null)
             {
-                if (talent.Name == dt.Name)
+                foreach (TalentViewModel dt in DisciplineTalents)
                 {
-                    dt.Rank = talent.Rank;
-                    dt.Step = _characterSheetService.CharacterCreationSheetInstance.GetTalentStepNumber(talent.Name);
-                    break;
+                    if (talent.Name == dt.Name)
+                    {
+                        dt.Rank = talent.Rank;
+                        dt.Step = _characterSheetService.CharacterCreationSheetInstance.GetTalentStepNumber(talent.Name);
+                        break;
+                    }
                 }
             }
-        }
 
+        }
         if (_currentlySelectedOptionalTalent != null
             && _characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0]
                 .GetDisciplineOptionalTalents() != null)
         {
             _currentlySelectedOptionalTalent.Rank = _characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0]
                 .GetDisciplineOptionalTalents()[0].Rank;
+            OptionalTalentRank = _characterSheetService.CharacterCreationSheetInstance.GetDiscipline()[0]
+                .GetDisciplineOptionalTalents()[0].Rank;
+            OptionalTalentStep = _characterSheetService.CharacterCreationSheetInstance.GetTalentStepNumber(_currentlySelectedOptionalTalent.Name);
+            
         }
     }
 

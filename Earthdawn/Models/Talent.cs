@@ -57,7 +57,7 @@ public class Talent
             return AttributesTypes.Tou;
         if(Step.Contains("WIL", StringComparison.OrdinalIgnoreCase))
             return AttributesTypes.Wil;
-        if(Step.Contains("CHR", StringComparison.OrdinalIgnoreCase))
+        if(Step.Contains("CHR", StringComparison.OrdinalIgnoreCase) || Step.Contains("CHA", StringComparison.OrdinalIgnoreCase))
             return AttributesTypes.Chr;
         return AttributesTypes.None;
     }
