@@ -1,15 +1,21 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c="clr-namespace:Earthdawn.Converters"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:Earthdawn.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:DataType="vm:GeneralSkillsViewModel"
-             x:Class="Earthdawn.Views.GeneralSkillsView">
+             x:DataType="vm:GeneralSkillsViewModel" 
+             x:Class="Earthdawn.Views.GeneralSkillsView"
+             x:Name="GeneralSkillsControl">
 
     <Design.DataContext>
         <vm:GeneralSkillsViewModel />
     </Design.DataContext>
+
+    <UserControl.Resources>
+        <c:BoolToSelectionColorConverter x:Key="SelectionColorConverter"/>
+    </UserControl.Resources>
 
     <ScrollViewer>
         <StackPanel Orientation="Vertical" Margin="20">
@@ -21,12 +27,17 @@
                 </Carousel.PageTransition>
                 <Carousel.ItemTemplate>
                     <DataTemplate>
-                        <Border Classes="background" BorderBrush="Black" BorderThickness="5" CornerRadius="30" Padding="20">
-                            <Grid ColumnDefinitions="300, *" RowDefinitions="Auto, *">
-                                <!-- Skill Name Centered at the Top -->
+                         <!-- Main skill card with conditional border color -->
+                         <Border Classes="background" BorderBrush="Black" BorderThickness="5" CornerRadius="30" Padding="20">
+                             <!-- Bind the border brush to show selection state -->
+                             <Border.BorderBrush>
+                                  <Binding Path="DataContext.IsCurrentSkillSelected" Converter="{StaticResource SelectionColorConverter}" ElementName="GeneralSkillsControl"/>
+                             </Border.BorderBrush>
+                             
+                             <Grid ColumnDefinitions="300, *" RowDefinitions="Auto, *">
                                 <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
-                                           Classes="PrimarySubHeader" Content="{Binding Name}" 
-                                           HorizontalAlignment="Center" 
+                                       Classes="PrimarySubHeader" Content="{Binding Name}" 
+                                       HorizontalAlignment="Center"
                                            FontSize="24" FontWeight="Bold" 
                                            Margin="0,0,0,20"/>
 
@@ -46,16 +57,17 @@
                                                    Classes="PrimaryDescriptionText" Margin="0,0,0,10"/>
                                     </StackPanel>
                                 </Border>
+                                
                                 <ScrollViewer Grid.Column="1" Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-                                <!-- Description Taking Up Remaining Space -->
-                                <StackPanel Grid.Column="1" Grid.Row="1">
-                                    <TextBlock Text="Description:" 
-                                               Classes="PrimaryDescriptionText" FontWeight="Bold" 
-                                               Margin="0,0,0,5"/>
-                                    <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Description}" 
-                                               TextWrapping="Wrap" 
-                                               MaxHeight="400"/>
-                                </StackPanel>
+                                    <!-- Description Taking Up Remaining Space -->
+                                    <StackPanel Grid.Column="1" Grid.Row="1">
+                                        <TextBlock Text="Description:" 
+                                                   Classes="PrimaryDescriptionText" FontWeight="Bold" 
+                                                   Margin="0,0,0,5"/>
+                                        <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Description}" 
+                                                   TextWrapping="Wrap" 
+                                                   MaxHeight="400"/>
+                                    </StackPanel>
                                 </ScrollViewer>
                             </Grid>
                         </Border>

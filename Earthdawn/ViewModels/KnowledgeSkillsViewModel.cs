@@ -23,6 +23,8 @@ public partial class KnowledgeSkillsViewModel : PageViewModel
         KnowledgeSkills = new ObservableCollection<KnowledgeSkill>(_dataServices.LoadKnowledgeSkillsList().Select(ks => ks.KnowledgeSkill));
         // Initialize select button text
         UpdateSelectButtonText();
+        // Initialize selection status for highlighting
+        UpdateIsCurrentSkillSelected();
     }
     
     private readonly IDataServices _dataServices;
@@ -34,6 +36,9 @@ public partial class KnowledgeSkillsViewModel : PageViewModel
 
     [ObservableProperty]
     private string _selectButtonText = "Select";
+
+    [ObservableProperty]
+    private bool _isCurrentSkillSelected;
 
     public ObservableCollection<KnowledgeSkill> KnowledgeSkills { get; }
 
@@ -51,6 +56,8 @@ public partial class KnowledgeSkillsViewModel : PageViewModel
         }
         // Update button text when selection changes
         UpdateSelectButtonText();
+        // Update selection status for highlighting
+        UpdateIsCurrentSkillSelected();
     }
 
     [RelayCommand]
@@ -65,6 +72,8 @@ public partial class KnowledgeSkillsViewModel : PageViewModel
         }
         // Update button text when selection changes
         UpdateSelectButtonText();
+        // Update selection status for highlighting
+        UpdateIsCurrentSkillSelected();
     }
 
     [RelayCommand]
@@ -103,6 +112,8 @@ public partial class KnowledgeSkillsViewModel : PageViewModel
         }
         // Update the button text
         UpdateSelectButtonText();
+        // Update selection status for highlighting
+        UpdateIsCurrentSkillSelected();
     }
     
     // Helper method to check if a knowledge skill is already selected
@@ -122,5 +133,11 @@ public partial class KnowledgeSkillsViewModel : PageViewModel
         {
             SelectButtonText = "Select";
         }
+    }
+
+    private void UpdateIsCurrentSkillSelected()
+    {
+        IsCurrentSkillSelected = SelectedKnowledgeSkill != null && IsKnowledgeSkillSelected(SelectedKnowledgeSkill);
+        OnPropertyChanged(nameof(IsCurrentSkillSelected));
     }
 }

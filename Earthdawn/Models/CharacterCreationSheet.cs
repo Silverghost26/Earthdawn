@@ -1,6 +1,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Earthdawn.Data;
 using EarthDawn.Services;
 
@@ -39,6 +40,7 @@ public class  CharacterCreationSheet : CharacterBase
         };
         talents = dataService.LoadTalents();
         CreateSkillList(dataService.LoadSkillsList());
+        _artisanSkills = new List<Skill>();
     }
 
     public List<Skill> AvailableSkillList
@@ -63,7 +65,32 @@ public class  CharacterCreationSheet : CharacterBase
     public int RemainingKnowledgeSkillPoints { get; set; }
     public int RemainingReadWriteSkillPoints { get; set; }
     public int RemainingArtisanSkillPoints { get; set; }
-    public string ArtesianSkill { get; set; }
+
+    public string ArtesianSkill
+    {
+        get
+        {
+            if(_artisanSkills.Count > 0)
+                return _artisanSkills.FirstOrDefault().Name;
+            else
+            {
+                return "None";
+            }
+        }
+        set
+        {
+            Skill skill = new Skill();
+            skill.Name = value;
+            skill.Description = value;
+            skill.Rank = 1;
+            skill.Step = "Dex";
+            skill.Strain = 0;
+            skill.Tier = "Novice";
+            skill.Action = "Sustained";
+            
+            this.AddArtisanSkill(skill);
+        }
+    }
     public int RemainingSpeakLanguageSkillPoints { get; set; }
     public int SpellPoints
     {
@@ -101,8 +128,6 @@ public class  CharacterCreationSheet : CharacterBase
     }
     public void AddDiscipline(DisciplineDisplayCard card)
     {
-        //IDataServices dataService = new DataServices();
-        //var talents = dataService.LoadTalents();
         Discipline newDiscipline = new Discipline();
         newDiscipline.DisciplineName = card.Name;
         newDiscipline.DisciplineCircleLevel = 1;
@@ -400,7 +425,6 @@ public class  CharacterCreationSheet : CharacterBase
                 {
                     RemainingAttributePoints += cost;
                     CharacterAttributes.Dexterity -= 1;
-                    // OnPropertyChanged(nameof(RemainingAttributePoints));
                 }
                 break;
         }

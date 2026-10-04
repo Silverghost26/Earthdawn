@@ -12,6 +12,7 @@ public class CharacterBase
     protected List<Skill> _generalSkills;
     protected List<LanguageSkill> _languageSkills;
     protected List<KnowledgeSkill> _knowledgeSkills;
+    protected List<Skill> _artisanSkills;
     private List<Weapon> _weapons;
     private List<Armor> _armor;
     private List<Shield> _shields;
@@ -33,6 +34,7 @@ public class CharacterBase
         _generalSkills = new List<Skill>();
         _knowledgeSkills = new List<KnowledgeSkill>();
         _languageSkills = new List<LanguageSkill>();
+        _artisanSkills = new List<Skill>();
     }
     
     //***********************************Private Vars*************************************************
@@ -72,6 +74,7 @@ public class CharacterBase
     public List<Skill> GeneralSkills { get {return _generalSkills;} }
     public List<LanguageSkill> LanguageSkills {get {return  _languageSkills;} }
     public List<KnowledgeSkill>  KnowledgeSkills { get {return _knowledgeSkills;} }
+    public List<Skill> ArtisanSkills { get {return _artisanSkills;} }
     
     public Attributes CharacterAttributes
     {
@@ -333,6 +336,21 @@ public class CharacterBase
         }
         return false;
     }
+
+    public bool AddArtisanSkill(Skill skill)
+    {
+        if (skill == null)
+            return false;
+        if (_artisanSkills.Any(s => s.Name == skill.Name))
+            return false;
+        _artisanSkills.Add(skill);
+        return true;
+    }
+
+    // public List<Skill> GetArtisanSkills()
+    // {
+    //     return _artisanSkills;
+    // }
     
     public bool AddLanguageSkill(LanguageSkill skill)
     {

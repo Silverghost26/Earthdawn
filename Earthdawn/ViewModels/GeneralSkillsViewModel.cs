@@ -23,6 +23,8 @@ public partial class GeneralSkillsViewModel : PageViewModel
         Skills = new ObservableCollection<Skill>(_characterSheetService.CharacterCreationSheetInstance.AvailableSkillList);
         // Initialize select button text
         UpdateSelectButtonText();
+        // Initialize selection status for highlighting
+        UpdateIsCurrentSkillSelected();
     }
     
     private readonly IDataServices _dataServices;
@@ -34,6 +36,9 @@ public partial class GeneralSkillsViewModel : PageViewModel
 
     [ObservableProperty]
     private string _selectButtonText = "Select";
+
+    [ObservableProperty]
+    private bool _isCurrentSkillSelected;
 
     public ObservableCollection<Skill> Skills { get; }
 
@@ -51,6 +56,8 @@ public partial class GeneralSkillsViewModel : PageViewModel
         }
         // Update button text when selection changes
         UpdateSelectButtonText();
+        // Update selection status for highlighting
+        UpdateIsCurrentSkillSelected();
     }
 
     [RelayCommand]
@@ -65,6 +72,8 @@ public partial class GeneralSkillsViewModel : PageViewModel
         }
         // Update button text when selection changes
         UpdateSelectButtonText();
+        // Update selection status for highlighting
+        UpdateIsCurrentSkillSelected();
     }
 
     [RelayCommand]
@@ -103,6 +112,8 @@ public partial class GeneralSkillsViewModel : PageViewModel
         }
         // Update the button text
         UpdateSelectButtonText();
+        // Update selection status for highlighting
+        UpdateIsCurrentSkillSelected();
     }
     
     private bool IsSkillSelected(Skill skill)
@@ -126,5 +137,11 @@ public partial class GeneralSkillsViewModel : PageViewModel
         {
             SelectButtonText = "Select";
         }
+    }
+
+    private void UpdateIsCurrentSkillSelected()
+    {
+        IsCurrentSkillSelected = SelectedSkill != null && IsSkillSelected(SelectedSkill);
+        OnPropertyChanged(nameof(IsCurrentSkillSelected));
     }
 }
