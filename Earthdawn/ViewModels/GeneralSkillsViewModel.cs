@@ -40,6 +40,15 @@ public partial class GeneralSkillsViewModel : PageViewModel
     [ObservableProperty]
     private bool _isCurrentSkillSelected;
 
+    [ObservableProperty]
+    private int _currentRank;
+
+    [ObservableProperty]
+    private bool _canIncrementRank;
+
+    [ObservableProperty]
+    private bool _canDecrementRank;
+
     public ObservableCollection<Skill> Skills { get; }
 
     public Skill SelectedSkill => Skills.Count > 0 && SelectedIndex >= 0 ? Skills[SelectedIndex] : null;
@@ -86,8 +95,7 @@ public partial class GeneralSkillsViewModel : PageViewModel
             // If skill is already selected, remove it
             if (_characterSheetService.CharacterCreationSheetInstance.RemoveGeneralSkill(SelectedSkill))
             {
-                // Restore skill point
-                _characterSheetService.CharacterCreationSheetInstance.RemainingGeneralSkillPoints += 1;
+                // Points are refunded in RemoveGeneralSkill method
                 // Notify that skill points changed
                 _onSkillPointsChanged?.Invoke();
             }
@@ -114,6 +122,26 @@ public partial class GeneralSkillsViewModel : PageViewModel
         UpdateSelectButtonText();
         // Update selection status for highlighting
         UpdateIsCurrentSkillSelected();
+    }
+
+    [RelayCommand]
+    private void IncrementRank()
+    {
+        if (SelectedSkill == null || !IsSkillSelected(SelectedSkill)) return;
+        
+        _characterSheetService.CharacterCreationSheetInstance.IncrementGeneralSkill(SelectedSkill.Name);
+        UpdateCurrentRank();
+        _onSkillPointsChanged?.Invoke();
+    }
+
+    [RelayCommand]
+    private void DecrementRank()
+    {
+        if (SelectedSkill == null || !IsSkillSelected(SelectedSkill)) return;
+        
+        _characterSheetService.CharacterCreationSheetInstance.DecrementGeneralSkill(SelectedSkill.Name);
+        UpdateCurrentRank();
+        _onSkillPointsChanged?.Invoke();
     }
     
     private bool IsSkillSelected(Skill skill)
@@ -143,5 +171,23 @@ public partial class GeneralSkillsViewModel : PageViewModel
     {
         IsCurrentSkillSelected = SelectedSkill != null && IsSkillSelected(SelectedSkill);
         OnPropertyChanged(nameof(IsCurrentSkillSelected));
+        UpdateCurrentRank();
+    }
+
+    private void UpdateCurrentRank()
+    {
+        if (SelectedSkill != null && IsSkillSelected(SelectedSkill))
+        {
+            CurrentRank = _characterSheetService.CharacterCreationSheetInstance.GetGeneralSkillRank(SelectedSkill.Name);
+            CanDecrementRank = CurrentRank > 0;
+            // Can increment if we have points and rank is less than max (3)
+            CanIncrementRank = _characterSheetService.CharacterCreationSheetInstance.RemainingGeneralSkillPoints > 0 && CurrentRank < 3;
+        }
+        else
+        {
+            CurrentRank = 0;
+            CanIncrementRank = false;
+            CanDecrementRank = false;
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace Earthdawn.Models
         {
             Name = knowledgeSkill.Name;
             Description = knowledgeSkill.Description;
+            Rank = knowledgeSkill.Rank;
         }
 
         public string Name { get; set; }

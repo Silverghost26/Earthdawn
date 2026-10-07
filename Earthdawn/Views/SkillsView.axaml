@@ -54,10 +54,10 @@
             </Border>
 
             <!-- Child View Container -->
-            <ContentControl Content="{Binding CurrentChildView}" Margin="0,20,0,0"/>
+            <ContentControl Content="{Binding CurrentChildView}" Margin="0,15,0,0"/>
             
             <!-- Artesian Skill Input -->
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,20,0,0">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,5,0,0">
                 <Label Classes="PrimaryText" Content="Artesian Skill" HorizontalAlignment="Center" Margin="0,0,0,5"/>
                 <TextBox 
                     Classes="PrimaryText"
@@ -70,7 +70,7 @@
             </StackPanel>
             
             <!-- Save and Continue Button -->
-            <Panel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0">
+            <Panel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0">
                 <Button Classes="TextureButton" 
                         Command="{Binding SaveAndContinueCommand}"
                         Content="Save &amp; Continue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"

@@ -28,14 +28,14 @@
                 <Carousel.ItemTemplate>
                     <DataTemplate>
                          <!-- Main knowledge skill card with conditional border color -->
-                         <Border Classes="background" BorderBrush="Black" BorderThickness="5" CornerRadius="30" Padding="20">
+                         <Border Classes="background" BorderThickness="5" CornerRadius="30" Padding="20">
                              <!-- Bind the border brush to show selection state -->
                              <Border.BorderBrush>
                                   <Binding Path="DataContext.IsCurrentSkillSelected" Converter="{StaticResource SelectionColorConverter}" ElementName="KnowledgeSkillsControl"/>
                              </Border.BorderBrush>
                              <Grid ColumnDefinitions="300, *" RowDefinitions="Auto, *">
                                  <!-- Knowledge Skill Name Centered at the Top -->
-                                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                                <Label Grid.Row="0" Grid.Column="1"  
                                        Classes="PrimarySubHeader" Content="{Binding Name}" 
                                        HorizontalAlignment="Center"
                                            FontSize="24" FontWeight="Bold" 
@@ -60,7 +60,32 @@
                                                Margin="0,0,0,5"/>
                                     <TextBlock Classes="PrimaryDescriptionText" Text="{Binding Description}" 
                                                TextWrapping="Wrap" 
-                                               MaxHeight="400"/>
+                                               MaxHeight="300"/>
+                                    
+                                    <!-- Rank Display and Controls - Only shown when skill is selected -->
+                                    <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Padding="10"
+                                            Margin="0,20,0,0"
+                                            IsVisible="{Binding DataContext.IsCurrentSkillSelected, ElementName=KnowledgeSkillsControl}">
+                                        <StackPanel Orientation="Vertical" Spacing="5">
+                                            <TextBlock Text="Skill Rank:" 
+                                                       Classes="PrimaryDescriptionText" FontWeight="Bold"
+                                                       HorizontalAlignment="Center"/>
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+                                                <Button Content="-" 
+                                                        Command="{Binding DataContext.DecrementRankCommand, ElementName=KnowledgeSkillsControl}"
+                                                        IsEnabled="{Binding DataContext.CanDecrementRank, ElementName=KnowledgeSkillsControl}"
+                                                        Width="30" Height="30"/>
+                                                <TextBlock Text="{Binding DataContext.CurrentRank, ElementName=KnowledgeSkillsControl}" 
+                                                           Classes="PrimaryDescriptionText" FontSize="20"
+                                                           VerticalAlignment="Center"
+                                                           MinWidth="30" TextAlignment="Center"/>
+                                                <Button Content="+" 
+                                                        Command="{Binding DataContext.IncrementRankCommand, ElementName=KnowledgeSkillsControl}"
+                                                        IsEnabled="{Binding DataContext.CanIncrementRank, ElementName=KnowledgeSkillsControl}"
+                                                        Width="30" Height="30"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Border>
                                 </StackPanel>
                                 </ScrollViewer>
                             </Grid>

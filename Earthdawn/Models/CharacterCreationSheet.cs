@@ -302,7 +302,7 @@ public class  CharacterCreationSheet : CharacterBase
     
     public void IncrementGeneralSkill(string skillName)
     {
-        if (RemainingTalentPoints > 0)
+        if (RemainingGeneralSkillPoints > 0)
         {
             foreach (Skill skill in _generalSkills)
             {
@@ -331,13 +331,16 @@ public class  CharacterCreationSheet : CharacterBase
     
     public void IncrementKnowledgeSkill(string skillName)
     {
-        foreach (KnowledgeSkill skill in _knowledgeSkills)
+        if (RemainingKnowledgeSkillPoints > 0)
         {
-            if (skill.Name == skillName && skill.Rank > 0)
+            foreach (KnowledgeSkill skill in _knowledgeSkills)
             {
-                skill.Rank -= 1;
-                RemainingGeneralSkillPoints += 1;
-                return;
+                if (skill.Name == skillName && skill.Rank < 3)
+                {
+                    skill.Rank += 1;
+                    RemainingKnowledgeSkillPoints -= 1;
+                    return;
+                }
             }
         }
     }
@@ -349,10 +352,34 @@ public class  CharacterCreationSheet : CharacterBase
             if (skill.Name == skillName && skill.Rank > 0)
             {
                 skill.Rank -= 1;
-                RemainingGeneralSkillPoints += 1;
+                RemainingKnowledgeSkillPoints += 1;
                 return;
             }
         }
+    }
+    
+    public int GetGeneralSkillRank(string skillName)
+    {
+        foreach (Skill skill in _generalSkills)
+        {
+            if (skill.Name == skillName)
+            {
+                return skill.Rank;
+            }
+        }
+        return 0;
+    }
+    
+    public int GetKnowledgeSkillRank(string skillName)
+    {
+        foreach (KnowledgeSkill skill in _knowledgeSkills)
+        {
+            if (skill.Name == skillName)
+            {
+                return skill.Rank;
+            }
+        }
+        return 0;
     }
     
     public bool RemoveGeneralSkill(Skill skill)
@@ -362,6 +389,13 @@ public class  CharacterCreationSheet : CharacterBase
  
         if (_generalSkills.Any(s => s.Name == skill.Name))
         {
+            // Get the rank before removing to refund points
+            var skillToRemove = _generalSkills.FirstOrDefault(s => s.Name == skill.Name);
+            if (skillToRemove != null)
+            {
+                // Refund points based on rank (each rank costs 1 point)
+                RemainingGeneralSkillPoints += skillToRemove.Rank;
+            }
             _generalSkills.RemoveAll(obj => obj.Name == skill.Name);
             return true;
         }
@@ -375,6 +409,13 @@ public class  CharacterCreationSheet : CharacterBase
  
         if ( _knowledgeSkills.Any(s => s.Name == skill.Name))
         {
+            // Get the rank before removing to refund points
+            var skillToRemove = _knowledgeSkills.FirstOrDefault(s => s.Name == skill.Name);
+            if (skillToRemove != null)
+            {
+                // Refund points based on rank (each rank costs 1 point)
+                RemainingKnowledgeSkillPoints += skillToRemove.Rank;
+            }
             _knowledgeSkills.RemoveAll(obj => obj.Name == skill.Name);
             return true;
         }

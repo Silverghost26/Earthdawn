@@ -40,6 +40,15 @@ public partial class KnowledgeSkillsViewModel : PageViewModel
     [ObservableProperty]
     private bool _isCurrentSkillSelected;
 
+    [ObservableProperty]
+    private int _currentRank;
+
+    [ObservableProperty]
+    private bool _canIncrementRank;
+
+    [ObservableProperty]
+    private bool _canDecrementRank;
+
     public ObservableCollection<KnowledgeSkill> KnowledgeSkills { get; }
 
     public KnowledgeSkill SelectedKnowledgeSkill => KnowledgeSkills.Count > 0 && SelectedIndex >= 0 ? KnowledgeSkills[SelectedIndex] : null;
@@ -86,8 +95,7 @@ public partial class KnowledgeSkillsViewModel : PageViewModel
             // If knowledge skill is already selected, remove it
             if (_characterSheetService.CharacterCreationSheetInstance.RemoveKnowledgeSkill(SelectedKnowledgeSkill))
             {
-                // Restore skill point
-                _characterSheetService.CharacterCreationSheetInstance.RemainingKnowledgeSkillPoints += 1;
+                // Points are refunded in RemoveKnowledgeSkill method
                 // Notify that skill points changed
                 _onSkillPointsChanged?.Invoke();
             }
@@ -115,6 +123,26 @@ public partial class KnowledgeSkillsViewModel : PageViewModel
         // Update selection status for highlighting
         UpdateIsCurrentSkillSelected();
     }
+
+    [RelayCommand]
+    private void IncrementRank()
+    {
+        if (SelectedKnowledgeSkill == null || !IsKnowledgeSkillSelected(SelectedKnowledgeSkill)) return;
+        
+        _characterSheetService.CharacterCreationSheetInstance.IncrementKnowledgeSkill(SelectedKnowledgeSkill.Name);
+        UpdateCurrentRank();
+        _onSkillPointsChanged?.Invoke();
+    }
+
+    [RelayCommand]
+    private void DecrementRank()
+    {
+        if (SelectedKnowledgeSkill == null || !IsKnowledgeSkillSelected(SelectedKnowledgeSkill)) return;
+        
+        _characterSheetService.CharacterCreationSheetInstance.DecrementKnowledgeSkill(SelectedKnowledgeSkill.Name);
+        UpdateCurrentRank();
+        _onSkillPointsChanged?.Invoke();
+    }
     
     // Helper method to check if a knowledge skill is already selected
     private bool IsKnowledgeSkillSelected(KnowledgeSkill knowledgeSkill)
@@ -139,5 +167,23 @@ public partial class KnowledgeSkillsViewModel : PageViewModel
     {
         IsCurrentSkillSelected = SelectedKnowledgeSkill != null && IsKnowledgeSkillSelected(SelectedKnowledgeSkill);
         OnPropertyChanged(nameof(IsCurrentSkillSelected));
+        UpdateCurrentRank();
+    }
+
+    private void UpdateCurrentRank()
+    {
+        if (SelectedKnowledgeSkill != null && IsKnowledgeSkillSelected(SelectedKnowledgeSkill))
+        {
+            CurrentRank = _characterSheetService.CharacterCreationSheetInstance.GetKnowledgeSkillRank(SelectedKnowledgeSkill.Name);
+            CanDecrementRank = CurrentRank > 0;
+            // Can increment if we have points and rank is less than max (3)
+            CanIncrementRank = _characterSheetService.CharacterCreationSheetInstance.RemainingKnowledgeSkillPoints > 0 && CurrentRank < 3;
+        }
+        else
+        {
+            CurrentRank = 0;
+            CanIncrementRank = false;
+            CanDecrementRank = false;
+        }
     }
 }
