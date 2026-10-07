@@ -299,6 +299,100 @@ public class  CharacterCreationSheet : CharacterBase
             }
         }
     }
+    
+    public void IncrementGeneralSkill(string skillName)
+    {
+        if (RemainingTalentPoints > 0)
+        {
+            foreach (Skill skill in _generalSkills)
+            {
+                if (skill.Name == skillName && skill.Rank < 3)
+                {
+                    skill.Rank += 1;
+                    RemainingGeneralSkillPoints -= 1;
+                    return;
+                }
+            }
+        }
+    }
+    
+    public void DecrementGeneralSkill(string skillName)
+    {
+        foreach (Skill skill in _generalSkills)
+        {
+            if (skill.Name == skillName && skill.Rank > 0)
+            {
+                skill.Rank -= 1;
+                RemainingGeneralSkillPoints += 1;
+                return;
+            }
+        }
+    }
+    
+    public void IncrementKnowledgeSkill(string skillName)
+    {
+        foreach (KnowledgeSkill skill in _knowledgeSkills)
+        {
+            if (skill.Name == skillName && skill.Rank > 0)
+            {
+                skill.Rank -= 1;
+                RemainingGeneralSkillPoints += 1;
+                return;
+            }
+        }
+    }
+    
+    public void DecrementKnowledgeSkill(string skillName)
+    {
+        foreach (KnowledgeSkill skill in _knowledgeSkills)
+        {
+            if (skill.Name == skillName && skill.Rank > 0)
+            {
+                skill.Rank -= 1;
+                RemainingGeneralSkillPoints += 1;
+                return;
+            }
+        }
+    }
+    
+    public bool RemoveGeneralSkill(Skill skill)
+    {
+        if (skill == null)
+            return false;
+ 
+        if (_generalSkills.Any(s => s.Name == skill.Name))
+        {
+            _generalSkills.RemoveAll(obj => obj.Name == skill.Name);
+            return true;
+        }
+        return false;
+    }
+    
+    public bool RemoveKnowledgeSkill(KnowledgeSkill skill)
+    {
+        if (skill == null)
+            return false;
+ 
+        if ( _knowledgeSkills.Any(s => s.Name == skill.Name))
+        {
+            _knowledgeSkills.RemoveAll(obj => obj.Name == skill.Name);
+            return true;
+        }
+        return false;
+    }
+    
+    public bool RemoveLanguageSkill(LanguageSkill skill)
+    {
+        if (skill == null)
+            return false;
+ 
+        if (_languageSkills.Any(s => s.Language == skill.Language))
+        {
+            _languageSkills.RemoveAll(obj => obj.Language == skill.Language);
+            return true;
+        }
+        return false;
+    }
 
     public int AddOptionalTalent(Talent talent, string currentOptionalTalent = "")
     {

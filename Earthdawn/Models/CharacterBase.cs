@@ -295,19 +295,6 @@ public class CharacterBase
         _generalSkills.Add(skill);
         return true;
     }
-
-    public bool RemoveGeneralSkill(Skill skill)
-    {
-        if (skill == null)
-            return false;
- 
-        if (_generalSkills.Any(s => s.Name == skill.Name))
-        {
-            _generalSkills.RemoveAll(obj => obj.Name == skill.Name);
-            return true;
-        }
-        return false;
-    }
     
     public bool AddKnowledgeSkill(KnowledgeSkill skill)
     {
@@ -324,19 +311,6 @@ public class CharacterBase
         return true;
     }
 
-    public bool RemoveKnowledgeSkill(KnowledgeSkill skill)
-    {
-        if (skill == null)
-            return false;
- 
-        if ( _knowledgeSkills.Any(s => s.Name == skill.Name))
-        {
-            _knowledgeSkills.RemoveAll(obj => obj.Name == skill.Name);
-            return true;
-        }
-        return false;
-    }
-
     public bool AddArtisanSkill(Skill skill)
     {
         if (skill == null)
@@ -346,11 +320,6 @@ public class CharacterBase
         _artisanSkills.Add(skill);
         return true;
     }
-
-    // public List<Skill> GetArtisanSkills()
-    // {
-    //     return _artisanSkills;
-    // }
     
     public bool AddLanguageSkill(LanguageSkill skill)
     {
@@ -366,20 +335,7 @@ public class CharacterBase
         _languageSkills.Add(skill);
         return true;
     }
-
-    public bool RemoveLanguageSkill(LanguageSkill skill)
-    {
-        if (skill == null)
-            return false;
- 
-        if (_languageSkills.Any(s => s.Language == skill.Language))
-        {
-            _languageSkills.RemoveAll(obj => obj.Language == skill.Language);
-            return true;
-        }
-        return false;
-    }
-
+    
     public int GetTalentStepNumber(string talentName)
     {
         int step = 0;

@@ -2,7 +2,8 @@ using System;
 
 namespace Earthdawn.Models
 {
-    public class KnowledgeSkill
+    public class 
+        KnowledgeSkill
     {
         public KnowledgeSkill()
         {
